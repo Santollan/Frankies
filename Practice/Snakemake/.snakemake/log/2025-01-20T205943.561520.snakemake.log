@@ -1,0 +1,112 @@
+host: bigboy
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+bcftools_call         1
+plot_quals            1
+samtools_index        2
+samtools_sort         2
+total                 7
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Mon Jan 20 20:59:43 2025]
+localrule samtools_sort:
+    input: mapped_reads/B.bam
+    output: sorted_reads/B.bam
+    jobid: 5
+    reason: Missing output files: sorted_reads/B.bam
+    wildcards: sample=B
+    resources: tmpdir=/tmp
+
+
+[Mon Jan 20 20:59:43 2025]
+localrule samtools_sort:
+    input: mapped_reads/A.bam
+    output: sorted_reads/A.bam
+    jobid: 3
+    reason: Missing output files: sorted_reads/A.bam
+    wildcards: sample=A
+    resources: tmpdir=/tmp
+
+[Mon Jan 20 20:59:43 2025]
+Finished job 5.
+1 of 7 steps (14%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 20 20:59:43 2025]
+localrule samtools_index:
+    input: sorted_reads/B.bam
+    output: sorted_reads/B.bam.bai
+    jobid: 8
+    reason: Missing output files: sorted_reads/B.bam.bai; Input files updated by another job: sorted_reads/B.bam
+    wildcards: sample=B
+    resources: tmpdir=/tmp
+
+[Mon Jan 20 20:59:43 2025]
+Finished job 3.
+2 of 7 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 20 20:59:43 2025]
+localrule samtools_index:
+    input: sorted_reads/A.bam
+    output: sorted_reads/A.bam.bai
+    jobid: 7
+    reason: Missing output files: sorted_reads/A.bam.bai; Input files updated by another job: sorted_reads/A.bam
+    wildcards: sample=A
+    resources: tmpdir=/tmp
+
+[Mon Jan 20 20:59:43 2025]
+Finished job 8.
+3 of 7 steps (43%) done
+[Mon Jan 20 20:59:43 2025]
+Finished job 7.
+4 of 7 steps (57%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 20 20:59:43 2025]
+localrule bcftools_call:
+    input: /home/bigboy/Documents/GitHub/Frankies/Frankies/snakemake-tutorial/data/genome.fa, sorted_reads/A.bam, sorted_reads/B.bam, sorted_reads/A.bam.bai, sorted_reads/B.bam.bai
+    output: calls/all.vcf
+    jobid: 2
+    reason: Missing output files: calls/all.vcf; Input files updated by another job: sorted_reads/B.bam.bai, sorted_reads/A.bam.bai, sorted_reads/B.bam, sorted_reads/A.bam
+    resources: tmpdir=/tmp
+
+[Mon Jan 20 20:59:43 2025]
+Finished job 2.
+5 of 7 steps (71%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 20 20:59:43 2025]
+localrule plot_quals:
+    input: calls/all.vcf
+    output: plots/quals.svg
+    jobid: 1
+    reason: Missing output files: plots/quals.svg; Input files updated by another job: calls/all.vcf
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file /home/bigboy/Documents/GitHub/Frankies/Frankies/Practice/Snakemake/Snakefile, line 52:
+Command 'set -euo pipefail;  /home/bigboy/Documents/GitHub/Frankies/Frankies/.venv/bin/python /home/bigboy/Documents/GitHub/Frankies/Frankies/Practice/Snakemake/.snakemake/scripts/tmpuj7wo7s1.plot-quals.py' returned non-zero exit status 1.
+[Mon Jan 20 20:59:43 2025]
+Error in rule plot_quals:
+    jobid: 1
+    input: calls/all.vcf
+    output: plots/quals.svg
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-01-20T205943.561520.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,37 @@
+host: bigboy
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+all               1
+plot_quals        1
+total             2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 20 21:00:24 2025]
+localrule plot_quals:
+    input: calls/all.vcf
+    output: plots/quals.svg
+    jobid: 1
+    reason: Missing output files: plots/quals.svg
+    resources: tmpdir=/tmp
+
+RuleException:
+CalledProcessError in file /home/bigboy/Documents/GitHub/Frankies/Frankies/Practice/Snakemake/Snakefile, line 52:
+Command 'set -euo pipefail;  /home/bigboy/Documents/GitHub/Frankies/Frankies/.venv/bin/python /home/bigboy/Documents/GitHub/Frankies/Frankies/Practice/Snakemake/.snakemake/scripts/tmpahnuyix9.plot-quals.py' returned non-zero exit status 1.
+[Mon Jan 20 21:00:25 2025]
+Error in rule plot_quals:
+    jobid: 1
+    input: calls/all.vcf
+    output: plots/quals.svg
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-01-20T210024.832006.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

@@ -1,0 +1,1 @@
+Guide Followed from : https://snakemake.readthedocs.io/en/stable/tutorial/basics.html

@@ -1,0 +1,6 @@
+host: bigboy
+Building DAG of jobs...
+MissingInputException in rule all in file /home/bigboy/Documents/GitHub/Frankies/Frankies/pipeline.txt, line 1:
+Missing input files for rule all:
+    affected files:
+        helloworld.txt

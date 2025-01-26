@@ -1,0 +1,31 @@
+rule all:
+    input: "Scripts/6_postprocess/helloworld.txt"
+
+rule frank_preprocess:
+    output: "Scripts/1_preprocess/helloworld.txt"
+    shell: "echo Hello World > Scripts/1_preprocess/helloworld.txt"
+
+rule frank_folding:
+    input: "Scripts/1_preprocess/helloworld.txt"
+    output: "Scripts/2_folding/helloworld.txt"
+    shell: "echo Hello World > Scripts/2_folding/helloworld.txt"
+
+rule frank_diffusion:
+    input: "Scripts/2_folding/helloworld.txt"
+    output: "Scripts/3_diffusion/helloworld.txt"
+    shell: "echo Hello World > Scripts/3_diffusion/helloworld.txt"
+
+rule frank_docking:
+    input: "Scripts/3_diffusion/helloworld.txt"
+    output: "Scripts/4_docking/helloworld.txt"
+    shell: "echo Hello World > Scripts/4_docking/helloworld.txt"
+
+rule frank_dynamics:
+    input: "Scripts/4_docking/helloworld.txt"
+    output: "Scripts/5_dynamics/hello/world.txt"
+    shell: "echo Hello World > Scripts/5_dynamics/hello/world.txt"
+
+rule frank_postprocess:
+    input: "Scripts/5_dynamics/hello/world.txt"
+    output: "Scripts/6_postprocess/helloworld.txt"
+    shell: "echo Hello World > Scripts/6_postprocess/helloworld.txt"

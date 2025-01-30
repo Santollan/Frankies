@@ -3,12 +3,31 @@ rule all:
 
 rule frank_preprocess:
     output: "Scripts/1_preprocess/helloworld.txt"
-    shell: "echo Hello World > Scripts/1_preprocess/helloworld.txt"
+    shell: "echo hello_frankie > Scripts/1_preprocess/helloworld.txt"
+
+import os
 
 rule frank_folding:
-    input: "Scripts/1_preprocess/helloworld.txt"
-    output: "Scripts/2_folding/helloworld.txt"
-    shell: "echo Hello World > Scripts/2_folding/helloworld.txt"
+    input:
+        seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
+        output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
+    output:
+        "outputs/3_diffusion/structure.pdb"
+    shell: """      
+        docker run -it \
+            --volume {input.seq}:/root/af_input \
+            --volume {input.output_model}:/root/af_output \
+            --volume /media/ssd2/Projects/Alphafold/Alphafold_weights:/root/models \ #need to add a way to make this dynamic 
+            --volume /media/ssd2/Projects/Alphafold/Alphafold_DB:/root/public_databases \ #Same as above --> thinking we can can a config file. Users input locations.
+            --gpus all \
+            alphafold3 \
+            python run_alphafold.py \
+            --json_path=/root/af_input/alphafold_input.json \
+            --model_dir=/root/models \
+            --output_dir=/root/af_output
+    """
+
+
 
 rule frank_diffusion:
     input: "Scripts/2_folding/helloworld.txt"
@@ -22,10 +41,11 @@ rule frank_docking:
 
 rule frank_dynamics:
     input: "Scripts/4_docking/helloworld.txt"
-    output: "Scripts/5_dynamics/hello/world.txt"
-    shell: "echo Hello World > Scripts/5_dynamics/hello/world.txt"
+    output: "Scripts/5_dynamics/hello_world.txt"  
+    shell: "echo Hello World > Scripts/5_dynamics/hello_world.txt"
 
 rule frank_postprocess:
-    input: "Scripts/5_dynamics/hello/world.txt"
+    input: "Scripts/5_dynamics/hello_world.txt"  
     output: "Scripts/6_postprocess/helloworld.txt"
     shell: "echo Hello World > Scripts/6_postprocess/helloworld.txt"
+

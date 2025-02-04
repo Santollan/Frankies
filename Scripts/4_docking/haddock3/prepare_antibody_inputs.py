@@ -1,7 +1,7 @@
 from pymol import cmd
 from random import sample
 # import pandas as pd
-import biopandas.pdb as pd
+# import biopandas.pdb as pd
 from biopandas.pdb import PandasPdb
 import numpy as np
 from abnumber import Chain
@@ -108,8 +108,9 @@ def prepare_antibody_structure(file, output_file, H_chain_id="A", L_chain_id="B"
     cmd.reinitialize('everything')
 
 
-
+##########
 ## Main Function
+##########
 if __name__ == '__main__':
     ## Set up logging
     logging.basicConfig(level=logging.INFO)

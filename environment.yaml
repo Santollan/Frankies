@@ -1,0 +1,13 @@
+name: frankies
+channels:
+  - conda-forge
+  - schrodinger
+  - bioconda
+dependencies:
+- python>=3.12
+- pip
+- pymol-bundle
+- numpy
+- pandas
+- biopandas
+- abnumber

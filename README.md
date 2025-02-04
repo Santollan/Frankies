@@ -1,9 +1,9 @@
 # Frankies
-Scalable, AI_Based Antibody Design 
+Scalable, AI-Based Antibody Design Pipeline 
 
 
 Snakemake Commands -
 
-## Run snakemake pipeline
+## Run Snakemake Pipeline
 
 ```snakemake --snakefile pipeline.txt```

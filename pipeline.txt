@@ -12,7 +12,7 @@ rule frank_folding:
         seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
         output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
     output:
-        "outputs/3_diffusion/structure.pdb"
+        "outputs/3_diffusion/structure.pdb" #need to make adjustment to this
     shell: """      
         docker run -it \
             --volume {input.seq}:/root/af_input \

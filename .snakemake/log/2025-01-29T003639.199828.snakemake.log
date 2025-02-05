@@ -20,3 +20,12 @@ localrule frank_folding:
     reason: Forced execution
     resources: tmpdir=/tmp
 
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule frank_folding in file /home/bigboy/Documents/GitHub/Frankies/Frankies/pipeline.txt, line 10:
+Job 0 completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+outputs/3_diffusion/structure.pdb (missing locally, parent dir contents: oprep2)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-01-29T003639.199828.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

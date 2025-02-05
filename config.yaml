@@ -1,0 +1,18 @@
+# config.yaml
+
+# Input data location
+data:
+  processed: "/home/bigboy/Documents/GitHub/Frankies/Frankies/data/processed/3_diffusion/af_input" #"/path/to/data/processed/3_diffusion/af_input"
+
+# Output directory for models and results
+output:
+  pdb: "outputs/3_diffusion/structure.pdb" #"/path/to/outputs/3_diffusion/structure.pdb"
+
+# Directories for Alphafold and required databases
+alphafold:
+  weights: "/media/ssd2/Projects/Alphafold/Alphafold_weights" #"/path/to/Alphafold_weights"
+  databases: "/media/ssd2/Projects/Alphafold/Alphafold_DB"  #"/path/to/Alphafold_DB"
+
+# GPU setting (optional for dynamic configuration)
+gpus: "all"
+

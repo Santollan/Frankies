@@ -1,3 +1,6 @@
+import os
+configfile: "config.yaml"
+
 rule all:
     input: "Scripts/6_postprocess/helloworld.txt"
 
@@ -5,29 +8,26 @@ rule frank_preprocess:
     output: "Scripts/1_preprocess/helloworld.txt"
     shell: "echo hello_frankie > Scripts/1_preprocess/helloworld.txt"
 
-import os
 
 rule frank_folding:
     input:
         seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
         output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
     output:
-        "outputs/3_diffusion/structure.pdb" #need to make adjustment to this
+        config["output"]["pdb"] # Dynamic output path
     shell: """      
         docker run -it \
             --volume {input.seq}:/root/af_input \
             --volume {input.output_model}:/root/af_output \
-            --volume /media/ssd2/Projects/Alphafold/Alphafold_weights:/root/models \ #need to add a way to make this dynamic 
-            --volume /media/ssd2/Projects/Alphafold/Alphafold_DB:/root/public_databases \ #Same as above --> thinking we can can a config file. Users input locations.
-            --gpus all \
+            --volume {config[alphafold][weights]}:/root/models \
+            --volume {config[alphafold][databases]}:/root/public_databases \
+            --gpus {config[gpus]} \
             alphafold3 \
             python run_alphafold.py \
             --json_path=/root/af_input/alphafold_input.json \
             --model_dir=/root/models \
             --output_dir=/root/af_output
     """
-
-
 
 rule frank_diffusion:
     input: "Scripts/2_folding/helloworld.txt"

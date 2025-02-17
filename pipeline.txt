@@ -8,6 +8,12 @@ rule frank_preprocess:
     output: "Scripts/1_preprocess/helloworld.txt"
     shell: "echo hello_frankie > Scripts/1_preprocess/helloworld.txt"
 
+rule frank_diffusion:
+    input: 
+        prepare_evodiff= os.path.join(os.getcwd(), "Scripts/2_diffusion/prepare_evodiff.py"),
+        Chain=config["Evo"]["H_Chain"]
+    output: "Scripts/3_diffusion/helloworld.txt"
+    shell: "conda activate evodiff && python3 {input.prepare_evodiff} --chain {input.Chain}" #this will need to trigger the prepare_evodiff.py
 
 rule frank_folding:
     input:
@@ -29,10 +35,7 @@ rule frank_folding:
             --output_dir=/root/af_output
     """
 
-rule frank_diffusion:
-    input: "Scripts/2_folding/helloworld.txt"
-    output: "Scripts/3_diffusion/helloworld.txt"
-    shell: "echo Hello World > Scripts/3_diffusion/helloworld.txt"
+
 
 rule frank_docking:
     input: "Scripts/3_diffusion/helloworld.txt"

@@ -54,7 +54,7 @@ def get_cdr_resn(protein_atoms, scheme):
     cdr1_start_pos = seq.find(cdr1_seq) + seq_start_pos
     cdr1_end_pos = cdr1_start_pos + len(cdr1_seq) - 1
     cdr1_resn = [str(n) for n in range(cdr1_start_pos, cdr1_end_pos+1)]
-
+    print(cdr1_resn)
     cdr2_seq = chain.cdr2_seq
     cdr2_start_pos = seq.find(cdr2_seq) + seq_start_pos
     cdr2_end_pos = cdr2_start_pos + len(cdr2_seq) - 1

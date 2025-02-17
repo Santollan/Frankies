@@ -1,5 +1,12 @@
 # config.yaml
 
+#EvoDiff
+
+Evo:
+  H_Chain: "/home/bigboy/Desktop/test junk/evodiff/PD1_Hchains_aligned.a3m" #path to H_Chain.a3m
+  L_Chain: "" #path to L_Chain.a3m
+
+
 # Input data location
 data:
   processed: "/home/bigboy/Documents/GitHub/Frankies/Frankies/data/processed/3_diffusion/af_input" #"/path/to/data/processed/3_diffusion/af_input"

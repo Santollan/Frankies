@@ -3,6 +3,7 @@
 #EvoDiff
 
 Evo:
+  Path_to_conda_evodiff: "" #Can we assume they have evodiff env setup and use the dir to trigger the env?
   H_Chain: "/home/bigboy/Desktop/test junk/evodiff/PD1_Hchains_aligned.a3m" #path to H_Chain.a3m
   L_Chain: "" #path to L_Chain.a3m
 

@@ -1,3 +1,7 @@
+
+python prepare_sf3_json.py --fasta_path "" --output_path fold_input.json
+
+
 docker run -it \
     --volume $PWD/data/processed/3_diffusion/af_input:/root/af_input \
     --volume $PWD/data/processed/3_diffusion/af_output :/root/af_output \

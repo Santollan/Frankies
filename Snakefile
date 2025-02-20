@@ -15,6 +15,16 @@ rule frank_diffusion:
     output: "Scripts/3_diffusion/helloworld.txt"
     shell: "conda activate evodiff && python3 {input.prepare_evodiff} --chain {input.Chain}" #this will need to trigger the prepare_evodiff.py
 
+rule antigen_folding:
+    input:
+        seq=config["main"]["antigen"]["sequence"]
+    output:
+        structure=config["main"]["antigen"]["structure"] # Dynamic output path
+
+    shell: """
+        run_af3.sh --fasta_path {input.seq} --output_path {output.structure}
+    """
+
 rule frank_folding:
     input:
         seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),

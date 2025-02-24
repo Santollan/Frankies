@@ -37,11 +37,11 @@ def prepare_antigen_structure(file, output_file, resn_offset = 1000):
     cmd.reinitialize('everything')
 
 
-def find_random_surface_residues(file, percentage = 0.25):
+def find_random_surface_residues(input_structure, percentage = 0.25):
     """
     Find a random subset of surface residues from a PDB file.
     """
-    cmd.load(file)
+    cmd.load(input_structure)
     ## Finds atoms on the surface of a protein
     ## Logic from: https://pymolwiki.org/index.php/FindSurfaceResidues
     cutoff = 2.0
@@ -60,9 +60,9 @@ def find_random_surface_residues(file, percentage = 0.25):
 
     k = int(len(surface_residues) * percentage)
 
-    surface_residues_sample = list(sample(surface_residues, k))
+    surface_residues_sample = list(sample(sorted(surface_residues), k))
     surface_residues_sample = [int(x) for x in surface_residues_sample]
-    surface_residues_sample.sort()
+    # surface_residues_sample.sort()
 
     ## Reintialize Everything
     cmd.reinitialize(what='everything')
@@ -93,9 +93,10 @@ if __name__ == '__main__':
     logging.info(f"Finding random surface residues")
     try:
         surface_residues = find_random_surface_residues(
-            output_pdb_path,
+            input_structure=output_pdb_path,
             percentage=percentage
             )
+        logging.info(f"Random surface residues found: {surface_residues}")
     except Exception as e:
         logging.error(f"Error finding random surface residues: {e}")
 

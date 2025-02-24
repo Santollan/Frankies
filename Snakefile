@@ -4,53 +4,114 @@ configfile: "config.yaml"
 rule all:
     input: "Scripts/6_postprocess/helloworld.txt"
 
-rule frank_preprocess:
-    output: "Scripts/1_preprocess/helloworld.txt"
-    shell: "echo hello_frankie > Scripts/1_preprocess/helloworld.txt"
-
-rule frank_diffusion:
-    input: 
-        prepare_evodiff= os.path.join(os.getcwd(), "Scripts/2_diffusion/prepare_evodiff.py"),
-        Chain=config["Evo"]["H_Chain"]
-    output: "Scripts/3_diffusion/helloworld.txt"
-    shell: "conda activate evodiff && python3 {input.prepare_evodiff} --chain {input.Chain}" #this will need to trigger the prepare_evodiff.py
-
-rule antigen_folding:
-    input:
-        seq=config["main"]["antigen"]["sequence"]
+rule initialize:
+    params:
+        experiment_dir = config["main"]["experiment_dir"],
     output:
-        structure=config["main"]["antigen"]["structure"] # Dynamic output path
+       "{params.experiment_dir}/frankies.log"
+    run: 
+        shell("mkdir -p {params.experiment_dir}"),
+        shell("echo \"Frankies pipeline started at: $(date)\" > {output}")
 
+# rule frank_preprocess:
+#     output: "Scripts/1_preprocess/helloworld.txt"
+#     shell: "echo hello_frankie > Scripts/1_preprocess/helloworld.txt"
+
+# rule frank_diffusion:
+#     input: 
+#         # prepare_evodiff= os.path.join(os.getcwd(), "Scripts/2_diffusion/prepare_evodiff.py"),
+#         # Chain=config["Evo"]["H_Chain"]
+#     output: "Scripts/3_diffusion/helloworld.txt"
+#     shell: "conda activate evodiff && python3 {input.prepare_evodiff} --chain {input.Chain}" #this will need to trigger the prepare_evodiff.py
+
+# rule antigen_folding:
+#     input:
+#         seq=config["main"]["antigen"]["sequence"]
+#     output:
+#         structure=config["main"]["antigen"]["structure"] # Dynamic output path
+
+#     shell: """
+#         run_af3.sh --fasta_path {input.seq} --output_path {output.structure}
+#     """
+
+# rule frank_folding:
+#     input:
+#         seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
+#         output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
+#     output:
+#         config["output"]["pdb"] # Dynamic output path
+#     shell: """      
+#         docker run -it \
+#             --volume {input.seq}:/root/af_input \
+#             --volume {input.output_model}:/root/af_output \
+#             --volume {config[alphafold][weights]}:/root/models \
+#             --volume {config[alphafold][databases]}:/root/public_databases \
+#             --gpus {config[gpus]} \
+#             alphafold3 \
+#             python run_alphafold.py \
+#             --json_path=/root/af_input/alphafold_input.json \
+#             --model_dir=/root/models \
+#             --output_dir=/root/af_output
+#     """
+
+
+rule prepare_haddock3:
+    params:
+        experiment_dir = config["main"]["experiment_dir"],
+        antibody_pdb = config["docking"]["haddock3"]["antibody_pdb"],
+        antigen_pdb = config["docking"]["haddock3"]["antigen_pdb"],
+        prepared_antibody_pdb = config["docking"]["haddock3"]["prepared_antibody_pdb"],
+        prepared_antigen_pdb = config["docking"]["haddock3"]["prepared_antigen_pdb"],
+        air_file = config["docking"]["haddock3"]["air_file"],
+        config_file = config["docking"]["haddock3"]["config_file"],
+        n_cores=config["main"]["cores"]
+    # input:
+        ## Folding outputs will be referenced here
+    output: 
+        config["main"]["experiment_dir"] + "/4_docking/" + config["docking"]["haddock3"]["config_file"]
+    log:
+        config["main"]["experiment_dir"] + "/frankies.log"
     shell: """
-        run_af3.sh --fasta_path {input.seq} --output_path {output.structure}
+        ## Run antigen preparation
+        python Scripts/4_docking/haddock3/prepare_antigen_inputs.py \
+            --input_pdb_path {params.experiment_dir}/3_folding/{params.antigen_pdb} \
+            --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
+            --resn_offset 1000 \
+            --percentage 0.25 && \
+
+        ## Run antibody preparation
+        python Scripts/4_docking/haddock3/prepare_antibody_inputs.py \
+            --input_pdb_path {params.experiment_dir}/3_folding/{params.antibody_pdb} \
+            --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
+            --H_chain_id A \
+            --L_chain_id B \
+            --L_resn_offset 1000 && \
+
+        ## Prepare experiment
+        python Scripts/4_docking/haddock3/create_haddock_experiment.py \
+            --experiment_path {params.experiment_dir}/4_docking \
+            --antibody_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
+            --antigen_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
+            --active_antibody_path {params.experiment_dir}/4_docking/cdr_residues.txt \
+            --active_antigen_path {params.experiment_dir}/4_docking/surface_residues.txt \
+            --n_cores {params.n_cores} \
+            --config_template_path Scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
     """
 
-rule frank_folding:
+rule run_haddock3:
+    params:
+        experiment_dir=config["main"]["experiment_dir"],
+        config_file=config['docking']['haddock3']['config_file'],
     input:
-        seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
-        output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
+        config_file=config["main"]["experiment_dir"] + "/4_docking/" + config['docking']['haddock3']['config_file'],
     output:
-        config["output"]["pdb"] # Dynamic output path
-    shell: """      
-        docker run -it \
-            --volume {input.seq}:/root/af_input \
-            --volume {input.output_model}:/root/af_output \
-            --volume {config[alphafold][weights]}:/root/models \
-            --volume {config[alphafold][databases]}:/root/public_databases \
-            --gpus {config[gpus]} \
-            alphafold3 \
-            python run_alphafold.py \
-            --json_path=/root/af_input/alphafold_input.json \
-            --model_dir=/root/models \
-            --output_dir=/root/af_output
+        config["main"]["experiment_dir"] + "/4_docking/HADDOCK_DONE"
+    shell: """
+        docker run -v {params.experiment_dir}/4_docking:/mnt/experiment --rm cford38/haddock:3 /bin/bash -c \
+            "cd /mnt/experiment && \
+            haddock3 {params.config_file} && \
+            touch HADDOCK_DONE"
     """
-
-
-
-rule frank_docking:
-    input: "Scripts/3_diffusion/helloworld.txt"
-    output: "Scripts/4_docking/helloworld.txt"
-    shell: "echo Hello World > Scripts/4_docking/helloworld.txt"
 
 rule frank_dynamics:
     input: "Scripts/4_docking/helloworld.txt"

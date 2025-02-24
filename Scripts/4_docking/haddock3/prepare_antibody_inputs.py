@@ -5,6 +5,8 @@ from random import sample
 from biopandas.pdb import PandasPdb
 import numpy as np
 from abnumber import Chain
+import logging
+from pathlib import Path
 
 import argparse
 
@@ -132,10 +134,10 @@ if __name__ == '__main__':
     except Exception as e:
         logging.error(f"Error preparing antibody structure: {e}")
 
-    ## Get a list of random surface residues
-    logging.info(f"Finding random surface residues")
+    ## Get a list of CDR residues
+    logging.info(f"Finding CDR loop residues")
     try:
-        surface_residues = find_cdr_residues(
+        cdr_residues = find_cdr_residues(
             output_pdb_path,
             L_resn_offset=L_resn_offset
             )
@@ -147,6 +149,6 @@ if __name__ == '__main__':
     logging.info(f"Writing CDR residues to file: {output_residues_file}")
     try:
         with open(output_residues_file, 'w') as f:
-            f.write(','.join(str(res) for res in surface_residues))
+            f.write(','.join(str(res) for res in cdr_residues))
     except Exception as e:
         logging.error(f"Error writing CDR residues to file: {e}")

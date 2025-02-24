@@ -13,6 +13,7 @@ parser.add_argument("--antigen_pdb_path", help="Path to the antigen PDB file.")
 parser.add_argument("--active_antibody_path", help="Path to comma-separated list of active residues in the antibody PDB file.")
 parser.add_argument("--active_antigen_path", help="Path to comma-separated list of active residues in the antigen PDB file.")
 parser.add_argument("--config_template_path", help="Path to template config file.")
+parser.add_argument("--n_cores", help="Number of CPU cores to use")
 
 args = parser.parse_args()
 
@@ -22,6 +23,7 @@ antigen_pdb_path = args.antigen_pdb_path
 active_antibody_path = args.active_antibody_path
 active_antigen_path = args.active_antigen_path
 config_template_path = args.config_template_path
+n_cores = args.n_cores
 
 
 ## Copy the antibody and antigen PDB files to the experiment directory
@@ -68,11 +70,13 @@ def write_ambig_air_file(active1, passive1, active2, passive2, segid1='A', segid
     ## File will be closed automatically when exiting the 'with' block
 
 def create_config(
+      output_dir = './output',
       antibody_pdb = 'antibody.pdb',
-      antigen_pdb = 'antibody.pdb',
+      antigen_pdb = 'antigen.pdb',
       # reference_pdb = 'refD.pdb',
-      ambig_fname = "ambig.tbl",
-      # unambig_fname = "unambig.tbl",
+      ambig_air = "ambig.tbl",
+      # unambig_air = "unambig.tbl",
+      n_cores = 36,
       template_file = 'antibody_antigen_template_custom.cfg',
       output_file = 'config.cfg'
                   ):
@@ -83,16 +87,31 @@ def create_config(
     config.read(template_file)
 
     ## Update the configuration
-    config['main'] = {'run_dir': '"./output"',
-                      'mode': '"local"',
-                      'ncores': 36,
-                     #  'concat':  5,
-                     #  'queue_limit': 100,
-                      'molecules': [
-                            antibody_pdb,
-                            antigen_pdb
-                            ]}
- 
+    config['main'] = {
+        'run_dir': '"./output"',
+        # 'run_dir': output_dir,
+        'mode': '"local"',
+        'ncores': n_cores,
+        #  'concat':  5,
+        #  'queue_limit': 100,
+        'molecules': [
+            "antibody.pdb",
+            # antibody_pdb,
+            "antigen.pdb"
+            # antigen_pdb
+            ]}
+    # config['rigidbody'] = {
+    #     'ambig_fname': ambig_air
+    #     }
+    
+    # config['flexref'] = {
+    #     'ambig_fname': ambig_air
+    #     }
+    
+    # config['mdref'] = {
+    #     'ambig_fname': ambig_air
+    #     }
+
     ## Write the configuration to a file
     with open(output_file, 'w') as configfile:
         config.write(configfile)
@@ -123,11 +142,11 @@ if __name__ == '__main__':
     Path(experiment_path).parent.mkdir(parents=True, exist_ok=True)
 
     ## Copy the antibody and antigen PDB files to the experiment directory
-    logging.info(f"Copying antibody and antigen PDB files to experiment directory...")
-    try:
-        copy_experiment_files(antibody_pdb_path, antigen_pdb_path, experiment_path)
-    except Exception as e:
-        logging.error(f"Error copying PDB files to experiment directory: {e}")
+    # logging.info(f"Copying antibody and antigen PDB files to experiment directory...")
+    # try:
+    #     copy_experiment_files(antibody_pdb_path, antigen_pdb_path, experiment_path)
+    # except Exception as e:
+    #     logging.error(f"Error copying PDB files to experiment directory: {e}")
 
     ## Prepare the AIR file
     logging.info(f"Preparing AIR file...")
@@ -150,9 +169,11 @@ if __name__ == '__main__':
     logging.info(f"Preparing config file...")
     try:
         create_config(
+          output_dir = f"{experiment_path}/output",
           antibody_pdb = f"{experiment_path}/antibody.pdb",
-          antigen_pdb = f"{experiment_path}/antibody.pdb",
-          ambig_fname = f"{experiment_path}ambig.tbl",
+          antigen_pdb = f"{experiment_path}/antigen.pdb",
+          ambig_air = f"{experiment_path}/ambig.tbl",
+          n_cores = n_cores,
           template_file = config_template_path,
           output_file = f"{experiment_path}/config.cfg"
           )

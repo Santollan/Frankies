@@ -24,6 +24,4 @@ snakemake --snakefile Snakefile
 Specific rule:
 ```bash
 snakemake --force prepare_haddock3
-
-snakemake --allowed-rules prepare_haddock3
 ```

@@ -4,10 +4,11 @@ channels:
   - schrodinger
   - bioconda
 dependencies:
-- python>=3.12
+- python=3.12
 - pip
 - snakemake
 - pymol-bundle
+- pyqt
 - numpy
 - pandas
 - biopandas

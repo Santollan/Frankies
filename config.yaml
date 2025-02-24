@@ -1,5 +1,10 @@
 # config.yaml
 
+main:
+  experiment_dir: "./experiments/test"
+  cores: 4 # Number of CPU cores to use
+  gpus: "all" # GPU setting (optional for dynamic configuration)
+
 #EvoDiff
 
 Evo:
@@ -16,11 +21,19 @@ data:
 output:
   pdb: "outputs/3_diffusion/structure.pdb" #"/path/to/outputs/3_diffusion/structure.pdb"
 
-# Directories for Alphafold and required databases
-alphafold:
-  weights: "/media/ssd2/Projects/Alphafold/Alphafold_weights" #"/path/to/Alphafold_weights"
-  databases: "/media/ssd2/Projects/Alphafold/Alphafold_DB"  #"/path/to/Alphafold_DB"
 
-# GPU setting (optional for dynamic configuration)
-gpus: "all"
+folding:
+  alphafold3:
+    weights_dir: "/media/ssd2/Projects/Alphafold/Alphafold_weights" #"/path/to/Alphafold_weights"
+    databases_dir: "/media/ssd2/Projects/Alphafold/Alphafold_DB"  #"/path/to/Alphafold_DB"
 
+
+
+docking:
+  haddock3:
+    antigen_pdb: "2vir_chainC_antigen.pdb" ## File name of the antigen PDB file
+    antibody_pdb: "2vir_chainsAB_antibody.pdb" ## File name of the antibody PDB file
+    prepared_antigen_pdb: "antigen.pdb"
+    prepared_antibody_pdb: "antibody.pdb"
+    air_file: ambig.tbl
+    config_file: config.cfg

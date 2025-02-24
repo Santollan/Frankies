@@ -2,8 +2,28 @@
 Scalable, AI-Based Antibody Design Pipeline 
 
 
-Snakemake Commands -
+
+
+## Setup Conda Environment
+```bash
+conda env create -f environment.yml
+conda activate frankies
+
+# conda deactivate
+# conda env update
+```
+
 
 ## Run Snakemake Pipeline
 
-```snakemake --snakefile pipeline.txt```
+Entire pipeline:
+```bash
+snakemake --snakefile Snakefile
+```
+
+Specific rule:
+```bash
+snakemake --force prepare_haddock3
+
+snakemake --allowed-rules prepare_haddock3
+```

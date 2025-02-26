@@ -31,8 +31,8 @@ folding:
 
 docking:
   haddock3:
-    antigen_pdb: "2vir_chainC_antigen.pdb" ## File name of the antigen PDB file
-    antibody_pdb: "2vir_chainsAB_antibody.pdb" ## File name of the antibody PDB file
+    antigen_pdb: "2vir_chainC_antigen.pdb" ## Will be removed when the AF3 step is done.
+    antibody_pdb: "2vir_chainsAB_antibody.pdb" ## Will be removed when the AF3 step is done.
     prepared_antigen_pdb: "antigen.pdb"
     prepared_antibody_pdb: "antibody.pdb"
     air_file: ambig.tbl

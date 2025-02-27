@@ -4,6 +4,7 @@ main:
   experiment_dir: "./experiments/test"
   cores: 4 # Number of CPU cores to use
   gpus: "all" # GPU setting (optional for dynamic configuration)
+  container_engine: "docker" # Container engine to use (docker or singularity)
 
 #EvoDiff
 

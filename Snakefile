@@ -24,14 +24,15 @@ rule run_evodiff:
     input:
         Hchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
     output:
-        "{params.experiment_dir}/2_diffusion/EVODIFF_DONE"
+        "{params.experiment_dir}/2_diffusion/Hchains_aligned.a3m.json"
     shell:
         """
         {params.container_engine} run --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 \
     -v ./experiments/test/2_diffusion:/workspace/evodiff/frankie/experiment \
     -v ./Scripts/2_diffusion:/workspace/evodiff/frankie \
     -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
-    "python3 /workspace/evodiff/frankie/prepare_evodiff.py --chain /workspace/evodiff/frankie/experiment/Hchains_aligned.a3m"
+    "python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Hchains_aligned.a3m && \
+    python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Lchains_aligned.a3m"
         """
 
 

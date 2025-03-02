@@ -1,14 +1,19 @@
 import subprocess
 import argparse
+import os
 parser = argparse.ArgumentParser()
 
-parser.add_argument("--chain", help="The file location of the Chain")
+parser.add_argument("--path", help="The file path of the Chain")
+parser.add_argument("--chain", help="The file name of the Chain")
 
 
 
 args = parser.parse_args()
 
-file_path = args.chain
+# Properly join path and filename using os.path.join to ensure cross-platform compatibility
+file_path = os.path.join(args.path, args.chain)
+
+print("Full file path:", file_path)
 
 
 def count_sequences_and_max_length(file_path):
@@ -43,7 +48,8 @@ def run_evo_command(num_sequences, max_length):
         "python3", "frankie/run_evodiff.py",
         "--sequence_count", str(num_sequences),
         "--max_sequence", str(max_length),
-        "--chain", file_path
+        "--path", args.path,
+        "--chain", args.chain,
     ]
     
     # Run the command

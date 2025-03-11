@@ -14,23 +14,27 @@ def generate_alphafold_json(hchain_file, lchain_file, output_file):
 
     # Create the structure for AlphaFold3 JSON
     alphafold_data = {
-        "name": "Antibody_structure",
-        "modelSeeds": [],
-        "sequences": [
-            {
-                "proteinChain": {
-                    "sequence": hchain_sequence,
-                    "count": 1
-                }
-            },
-            {
-                "proteinChain": {
-                    "sequence": lchain_sequence,
-                    "count": 1
-                }
-            }
-        ]
+  "name": "Antibody",
+  "modelSeeds": [
+    1234
+  ],
+  "sequences": [
+    {
+      "protein": {
+        "id": "H",
+        "sequence": hchain_sequence.strip(),
+      }
+    },
+    {
+      "protein": {
+        "id": "L",
+        "sequence": lchain_sequence.strip(),
+      }
     }
+  ],
+  "dialect": "alphafold3",
+  "version": 1
+}
     
     # Save the generated data into a new JSON file
     with open(output_file, 'w') as f:
@@ -42,6 +46,6 @@ def generate_alphafold_json(hchain_file, lchain_file, output_file):
 # Example usage
 hchain_file = "/Users/nick/Documents/GitHub/Frankies/experiments/test/2_diffusion/Hchains_aligned.a3m.json"
 lchain_file = "/Users/nick/Documents/GitHub/Frankies/experiments/test/2_diffusion/Lchains_aligned.a3m.json"
-output_file = "alphafold_input.json"
+output_file = "/Users/nick/Documents/GitHub/Frankies/experiments/test/3_folding/AlphaFold3/alphafold_input.json"
 
 generate_alphafold_json(hchain_file, lchain_file, output_file)

@@ -11,7 +11,8 @@ rule initialize:
        "{params.experiment_dir}/frankies.log"
     run: 
         shell("mkdir -p {params.experiment_dir}"),
-        shell("echo \"Frankies pipeline started at: $(date)\" > {output}")
+        shell("echo \"Frankies pipeline started at: $(date)\" > {output}"),
+        shell("docker info || echo 'Docker is not running. Please start Docker Desktop.'")
 
 # rule frank_preprocess:
 #     output: "Scripts/1_preprocess/helloworld.txt"
@@ -33,8 +34,22 @@ rule run_evodiff:
     -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
     "python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Hchains_aligned.a3m && \
     python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Lchains_aligned.a3m"
+        sleep 5
         """
 
+rule run_igFold:
+    params:
+        experiment_dir=config["main"]["experiment_dir"],
+    input:
+        Hchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
+        Lchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["L_chain"]   # path to Lchain file
+    output:
+        "{params.experiment_dir}/3_folding/lgFold/my_antibody.pdb"
+    shell:
+        """
+        python3 ./Scripts/3_folding/lgFold/run_lgFold.py --input {input.Hchain_file} --output experiments/test/3_folding/lgFold/
+
+        """
 
 
 #     input: 

@@ -55,7 +55,7 @@ output_data = {
 }
 
 # Save the output data to a .json file
-output_file_path = f'/workspace/evodiff/frankie/experiment/{args.chain}.json'  # Corrected to use f-string
+output_file_path = f'/workspace/evodiff/frankie/experiment/{args.chain}.json'   
 with open(output_file_path, 'w') as json_file:
     json.dump(output_data, json_file, indent=4)
 

@@ -21,21 +21,41 @@ rule initialize:
 rule run_evodiff:
     params:
         experiment_dir=config["main"]["experiment_dir"],
+        exeriment_name=config["main"]["experiment_name"],
         container_engine=config["main"]["container_engine"],
+        H_chain=config["diffusion"]["evodiff"]["H_chain"],
+        L_chain=config["diffusion"]["evodiff"]["L_chain"],
+        H_chain_file=config["main"]["experiment_dir"] + "/01_inputs/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
+        L_chain_file=config["main"]["experiment_dir"] + "/01_inputs/" + config["diffusion"]["evodiff"]["L_chain"],  # path to Lchain file  
+
+ 
     input:
-        Hchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
+        Hchain_file=config["main"]["experiment_dir"] + "/01_inputs/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
     output:
-        "{params.experiment_dir}/2_diffusion/Hchains_aligned.a3m.json"
+        config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",
+        config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json",
     shell:
         """
         {params.container_engine} run --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 \
-    -v ./experiments/test/2_diffusion:/workspace/evodiff/frankie/experiment \
+    -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment \
     -v ./Scripts/2_diffusion:/workspace/evodiff/frankie \
     -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
-    "python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Hchains_aligned.a3m && \
-    python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Lchains_aligned.a3m"
+    " conda install -c bioconda abnumber -y && \
+    python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.H_chain} && \
+    python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.L_chain} "
         sleep 5
         """
+
+
+    #     """
+    #     {params.container_engine} run --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 \
+    # -v ./experiments/test/2_diffusion:/workspace/evodiff/frankie/experiment \
+    # -v ./Scripts/2_diffusion:/workspace/evodiff/frankie \
+    # -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
+    # "python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Hchains_aligned.a3m && \
+    # python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Lchains_aligned.a3m"
+    #     sleep 5
+    #     """
 
 rule run_igFold:
     params:

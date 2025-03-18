@@ -5,9 +5,9 @@ main:
   experiment_dir: "./experiments/anti_HA_test"
   cores: 4 # Number of CPU cores to use
   gpus: "all" # GPU setting (optional for dynamic configuration)
-  container_engine: "docker" # Container engine to use (docker or singularity)
+  container_engine: "sudo docker" # Container engine to use (docker or singularity)
 
-#EvoDiff
+# EvoDiff configuration
 diffusion:
   evodiff:
     H_chain: "anti-HA_antibodies_Hchains_aligned.a3m"  # Correct the key if needed here
@@ -19,15 +19,16 @@ data:
   processed: "/home/bigboy/Documents/GitHub/Frankies/Frankies/data/processed/3_diffusion/af_input" #"/path/to/data/processed/3_diffusion/af_input"
 
 # Output directory for models and results
-output:
-  pdb: "outputs/3_diffusion/structure.pdb" #"/path/to/outputs/3_diffusion/structure.pdb"
+# output:
+#   pdb: "outputs/3_diffusion/structure.pdb" #"/path/to/outputs/3_diffusion/structure.pdb"
 
-
+# Alphafold3 configuration
 folding:
   alphafold3:
-    weights_dir: "/media/ssd2/Projects/Alphafold/Alphafold_weights" #"/path/to/Alphafold_weights"
-    databases_dir: "/media/ssd2/Projects/Alphafold/Alphafold_DB"  #"/path/to/Alphafold_DB"
-
+    weights_dir: "/media/nsantolla/a4335b57-a351-4a17-a117-4efba087ba3c/Projects/Alphafold/Alphafold_weights" #"/path/to/Alphafold_weights"
+    databases_dir: "/media/nsantolla/a4335b57-a351-4a17-a117-4efba087ba3c/Projects/Alphafold/Alphafold_DB"  #"/path/to/Alphafold_DB"
+    output_dir: "/3_folding/AlphaFold3" #"/path/to/outputs/3_diffusion/af_output"
+    output_name: "/af_output.pdb"
 
 
 docking:

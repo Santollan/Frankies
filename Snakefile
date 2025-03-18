@@ -34,9 +34,10 @@ rule run_evodiff:
     output:
         config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",
         config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json",
-    shell:
+    shell:#--ipc=host
         """
-        {params.container_engine} run --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 \
+        {params.container_engine} run  --ulimit memlock=-1 --ulimit stack=67108864 \
+        --user $(id -u):$(id -g) \
     -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment \
     -v ./Scripts/2_diffusion:/workspace/evodiff/frankie \
     -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
@@ -88,25 +89,37 @@ rule run_igFold:
 #         run_af3.sh --fasta_path {input.seq} --output_path {output.structure}
 #     """
 
-# rule frank_folding:
-#     input:
-#         seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
-#         output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
-#     output:
-#         config["output"]["pdb"] # Dynamic output path
-#     shell: """      
-#         docker run -it \
-#             --volume {input.seq}:/root/af_input \
-#             --volume {input.output_model}:/root/af_output \
-#             --volume {config[alphafold][weights]}:/root/models \
-#             --volume {config[alphafold][databases]}:/root/public_databases \
-#             --gpus {config[gpus]} \
-#             alphafold3 \
-#             python run_alphafold.py \
-#             --json_path=/root/af_input/alphafold_input.json \
-#             --model_dir=/root/models \
-#             --output_dir=/root/af_output
-#     """
+rule frank_folding:
+    params:
+        experiment_dir=config["main"]["experiment_dir"],
+        # input=config["main"]["experiment_dir"] + "/3_diffusion/af_input.json",
+        # weights_dir=config["main"]["experiment_dir"] + ["folding"]["alphafold3"]["weights_dir"],
+        # databases_dir=config["main"]["experiment_dir"] + ["folding"]["alphafold3"]["databases_dir"],
+        # output_dir=config["main"]["experiment_dir"] + ["folding"]["alphafold3"]["output_dir"],
+        # output_name=["folding"]["alphafold3"]["output_name"],
+    input:
+        seq=config["main"]["experiment_dir"] + "/2_diffusion/Evodiff/alphafold_input.json",
+        #seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
+        output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
+    output:
+        output_dir=config["main"]["experiment_dir"] + config["folding"]["alphafold3"]["output_dir"] + config["folding"]["alphafold3"]["output_name"] # Dynamic output path
+    shell: """
+    
+# below is the command to run the alphafold3
+        sudo docker run -it \
+            --volume {input.seq}:/root/af_input \
+            --volume {input.output_model}:/root/af_output \
+            --volume {config[folding][alphafold3][weights_dir]}:/root/models \
+            --volume {config[folding][alphafold3][databases_dir]}:/root/public_databases \
+            --gpus all \
+            alphafold3 \
+            python run_alphafold.py \
+            --json_path=/root/af_input/alphafold_input.json \
+            --model_dir=/root/models \
+            --output_dir=/root/af_output \
+ 
+      
+    """
 
 
 # rule prepare_haddock3:

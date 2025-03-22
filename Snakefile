@@ -119,48 +119,48 @@ rule frank_folding:
     """
 
 
-# rule prepare_haddock3:
-#     params:
-#         experiment_dir = config["main"]["experiment_dir"],
-#         antibody_pdb = config["docking"]["haddock3"]["antibody_pdb"],
-#         antigen_pdb = config["docking"]["haddock3"]["antigen_pdb"],
-#         prepared_antibody_pdb = config["docking"]["haddock3"]["prepared_antibody_pdb"],
-#         prepared_antigen_pdb = config["docking"]["haddock3"]["prepared_antigen_pdb"],
-#         air_file = config["docking"]["haddock3"]["air_file"],
-#         config_file = config["docking"]["haddock3"]["config_file"],
-#         n_cores=config["main"]["cores"]
-#     # input:
-#         ## Folding outputs will be referenced here
-#     output: 
-#         config["main"]["experiment_dir"] + "/4_docking/" + config["docking"]["haddock3"]["config_file"]
-#     log:
-#         config["main"]["experiment_dir"] + "/frankies.log"
-#     shell: """
-#         ## Run antigen preparation
-#         python Scripts/4_docking/haddock3/prepare_antigen_inputs.py \
-#             --input_pdb_path {params.experiment_dir}/3_folding/{params.antigen_pdb} \
-#             --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
-#             --resn_offset 1000 \
-#             --percentage 0.25 && \
+rule prepare_haddock3:
+    params:
+        experiment_dir = config["main"]["experiment_dir"],
+        antibody_pdb = config["docking"]["haddock3"]["antibody_pdb"],
+        antigen_pdb = config["docking"]["haddock3"]["antigen_pdb"],
+        prepared_antibody_pdb = config["docking"]["haddock3"]["prepared_antibody_pdb"],
+        prepared_antigen_pdb = config["docking"]["haddock3"]["prepared_antigen_pdb"],
+        air_file = config["docking"]["haddock3"]["air_file"],
+        config_file = config["docking"]["haddock3"]["config_file"],
+        n_cores=config["main"]["cores"]
+    input:
+        config["main"]["experiment_dir"]+"/4_docking/antibody.pdb"
+    output: 
+        config["main"]["experiment_dir"] + "/4_docking/" + config["docking"]["haddock3"]["config_file"]
+    log:
+        config["main"]["experiment_dir"] + "/frankies.log"
+    shell: """
+        ## Run antigen preparation
+        python Scripts/4_docking/haddock3/prepare_antigen_inputs.py \
+            --input_pdb_path {params.experiment_dir}/3_folding/{params.antigen_pdb} \
+            --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
+            --resn_offset 1000 \
+            --percentage 0.25 && \
 
-#         ## Run antibody preparation
-#         python Scripts/4_docking/haddock3/prepare_antibody_inputs.py \
-#             --input_pdb_path {params.experiment_dir}/3_folding/{params.antibody_pdb} \
-#             --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
-#             --H_chain_id A \
-#             --L_chain_id B \
-#             --L_resn_offset 1000 && \
+        ## Run antibody preparation
+        python Scripts/4_docking/haddock3/prepare_antibody_inputs.py \
+            --input_pdb_path {params.experiment_dir}/3_folding/{params.antibody_pdb} \
+            --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
+            --H_chain_id A \
+            --L_chain_id B \
+            --L_resn_offset 1000 && \
 
-#         ## Prepare experiment
-#         python Scripts/4_docking/haddock3/create_haddock_experiment.py \
-#             --experiment_path {params.experiment_dir}/4_docking \
-#             --antibody_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
-#             --antigen_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
-#             --active_antibody_path {params.experiment_dir}/4_docking/cdr_residues.txt \
-#             --active_antigen_path {params.experiment_dir}/4_docking/surface_residues.txt \
-#             --n_cores {params.n_cores} \
-#             --config_template_path Scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
-#     """
+        ## Prepare experiment
+        python Scripts/4_docking/haddock3/create_haddock_experiment.py \
+            --experiment_path {params.experiment_dir}/4_docking \
+            --antibody_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
+            --antigen_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
+            --active_antibody_path {params.experiment_dir}/4_docking/cdr_residues.txt \
+            --active_antigen_path {params.experiment_dir}/4_docking/surface_residues.txt \
+            --n_cores {params.n_cores} \
+            --config_template_path Scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
+    """
 
 # rule run_haddock3:
 #     params:

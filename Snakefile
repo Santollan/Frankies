@@ -86,18 +86,19 @@ sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit
 rule frank_folding:
     params:
         experiment_dir=config["main"]["experiment_dir"],
-        af3_input_dir=config["main"]["experiment_dir"]+"/3_folding/af_input"
+        af3_input_dir=config["main"]["experiment_dir"]+"/3_folding/af_input",
+        output_pdb=config["main"]["experiment_dir"]+"/4_docking/antibody.pdb"
     input:
         config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"], # path to AlphaFold3 input file
         # config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",  # path to Hchain file
         # config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json", 
         # seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
-        output_model=os.path.join(os.getcwd(), "outputs/3_diffusion"),
+        output_model=config["main"]["experiment_dir"]+"/3_folding/af_output",
         weights_dir=config["folding"]["alphafold3"]["weights_dir"],
         databases_dir=config["folding"]["alphafold3"]["databases_dir"],
-
+ 
     output:
-        config["main"]["experiment_dir"]+"/4_docking/" # path to output file
+        config["main"]["experiment_dir"]+"/4_docking/antibody.pdb" # path to output file
     shell: """
         docker run --rm -it \
             --volume {params.af3_input_dir}:/root/af_input \
@@ -111,7 +112,10 @@ rule frank_folding:
             --model_dir=/root/models \
             --db_dir=/root/public_databases \
             --db_dir=/root/public_databases_fallback \
-            --output_dir=/root/af_output
+            --output_dir=/root/af_output && \
+        python3 ./Scripts/3_folding/AlphaFold3/convert_output.py \
+            {input.output_model}"/antibody/antibody_model.cif" \
+            -o {params.output_pdb}
     """
 
 

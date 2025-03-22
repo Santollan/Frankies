@@ -27,49 +27,44 @@ rule run_evodiff:
         L_chain=config["diffusion"]["evodiff"]["L_chain"],
         H_chain_file=config["main"]["experiment_dir"] + "/01_inputs/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
         L_chain_file=config["main"]["experiment_dir"] + "/01_inputs/" + config["diffusion"]["evodiff"]["L_chain"],  # path to Lchain file  
-
- 
+        H_chain_json=config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",  # path to Hchain file
+        L_chain_json=config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json",  # path to Lchain file
+        prep_output_file=config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"]
     input:
         Hchain_file=config["main"]["experiment_dir"] + "/01_inputs/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
     output:
-        config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",
-        config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json",
+        config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"], # path to output file
+
     shell:
         """
-        {params.container_engine} run --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 \
-    -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment \
-    -v ./Scripts/2_diffusion:/workspace/evodiff/frankie \
-    -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
-    " conda install -c bioconda abnumber -y && \
-    python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.H_chain} && \
-    python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.L_chain} "
-        sleep 5
-        """
+sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
+  -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
+  -v ./Scripts/2_diffusion:/workspace/evodiff/frankie:rw \
+  -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
+  "conda install -c bioconda abnumber -y && \
+  python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.H_chain} && \
+   python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.L_chain}" && \
+    python3 Scripts/3_folding/AlphaFold3/prepare_af3.py \
+        --hchain_file {params.H_chain_json} \
+        --lchain_file {params.L_chain_json} \
+        --output_file {params.prep_output_file} 
+   """
 
 
-    #     """
-    #     {params.container_engine} run --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 \
-    # -v ./experiments/test/2_diffusion:/workspace/evodiff/frankie/experiment \
-    # -v ./Scripts/2_diffusion:/workspace/evodiff/frankie \
-    # -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
-    # "python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Hchains_aligned.a3m && \
-    # python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/ --chain Lchains_aligned.a3m"
-    #     sleep 5
-    #     """
 
-rule run_igFold:
-    params:
-        experiment_dir=config["main"]["experiment_dir"],
-    input:
-        Hchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
-        Lchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["L_chain"]   # path to Lchain file
-    output:
-        "{params.experiment_dir}/3_folding/lgFold/my_antibody.pdb"
-    shell:
-        """
-        python3 ./Scripts/3_folding/lgFold/run_lgFold.py --input {input.Hchain_file} --output experiments/test/3_folding/lgFold/
+# rule run_igFold:
+#     params:
+#         experiment_dir=config["main"]["experiment_dir"],
+#     input:
+#         Hchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
+#         Lchain_file=config["main"]["experiment_dir"] + "/2_diffusion/" + config["diffusion"]["evodiff"]["L_chain"]   # path to Lchain file
+#     output:
+#         "{params.experiment_dir}/3_folding/lgFold/my_antibody.pdb"
+#     shell:
+#         """
+#         python3 ./Scripts/3_folding/lgFold/run_lgFold.py --input {input.Hchain_file} --output experiments/test/3_folding/lgFold/
 
-        """
+#         """
 
 
 #     input: 
@@ -88,25 +83,36 @@ rule run_igFold:
 #         run_af3.sh --fasta_path {input.seq} --output_path {output.structure}
 #     """
 
-# rule frank_folding:
-#     input:
-#         seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
-#         output_model=os.path.join(os.getcwd(), "outputs/3_diffusion")
-#     output:
-#         config["output"]["pdb"] # Dynamic output path
-#     shell: """      
-#         docker run -it \
-#             --volume {input.seq}:/root/af_input \
-#             --volume {input.output_model}:/root/af_output \
-#             --volume {config[alphafold][weights]}:/root/models \
-#             --volume {config[alphafold][databases]}:/root/public_databases \
-#             --gpus {config[gpus]} \
-#             alphafold3 \
-#             python run_alphafold.py \
-#             --json_path=/root/af_input/alphafold_input.json \
-#             --model_dir=/root/models \
-#             --output_dir=/root/af_output
-#     """
+rule frank_folding:
+    params:
+        experiment_dir=config["main"]["experiment_dir"],
+        af3_input_dir=config["main"]["experiment_dir"]+"/3_folding/af_input"
+    input:
+        config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"], # path to AlphaFold3 input file
+        # config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",  # path to Hchain file
+        # config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json", 
+        # seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
+        output_model=os.path.join(os.getcwd(), "outputs/3_diffusion"),
+        weights_dir=config["folding"]["alphafold3"]["weights_dir"],
+        databases_dir=config["folding"]["alphafold3"]["databases_dir"],
+
+    output:
+        config["main"]["experiment_dir"]+"/4_docking/" # path to output file
+    shell: """
+        docker run --rm -it \
+            --volume {params.af3_input_dir}:/root/af_input \
+            --volume {input.output_model}:/root/af_output \
+            --volume {input.weights_dir}:/root/models \
+            --volume {input.databases_dir}:/root/public_databases \
+            --gpus all \
+            alphafold3 \
+            python run_alphafold.py \
+            --json_path=/root/af_input/alphafold_input.json \
+            --model_dir=/root/models \
+            --db_dir=/root/public_databases \
+            --db_dir=/root/public_databases_fallback \
+            --output_dir=/root/af_output
+    """
 
 
 # rule prepare_haddock3:

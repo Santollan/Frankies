@@ -25,3 +25,6 @@ Specific rule:
 ```bash
 snakemake --force prepare_haddock3
 ```
+
+## Host and Drivers
+This was tested on Ubuntu 22.04 with Nvidia 560 drivers and Cuda 12.6 

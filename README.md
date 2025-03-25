@@ -1,7 +1,5 @@
 # Frankies
-Scalable, AI-Based Antibody Design Pipeline 
-
-
+Scalable, AI-Based Antibody Design Pipeline
 
 
 ## Setup Conda Environment

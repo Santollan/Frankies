@@ -87,18 +87,15 @@ rule frank_folding:
     params:
         experiment_dir=config["main"]["experiment_dir"],
         af3_input_dir=config["main"]["experiment_dir"]+"/3_folding/af_input",
-        output_pdb=config["main"]["experiment_dir"]+"/4_docking/antibody.pdb"
+        output_pdb=config["main"]["experiment_dir"]+"/3_folding/antibody.pdb"
     input:
         config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"], # path to AlphaFold3 input file
-        # config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",  # path to Hchain file
-        # config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json", 
-        # seq=os.path.join(os.getcwd(), "data/processed/3_diffusion/af_input"),
         output_model=config["main"]["experiment_dir"]+"/3_folding/af_output",
         weights_dir=config["folding"]["alphafold3"]["weights_dir"],
         databases_dir=config["folding"]["alphafold3"]["databases_dir"],
  
     output:
-        config["main"]["experiment_dir"]+"/4_docking/antibody.pdb" # path to output file
+        config["main"]["experiment_dir"]+"/3_folding/antibody.pdb" # path to output file
     shell: """
         docker run --rm -it \
             --volume {params.af3_input_dir}:/root/af_input \
@@ -122,15 +119,15 @@ rule frank_folding:
 rule prepare_haddock3:
     params:
         experiment_dir = config["main"]["experiment_dir"],
-        antibody_pdb = config["docking"]["haddock3"]["antibody_pdb"],
-        antigen_pdb = config["docking"]["haddock3"]["antigen_pdb"],
+        antibody_pdb = "antibody.pdb",
+        antigen_pdb = "antigen.pdb",
         prepared_antibody_pdb = config["docking"]["haddock3"]["prepared_antibody_pdb"],
         prepared_antigen_pdb = config["docking"]["haddock3"]["prepared_antigen_pdb"],
         air_file = config["docking"]["haddock3"]["air_file"],
         config_file = config["docking"]["haddock3"]["config_file"],
         n_cores=config["main"]["cores"]
     input:
-        config["main"]["experiment_dir"]+"/4_docking/antibody.pdb"
+        config["main"]["experiment_dir"]+"/3_folding/antibody.pdb"
     output: 
         config["main"]["experiment_dir"] + "/4_docking/" + config["docking"]["haddock3"]["config_file"]
     log:
@@ -162,28 +159,28 @@ rule prepare_haddock3:
             --config_template_path Scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
     """
 
-# rule run_haddock3:
-#     params:
-#         experiment_dir=config["main"]["experiment_dir"],
-#         config_file=config['docking']['haddock3']['config_file'],
-#     input:
-#         config_file=config["main"]["experiment_dir"] + "/4_docking/" + config['docking']['haddock3']['config_file'],
-#     output:
-#         config["main"]["experiment_dir"] + "/4_docking/HADDOCK_DONE"
-#     shell: """
-#         docker run -v {params.experiment_dir}/4_docking:/mnt/experiment --rm cford38/haddock:3 /bin/bash -c \
-#             "cd /mnt/experiment && \
-#             haddock3 {params.config_file} && \
-#             touch HADDOCK_DONE"
-#     """
+rule run_haddock3:
+    params:
+        experiment_dir=config["main"]["experiment_dir"],
+        config_file=config['docking']['haddock3']['config_file'],
+    input:
+        config_file=config["main"]["experiment_dir"] + "/4_docking/" + config['docking']['haddock3']['config_file'],
+    output:
+        config["main"]["experiment_dir"] + "/4_docking/HADDOCK_DONE"
+    shell: """
+        docker run -v {params.experiment_dir}/4_docking:/mnt/experiment --rm cford38/haddock:3 /bin/bash -c \
+            "cd /mnt/experiment && \
+            haddock3 {params.config_file} && \
+            touch HADDOCK_DONE"
+    """
 
-# rule frank_dynamics:
-#     input: "Scripts/4_docking/helloworld.txt"
-#     output: "Scripts/5_dynamics/hello_world.txt"  
-#     shell: "echo Hello World > Scripts/5_dynamics/hello_world.txt"
+rule frank_dynamics:
+    input: "Scripts/4_docking/helloworld.txt"
+    output: "Scripts/5_dynamics/hello_world.txt"  
+    shell: "echo Hello World > Scripts/5_dynamics/hello_world.txt"
 
-# rule frank_postprocess:
-#     input: "Scripts/5_dynamics/hello_world.txt"  
-#     output: "Scripts/6_postprocess/helloworld.txt"
-#     shell: "echo Hello World > Scripts/6_postprocess/helloworld.txt"
+rule frank_postprocess:
+    input: "Scripts/5_dynamics/hello_world.txt"  
+    output: "Scripts/6_postprocess/helloworld.txt"
+    shell: "echo Hello World > Scripts/6_postprocess/helloworld.txt"
 

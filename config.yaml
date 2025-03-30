@@ -1,8 +1,11 @@
 # config.yaml
 
 main:
-  experiment_name: "anti-HA_test" # Name of the experiment
-  experiment_dir: "./experiments/anti_HA_test"
+  experiment_name: "anti-HA_test_01" # Name of the experiment
+  experiment_dir: "./experiments/anti_HA_test_01"
+  H_chain: "anti-HA_antibodies_Hchains_aligned.a3m" # Path to the heavy chain alignment file
+  L_chain: "anti-HA_antibodies_Lchains_aligned.a3m" # Path to the light chain alignment file
+  Antigen: "2vir_chainC_antigen.pdb" # Path to the antigen PDB file
   cores: 4 # Number of CPU cores to use
   gpus: "all" # GPU setting (optional for dynamic configuration)
   container_engine: "docker" # Container engine to use (docker or singularity)
@@ -10,8 +13,8 @@ main:
 #EvoDiff
 diffusion:
   evodiff:
-    H_chain: "Hchains_aligned.a3m"  # Correct the key if needed here
-    L_chain: "Lchains_aligned.a3m"
+    H_chain: "anti-HA_antibodies_Hchains_aligned.a3m"  # Correct the key if needed here
+    L_chain: "anti-HA_antibodies_Lchains_aligned.a3m" 
 
 
 # Input data location
@@ -25,7 +28,7 @@ output:
 
 folding:
   alphafold3:
-    weights_dir: "/media/nicholas/a4335b57-a351-4a17-a117-4efba087ba3c/Projects/Alphafold/Alphafold_weights" #"/path/to/Alphafold_weights"
+    weights_dir: "/home/nicholas/alphafold_weights" #"/path/to/Alphafold_weights"
     databases_dir: "/home/nicholas/public_databases"  #"/path/to/Alphafold_DB"
     prep_output_file_name: "alphafold_input.json" # Name of the input data
 

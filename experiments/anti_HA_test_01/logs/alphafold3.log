@@ -1,0 +1,96 @@
+Starting AlphaFold3 run at Sun 30 Mar 2025 03:14:53 PM EDT
+Using docker with GPU setting: all
+Using the following paths:
+Input directory: ./experiments/anti_HA_test_01/3_folding/af_input
+Output directory: ./experiments/anti_HA_test_01/3_folding/af_output
+Weights directory: /home/nicholas/alphafold_weights
+Databases directory: /home/nicholas/public_databases
+Using GPU flag: --gpus all
+Running AlphaFold3...
+I0330 19:14:54.709762 131990198956224 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0330 19:14:54.710321 131990198956224 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+I0330 19:14:57.148792 131990198956224 pipeline.py:82] Getting protein MSAs for sequence EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:14:57.160572 131985932551744 jackhmmer.py:78] Query sequence: EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:14:57.160794 131985922065984 jackhmmer.py:78] Query sequence: EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:14:57.161016 131985911580224 jackhmmer.py:78] Query sequence: EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:14:57.161260 131985932551744 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpnyhy02_e/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpnyhy02_e/query.fasta /root/public_databases/uniref90_2022_05.fa"
+I0330 19:14:57.161337 131985901094464 jackhmmer.py:78] Query sequence: EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:14:57.161396 131985922065984 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpnenjyr64/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpnenjyr64/query.fasta /root/public_databases/mgy_clusters_2022_05.fa"
+I0330 19:14:57.161436 131985911580224 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpu6p35wvj/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpu6p35wvj/query.fasta /root/public_databases/bfd-first_non_consensus_sequences.fasta"
+I0330 19:14:57.161687 131985901094464 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpq5t31733/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpq5t31733/query.fasta /root/public_databases/uniprot_all_2021_04.fa"
+I0330 19:15:34.516452 131985911580224 subprocess_utils.py:97] Finished Jackhmmer (bfd-first_non_consensus_sequences.fasta) in 37.355 seconds
+I0330 19:17:39.293790 131985932551744 subprocess_utils.py:97] Finished Jackhmmer (uniref90_2022_05.fa) in 162.132 seconds
+I0330 19:19:01.328172 131985901094464 subprocess_utils.py:97] Finished Jackhmmer (uniprot_all_2021_04.fa) in 244.166 seconds
+I0330 19:19:33.263801 131985922065984 subprocess_utils.py:97] Finished Jackhmmer (mgy_clusters_2022_05.fa) in 276.102 seconds
+I0330 19:19:33.265794 131990198956224 pipeline.py:115] Getting protein MSAs took 276.12 seconds for sequence EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:19:33.265827 131990198956224 pipeline.py:121] Deduplicating MSAs for sequence EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:19:33.275204 131990198956224 pipeline.py:134] Deduplicating MSAs took 0.01 seconds for sequence EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS, found 10556 unpaired sequences, 22308 paired sequences
+I0330 19:19:33.278210 131990198956224 pipeline.py:40] Getting protein templates for sequence EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:19:33.306994 131990198956224 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmbuild --informat stockholm --hand --amino /tmp/tmpr3fcg1_i/output.hmm /tmp/tmpr3fcg1_i/query.msa"
+I0330 19:19:33.421107 131990198956224 subprocess_utils.py:97] Finished Hmmbuild in 0.114 seconds
+I0330 19:19:33.422871 131990198956224 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmsearch --noali --cpu 8 --F1 0.1 --F2 0.1 --F3 0.1 -E 100 --incE 100 --domE 100 --incdomE 100 -A /tmp/tmpr_yq83kc/output.sto /tmp/tmpr_yq83kc/query.hmm /root/public_databases/pdb_seqres_2022_09_28.fasta"
+I0330 19:19:36.298477 131990198956224 subprocess_utils.py:97] Finished Hmmsearch (pdb_seqres_2022_09_28.fasta) in 2.876 seconds
+I0330 19:19:36.509214 131990198956224 pipeline.py:52] Getting 4 protein templates took 3.23 seconds for sequence EVEFVESGAELTMAGASLRVSCKTSAVSFSSYAMSAVRQAPGKGLEGVGEISNSNGSTYYNPTVKGRFTISRDNSKTTAYLQQSSLTAEDTAVRFCVRDDSNYADSWGQATMVTASS
+I0330 19:19:36.554294 131990198956224 pipeline.py:82] Getting protein MSAs for sequence EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:19:36.554742 131985901094464 jackhmmer.py:78] Query sequence: EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:19:36.554973 131985932551744 jackhmmer.py:78] Query sequence: EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:19:36.555041 131985922065984 jackhmmer.py:78] Query sequence: EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:19:36.555216 131985911580224 jackhmmer.py:78] Query sequence: EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:19:36.555337 131985901094464 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmptpnl1u32/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmptpnl1u32/query.fasta /root/public_databases/uniref90_2022_05.fa"
+I0330 19:19:36.555483 131985922065984 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpl35eih7x/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpl35eih7x/query.fasta /root/public_databases/mgy_clusters_2022_05.fa"
+I0330 19:19:36.555598 131985932551744 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpo8_lp6xc/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpo8_lp6xc/query.fasta /root/public_databases/bfd-first_non_consensus_sequences.fasta"
+I0330 19:19:36.555654 131985911580224 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpgx7_r3i8/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpgx7_r3i8/query.fasta /root/public_databases/uniprot_all_2021_04.fa"
+I0330 19:20:13.852843 131985932551744 subprocess_utils.py:97] Finished Jackhmmer (bfd-first_non_consensus_sequences.fasta) in 37.297 seconds
+I0330 19:22:16.847104 131985901094464 subprocess_utils.py:97] Finished Jackhmmer (uniref90_2022_05.fa) in 160.292 seconds
+I0330 19:23:39.883247 131985911580224 subprocess_utils.py:97] Finished Jackhmmer (uniprot_all_2021_04.fa) in 243.328 seconds
+I0330 19:24:08.436074 131985922065984 subprocess_utils.py:97] Finished Jackhmmer (mgy_clusters_2022_05.fa) in 271.881 seconds
+I0330 19:24:08.437039 131990198956224 pipeline.py:115] Getting protein MSAs took 271.88 seconds for sequence EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:24:08.437066 131990198956224 pipeline.py:121] Deduplicating MSAs for sequence EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:24:08.444767 131990198956224 pipeline.py:134] Deduplicating MSAs took 0.01 seconds for sequence EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM, found 8522 unpaired sequences, 11120 paired sequences
+I0330 19:24:08.446014 131990198956224 pipeline.py:40] Getting protein templates for sequence EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:24:08.465769 131990198956224 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmbuild --informat stockholm --hand --amino /tmp/tmpc8vcllvx/output.hmm /tmp/tmpc8vcllvx/query.msa"
+I0330 19:24:08.558627 131990198956224 subprocess_utils.py:97] Finished Hmmbuild in 0.093 seconds
+I0330 19:24:08.559905 131990198956224 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmsearch --noali --cpu 8 --F1 0.1 --F2 0.1 --F3 0.1 -E 100 --incE 100 --domE 100 --incdomE 100 -A /tmp/tmpkx2dcuuu/output.sto /tmp/tmpkx2dcuuu/query.hmm /root/public_databases/pdb_seqres_2022_09_28.fasta"
+I0330 19:24:11.536281 131990198956224 subprocess_utils.py:97] Finished Hmmsearch (pdb_seqres_2022_09_28.fasta) in 2.976 seconds
+I0330 19:24:11.781915 131990198956224 pipeline.py:52] Getting 4 protein templates took 3.34 seconds for sequence EIVITRSPATISVSPTENVCRSSQSILGASYRQMPGISHKRLISSAPNRASGIPDXFSGSQSGTDGTFTXVSLSSRVQSENLXCXYAQQYSSTPTFPAATKVEIM
+I0330 19:24:14.839870 131990198956224 pipeline.py:166] processing Antibody, random_seed=1234
+I0330 19:24:14.848646 131990198956224 pipeline.py:259] Calculating bucket size for input with 222 tokens.
+I0330 19:24:14.848723 131990198956224 pipeline.py:265] Got bucket size 256 for input with 222 tokens, resulting in 34 padded tokens.
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job Antibody...
+Output will be written in /root/af_output/antibody
+Running data pipeline...
+Running data pipeline for chain H...
+Running data pipeline for chain H took 279.41 seconds
+Running data pipeline for chain L...
+Running data pipeline for chain L took 275.28 seconds
+Writing model input JSON to /root/af_output/antibody/antibody_data.json
+Predicting 3D structure for Antibody with 1 seed(s)...
+Featurising data with 1 seed(s)...
+Featurising data with seed 1234.
+Featurising data with seed 1234 took 2.12 seconds.
+Featurising data with 1 seed(s) took 5.09 seconds.
+Running model inference and extracting output structure samples with 1 seed(s)...
+Running model inference with seed 1234...
+Running model inference with seed 1234 took 29.43 seconds.
+Extracting inference results with seed 1234...
+Extracting 5 inference samples with seed 1234 took 0.11 seconds.
+Running model inference and extracting output structures with 1 seed(s) took 29.55 seconds.
+Writing outputs with 1 seed(s)...
+Fold job Antibody done, output written to /root/af_output/antibody
+
+Done running 1 fold jobs.
+Converting output to PDB format...
+Conversion successful: ./experiments/anti_HA_test_01/3_folding/af_output/antibody/antibody_model.cif -> ./experiments/anti_HA_test_01/3_folding/antibody.pdb
+AlphaFold3 run completed at Sun 30 Mar 2025 03:24:48 PM EDT

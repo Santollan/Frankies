@@ -35,7 +35,7 @@ model, collater, tokenizer, scheme = checkpoint
 path_to_msa = os.path.join(args.path, args.chain) #'/workspace/evodiff/frankie/evodiff/tests/PD1_Hchains_aligned.a3m'  # Replace with your file path
 n_sequences=sequence_count # number of sequences in MSA to subsample
 seq_length=max_sequence # maximum sequence length to subsample
-selection_type='random' # or 'MaxHamming'; MSA subsampling scheme
+selection_type='MaxHamming' # or 'random'; MSA subsampling scheme
 
 print(f"Path to MSA: {path_to_msa}")  # Debugging line
 

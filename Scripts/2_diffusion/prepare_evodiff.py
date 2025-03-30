@@ -55,8 +55,6 @@ def run_evo_command(num_sequences, max_length):
     # Run the command
     subprocess.run(command)
 
-# Replace with your .a3m file path
-#file_path = '/home/bigboy/Desktop/test junk/evodiff/PD1_Hchains_aligned.a3m'  # Replace with your file path
 
 # Get number of sequences and max sequence length
 num_sequences, max_length = count_sequences_and_max_length(file_path)

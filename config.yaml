@@ -1,8 +1,8 @@
 # config.yaml
 
 main:
-  experiment_name: "anti-HA_test" # Name of the experiment
-  experiment_dir: "./experiments/anti_HA_test"
+  experiment_name: "anti-HA_test_02" # Name of the experiment
+  experiment_dir: "./experiments/anti_HA_test_02"
   cores: 4 # Number of CPU cores to use
   gpus: "all" # GPU setting (optional for dynamic configuration)
   container_engine: "docker" # Container engine to use (docker or singularity)
@@ -10,8 +10,8 @@ main:
 #EvoDiff
 diffusion:
   evodiff:
-    H_chain: "Hchains_aligned.a3m"  # Correct the key if needed here
-    L_chain: "Lchains_aligned.a3m"
+    H_chain: "anti-HA_antibodies_Hchains_aligned.fasta"  # Correct the key if needed here
+    L_chain: "anti-HA_antibodies_Lchains_aligned.fasta"  # Correct the key if needed here
 
 
 # Input data location

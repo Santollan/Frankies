@@ -7,8 +7,8 @@ Scalable, AI-Based Antibody Design Pipeline
 conda env create -f environment.yml
 conda activate frankies
 
-# conda deactivate
-# conda env update
+# conda env deactivate
+# conda env update -n frankies -f environment.yml
 ```
 
 
@@ -25,4 +25,6 @@ snakemake --force prepare_haddock3
 ```
 
 ## Host and Drivers
-This was tested on Ubuntu 22.04 with Nvidia 560 drivers and Cuda 12.6 
+This was tested on:
+ - Ubuntu 22.04 with NVIDIA 560 drivers and CUDA 12.6.
+ - Windows Subsystem for Linux with Ubuntu 18.04 on an NVIDIA Titan X.

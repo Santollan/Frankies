@@ -1,0 +1,12 @@
+Starting AlphaFold3 run at Wed 09 Apr 2025 08:28:22 AM EDT
+Using docker with GPU setting: all
+Using the following paths:
+Input directory: ./experiments/anti_HA_test_03/3_folding/af_input
+Output directory: ./experiments/anti_HA_test_03/3_folding/af_output
+Weights directory: /media/nicholas/a4335b57-a351-4a17-a117-4efba087ba3c/Projects/Alphafold/Alphafold_weights
+Databases directory: /home/nicholas/public_databases
+Using GPU flag: --gpus all
+Running AlphaFold3...
+docker: Error response from daemon: error while creating mount source path '/media/nicholas/a4335b57-a351-4a17-a117-4efba087ba3c/Projects/Alphafold/Alphafold_weights': mkdir /media/nicholas/a4335b57-a351-4a17-a117-4efba087ba3c: permission denied
+
+Run 'docker run --help' for more information

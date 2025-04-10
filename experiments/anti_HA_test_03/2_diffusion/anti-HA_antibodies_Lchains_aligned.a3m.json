@@ -1,0 +1,47 @@
+{
+  "raw_sequence": "EIVMTRSPESLSVSIGERVTLSCRASQSLVPTDGSNHITQDYRQKPNQAPRRLIYDTSSRATGLPDRFSGSGSGTHYTETISQDVAPLESEDVBVYYSQQSNVFPTVVWAQDYGQGTLVEIKISP",
+  "cleaned_sequence": "EIVMTRSPESLSVSIGERVTLSCRASQSLVPTDGSNHITQDYRQKPNQAPRRLIYDTSSRATGLPDRFSGSGSGTHYTETISQDVAPLESEDVGVYYSQQSNVFPTVVWAQDYGQGTLVEIKISP",
+  "validation": {
+    "sequence": "EIVMTRSPESLSVSIGERVTLSCRASQSLVPTDGSNHITQDYRQKPNQAPRRLIYDTSSRATGLPDRFSGSGSGTHYTETISQDVAPLESEDVGVYYSQQSNVFPTVVWAQDYGQGTLVEIKISP",
+    "length": 125,
+    "likely_chain_type": "light (VL)",
+    "non_standard_aas": [],
+    "validation_schemes": {
+      "chothia": {
+        "valid": true,
+        "message": "K"
+      },
+      "imgt": {
+        "valid": true,
+        "message": "K"
+      },
+      "kabat": {
+        "valid": true,
+        "message": "K"
+      },
+      "martin": {
+        "valid": false,
+        "message": "Scheme \"martin\" is not supported. Available schemes: imgt, aho, chothia, kabat"
+      },
+      "aho": {
+        "valid": false,
+        "message": "CDR regions are not defined for AHo, you need to specify cdr_definition=\"chothia\" or another scheme for CDR extraction."
+      },
+      "imgt_gap": {
+        "valid": false,
+        "message": "Unrecognised or unimplemented scheme: imgt_gap"
+      }
+    },
+    "valid": true,
+    "valid_schemes": [
+      "chothia",
+      "imgt",
+      "kabat"
+    ]
+  },
+  "generated_sequence": [
+    [
+      "EIVMTRSPESLSVSIGERVTLSCRASQSLVPTDGSNHITQDYRQKPNQAPRRLIYDTSSRATGLPDRFSGSGSGTHYTETISQDVAPLESEDVBVYYSQQSNVFPTVVWAQDYGQGTLVEIKISP"
+    ]
+  ]
+}

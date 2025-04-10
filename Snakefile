@@ -2,17 +2,47 @@ import os
 configfile: "config.yaml"
 
 rule all:
-    input: "Scripts/6_postprocess/helloworld.txt"
+    input: 
+        "config_timestamp",
+        config["main"]["experiment_dir"] + "/4_docking/HADDOCK_DONE",
+
+
+rule config_timestamp:
+    input:
+        config = "config.yaml"
+    output:
+        touch("config_timestamp")
+
+
 
 rule initialize:
+    input:
+        config_stamp = "config_timestamp"
     params:
         experiment_dir = config["main"]["experiment_dir"],
+        experiment_name = config["main"]["experiment_name"],
+        H_chain = config["main"]["H_chain"],
+        L_chain = config["main"]["L_chain"],
+        Antigen = config["main"]["Antigen"],
     output:
-       "{params.experiment_dir}/frankies.log"
+        config["main"]["experiment_dir"] + "/frankies.log",
+        config["main"]["experiment_dir"] + "/01_inputs/" + config["main"]["H_chain"],
+        config["main"]["experiment_dir"] + "/01_inputs/" + config["main"]["L_chain"],
+        config["main"]["experiment_dir"] + "/01_inputs/" + config["main"]["Antigen"]
     run: 
-        shell("mkdir -p {params.experiment_dir}"),
+        # Create the experiment directory
+        shell("mkdir -p {params.experiment_dir}/01_inputs"),
+        shell("cp -r ./data/inputs/* {params.experiment_dir}/01_inputs/"),
+        # Create the output directories
+        shell("mkdir -p {params.experiment_dir}/2_diffusion"),
+        shell("mkdir -p {params.experiment_dir}/2_diffusion"),
+        shell("mkdir -p {params.experiment_dir}/3_folding"),
+        shell("mkdir -p {params.experiment_dir}/4_docking"),
         shell("echo \"Frankies pipeline started at: $(date)\" > {output}"),
         shell("docker info || echo 'Docker is not running. Please start Docker Desktop.'")
+        shell("touch {params.experiment_dir}/2_diffusion/{params.H_chain}.json")
+        shell("touch {params.experiment_dir}/3_folding/{params.H_chain}+{params.L_chain}.json"),
+        shell("cp -r {params.experiment_dir}/01_inputs/{params.Antigen} {params.experiment_dir}/4_docking/antigen.pdb"),
 
 # rule frank_preprocess:
 #     output: "Scripts/1_preprocess/helloworld.txt"
@@ -83,44 +113,93 @@ sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit
 #         run_af3.sh --fasta_path {input.seq} --output_path {output.structure}
 #     """
 
-rule frank_folding:
+rule run_alphafold3:
+    # This rule runs AlphaFold3 using Docker with config-specified GPU settings
     params:
-        experiment_dir=config["main"]["experiment_dir"],
-        af3_input_dir=config["main"]["experiment_dir"]+"/3_folding/af_input",
-        output_pdb=config["main"]["experiment_dir"]+"/3_folding/antibody.pdb"
+        experiment_dir = config["main"]["experiment_dir"],
+        gpus = config["main"]["gpus"],
+        container_engine = config["main"]["container_engine"],
+        af3_input_dir = os.path.join(config["main"]["experiment_dir"], "3_folding/af_input"),
+        output_pdb = os.path.join(config["main"]["experiment_dir"], "3_folding/antibody.pdb"),
+        weights_dir = config["folding"]["alphafold3"]["weights_dir"],
+        databases_dir = config["folding"]["alphafold3"]["databases_dir"],
+        output_model_dir = os.path.join(config["main"]["experiment_dir"], "3_folding/af_output")
     input:
-        config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"], # path to AlphaFold3 input file
-        output_model=config["main"]["experiment_dir"]+"/3_folding/af_output",
-        weights_dir=config["folding"]["alphafold3"]["weights_dir"],
-        databases_dir=config["folding"]["alphafold3"]["databases_dir"],
- 
+        alphafold_input = os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", 
+                                       config["folding"]["alphafold3"]["prep_output_file_name"])
     output:
-        config["main"]["experiment_dir"]+"/3_folding/antibody.pdb" # path to output file
-    shell: """
-        docker run --rm -it \
-            --volume {params.af3_input_dir}:/root/af_input \
-            --volume {input.output_model}:/root/af_output \
-            --volume {input.weights_dir}:/root/models \
-            --volume {input.databases_dir}:/root/public_databases \
-            --gpus all \
+        pdb = os.path.join(config["main"]["experiment_dir"], "3_folding/antibody.pdb")
+    log:
+        os.path.join(config["main"]["experiment_dir"], "logs/alphafold3.log")
+    shell: 
+        """
+        # Create output directories
+        mkdir -p $(dirname {output.pdb})
+        mkdir -p {params.output_model_dir}
+        mkdir -p $(dirname {log})
+        
+        echo "Starting AlphaFold3 run at $(date)" > {log}
+        echo "Using {params.container_engine} with GPU setting: {params.gpus}" >> {log}
+        echo "Using the following paths:" >> {log}
+        echo "Input directory: {params.af3_input_dir}" >> {log}
+        echo "Output directory: {params.output_model_dir}" >> {log}
+        echo "Weights directory: {params.weights_dir}" >> {log}
+        echo "Databases directory: {params.databases_dir}" >> {log}
+        
+        # Check if AlphaFold3 image exists
+        if ! {params.container_engine} image inspect alphafold3 &>/dev/null; then
+            echo "ERROR: {params.container_engine} image 'alphafold3' does not exist!" >> {log}
+            echo "Please pull or build the AlphaFold3 image before running this step." >> {log}
+            exit 1
+        fi
+        
+        # Set GPU flag based on config
+        if [ "{params.gpus}" = "all" ]; then
+            GPU_FLAG="--gpus all"
+        elif [ "{params.gpus}" = "none" ] || [ "{params.gpus}" = "" ]; then
+            GPU_FLAG=""
+        else
+            GPU_FLAG="--gpus {params.gpus}"
+        fi
+        
+        echo "Using GPU flag: $GPU_FLAG" >> {log}
+        
+        # Run AlphaFold3
+        echo "Running AlphaFold3..." >> {log}
+        ({params.container_engine} run --rm $GPU_FLAG \
+            --volume {params.af3_input_dir}:/root/af_input:ro \
+            --volume {params.output_model_dir}:/root/af_output:rw \
+            --volume {params.weights_dir}:/root/models:ro \
+            --volume {params.databases_dir}:/root/public_databases:ro \
             alphafold3 \
             python run_alphafold.py \
-            --json_path=/root/af_input/alphafold_input.json \
-            --model_dir=/root/models \
-            --db_dir=/root/public_databases \
-            --db_dir=/root/public_databases_fallback \
-            --output_dir=/root/af_output && \
-        python3 ./Scripts/3_folding/AlphaFold3/convert_output.py \
-            {input.output_model}"/antibody/antibody_model.cif" \
-            -o {params.output_pdb}
-    """
+                --json_path=/root/af_input/alphafold_input.json \
+                --model_dir=/root/models \
+                --db_dir=/root/public_databases \
+                --output_dir=/root/af_output) >> {log} 2>&1
+        
+        # Check if the output file was created
+        if [ ! -f {params.output_model_dir}/antibody/antibody_model.cif ]; then
+            echo "ERROR: AlphaFold3 failed to create output model" >> {log}
+            ls -la {params.output_model_dir} >> {log} 2>&1
+            exit 1
+        fi
+        
+        # Convert output
+        echo "Converting output to PDB format..." >> {log}
+        (python3 ./Scripts/3_folding/AlphaFold3/convert_output.py \
+            {params.output_model_dir}/antibody/antibody_model.cif \
+            -o {output.pdb}) >> {log} 2>&1
+        
+        echo "AlphaFold3 run completed at $(date)" >> {log}
+        """
 
 
 rule prepare_haddock3:
     params:
         experiment_dir = config["main"]["experiment_dir"],
         antibody_pdb = "antibody.pdb",
-        antigen_pdb = "antigen.pdb",
+        antigen_pdb = config["main"]["Antigen"],
         prepared_antibody_pdb = config["docking"]["haddock3"]["prepared_antibody_pdb"],
         prepared_antigen_pdb = config["docking"]["haddock3"]["prepared_antigen_pdb"],
         air_file = config["docking"]["haddock3"]["air_file"],
@@ -174,13 +253,64 @@ rule run_haddock3:
             touch HADDOCK_DONE"
     """
 
-rule frank_dynamics:
-    input: "Scripts/4_docking/helloworld.txt"
-    output: "Scripts/5_dynamics/hello_world.txt"  
-    shell: "echo Hello World > Scripts/5_dynamics/hello_world.txt"
+# rule frank_dynamics:
+#     input: "Scripts/4_docking/helloworld.txt"
+#     output: "Scripts/5_dynamics/hello_world.txt"  
+#     shell: "echo Hello World > Scripts/5_dynamics/hello_world.txt"
 
-rule frank_postprocess:
-    input: "Scripts/5_dynamics/hello_world.txt"  
-    output: "Scripts/6_postprocess/helloworld.txt"
-    shell: "echo Hello World > Scripts/6_postprocess/helloworld.txt"
+# rule frank_postprocess:
+#     input: "Scripts/5_dynamics/hello_world.txt"  
+#     output: "Scripts/6_postprocess/helloworld.txt"
+#     shell: "echo Hello World > Scripts/6_postprocess/helloworld.txt"
 
+# rule generate_report:
+#     params:
+#         experiment_dir = config["main"]["experiment_dir"],
+#         report_template = "Scripts/reporting/report_template.qmd",
+#         output_report_dir = os.path.join(config["main"]["experiment_dir"], "reports"),
+#         best_structure_dir = os.path.join(config["main"]["experiment_dir"],"4_docking/output", "08_mdscoring"),
+#         experiment_name = config["main"]["experiment_name"]
+#     input:
+#         # Add the final output from the pipeline as a dependency
+#         haddock_done = config["main"]["experiment_dir"] + "/4_docking/HADDOCK_DONE",
+#         # CAPRI scoring file
+#         capri_scores = os.path.join(config["main"]["experiment_dir"],"4_docking/output", "10_caprieval", "capri_ss.tsv")
+#     output:
+#         html_report = os.path.join(config["main"]["experiment_dir"], "reports", "experiment_report.html"),
+#         best_pdb = os.path.join(config["main"]["experiment_dir"], "reports", "best_model.pdb")
+#     log:
+#         config["main"]["experiment_dir"] + "/logs/report_generation.log"
+#     shell: """
+#         mkdir -p {params.output_report_dir}
+#         mkdir -p $(dirname {log})
+        
+#         echo "Starting report generation at $(date)" > {log}
+        
+#         # Find the best structure based on VDW score
+#         echo "Analyzing CAPRI scores to find the best structure..." >> {log}
+#         best_model=$(awk 'NR>1 {{if (NR==2 || $5<min) {{min=$5; model=$1}}}} END {{print model}}' {input.capri_scores})
+#         best_model_path="{params.best_structure_dir}/${{best_model}}"
+        
+#         echo "Best model based on VDW score: $best_model" >> {log}
+#         echo "Best model path: $best_model_path" >> {log}
+        
+#         # Copy the best model to the reports directory
+#         cp "$best_model_path" {output.best_pdb}
+        
+#         # Create environment variables for the Quarto report
+#         export EXPERIMENT_DIR="{params.experiment_dir}"
+#         export EXPERIMENT_NAME="{params.experiment_name}"
+#         export CAPRI_SCORES_FILE="{input.capri_scores}"
+#         export BEST_MODEL_FILE="{output.best_pdb}"
+        
+#         # Run Quarto to generate the report
+#         echo "Generating Quarto report..." >> {log}
+#         (quarto render {params.report_template} \
+#             --output-file={output.html_report} \
+#             --execute-params experiment_dir={params.experiment_dir} \
+#             --execute-params experiment_name={params.experiment_name} \
+#             --execute-params capri_scores_file={input.capri_scores} \
+#             --execute-params best_model_file={output.best_pdb}) >> {log} 2>&1
+            
+#         echo "Report generation completed at $(date)" >> {log}
+#     """   

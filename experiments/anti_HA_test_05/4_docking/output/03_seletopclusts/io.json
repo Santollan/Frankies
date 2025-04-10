@@ -1,0 +1,386 @@
+{
+    "input": [],
+    "output": [
+        {
+            "clt_id": 22,
+            "clt_model_rank": 1,
+            "clt_rank": 1,
+            "created": "2025-04-10 11:53:00",
+            "file_name": "rigidbody_179.pdb",
+            "file_type": {
+                "py/reduce": [
+                    {
+                        "py/type": "haddock.libs.libontology.Format"
+                    },
+                    {
+                        "py/tuple": [
+                            "pdb"
+                        ]
+                    }
+                ]
+            },
+            "full_name": "01_rigidbody/rigidbody_179.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": null,
+            "path": "/mnt/experiment/output/01_rigidbody/01_rigidbody",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "01_rigidbody",
+                            "rigidbody_179.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "data",
+                            "01_rigidbody",
+                            "ambig.tbl"
+                        ]
+                    }
+                ]
+            },
+            "score": -2.543718,
+            "topology": [
+                {
+                    "created": "2025-04-10 11:52:59",
+                    "file_name": "antibody_haddock.psf",
+                    "file_type": {
+                        "py/reduce": [
+                            {
+                                "py/type": "haddock.libs.libontology.Format"
+                            },
+                            {
+                                "py/tuple": [
+                                    "psf"
+                                ]
+                            }
+                        ]
+                    },
+                    "full_name": "antibody_haddock.psf",
+                    "md5": null,
+                    "path": "/mnt/experiment/output/00_topoaa",
+                    "py/object": "haddock.libs.libontology.TopologyFile",
+                    "rel_path": {
+                        "py/reduce": [
+                            {
+                                "py/type": "pathlib.PosixPath"
+                            },
+                            {
+                                "py/tuple": [
+                                    "..",
+                                    "00_topoaa",
+                                    "antibody_haddock.psf"
+                                ]
+                            }
+                        ]
+                    },
+                    "restr_fname": null
+                },
+                {
+                    "created": "2025-04-10 11:52:59",
+                    "file_name": "antigen_haddock.psf",
+                    "file_type": {
+                        "py/id": 9
+                    },
+                    "full_name": "antigen_haddock.psf",
+                    "md5": null,
+                    "path": "/mnt/experiment/output/00_topoaa",
+                    "py/object": "haddock.libs.libontology.TopologyFile",
+                    "rel_path": {
+                        "py/reduce": [
+                            {
+                                "py/type": "pathlib.PosixPath"
+                            },
+                            {
+                                "py/tuple": [
+                                    "..",
+                                    "00_topoaa",
+                                    "antigen_haddock.psf"
+                                ]
+                            }
+                        ]
+                    },
+                    "restr_fname": null
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 10.7178,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -2.43654,
+                "dihe": 0.0,
+                "elec": 0.0,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": 0.0,
+                "vdw": 0.0,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": 194,
+            "clt_model_rank": 1,
+            "clt_rank": 2,
+            "created": "2025-04-10 11:53:00",
+            "file_name": "rigidbody_7.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "01_rigidbody/rigidbody_7.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": null,
+            "path": "/mnt/experiment/output/01_rigidbody/01_rigidbody",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "01_rigidbody",
+                            "rigidbody_7.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -2.0654765,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 1.39665,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -2.05151,
+                "dihe": 0.0,
+                "elec": 0.0,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": 0.0,
+                "vdw": 0.0,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": 154,
+            "clt_model_rank": 1,
+            "clt_rank": 3,
+            "created": "2025-04-10 11:53:00",
+            "file_name": "rigidbody_47.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "01_rigidbody/rigidbody_47.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": null,
+            "path": "/mnt/experiment/output/01_rigidbody/01_rigidbody",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "01_rigidbody",
+                            "rigidbody_47.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -1.8971500000000001,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 31.919,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -1.57796,
+                "dihe": 0.0,
+                "elec": 0.0,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": 0.0,
+                "vdw": 0.0,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": 65,
+            "clt_model_rank": 1,
+            "clt_rank": 4,
+            "created": "2025-04-10 11:53:00",
+            "file_name": "rigidbody_136.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "01_rigidbody/rigidbody_136.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": null,
+            "path": "/mnt/experiment/output/01_rigidbody/01_rigidbody",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "01_rigidbody",
+                            "rigidbody_136.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -1.7810936,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 1.23536,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -1.76874,
+                "dihe": 0.0,
+                "elec": 0.0,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": 0.0,
+                "vdw": 0.0,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": 114,
+            "clt_model_rank": 1,
+            "clt_rank": 5,
+            "created": "2025-04-10 11:53:00",
+            "file_name": "rigidbody_87.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "01_rigidbody/rigidbody_87.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": null,
+            "path": "/mnt/experiment/output/01_rigidbody/01_rigidbody",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "01_rigidbody",
+                            "rigidbody_87.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -1.6506059999999998,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 25.0606,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -1.4,
+                "dihe": 0.0,
+                "elec": 0.0,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": 0.0,
+                "vdw": 0.0,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        }
+    ]
+}

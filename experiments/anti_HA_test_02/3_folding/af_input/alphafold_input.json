@@ -1,0 +1,22 @@
+{
+    "name": "Antibody",
+    "modelSeeds": [
+        1234
+    ],
+    "sequences": [
+        {
+            "protein": {
+                "id": "H",
+                "sequence": "EVZLANSGAEVKKSGSSAKISCAASPFSFSSVGYQAPWIRPMPGQGREWVGGISPLGGNFTDYAPSIQGRVTITHDQSTSVIYLQLSSLKSEDTTVWYCARHARGDPVIGGSYFWLGWFPPWGQGTLVTVSS"
+            }
+        },
+        {
+            "protein": {
+                "id": "L",
+                "sequence": "DSVPTQEPSTISVTPGTRATISCRTSASNVGSDGYNNLAWVYQQKTGQAPKALIYAASNRASGVPDRYGGSGAGTDFTFTINHSIDILKPADVAQYYAQQSSETPPSSDAQTYBBGTKVEIRNQT"
+            }
+        }
+    ],
+    "dialect": "alphafold3",
+    "version": 1
+}

@@ -68,16 +68,16 @@ rule run_evodiff:
     shell:
         """
 sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
-  -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
-  -v ./Scripts/2_diffusion:/workspace/evodiff/frankie:rw \
+  -v $(pwd)/{params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
+  -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
   -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
   "conda install -c bioconda abnumber -y && \
   python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.H_chain} && \
-   python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.L_chain}" && \
-    python3 Scripts/3_folding/AlphaFold3/prepare_af3.py \
-        --hchain_file {params.H_chain_json} \
-        --lchain_file {params.L_chain_json} \
-        --output_file {params.prep_output_file} 
+  python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/01_inputs/ --chain {params.L_chain}" && \
+  python3 scripts/3_folding/AlphaFold3/prepare_af3.py \
+      --hchain_file {params.H_chain_json} \
+      --lchain_file {params.L_chain_json} \
+      --output_file {params.prep_output_file} 
    """
 
 
@@ -187,7 +187,7 @@ rule run_alphafold3:
         
         # Convert output
         echo "Converting output to PDB format..." >> {log}
-        (python3 ./Scripts/3_folding/AlphaFold3/convert_output.py \
+        (python3 ./scripts/3_folding/AlphaFold3/convert_output.py \
             {params.output_model_dir}/antibody/antibody_model.cif \
             -o {output.pdb}) >> {log} 2>&1
         
@@ -213,14 +213,14 @@ rule prepare_haddock3:
         config["main"]["experiment_dir"] + "/frankies.log"
     shell: """
         ## Run antigen preparation
-        python Scripts/4_docking/haddock3/prepare_antigen_inputs.py \
+        python scripts/4_docking/haddock3/prepare_antigen_inputs.py \
             --input_pdb_path {params.experiment_dir}/3_folding/{params.antigen_pdb} \
             --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
             --resn_offset 1000 \
             --percentage 0.25 && \
 
         ## Run antibody preparation
-        python Scripts/4_docking/haddock3/prepare_antibody_inputs.py \
+        python scripts/4_docking/haddock3/prepare_antibody_inputs.py \
             --input_pdb_path {params.experiment_dir}/3_folding/{params.antibody_pdb} \
             --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
             --H_chain_id A \
@@ -228,14 +228,14 @@ rule prepare_haddock3:
             --L_resn_offset 1000 && \
 
         ## Prepare experiment
-        python Scripts/4_docking/haddock3/create_haddock_experiment.py \
+        python scripts/4_docking/haddock3/create_haddock_experiment.py \
             --experiment_path {params.experiment_dir}/4_docking \
             --antibody_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
             --antigen_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
             --active_antibody_path {params.experiment_dir}/4_docking/cdr_residues.txt \
             --active_antigen_path {params.experiment_dir}/4_docking/surface_residues.txt \
             --n_cores {params.n_cores} \
-            --config_template_path Scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
+            --config_template_path scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
     """
 
 rule run_haddock3:

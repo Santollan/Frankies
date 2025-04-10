@@ -43,9 +43,9 @@ def generate_alphafold_json(hchain_file, lchain_file, output_file):
     with open(lchain_file, 'r') as f:
         lchain_data = json.load(f)
     
-    # Extract the generated sequences
-    hchain_sequence = hchain_data['generated_sequence'][0][0]
-    lchain_sequence = lchain_data['generated_sequence'][0][0]
+    # Extract the clean generated sequences
+    hchain_sequence = hchain_data['cleaned_sequence'][0][0]
+    lchain_sequence = lchain_data['cleaned_sequence'][0][0]
 
     # Create the structure for AlphaFold3 JSON
     alphafold_data = {

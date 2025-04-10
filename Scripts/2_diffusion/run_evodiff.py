@@ -103,7 +103,7 @@ def validate_sequence(seq: str, schemes: Optional[List[str]] = None) -> Tuple[bo
         Tuple containing (is_valid, chain_object, validation_results)
     """
     if schemes is None:
-        schemes = ['chothia', 'imgt', 'kabat', 'martin', 'aho', 'imgt_gap']
+        schemes = ['chothia', 'imgt', 'kabat']
     
     # Check for non-standard amino acids
     standard_aas = set('ACDEFGHIKLMNPQRSTVWY')
@@ -251,7 +251,7 @@ def main():
             'cleaned_sequence': clean_seq,
             'validation': formatted_results,
             # Store tensor data as lists
-            'generated_sequence': [seq.tolist() if hasattr(seq, 'tolist') else seq for seq in generated_sequence]
+            # 'generated_sequence': [seq.tolist() if hasattr(seq, 'tolist') else seq for seq in generated_sequence]
         }
         
         # Save the output data to a JSON file

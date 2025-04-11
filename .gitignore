@@ -14,3 +14,4 @@ Practice/snakemake-tutorial/data/samples/B.fastq
 Practice/snakemake-tutorial/data/samples/C.fastq
 .snakemake/*
 .DS_Store
+/experiments

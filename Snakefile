@@ -116,14 +116,14 @@ sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit
 rule run_alphafold3:
     # This rule runs AlphaFold3 using Docker with config-specified GPU settings
     params:
-        experiment_dir = config["main"]["experiment_dir"],
+        experiment_dir = os.path.abspath(config["main"]["experiment_dir"]),
         gpus = config["main"]["gpus"],
         container_engine = config["main"]["container_engine"],
-        af3_input_dir = os.path.join(config["main"]["experiment_dir"], "3_folding/af_input"),
-        output_pdb = os.path.join(config["main"]["experiment_dir"], "3_folding/antibody.pdb"),
-        weights_dir = config["folding"]["alphafold3"]["weights_dir"],
-        databases_dir = config["folding"]["alphafold3"]["databases_dir"],
-        output_model_dir = os.path.join(config["main"]["experiment_dir"], "3_folding/af_output")
+        af3_input_dir = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "af_input")),
+        output_pdb = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "antibody.pdb")),
+        weights_dir = os.path.abspath(config["folding"]["alphafold3"]["weights_dir"]),
+        databases_dir = os.path.abspath(config["folding"]["alphafold3"]["databases_dir"]),
+        output_model_dir = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "af_output")),
     input:
         alphafold_input = os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", 
                                        config["folding"]["alphafold3"]["prep_output_file_name"])
@@ -214,28 +214,28 @@ rule prepare_haddock3:
     shell: """
         ## Run antigen preparation
         python scripts/4_docking/haddock3/prepare_antigen_inputs.py \
-            --input_pdb_path {params.experiment_dir}/3_folding/{params.antigen_pdb} \
-            --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
+            --input_pdb_path $(pwd)/{params.experiment_dir}/3_folding/{params.antigen_pdb} \
+            --output_pdb_path $(pwd)/{params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
             --resn_offset 1000 \
             --percentage 0.25 && \
 
         ## Run antibody preparation
         python scripts/4_docking/haddock3/prepare_antibody_inputs.py \
-            --input_pdb_path {params.experiment_dir}/3_folding/{params.antibody_pdb} \
-            --output_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
+            --input_pdb_path $(pwd)/{params.experiment_dir}/3_folding/{params.antibody_pdb} \
+            --output_pdb_path $(pwd)/{params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
             --H_chain_id A \
             --L_chain_id B \
             --L_resn_offset 1000 && \
 
         ## Prepare experiment
         python scripts/4_docking/haddock3/create_haddock_experiment.py \
-            --experiment_path {params.experiment_dir}/4_docking \
-            --antibody_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
-            --antigen_pdb_path {params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
-            --active_antibody_path {params.experiment_dir}/4_docking/cdr_residues.txt \
-            --active_antigen_path {params.experiment_dir}/4_docking/surface_residues.txt \
+            --experiment_path $(pwd)/{params.experiment_dir}/4_docking \
+            --antibody_pdb_path $(pwd)/{params.experiment_dir}/4_docking/{params.prepared_antibody_pdb} \
+            --antigen_pdb_path $(pwd)/{params.experiment_dir}/4_docking/{params.prepared_antigen_pdb} \
+            --active_antibody_path $(pwd)/{params.experiment_dir}/4_docking/cdr_residues.txt \
+            --active_antigen_path $(pwd)/{params.experiment_dir}/4_docking/surface_residues.txt \
             --n_cores {params.n_cores} \
-            --config_template_path scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
+            --config_template_path $(pwd)/scripts/4_docking/haddock3/resources/antibody_antigen_template_custom.cfg
     """
 
 rule run_haddock3:
@@ -254,19 +254,19 @@ rule run_haddock3:
     """
 
 # rule frank_dynamics:
-#     input: "Scripts/4_docking/helloworld.txt"
-#     output: "Scripts/5_dynamics/hello_world.txt"  
-#     shell: "echo Hello World > Scripts/5_dynamics/hello_world.txt"
+#     input: "scripts/4_docking/helloworld.txt"
+#     output: "scripts/5_dynamics/hello_world.txt"  
+#     shell: "echo Hello World > scripts/5_dynamics/hello_world.txt"
 
 # rule frank_postprocess:
-#     input: "Scripts/5_dynamics/hello_world.txt"  
-#     output: "Scripts/6_postprocess/helloworld.txt"
-#     shell: "echo Hello World > Scripts/6_postprocess/helloworld.txt"
+#     input: "scripts/5_dynamics/hello_world.txt"  
+#     output: "scripts/6_postprocess/helloworld.txt"
+#     shell: "echo Hello World > scripts/6_postprocess/helloworld.txt"
 
 # rule generate_report:
 #     params:
 #         experiment_dir = config["main"]["experiment_dir"],
-#         report_template = "Scripts/reporting/report_template.qmd",
+#         report_template = "scripts/reporting/report_template.qmd",
 #         output_report_dir = os.path.join(config["main"]["experiment_dir"], "reports"),
 #         best_structure_dir = os.path.join(config["main"]["experiment_dir"],"4_docking/output", "08_mdscoring"),
 #         experiment_name = config["main"]["experiment_name"]

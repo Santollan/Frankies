@@ -4,8 +4,8 @@ configfile: "config.yaml"
 rule all:
     input: 
         # "config_timestamp",
-        config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_ss.tsv" 
-        # config["main"]["experiment_dir"] + "/5_postprocess/frankies_report.html",
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_ss.tsv")),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "5_postprocess/frankies_report.html"))
 
 # rule config_timestamp:
 #     input:
@@ -14,19 +14,19 @@ rule all:
 #         touch("config_timestamp")
 
 rule initialize:
-    input:
-        config_stamp = "config_timestamp"
+    # input:
+        # config_stamp = "config_timestamp"
     params:
         experiment_dir = config["main"]["experiment_dir"],
         experiment_name = config["main"]["experiment_name"],
-        H_chain = config["main"]["H_chain"],
-        L_chain = config["main"]["L_chain"],
+        H_chain = config["diffusion"]["evodiff"]["H_chain"],
+        L_chain = config["diffusion"]["evodiff"]["L_chain"],
         Antigen = config["main"]["Antigen"],
     output:
-        config["main"]["experiment_dir"] + "/frankies.log",
-        config["main"]["experiment_dir"] + "/1_inputs/" + config["main"]["H_chain"],
-        config["main"]["experiment_dir"] + "/1_inputs/" + config["main"]["L_chain"],
-        config["main"]["experiment_dir"] + "/1_inputs/" + config["main"]["Antigen"]
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log")),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["L_chain"])),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["Antigen"]))
     run: 
         # Create the experiment directory
         shell("mkdir -p {params.experiment_dir}/1_inputs"),
@@ -48,25 +48,27 @@ rule initialize:
 
 rule run_evodiff:
     params:
-        experiment_dir=config["main"]["experiment_dir"],
+        experiment_dir=os.path.abspath(os.path.join(config["main"]["experiment_dir"])),
         exeriment_name=config["main"]["experiment_name"],
         container_engine=config["main"]["container_engine"],
         H_chain=config["diffusion"]["evodiff"]["H_chain"],
         L_chain=config["diffusion"]["evodiff"]["L_chain"],
-        H_chain_file=config["main"]["experiment_dir"] + "/1_inputs/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
-        L_chain_file=config["main"]["experiment_dir"] + "/1_inputs/" + config["diffusion"]["evodiff"]["L_chain"],  # path to Lchain file  
-        H_chain_json=config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["H_chain"]+".json",  # path to Hchain file
-        L_chain_json=config["main"]["experiment_dir"]+"/2_diffusion/"+config["diffusion"]["evodiff"]["L_chain"]+".json",  # path to Lchain file
-        prep_output_file=config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"]
+        H_chain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),  # path to Hchain file
+        L_chain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["L_chain"])),  # path to Lchain file  
+        H_chain_json=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),  # path to H chain output file
+        L_chain_json=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json")),  # path to L chain output file
+        prep_output_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", config["folding"]["alphafold3"]["prep_output_file_name"]))
     input:
-        Hchain_file=config["main"]["experiment_dir"] + "/1_inputs/" + config["diffusion"]["evodiff"]["H_chain"],  # path to Hchain file
+        Hchain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),  # path to Hchain file
     output:
-        config["main"]["experiment_dir"]+"/3_folding/af_input/"+config["folding"]["alphafold3"]["prep_output_file_name"], # path to output file
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", config["folding"]["alphafold3"]["prep_output_file_name"])), # path to output file
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),  # path to H chain output file
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json"))
 
     shell:
         """
         sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
-        -v $(pwd)/{params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
+        -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
         -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
         -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
         "conda install -c bioconda abnumber -y && \
@@ -167,10 +169,10 @@ rule run_esmfold:
         token = config["folding"]["esmfold"]["forge_token"],
         model = config["folding"]["esmfold"]["model"]
     input:
-        input_h_json = config["main"]["experiment_dir"] + "/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json",
-        input_l_json = config["main"]["experiment_dir"] + "/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json",
+        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),
+        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json"))
     output:
-        output_pdb = config["main"]["experiment_dir"] + "/3_folding/antibody.pdb"
+        output_pdb = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "antibody.pdb"))
     shell:
         """
         ## Create output directories
@@ -197,11 +199,11 @@ rule prepare_haddock3:
         config_file = config["docking"]["haddock3"]["config_file"],
         n_cores=config["main"]["cores"]
     input:
-        config["main"]["experiment_dir"]+"/3_folding/antibody.pdb"
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/antibody.pdb"))
     output: 
-        config["main"]["experiment_dir"] + "/4_docking/" + config["docking"]["haddock3"]["config_file"]
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking", config["docking"]["haddock3"]["config_file"]))
     log:
-        config["main"]["experiment_dir"] + "/frankies.log"
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
     shell:
         """
         ## Run antigen preparation
@@ -236,10 +238,10 @@ rule run_haddock3:
         experiment_dir=config["main"]["experiment_dir"],
         config_file=config['docking']['haddock3']['config_file'],
     input:
-        config_file=config["main"]["experiment_dir"] + "/4_docking/" + config['docking']['haddock3']['config_file'],
+        config_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking", config['docking']['haddock3']['config_file'])),
     output:
-        config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_clt.tsv",
-        config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_ss.tsv"
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_ss.tsv"))
     shell:
         """
         docker run -v $(pwd)/{params.experiment_dir}/4_docking:/mnt/experiment --rm cford38/haddock:3 /bin/bash -c \
@@ -253,12 +255,12 @@ rule make_report:
         experiment_dir = config["main"]["experiment_dir"],
         experiment_name = config["main"]["experiment_name"]
     input:
-        haddock_clt_file = config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_clt.tsv",
-        haddock_ss_file = config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_clt.tsv",
-        input_h_json = config["main"]["experiment_dir"] + "/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json",
-        input_l_json = config["main"]["experiment_dir"] + "/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json"
+        haddock_clt_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
+        haddock_ss_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
+        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/h_chain.json")),
+        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/l_chain.json"))
     output:
-        output_report = config["main"]["experiment_dir"] + "/5_postprocess/frankies_report.html"
+        output_report = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "5_postprocess/frankies_report.html"))
     shell:
         """
         ## Create output directories

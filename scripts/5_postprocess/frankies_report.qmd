@@ -15,11 +15,11 @@ format:
 #| label: parameters
 #| tags: [parameters]
 
-experiment_dir = "../../experiments/anti_HA_test_CF_01/"
-capri_clt_file = "../../experiments/anti_HA_test_CF_01/4_docking/output/10_caprieval/capri_clt.tsv"
-capri_ss_file = "../../experiments/anti_HA_test_CF_01/4_docking/output/10_caprieval/capri_ss.tsv"
-input_h_json = "../../experiments/anti_HA_test_CF_01/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json"
-input_l_json = "../../experiments/anti_HA_test_CF_01/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json"
+experiment_dir = "../../experiments/anti_HA_test_CF_02/"
+capri_clt_file = "../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_clt.tsv"
+capri_ss_file = "../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_ss.tsv"
+input_h_json = "../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json"
+input_l_json = "../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json"
 ```
 
 
@@ -48,7 +48,7 @@ with open(input_l_json, 'r') as f:
 best_cluster_id = clt_df.loc[clt_df["cluster_rank"] == 1, "cluster_id"].values[0]
 
 ## From best cluster, get best model (using VDW)
-ss_df_best = ss_df[(ss_df["cluster-id"] == 1)]
+ss_df_best = ss_df[(ss_df["cluster-id"] == best_cluster_id)]
 lowest_vdw_row = ss_df_best.loc[ss_df_best["vdw"].idxmin()]
 best_model = lowest_vdw_row["model"].replace('../08_mdscoring/','')
 

@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Antibody Sequence Generator with Validation
+
+This script combines sequence generation from EvoDiff with robust validation
+and simplified input/output handling.
+"""
+
 import re
 import os
 import sys
@@ -12,6 +20,8 @@ sys.path.append('/workspace/evodiff')  # Add explicit path to evodiff
 # Import EvoDiff modules
 from evodiff.pretrained import MSA_OA_DM_MAXSUB
 from evodiff.generate_msa import generate_query_oadm_msa_simple
+
+
 
 # Set up logging
 logging.basicConfig(
@@ -161,63 +171,17 @@ def format_validation_results(results: Dict[str, Any]) -> Dict[str, Any]:
     return formatted
 
 
-def read_config(config_path):
-    """
-    Read the configuration file and parse the sequence parameters.
-    
-    Args:
-        config_path: Path to the config file
-        
-    Returns:
-        Dictionary with chain parameters
-    """
-    chain_params = {
-        'h_chain': {'sequence_count': 0, 'max_sequence': 0},
-        'l_chain': {'sequence_count': 0, 'max_sequence': 0}
-    }
-    
-    current_chain = None
-    
-    with open(config_path, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-                
-            # Check if this is a chain header
-            if line.startswith('h_chain:'):
-                current_chain = 'h_chain'
-            elif line.startswith('l_chain:'):
-                current_chain = 'l_chain'
-            elif current_chain and line.startswith('  Number of sequences:'):
-                # Extract sequence count
-                parts = line.split(':')
-                if len(parts) > 1:
-                    try:
-                        chain_params[current_chain]['sequence_count'] = int(parts[1].strip())
-                    except ValueError:
-                        logger.error(f"Invalid sequence count in config: {line}")
-            elif current_chain and line.startswith('  Maximum sequence length:'):
-                # Extract max sequence length
-                parts = line.split(':')
-                if len(parts) > 1:
-                    try:
-                        chain_params[current_chain]['max_sequence'] = int(parts[1].strip())
-                    except ValueError:
-                        logger.error(f"Invalid max sequence length in config: {line}")
-    
-    return chain_params
-
-
 def main():
     """Main function to run the script"""
     parser = argparse.ArgumentParser(description="Generate and validate antibody sequences")
-    parser.add_argument("--config", type=str, default="config.txt",
-                       help="Path to the configuration file")
+    parser.add_argument("--sequence_count", type=int, default=14, 
+                       help="The number of sequences in MSA subsample")
+    parser.add_argument("--max_sequence", type=int, default=150, 
+                       help="Maximum sequence length to subsample")
     parser.add_argument("--path", type=str, required=True,
                        help="The directory path containing the MSA file")
     parser.add_argument("--chain", type=str, required=True,
-                       help="Chain type (h_chain or l_chain)")
+                       help="The filename of the MSA file")
     parser.add_argument("--output_dir", type=str, default="./output",
                        help="Directory to save output files")
     parser.add_argument("--device", type=str, default="cpu",
@@ -242,32 +206,8 @@ def main():
     except Exception as e:
         logger.warning(f"Could not set default device: {e}")
     
-    # Read configuration file
-    config_path = os.path.join(args.path, args.config)
-    if not os.path.exists(config_path):
-        logger.error(f"Config file not found at {config_path}")
-        exit(1)
-    
-    chain_params = read_config(config_path)
-    
-    # Validate specified chain type
-    if args.chain not in ['h_chain', 'l_chain']:
-        logger.error(f"Invalid chain type: {args.chain}. Must be 'h_chain' or 'l_chain'")
-        exit(1)
-    
-    # Get parameters for the specified chain
-    sequence_count = chain_params[args.chain]['sequence_count']
-    max_sequence = chain_params[args.chain]['max_sequence']
-    
-    if sequence_count == 0 or max_sequence == 0:
-        logger.error(f"Invalid parameters for {args.chain} in config file: sequence_count={sequence_count}, max_sequence={max_sequence}")
-        exit(1)
-    
-    logger.info(f"Using parameters for {args.chain}: sequence_count={sequence_count}, max_sequence={max_sequence}")
-    
-    # Determine actual filename to use for the MSA
-    chain_file = args.chain.split('_')[0] + "_chain.a3m"  # Convert e.g. "h_chain" to "h_chain.a3m"
-    path_to_msa = os.path.join(args.path, chain_file)
+    # Construct path to MSA file
+    path_to_msa = os.path.join(args.path, args.chain)
     
     if not os.path.exists(path_to_msa):
         logger.error(f"MSA file not found at {path_to_msa}")
@@ -284,11 +224,11 @@ def main():
     
     # Generate sequence
     logger.info(f"Generating sequence from {path_to_msa}")
-    logger.info(f"Parameters: n_sequences={sequence_count}, seq_length={max_sequence}")
+    logger.info(f"Parameters: n_sequences={args.sequence_count}, seq_length={args.max_sequence}")
     
     try:
         tokenized_sample, generated_sequence = generate_query_oadm_msa_simple(
-            path_to_msa, model, tokenizer, sequence_count, max_sequence,
+            path_to_msa, model, tokenizer, args.sequence_count, args.max_sequence,
             device=args.device, selection_type=args.selection_type
         )
         
@@ -315,8 +255,7 @@ def main():
         }
         
         # Save the output data to a JSON file
-        output_file = f"{args.chain.split('_')[0]}_chain.json"  # Convert e.g. "h_chain" to "h_chain.json"
-        output_file_path = os.path.join(args.output_dir, output_file)
+        output_file_path = os.path.join(args.output_dir, f"{args.chain}.json")
         with open(output_file_path, 'w') as json_file:
             json.dump(output_data, json_file, indent=2)
         logger.info(f"Output saved to {output_file_path}")

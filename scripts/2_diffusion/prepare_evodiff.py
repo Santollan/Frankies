@@ -1,19 +1,20 @@
 import subprocess
 import argparse
 import os
+
 parser = argparse.ArgumentParser()
-
 parser.add_argument("--path", help="The file path of the Chain")
-parser.add_argument("--chain", help="The file name of the Chain")
-
-
+parser.add_argument("--h_chain", help="The file name of the L Chain")
+parser.add_argument("--l_chain", help="The file name of the H Chain")
+parser.add_argument("--output_config", help="Output directory for the results")
 
 args = parser.parse_args()
 
 # Properly join path and filename using os.path.join to ensure cross-platform compatibility
-file_path = os.path.join(args.path, args.chain)
-
-print("Full file path:", file_path)
+h_file_path = os.path.join(args.path, args.h_chain)
+l_file_path = os.path.join(args.path, args.l_chain)
+print("Full Heavy chain file path:", h_file_path)
+print("Full Light chain file path:", l_file_path)
 
 
 def count_sequences_and_max_length(file_path):
@@ -42,31 +43,38 @@ def count_sequences_and_max_length(file_path):
 
     return count, max_length
 
-def run_evo_command(num_sequences, max_length):
-    # Construct the bash command
-    command = [
-        "python3", "frankie/run_evodiff.py",
-        "--sequence_count", str(num_sequences),
-        "--max_sequence", str(max_length),
-        "--path", args.path,
-        "--chain", args.chain,
-        "--device", "cuda:0",
-        "--output_dir", "/workspace/evodiff/frankie/experiment/2_diffusion/",
-    ]
-    
-    # Run the command
-    subprocess.run(command)
+# Function to create a config file
 
-# Replace with your .a3m file path
-#file_path = '/home/bigboy/Desktop/test junk/evodiff/PD1_Hchains_aligned.a3m'  # Replace with your file path
+def create_config_file( h_file_path,l_chain, h_chain_data, l_chain_data):
 
-# Get number of sequences and max sequence length
-num_sequences, max_length = count_sequences_and_max_length(file_path)
+    config_file_path = os.path.join(args.output_config)
 
-# Print the results
-print(f"Number of sequences: {num_sequences}")
-print(f"Maximum sequence length: {max_length}")
+    with open(config_file_path, 'w') as config_file:
+        config_file.write(f"h_chain:\n")
+        config_file.write(f" Number of sequences: {h_chain_data[0]}\n")
+        config_file.write(f" Maximum sequence length: {h_chain_data[1]}\n")
+        config_file.write(f"\n")
+        config_file.write(f"l_chain:\n")
+        config_file.write(f" Number of sequences: {l_chain_data[0]}\n")
+        config_file.write(f" Maximum sequence length: {l_chain_data[1]}\n")
+    return config_file_path
 
-# Run the evo.py script with the calculated values
-run_evo_command(num_sequences, max_length)
+# Process the heavy chain file
+h_num_sequences, h_max_length = count_sequences_and_max_length(h_file_path)
+print(f"Number of sequences in heavy chain: {h_num_sequences}")
+print(f"Maximum sequence length in heavy chain: {h_max_length}")
 
+# Process the light chain file
+l_num_sequences, l_max_length = count_sequences_and_max_length(l_file_path)
+print(f"Number of sequences in light chain: {l_num_sequences}")
+print(f"Maximum sequence length in light chain: {l_max_length}")
+
+
+# Create the config file
+config_file_path = create_config_file(
+    h_file_path, l_file_path, 
+    (h_num_sequences, h_max_length), 
+    (l_num_sequences, l_max_length)
+    )
+
+print(f"Config file created at: {config_file_path}")

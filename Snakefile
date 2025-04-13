@@ -19,13 +19,13 @@ rule initialize:
     params:
         experiment_dir = config["main"]["experiment_dir"],
         experiment_name = config["main"]["experiment_name"],
-        H_chain = config["diffusion"]["evodiff"]["H_chain"],
-        L_chain = config["diffusion"]["evodiff"]["L_chain"],
+        H_chain = config["main"]["H_chain"],
+        L_chain = config["main"]["L_chain"],
         Antigen = config["main"]["Antigen"],
     output:
         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log")),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["L_chain"])),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["H_chain"])),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["L_chain"])),
         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["Antigen"]))
     run: 
         # Create the experiment directory
@@ -42,29 +42,34 @@ rule initialize:
         shell("touch {params.experiment_dir}/3_folding/{params.H_chain}+{params.L_chain}.json"),
         shell("cp -r {params.experiment_dir}/1_inputs/{params.Antigen} {params.experiment_dir}/4_docking/antigen.pdb"),
 
-# rule frank_preprocess:
-#     output: "Scripts/1_preprocess/helloworld.txt"
-#     shell: "echo hello_frankie > Scripts/1_preprocess/helloworld.txt"
+rule prepare_evodiff:
+    # This rule prepares the input files for Evodiff
+    params:
+        path = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs")),
+        prepare_evodiff_script = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "scripts/2_diffusion/prepare.py")),
+    input:
+        H_chain = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["H_chain"])),
+        L_chain = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["L_chain"]))
+    output:
+        output_config= os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion","evodiff", "evo_config.txt")),
+    log:
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
+    shell:
+        """
+        ## Create output directories
+        mkdir -p $(dirname {output.output_config})
+
+        python3 scripts/2_diffusion/prepare_evodiff.py \
+        --path {params.path} \
+        --h_chain {input.H_chain} \
+        --l_chain {input.L_chain} \
+        --output_config {output.output_config} \
+        """
 
 rule run_evodiff:
+    # This rule runs Evodiff using Docker with config-specified GPU settings
     params:
-        experiment_dir=os.path.abspath(os.path.join(config["main"]["experiment_dir"])),
-        exeriment_name=config["main"]["experiment_name"],
-        container_engine=config["main"]["container_engine"],
-        H_chain=config["diffusion"]["evodiff"]["H_chain"],
-        L_chain=config["diffusion"]["evodiff"]["L_chain"],
-        H_chain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),  # path to Hchain file
-        L_chain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["L_chain"])),  # path to Lchain file  
-        H_chain_json=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),  # path to H chain output file
-        L_chain_json=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json")),  # path to L chain output file
-        prep_output_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", config["folding"]["alphafold3"]["prep_output_file_name"]))
-    input:
-        Hchain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),  # path to Hchain file
-    output:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", config["folding"]["alphafold3"]["prep_output_file_name"])), # path to output file
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),  # path to H chain output file
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json"))
-
+    
     shell:
         """
         sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
@@ -72,13 +77,46 @@ rule run_evodiff:
         -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
         -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
         "conda install -c bioconda abnumber -y && \
-        python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/1_inputs/ --chain {params.H_chain} && \
-        python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/1_inputs/ --chain {params.L_chain}" && \
+        python3 /workspace/evodiff/frankie/run_evodiff.py --path /workspace/evodiff/frankie/experiment/1_inputs/ --chain {params.H_chain} && \
         python3 scripts/3_folding/AlphaFold3/prepare_af3.py \
             --hchain_file {params.H_chain_json} \
             --lchain_file {params.L_chain_json} \
             --output_file {params.prep_output_file} 
         """
+
+# rule run_evodiff:
+#     params:
+#         experiment_dir=os.path.abspath(os.path.join(config["main"]["experiment_dir"])),
+#         exeriment_name=config["main"]["experiment_name"],
+#         container_engine=config["main"]["container_engine"],
+#         H_chain=config["diffusion"]["evodiff"]["H_chain"],
+#         L_chain=config["diffusion"]["evodiff"]["L_chain"],
+#         H_chain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),  # path to Hchain file
+#         L_chain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["L_chain"])),  # path to Lchain file  
+#         H_chain_json=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),  # path to H chain output file
+#         L_chain_json=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json")),  # path to L chain output file
+#         prep_output_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", config["folding"]["alphafold3"]["prep_output_file_name"]))
+#     input:
+#         Hchain_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["diffusion"]["evodiff"]["H_chain"])),  # path to Hchain file
+#     output:
+#         # os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", config["folding"]["alphafold3"]["prep_output_file_name"])), # path to output file
+#         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),  # path to H chain output file
+#         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json"))
+
+#     shell:
+#         """
+#         sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
+#         -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
+#         -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
+#         -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
+#         "conda install -c bioconda abnumber -y && \
+#         python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/1_inputs/ --chain {params.H_chain} && \
+#         python3 /workspace/evodiff/frankie/prepare_evodiff.py --path /workspace/evodiff/frankie/experiment/1_inputs/ --chain {params.L_chain}" && \
+#         python3 scripts/3_folding/AlphaFold3/prepare_af3.py \
+#             --hchain_file {params.H_chain_json} \
+#             --lchain_file {params.L_chain_json} \
+#             --output_file {params.prep_output_file} 
+#         """
 
 ## Folding
 
@@ -269,10 +307,10 @@ rule make_report:
         cp scripts/5_postprocess/frankies.scss {params.experiment_dir}/5_postprocess/frankies.scss
 
         ## Render dashboard with Quarto
-        quarto render $(pwd)/{params.experiment_dir}/5_postprocess/frankies_report.qmd \
-            -P experiment_dir:$(pwd)/{params.experiment_dir} \
-            -P capri_clt_file:$(pwd)/{input.haddock_clt_file} \
-            -P capri_ss_file:$(pwd)/{input.haddock_ss_file} \
-            -P input_h_json:$(pwd)/{input.input_h_json} \
-            -P input_l_json:$(pwd)/{input.input_l_json} \
+        quarto render {params.experiment_dir}/5_postprocess/frankies_report.qmd \
+            -P experiment_dir:{params.experiment_dir} \
+            -P capri_clt_file:{input.haddock_clt_file} \
+            -P capri_ss_file:{input.haddock_ss_file} \
+            -P input_h_json:{input.input_h_json} \
+            -P input_l_json:{input.input_l_json} \
         """

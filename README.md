@@ -7,9 +7,12 @@ Scalable, AI-Based Antibody Design Pipeline
 conda env create -f environment.yml
 conda activate frankies
 
-# conda env deactivate
+# conda deactivate
 # conda env update -n frankies -f environment.yml
 ```
+
+> [!NOTE]  
+> You'll also need to install Quarto separately. See https://quarto.org/docs/get-started/ for instructions.
 
 
 ## Run Snakemake Pipeline
@@ -21,7 +24,7 @@ snakemake --snakefile Snakefile
 
 Specific rule:
 ```bash
-snakemake --force prepare_haddock3
+snakemake --force make_report
 ```
 
 ## Host and Drivers

@@ -6,7 +6,7 @@ main:
   H_chain: "anti-HA_antibodies_Hchains_aligned.a3m" # Path to the heavy chain alignment file
   L_chain: "anti-HA_antibodies_Lchains_aligned.a3m" # Path to the light chain alignment file
   Antigen: "2vir_chainC_antigen.pdb" # Path to the antigen PDB file
-  cores: 4 # Number of CPU cores to use
+  cores: 24 # Number of CPU cores to use
   gpus: "all" # GPU setting (optional for dynamic configuration)
   container_engine: "docker" # Container engine to use (docker or singularity)
 
@@ -28,16 +28,20 @@ output:
 ## Folding
 folding:
   alphafold3:
+    ## Absolute paths to the weights and databases directories
     weights_dir: "/home/nicholas/alphafold_weights" #"/path/to/Alphafold_weights"
     databases_dir: "/home/nicholas/public_databases"  #"/path/to/Alphafold_DB"
     prep_output_file_name: "alphafold_input.json" # Name of the input data
+  esmfold:
+    forge_token: "52FLGhSpOpdlNHQMaO9iZk" # Token for ESM-3 API access
+    model: "esm3-medium-multimer-2024-09" # Model name for ESM-3
 
 ## Docking
 docking:
   haddock3:
-    antigen_pdb: "2vir_chainC_antigen.pdb" ## Will be removed when the AF3 step is done.
-    antibody_pdb: "2vir_chainsAB_antibody.pdb" ## Will be removed when the AF3 step is done.
-    prepared_antigen_pdb: "2vir_chainC_antigen.pdb"
+    antigen_pdb: "antigen.pdb" ## Will be removed when the AF3 step is done.
+    antibody_pdb: "antibody.pdb" ## Will be removed when the AF3 step is done.
+    prepared_antigen_pdb: "antigen.pdb"
     prepared_antibody_pdb: "antibody.pdb"
     air_file: ambig.tbl
     config_file: config.cfg

@@ -17,10 +17,10 @@ Practice/snakemake-tutorial/data/samples/C.fastq
 
 
 ## Experiment files
-experiments/*/01_inputs/*
-experiments/*/1_inputs/*
-experiments/*/2_diffusion/*
-experiments/*/3_folding/*
+# experiments/*/01_inputs/*
+# experiments/*/1_inputs/*
+# experiments/*/2_diffusion/*
+# experiments/*/3_folding/*
 experiments/*/4_docking/output/00_topoaa
 experiments/*/4_docking/output/01_rigidbody
 experiments/*/4_docking/output/02_clustfcc

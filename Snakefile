@@ -3,15 +3,15 @@ configfile: "config.yaml"
 
 rule all:
     input: 
-        "config_timestamp",
-        config["main"]["experiment_dir"] + "/5_postprocess/frankies_report.html",
+        # "config_timestamp",
+        config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_ss.tsv" 
+        # config["main"]["experiment_dir"] + "/5_postprocess/frankies_report.html",
 
-rule config_timestamp:
-    input:
-        config = "config.yaml"
-    output:
-        touch("config_timestamp")
-
+# rule config_timestamp:
+#     input:
+#         config = "config.yaml"
+#     output:
+#         touch("config_timestamp")
 
 rule initialize:
     input:
@@ -83,14 +83,14 @@ rule run_evodiff:
 # rule run_alphafold3:
 #     # This rule runs AlphaFold3 using Docker with config-specified GPU settings
 #     params:
-#         experiment_dir = config["main"]["experiment_dir"],
+#         experiment_dir = os.path.abspath(config["main"]["experiment_dir"]),
 #         gpus = config["main"]["gpus"],
 #         container_engine = config["main"]["container_engine"],
-#         af3_input_dir = os.path.join(config["main"]["experiment_dir"], "3_folding/af_input"),
-#         output_pdb = os.path.join(config["main"]["experiment_dir"], "3_folding/antibody.pdb"),
-#         weights_dir = config["folding"]["alphafold3"]["weights_dir"],
-#         databases_dir = config["folding"]["alphafold3"]["databases_dir"],
-#         output_model_dir = os.path.join(config["main"]["experiment_dir"], "3_folding/af_output")
+#         af3_input_dir = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "af_input")),
+#         output_pdb = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "antibody.pdb")),
+#         weights_dir = os.path.abspath(config["folding"]["alphafold3"]["weights_dir"]),
+#         databases_dir = os.path.abspath(config["folding"]["alphafold3"]["databases_dir"]),
+#         output_model_dir = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "af_output")),
 #     input:
 #         alphafold_input = os.path.join(config["main"]["experiment_dir"], "3_folding/af_input", 
 #                                        config["folding"]["alphafold3"]["prep_output_file_name"])
@@ -133,7 +133,7 @@ rule run_evodiff:
         
 #         # Run AlphaFold3
 #         echo "Running AlphaFold3..." >> {log}
-#         (docker run --rm $GPU_FLAG \
+#         ({params.container_engine} run --rm $GPU_FLAG \
 #             --volume {params.af3_input_dir}:/root/af_input:ro \
 #             --volume {params.output_model_dir}:/root/af_output:rw \
 #             --volume {params.weights_dir}:/root/models:ro \
@@ -238,13 +238,13 @@ rule run_haddock3:
     input:
         config_file=config["main"]["experiment_dir"] + "/4_docking/" + config['docking']['haddock3']['config_file'],
     output:
-        config["main"]["experiment_dir"] + "/4_docking/10_caprieval/capri_clt.tsv",
-        config["main"]["experiment_dir"] + "/4_docking/10_caprieval/capri_ss.tsv"
+        config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_clt.tsv",
+        config["main"]["experiment_dir"] + "/4_docking/output/10_caprieval/capri_ss.tsv"
     shell:
         """
-        docker run -v {params.experiment_dir}/4_docking:/mnt/experiment --rm cford38/haddock:3 /bin/bash -c \
+        docker run -v $(pwd)/{params.experiment_dir}/4_docking:/mnt/experiment --rm cford38/haddock:3 /bin/bash -c \
             "cd /mnt/experiment && \
-            haddock3 {params.config_file}
+            haddock3 {params.config_file}"
         """
 
 ## Report Generation
@@ -267,10 +267,10 @@ rule make_report:
         cp scripts/5_postprocess/frankies.scss {params.experiment_dir}/5_postprocess/frankies.scss
 
         ## Render dashboard with Quarto
-        quarto render {params.experiment_dir}/5_postprocess/frankies_report.qmd \
-            -P experiment_dir:{params.experiment_dir} \
-            -P capri_clt_file:{input.haddock_clt_file} \
-            -P capri_ss_file:{input.haddock_ss_file} \
-            -P input_h_json:{input.input_h_json} \
-            -P input_l_json:{input.input_l_json} \
+        quarto render $(pwd)/{params.experiment_dir}/5_postprocess/frankies_report.qmd \
+            -P experiment_dir:$(pwd)/{params.experiment_dir} \
+            -P capri_clt_file:$(pwd)/{input.haddock_clt_file} \
+            -P capri_ss_file:$(pwd)/{input.haddock_ss_file} \
+            -P input_h_json:$(pwd)/{input.input_h_json} \
+            -P input_l_json:$(pwd)/{input.input_l_json} \
         """

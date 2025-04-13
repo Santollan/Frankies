@@ -50,7 +50,7 @@ def run_evo_command(num_sequences, max_length):
         "--max_sequence", str(max_length),
         "--path", args.path,
         "--chain", args.chain,
-        "--device", "cuda",
+        "--device", "cuda:0",
         "--output_dir", "/workspace/evodiff/frankie/experiment/2_diffusion/",
     ]
     

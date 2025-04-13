@@ -9,8 +9,15 @@ dependencies:
 - snakemake
 - pymol-bundle
 - pyqt
+- jupyter
 - numpy
 - pandas
 - biopandas
 - abnumber
 - gemmi
+- pip:
+  - esm
+  - itables
+  - py3Dmol
+  - plotly
+  - papermill

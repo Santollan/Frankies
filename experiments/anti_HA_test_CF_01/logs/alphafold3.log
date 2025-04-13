@@ -1,0 +1,9 @@
+Starting AlphaFold3 run at Sat Apr 12 12:40:58 EDT 2025
+Using docker with GPU setting: all
+Using the following paths:
+Input directory: experiments/anti_HA_test_CF_01/3_folding/af_input
+Output directory: experiments/anti_HA_test_CF_01/3_folding/af_output
+Weights directory: /t/alphafold3/weights
+Databases directory: /t/alphafold3/databases
+ERROR: docker image 'alphafold3' does not exist!
+Please pull or build the AlphaFold3 image before running this step.

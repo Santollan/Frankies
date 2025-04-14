@@ -1,10 +1,10 @@
 # config.yaml
 
 main:
-  experiment_name: "anti-HA_test_CF_02" # Name of the experiment
-  experiment_dir: "experiments/anti_HA_test_CF_02"
-  # H_chain: "anti-HA_antibodies_Hchains_aligned.a3m" # Path to the heavy chain alignment file
-  # L_chain: "anti-HA_antibodies_Lchains_aligned.a3m" # Path to the light chain alignment file
+  experiment_name: "anti-HA_test_CF_03" # Name of the experiment
+  experiment_dir: "experiments/anti_HA_test_CF_03"
+  H_chain: "anti-HA_antibodies_Hchains_aligned.a3m" # Path to the heavy chain alignment file
+  L_chain: "anti-HA_antibodies_Lchains_aligned.a3m" # Path to the light chain alignment file
   Antigen: "2vir_chainC_antigen.pdb" # Path to the antigen PDB file
   cores: 24 # Number of CPU cores to use
   gpus: "all" # GPU setting (optional for dynamic configuration)
@@ -13,8 +13,7 @@ main:
 ## Diffusion
 diffusion:
   evodiff:
-    H_chain: "anti-HA_antibodies_Hchains_aligned.a3m"  # Correct the key if needed here
-    L_chain: "anti-HA_antibodies_Lchains_aligned.a3m"  # Correct the key if needed here
+
 
 
 # Input data location

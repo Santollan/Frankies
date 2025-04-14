@@ -75,7 +75,11 @@ rule run_evodiff:
 
     input:
         evo_config= os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion","evodiff", "evo_config.txt")), 
-    
+    output:
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "h_chain.json")),
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "l_chain.json"))
+    log:
+        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
     shell:
         """
         sudo docker run  --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
@@ -216,8 +220,8 @@ rule run_esmfold:
         token = config["folding"]["esmfold"]["forge_token"],
         model = config["folding"]["esmfold"]["model"]
     input:
-        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "h_chain.json")),
-        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "l_chain.json"))
+        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "h_chain.json")),
+        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "l_chain.json"))
     output:
         output_pdb = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "antibody.pdb"))
     shell:
@@ -304,8 +308,8 @@ rule make_report:
     input:
         haddock_clt_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
         haddock_ss_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
-        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/h_chain.json")),
-        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/l_chain.json"))
+        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/evodiff/h_chain.json")),
+        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/evodiff/l_chain.json"))
     output:
         output_report = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "5_postprocess/frankies_report.html"))
     shell:

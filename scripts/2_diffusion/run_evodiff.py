@@ -5,11 +5,9 @@ import json
 import argparse
 import logging
 from typing import Dict, List, Tuple, Optional, Any, Union
-
 import torch
 from abnumber import Chain
 sys.path.append('/workspace/evodiff')  # Add explicit path to evodiff
-# Import EvoDiff modules
 from evodiff.pretrained import MSA_OA_DM_MAXSUB
 from evodiff.generate_msa import generate_query_oadm_msa_simple
 
@@ -189,22 +187,21 @@ def read_config(config_path):
                 current_chain = 'h_chain'
             elif line.startswith('l_chain:'):
                 current_chain = 'l_chain'
-            elif current_chain and line.startswith('  Number of sequences:'):
-                # Extract sequence count
+            elif current_chain and 'number of sequences' in line.lower():
                 parts = line.split(':')
                 if len(parts) > 1:
                     try:
                         chain_params[current_chain]['sequence_count'] = int(parts[1].strip())
                     except ValueError:
                         logger.error(f"Invalid sequence count in config: {line}")
-            elif current_chain and line.startswith('  Maximum sequence length:'):
-                # Extract max sequence length
+            elif current_chain and 'maximum sequence length' in line.lower():
                 parts = line.split(':')
                 if len(parts) > 1:
                     try:
                         chain_params[current_chain]['max_sequence'] = int(parts[1].strip())
                     except ValueError:
                         logger.error(f"Invalid max sequence length in config: {line}")
+
     
     return chain_params
 
@@ -212,19 +209,21 @@ def read_config(config_path):
 def main():
     """Main function to run the script"""
     parser = argparse.ArgumentParser(description="Generate and validate antibody sequences")
-    parser.add_argument("--config", type=str, default="config.txt",
+    parser.add_argument("--config", type=str, default="evodiff_config.txt",
                        help="Path to the configuration file")
     parser.add_argument("--path", type=str, required=True,
                        help="The directory path containing the MSA file")
     parser.add_argument("--chain", type=str, required=True,
                        help="Chain type (h_chain or l_chain)")
-    parser.add_argument("--output_dir", type=str, default="./output",
+    parser.add_argument("--output_dir", type=str, default="/workspace/evodiff/frankie/experiment/2_diffusion/evodiff/",
                        help="Directory to save output files")
     parser.add_argument("--device", type=str, default="cpu",
                        help="Device to use for generation (cpu or cuda:N)")
-    parser.add_argument("--selection_type", type=str, default="random",
+    parser.add_argument("--selection_type", type=str, default="MaxHamming",
                        choices=["random", "MaxHamming"],
-                       help="MSA subsampling scheme")
+                       help="MSA subsampling scheme"),
+    # parser.add_argument("--path_to_msa", type=str, required=True,
+    #                    help="Path to the MSA file")
     
     args = parser.parse_args()
     
@@ -243,13 +242,13 @@ def main():
         logger.warning(f"Could not set default device: {e}")
     
     # Read configuration file
-    config_path = os.path.join(args.path, args.config)
+    config_path = "/workspace/evodiff/frankie/experiment/2_diffusion/evodiff/evo_config.txt"
     if not os.path.exists(config_path):
         logger.error(f"Config file not found at {config_path}")
         exit(1)
     
     chain_params = read_config(config_path)
-    
+    print(chain_params)
     # Validate specified chain type
     if args.chain not in ['h_chain', 'l_chain']:
         logger.error(f"Invalid chain type: {args.chain}. Must be 'h_chain' or 'l_chain'")
@@ -265,10 +264,9 @@ def main():
     
     logger.info(f"Using parameters for {args.chain}: sequence_count={sequence_count}, max_sequence={max_sequence}")
     
-    # Determine actual filename to use for the MSA
-    chain_file = args.chain.split('_')[0] + "_chain.a3m"  # Convert e.g. "h_chain" to "h_chain.a3m"
-    path_to_msa = os.path.join(args.path, chain_file)
-    
+    # Load the MSA file
+    path_to_msa = os.path.join(args.path)
+    print(path_to_msa)
     if not os.path.exists(path_to_msa):
         logger.error(f"MSA file not found at {path_to_msa}")
         exit(1)

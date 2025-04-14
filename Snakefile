@@ -51,37 +51,46 @@ rule prepare_evodiff:
         H_chain = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["H_chain"])),
         L_chain = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["L_chain"]))
     output:
-        output_config= os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion","evodiff", "evo_config.txt")),
+        evo_config= os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion","evodiff", "evo_config.txt")),
     log:
         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
     shell:
         """
         ## Create output directories
-        mkdir -p $(dirname {output.output_config})
+        mkdir -p $(dirname {output.evo_config})
 
         python3 scripts/2_diffusion/prepare_evodiff.py \
         --path {params.path} \
         --h_chain {input.H_chain} \
         --l_chain {input.L_chain} \
-        --output_config {output.output_config} \
+        --output_config {output.evo_config} \
         """
 
 rule run_evodiff:
     # This rule runs Evodiff using Docker with config-specified GPU settings
     params:
+        experiment_dir = os.path.abspath(config["main"]["experiment_dir"]),
+        H_chain = os.path.join("/workspace/evodiff/frankie/experiment/1_inputs", config["main"]["H_chain"]),
+        L_chain = os.path.join("/workspace/evodiff/frankie/experiment/1_inputs", config["main"]["L_chain"]),
+
+    input:
+        evo_config= os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion","evodiff", "evo_config.txt")), 
     
     shell:
         """
-        sudo docker run --gpus all --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
+        sudo docker run  --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
         -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
         -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
         -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
         "conda install -c bioconda abnumber -y && \
-        python3 /workspace/evodiff/frankie/run_evodiff.py --path /workspace/evodiff/frankie/experiment/1_inputs/ --chain {params.H_chain} && \
-        python3 scripts/3_folding/AlphaFold3/prepare_af3.py \
-            --hchain_file {params.H_chain_json} \
-            --lchain_file {params.L_chain_json} \
-            --output_file {params.prep_output_file} 
+        python3 /workspace/evodiff/frankie/run_evodiff.py --path {params.H_chain} \
+            --config /workspace/evodiff/frankie/experiment/2_diffusion/evodiff/evo_config.txt \
+            --chain h_chain \
+            && \
+        python3 /workspace/evodiff/frankie/run_evodiff.py --path {params.L_chain} \
+            --config /workspace/evodiff/frankie/experiment/2_diffusion/evodiff/evo_config.txt \
+            --chain l_chain
+            "
         """
 
 # rule run_evodiff:

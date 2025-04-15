@@ -82,7 +82,7 @@ rule run_evodiff:
         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
     shell:
         """
-        sudo docker run  --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
+        docker run  --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
         -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
         -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
         -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
@@ -295,6 +295,9 @@ rule run_haddock3:
         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_ss.tsv"))
     shell:
         """
+        rm -rf $(pwd)/{params.experiment_dir}/4_docking/output
+
+
         docker run -v $(pwd)/{params.experiment_dir}/4_docking:/mnt/experiment --rm cford38/haddock:3 /bin/bash -c \
             "cd /mnt/experiment && \
             haddock3 {params.config_file}"
@@ -307,7 +310,7 @@ rule make_report:
         experiment_name = config["main"]["experiment_name"]
     input:
         haddock_clt_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
-        haddock_ss_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
+        haddock_ss_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_ss.tsv")),
         input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/evodiff/h_chain.json")),
         input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/evodiff/l_chain.json"))
     output:

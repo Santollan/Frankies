@@ -82,7 +82,7 @@ rule run_evodiff:
         os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
     shell:
         """
-        docker run  --ipc=host --userns=host --ulimit memlock=-1 --ulimit stack=67108864 \
+        docker run  --ipc=host --userns=host  \
         -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
         -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
         -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \

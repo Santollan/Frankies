@@ -31,6 +31,7 @@ import plotly.express as px
 import py3Dmol
 from IPython.display import display, HTML
 from itables import show
+import os
 ```
 
 ```{python}
@@ -52,7 +53,14 @@ ss_df_best = ss_df[(ss_df["cluster-id"] == best_cluster_id)]
 lowest_vdw_row = ss_df_best.loc[ss_df_best["vdw"].idxmin()]
 best_model = lowest_vdw_row["model"].replace('../08_mdscoring/','')
 
-best_pdb_path = f"$(pwd)/{experiment_dir}/4_docking/output/08_mdscoring/{best_model}"
+# Get the absolute path of the current working directory
+current_dir = os.getcwd()
+ 
+
+# Navigate up to the experiments directory (2 levels up from postprocess)
+experiments_dir = os.path.dirname(os.path.dirname(current_dir))
+best_pdb_path = os.path.join(experiments_dir, "anti_HA_test_CF_03/4_docking/output/08_mdscoring", best_model)
+
 ```
 
 # Performance
@@ -68,7 +76,7 @@ best_pdb_path = f"$(pwd)/{experiment_dir}/4_docking/output/08_mdscoring/{best_mo
 dict(
     # icon = "x-square",
     color = "light",
-    value = clt_df.loc[clt_df["cluster_rank"] == 1, "n"].values[0]
+    value = int(clt_df.loc[clt_df["cluster_rank"] == 1, "n"].values[0])
 )
 ```
 
@@ -79,7 +87,7 @@ dict(
 dict(
     # icon = "x-square",
     color = "light",
-    value = f'{clt_df.loc[clt_df["cluster_rank"] == 1, "score"].values[0]}\n±{clt_df.loc[clt_df["cluster_rank"] == 1, "score_std"].values[0]}'
+  value = f'{float(clt_df.loc[clt_df["cluster_rank"] == 1, "score"].values[0])}\n±{float(clt_df.loc[clt_df["cluster_rank"] == 1, "score_std"].values[0])}'
 )
 ```
 
@@ -90,7 +98,7 @@ dict(
 dict(
     # icon = "x-square",
     color = "light",
-    value = f'{clt_df.loc[clt_df["cluster_rank"] == 1, "irmsd"].values[0]}\n±{clt_df.loc[clt_df["cluster_rank"] == 1, "irmsd_std"].values[0]}'
+    value = f'{float(clt_df.loc[clt_df["cluster_rank"] == 1, "irmsd"].values[0])}\n±{float(clt_df.loc[clt_df["cluster_rank"] == 1, "irmsd_std"].values[0])}'
 )
 ```
 
@@ -101,7 +109,7 @@ dict(
 dict(
     # icon = "x-square",
     color = "light",
-    value = f'{clt_df.loc[clt_df["cluster_rank"] == 1, "dockq"].values[0]}\n±{clt_df.loc[clt_df["cluster_rank"] == 1, "dockq_std"].values[0]}'
+    value = f'{float(clt_df.loc[clt_df["cluster_rank"] == 1, "dockq"].values[0])}\n±{float(clt_df.loc[clt_df["cluster_rank"] == 1, "dockq_std"].values[0])}'
 )
 ```
 

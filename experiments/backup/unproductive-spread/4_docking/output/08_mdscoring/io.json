@@ -1,0 +1,569 @@
+{
+    "input": [],
+    "output": [
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_1.pdb",
+            "file_type": {
+                "py/reduce": [
+                    {
+                        "py/type": "haddock.libs.libontology.Format"
+                    },
+                    {
+                        "py/tuple": [
+                            "pdb"
+                        ]
+                    }
+                ]
+            },
+            "full_name": "mdscoring_1.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_1.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_1.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "data",
+                            "07_mdref",
+                            "ambig.tbl"
+                        ]
+                    }
+                ]
+            },
+            "score": -137.10329,
+            "topology": [
+                {
+                    "created": "2025-04-15 21:06:34",
+                    "file_name": "antibody_haddock.psf",
+                    "file_type": {
+                        "py/reduce": [
+                            {
+                                "py/type": "haddock.libs.libontology.Format"
+                            },
+                            {
+                                "py/tuple": [
+                                    "psf"
+                                ]
+                            }
+                        ]
+                    },
+                    "full_name": "antibody_haddock.psf",
+                    "md5": null,
+                    "path": "/mnt/experiment/output/00_topoaa",
+                    "py/object": "haddock.libs.libontology.TopologyFile",
+                    "rel_path": {
+                        "py/reduce": [
+                            {
+                                "py/type": "pathlib.PosixPath"
+                            },
+                            {
+                                "py/tuple": [
+                                    "..",
+                                    "00_topoaa",
+                                    "antibody_haddock.psf"
+                                ]
+                            }
+                        ]
+                    },
+                    "restr_fname": null
+                },
+                {
+                    "created": "2025-04-15 21:06:34",
+                    "file_name": "antigen_haddock.psf",
+                    "file_type": {
+                        "py/id": 9
+                    },
+                    "full_name": "antigen_haddock.psf",
+                    "md5": null,
+                    "path": "/mnt/experiment/output/00_topoaa",
+                    "py/object": "haddock.libs.libontology.TopologyFile",
+                    "rel_path": {
+                        "py/reduce": [
+                            {
+                                "py/type": "pathlib.PosixPath"
+                            },
+                            {
+                                "py/tuple": [
+                                    "..",
+                                    "00_topoaa",
+                                    "antigen_haddock.psf"
+                                ]
+                            }
+                        ]
+                    },
+                    "restr_fname": null
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2345.11,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": 2.39831,
+                "dihe": 0.0,
+                "elec": -188.958,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -290.668,
+                "vdw": -101.71,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_2.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "mdscoring_2.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_2.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_2.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -142.72267,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2491.77,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -3.94467,
+                "dihe": 0.0,
+                "elec": -167.08,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -272.442,
+                "vdw": -105.362,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_3.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "mdscoring_3.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_3.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_3.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -133.16266299999998,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2543.79,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -0.377063,
+                "dihe": 0.0,
+                "elec": -174.352,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -272.268,
+                "vdw": -97.9152,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_4.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "mdscoring_4.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_4.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_4.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -131.05061999999998,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2666.24,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -3.02942,
+                "dihe": 0.0,
+                "elec": -143.461,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -242.79,
+                "vdw": -99.329,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_5.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "mdscoring_5.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_5.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_5.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -140.42863,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2651.68,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -3.78713,
+                "dihe": 0.0,
+                "elec": -203.27,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -299.257,
+                "vdw": -95.9875,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_6.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "mdscoring_6.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_6.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_6.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -128.71657,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2494.81,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -2.64257,
+                "dihe": 0.0,
+                "elec": -174.654,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -265.797,
+                "vdw": -91.1432,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_7.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "mdscoring_7.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_7.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_7.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -114.14098999999999,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2535.34,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": 4.12751,
+                "dihe": 0.0,
+                "elec": -133.89,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -225.38,
+                "vdw": -91.4905,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        },
+        {
+            "clt_id": null,
+            "clt_model_rank": null,
+            "clt_rank": null,
+            "created": "2025-04-15 21:19:50",
+            "file_name": "mdscoring_8.pdb",
+            "file_type": {
+                "py/id": 4
+            },
+            "full_name": "mdscoring_8.pdb",
+            "len": NaN,
+            "md5": null,
+            "ori_name": "mdref_8.pdb",
+            "path": "/mnt/experiment/output/08_mdscoring",
+            "py/object": "haddock.libs.libontology.PDBFile",
+            "rel_path": {
+                "py/reduce": [
+                    {
+                        "py/type": "pathlib.PosixPath"
+                    },
+                    {
+                        "py/tuple": [
+                            "..",
+                            "08_mdscoring",
+                            "mdscoring_8.pdb"
+                        ]
+                    }
+                ]
+            },
+            "restr_fname": {
+                "py/id": 6
+            },
+            "score": -130.24171,
+            "topology": [
+                {
+                    "py/id": 8
+                },
+                {
+                    "py/id": 11
+                }
+            ],
+            "unw_energies": {
+                "air": 0.0,
+                "angles": 0.0,
+                "bonds": 0.0,
+                "bsa": 2590.72,
+                "cdih": 0.0,
+                "coup": 0.0,
+                "dani": 0.0,
+                "desolv": -2.73831,
+                "dihe": 0.0,
+                "elec": -118.777,
+                "improper": 0.0,
+                "rdcs": 0.0,
+                "rg": 0.0,
+                "total": -222.526,
+                "vdw": -103.748,
+                "vean": 0.0,
+                "xpcs": 0.0
+            }
+        }
+    ]
+}

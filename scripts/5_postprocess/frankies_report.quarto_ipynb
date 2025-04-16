@@ -17,7 +17,7 @@
         "        href: https://github.com/Santollan/Frankies/\n",
         "---"
       ],
-      "id": "c6689f68"
+      "id": "71a32601"
     },
     {
       "cell_type": "code",
@@ -29,11 +29,15 @@
       "source": [
         "#| label: parameters\n",
         "\n",
-        "experiment_dir = \"../../experiments/anti_HA_test_CF_01/\"\n",
-        "capri_clt_file = \"../../experiments/anti_HA_test_CF_01/4_docking/output/10_caprieval/capri_clt.tsv\"\n",
-        "capri_ss_file = \"../../experiments/anti_HA_test_CF_01/4_docking/output/10_caprieval/capri_ss.tsv\"\n",
-        "input_h_json = \"../../experiments/anti_HA_test_CF_01/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json\"\n",
-        "input_l_json = \"../../experiments/anti_HA_test_CF_01/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json\""
+        "experiment_dir = \"../../experiments/anti_HA_test_CF_02/\"\n",
+        "capri_clt_file = \"../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_clt.tsv\"\n",
+        "capri_ss_file = \"../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_ss.tsv\"\n",
+        "input_h_json = \"../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json\"\n",
+        "input_l_json = \"../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json\"\n",
+        "\n",
+        "# Extract experiment name from path for use elsewhere\n",
+        "import os\n",
+        "experiment_name = os.path.basename(os.path.normpath(experiment_dir))"
       ],
       "id": "parameters",
       "execution_count": null,
@@ -49,7 +53,8 @@
         "import plotly.express as px\n",
         "import py3Dmol\n",
         "from IPython.display import display, HTML\n",
-        "from itables import show"
+        "from itables import show\n",
+        "import os"
       ],
       "id": "load_libs",
       "execution_count": null,
@@ -73,11 +78,17 @@
         "best_cluster_id = clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"cluster_id\"].values[0]\n",
         "\n",
         "## From best cluster, get best model (using VDW)\n",
-        "ss_df_best = ss_df[(ss_df[\"cluster-id\"] == 1)]\n",
+        "ss_df_best = ss_df[(ss_df[\"cluster-id\"] == best_cluster_id)]\n",
         "lowest_vdw_row = ss_df_best.loc[ss_df_best[\"vdw\"].idxmin()]\n",
         "best_model = lowest_vdw_row[\"model\"].replace('../08_mdscoring/','')\n",
         "\n",
-        "best_pdb_path = f\"{experiment_dir}/4_docking/output/08_mdscoring/{best_model}\""
+        "# Get the absolute path of the current working directory\n",
+        "current_dir = os.getcwd()\n",
+        " \n",
+        "\n",
+        "# Navigate up to the experiments directory (2 levels up from postprocess)\n",
+        "experiments_dir = os.path.dirname(os.path.dirname(current_dir))\n",
+        "best_pdb_path = os.path.join(experiments_dir, \"anti_HA_test_CF_03/4_docking/output/08_mdscoring\", best_model)"
       ],
       "id": "load_data",
       "execution_count": null,
@@ -93,7 +104,22 @@
         "\n",
         "### Row {height=20%}"
       ],
-      "id": "a59c2e19"
+      "id": "2966c370"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "component": "text"
+      },
+      "source": [
+        "#| label: experiment_display\n",
+        "import os\n",
+        "experiment_name = os.path.basename(os.path.normpath(experiment_dir))\n",
+        "f\"**Experiment**: {experiment_name}\""
+      ],
+      "id": "experiment_display",
+      "execution_count": null,
+      "outputs": []
     },
     {
       "cell_type": "code",
@@ -106,7 +132,7 @@
         "dict(\n",
         "    # icon = \"x-square\",\n",
         "    color = \"light\",\n",
-        "    value = clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"n\"].values[0]\n",
+        "    value = int(clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"n\"].values[0])\n",
         ")"
       ],
       "id": "n_tile",
@@ -124,7 +150,7 @@
         "dict(\n",
         "    # icon = \"x-square\",\n",
         "    color = \"light\",\n",
-        "    value = f'{clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"score\"].values[0]}\\n±{clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"score_std\"].values[0]}'\n",
+        "  value = f'{float(clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"score\"].values[0])}\\n±{float(clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"score_std\"].values[0])}'\n",
         ")"
       ],
       "id": "score_tile",
@@ -142,7 +168,7 @@
         "dict(\n",
         "    # icon = \"x-square\",\n",
         "    color = \"light\",\n",
-        "    value = f'{clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"irmsd\"].values[0]}\\n±{clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"irmsd_std\"].values[0]}'\n",
+        "    value = f'{float(clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"irmsd\"].values[0])}\\n±{float(clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"irmsd_std\"].values[0])}'\n",
         ")"
       ],
       "id": "irmsd_tile",
@@ -160,7 +186,7 @@
         "dict(\n",
         "    # icon = \"x-square\",\n",
         "    color = \"light\",\n",
-        "    value = f'{clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"dockq\"].values[0]}\\n±{clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"dockq_std\"].values[0]}'\n",
+        "    value = f'{float(clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"dockq\"].values[0])}\\n±{float(clt_df.loc[clt_df[\"cluster_rank\"] == 1, \"dockq_std\"].values[0])}'\n",
         ")"
       ],
       "id": "dockq_tile",
@@ -173,7 +199,7 @@
       "source": [
         "### Row {height=80%}"
       ],
-      "id": "59159476"
+      "id": "602cf44c"
     },
     {
       "cell_type": "code",
@@ -279,7 +305,7 @@
         "\n",
         "### Row {height=20%}"
       ],
-      "id": "fa0ff92e"
+      "id": "2cf0c9cd"
     },
     {
       "cell_type": "code",
@@ -329,7 +355,7 @@
       "source": [
         "### Row {height=80%}"
       ],
-      "id": "482d1e64"
+      "id": "7b996e8a"
     },
     {
       "cell_type": "code",
@@ -400,7 +426,7 @@
         "\n",
         "### Row {height=50%}"
       ],
-      "id": "d6b4c1bd"
+      "id": "d02cb6ce"
     },
     {
       "cell_type": "code",
@@ -426,9 +452,21 @@
         "show(clt_df, showIndex = False)\n",
         "``` -->\n",
         "\n",
-        "<!-- # About -->\n"
+        "<!-- # About -->\n",
+        "\n",
+        "## About FrankIES\n",
+        "\n",
+        "FrankIES (Frankie Immune Engineering Suite) is a computational pipeline for antibody engineering that integrates multiple advanced tools:\n",
+        "\n",
+        "- **Diffusion**: EvoDiff v1.1.0 (Docker container: cford38/evodiff:v1.1.0)\n",
+        "- **Folding**: ESM\n",
+        "- **Docking**: HADDOCK3 (Docker container: cford38/haddock:3)\n",
+        "\n",
+        "**Host System**: Ubuntu 22.04 with NVIDIA 560 drivers and CUDA 12.6\n",
+        "\n",
+        "The pipeline automates the complex process of antibody design, folding, docking, and evaluation, providing comprehensive results visualization through this interactive report.\n"
       ],
-      "id": "3508656a"
+      "id": "60366db2"
     }
   ],
   "metadata": {

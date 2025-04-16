@@ -1,0 +1,28 @@
+### clustfcc output ###
+
+Clustering parameters 
+> contact_distance_cutoff=5.0A
+> fraction_cutoff=0.6
+> threshold=10
+> strictness=0.75
+
+Note: Models marked with * represent the center of the cluster
+-----------------------------------------------
+
+Total # of clusters: 1
+
+-----------------------------------------------
+Cluster 1 (#1, n=10, top10_avg_score = 172.40 +-14.52)
+
+clt_rank	model_name	score
+1	rigidbody_160.pdb	144.47
+2	rigidbody_107.pdb	153.14
+3	rigidbody_180.pdb	163.68
+4	rigidbody_154.pdb	169.07
+5	rigidbody_79.pdb	173.76
+6	rigidbody_1.pdb	176.62
+7	rigidbody_24.pdb	177.85
+8	rigidbody_188.pdb	184.39	*
+9	rigidbody_91.pdb	187.17
+10	rigidbody_26.pdb	193.81
+-----------------------------------------------

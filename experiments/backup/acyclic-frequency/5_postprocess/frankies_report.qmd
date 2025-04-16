@@ -1,0 +1,344 @@
+---
+title: "Antibody Performance Dashboard" 
+subtitle: "Frankies Diffusion Pipeline"
+format:
+  dashboard:
+    theme: frankies.scss
+    icon: body-text
+    orientation: columns
+    nav-buttons:
+      - icon: github
+        href: https://github.com/Santollan/Frankies/
+---
+
+
+```{python}
+#| label: parameters
+#| tags: [parameters]
+
+experiment_dir = "../../experiments/anti_HA_test_CF_02/"
+capri_clt_file = "../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_clt.tsv"
+capri_ss_file = "../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_ss.tsv"
+input_h_json = "../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json"
+input_l_json = "../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json"
+
+# Extract experiment name from path for use elsewhere
+import os
+experiment_name = os.path.basename(os.path.normpath(experiment_dir))
+```
+
+```{python}
+#| label: load_libs
+import pandas as pd
+import re, json
+import plotly.express as px
+import py3Dmol
+from IPython.display import display, HTML
+from itables import show
+import os
+```
+
+```{python}
+#| label: load_data
+clt_df = pd.read_csv(capri_clt_file, sep='\t', comment='#')
+ss_df = pd.read_csv(capri_ss_file, sep='\t', comment='#')
+
+with open(input_h_json, 'r') as f:
+  h_sequence = json.load(f)["cleaned_sequence"]
+
+with open(input_l_json, 'r') as f:
+  l_sequence = json.load(f)["cleaned_sequence"]
+
+## Get best ranking cluster
+best_cluster_id = clt_df.loc[clt_df["cluster_rank"] == 1, "cluster_id"].values[0]
+
+## From best cluster, get best model (using VDW)
+ss_df_best = ss_df[(ss_df["cluster-id"] == best_cluster_id)]
+lowest_vdw_row = ss_df_best.loc[ss_df_best["vdw"].idxmin()]
+best_model = lowest_vdw_row["model"].replace('../08_mdscoring/','')
+
+# Get the absolute path of the current working directory
+current_dir = os.getcwd()
+ 
+
+# Navigate up to the experiments directory (2 levels up from postprocess)
+experiments_dir = os.path.dirname(os.path.dirname(current_dir))
+best_pdb_path = os.path.join(experiments_dir, "anti_HA_test_CF_03/4_docking/output/08_mdscoring", best_model)
+
+```
+
+# Performance
+
+## Column {width=50%}
+
+### Row {height=20%}
+
+
+```{python}
+#| label: experiment_display
+#| component: card
+#| title: "Experiment : "
+#| output: asis
+import os
+experiment_name = os.path.basename(os.path.normpath(experiment_dir))
+print(f"<div style='font-size: 20px; font-weight: bold; color:rgb(0, 0, 0);'> {experiment_name}</div>")
+```
+
+```{python}
+#| label: n_tile
+#| component: valuebox
+#| title: Structure Complexes Generated
+dict(
+    # icon = "x-square",
+    color = "light",
+    value = int(clt_df.loc[clt_df["cluster_rank"] == 1, "n"].values[0])
+)
+```
+
+```{python}
+#| label: score_tile
+#| component: valuebox
+#| title: Combined Score
+dict(
+    # icon = "x-square",
+    color = "light",
+  value = f'{float(clt_df.loc[clt_df["cluster_rank"] == 1, "score"].values[0])}\n±{float(clt_df.loc[clt_df["cluster_rank"] == 1, "score_std"].values[0])}'
+)
+```
+
+```{python}
+#| label: irmsd_tile
+#| component: valuebox
+#| title: Interface RMSD
+dict(
+    # icon = "x-square",
+    color = "light",
+    value = f'{float(clt_df.loc[clt_df["cluster_rank"] == 1, "irmsd"].values[0])}\n±{float(clt_df.loc[clt_df["cluster_rank"] == 1, "irmsd_std"].values[0])}'
+)
+```
+
+```{python}
+#| label: dockq_tile
+#| component: valuebox
+#| title: DockQ Score
+dict(
+    # icon = "x-square",
+    color = "light",
+    value = f'{float(clt_df.loc[clt_df["cluster_rank"] == 1, "dockq"].values[0])}\n±{float(clt_df.loc[clt_df["cluster_rank"] == 1, "dockq_std"].values[0])}'
+)
+```
+
+### Row {height=80%}
+
+```{python}
+#| label: create-graphs
+#| output: false
+score_fig  = px.box(ss_df, y="score", notched=True, points="all", labels={"score": "Combined Score"})
+score_fig.update_traces(marker_color='#005035', line_color='#005035')
+score_fig.update_layout(
+    showlegend=False,
+    paper_bgcolor="white",
+    plot_bgcolor="#e0e0e0",
+    font_color="#222",
+    xaxis=dict(color="#444"),
+    yaxis=dict(color="#444")
+)
+
+total_fig  = px.box(ss_df, y="total", notched=True, points="all", labels={"total": "Total Score"})
+total_fig.update_traces(marker_color='#899064', line_color='#899064')
+total_fig.update_layout(
+    showlegend=False,
+    paper_bgcolor="white",
+    plot_bgcolor="#e0e0e0",
+    font_color="#222",
+    xaxis=dict(color="#444"),
+    yaxis=dict(color="#444")
+)
+
+vdw_fig  = px.box(ss_df, y="vdw", notched=True, points="all", labels={"vdw": "Van der Waals Energy"})
+vdw_fig.update_traces(marker_color='#A49665', line_color='#A49665')
+vdw_fig.update_layout(
+    showlegend=False,
+    paper_bgcolor="white",
+    plot_bgcolor="#e0e0e0",
+    font_color="#222",
+    xaxis=dict(color="#444"),
+    yaxis=dict(color="#444")
+)
+
+elec_fig  = px.box(ss_df, y="elec", notched=True, points="all", labels={"elec": "Electrostatic Energy"})
+elec_fig.update_traces(marker_color='#101820', line_color='#101820')
+elec_fig.update_layout(
+    showlegend=False,
+    paper_bgcolor="white",
+    plot_bgcolor="#e0e0e0",
+    font_color="#222",
+    xaxis=dict(color="#444"),
+    yaxis=dict(color="#444")
+)
+
+desolv_fig  = px.box(ss_df, y="desolv", notched=True, points="all", labels={"desolv": "Desolvation Energy"})
+desolv_fig.update_traces(marker_color='#802F2D', line_color='#802F2D')
+desolv_fig.update_layout(
+    showlegend=False,
+    paper_bgcolor="white",
+    plot_bgcolor="#e0e0e0",
+    font_color="#222",
+    xaxis=dict(color="#444"),
+    yaxis=dict(color="#444")
+)
+
+bsa_fig  = px.box(ss_df, y="bsa", notched=True, points="all", labels={"bsa": "Buried Surface Area"})
+bsa_fig.update_traces(marker_color='#007377', line_color='#007377')
+bsa_fig.update_layout(
+    showlegend=False,
+    paper_bgcolor="white",
+    plot_bgcolor="#e0e0e0",
+    font_color="#222",
+    xaxis=dict(color="#444"),
+    yaxis=dict(color="#444")
+)
+```
+
+```{python}
+#| label: show-graphs
+#| title: Docking Performance Distribution
+#| layout-nrow: 2
+#| layout-ncol: 3
+score_fig.show()
+total_fig.show()
+vdw_fig.show()
+elec_fig.show()
+desolv_fig.show()
+bsa_fig.show()
+```
+
+
+## Column {width=50%}
+
+### Row {height=20%}
+
+```{python}
+#| label: h_chain
+#| title: Heavy Chain Sequence
+h_seq_html = f"""
+<div style='background-color:#f8f9fa; padding:1rem; border-radius:8px; margin-bottom:1rem;'>
+  <div style='font-family:monospace; white-space:pre-wrap; word-wrap:break-word;'>
+    {h_sequence}
+  </div>
+</div>
+"""
+
+display(HTML(h_seq_html))
+```
+
+```{python}
+#| label: l_chain
+#| title: Light Chain Sequence
+l_seq_html = f"""
+<div style='background-color:#f8f9fa; border-radius:8px;'>
+  <div style='font-family:monospace; white-space:pre-wrap; word-wrap:break-word;'>
+    {l_sequence}
+  </div>
+</div>
+"""
+
+display(HTML(l_seq_html))
+```
+
+
+### Row {height=80%}
+
+```{python}
+#| label: make_structure_viewer
+#| title: Best-Scoring Complex
+#| subtitle: Diffused antibody (in orange) docked with antigen (in cyan).
+#| output: false
+
+with open(best_pdb_path) as pdb_file:
+  pdb_data = "".join([x for x in pdb_file])
+  
+view = py3Dmol.view()
+view.addModel(pdb_data)
+view.setStyle( {'chain':'A'}, { 'cartoon': {'color': '#005035' }})
+view.setStyle( {'chain':'B'}, { 'cartoon': {'color': '#A49665'}})
+view.zoomTo()
+# view
+```
+
+
+```{python}
+#| label: show_structure
+#| padding: 0px
+print("title=", f"Best-Scoring Complex: {best_model}")
+
+html = f'''
+        <html>
+        <body style="margin: 0; padding: 0; display: block;">
+        {view._make_html()}
+        </body>
+        </html>
+    '''
+
+html = re.sub(r'width: (\S+);', 'width: 100%;', html)
+html = re.sub(r'height: (\S+);', 'height: 100vh;', html)
+
+# HTML(pdbview._make_html())
+HTML(html)
+```
+
+<!-- 
+```{=html}
+<script src="https://3Dmol.org/build/3Dmol-min.js"></script>     
+<script src="https://3Dmol.org/build/3Dmol.ui-min.js"></script>     
+ 
+<div style="height: 400px; width: 400px; position: relative;" class='viewer_3Dmoljs' data-pdb='2POR' data-backgroundcolor='0xffffff' data-style='stick' data-ui='true'></div>
+``` -->
+
+# Data
+
+## Column {width=100%}
+
+### Row {height=50%}
+
+```{python}
+#| label: model_data
+#| title: Individual Performance
+show(ss_df, showIndex = False)
+```
+
+
+<!-- ### Row {height=50%}
+
+```{python}
+#| label: cluster_data
+#| title: Cluster-Level Performance
+show(clt_df, showIndex = False)
+``` 
+-->
+
+
+
+
+# About
+## Row
+### About FrankIES {orientation="rows" width=100%}
+ 
+::: {.card title="FrankIES :  Scalable, AI-Based Antibody Design Against 2025 H5N1 Avian Influenza Isolates"}
+
+
+FrankIES (Frankie Immune Engineering Suite) is a computational pipeline for antibody engineering that integrates multiple advanced tools:
+
+- **Diffusion**: EvoDiff v1.1.0 (Docker container: cford38/evodiff:v1.1.0)
+- **Folding**: ESM
+- **Docking**: HADDOCK3 (Docker container: cford38/haddock:3)
+
+**Host System**: Ubuntu 22.04 with NVIDIA 560 drivers and CUDA 12.6
+
+The pipeline automates the complex process of antibody design, folding, docking, and evaluation, providing comprehensive results visualization through this interactive report.
+:::
+
+
+ 
+```{python}
+```

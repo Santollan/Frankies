@@ -1,0 +1,1189 @@
+### clustfcc output ###
+
+Clustering parameters 
+> contact_distance_cutoff=5.0A
+> fraction_cutoff=0.6
+> threshold=1
+> strictness=0.75
+
+Note: Models marked with * represent the center of the cluster
+-----------------------------------------------
+
+Total # of clusters: 196
+
+-----------------------------------------------
+Cluster 1 (#141, n=1, top1_avg_score = -2.80 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_58.pdb	-2.80	*
+
+-----------------------------------------------
+Cluster 2 (#109, n=1, top1_avg_score = -2.25 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_90.pdb	-2.25	*
+
+-----------------------------------------------
+Cluster 3 (#166, n=1, top1_avg_score = -2.20 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_32.pdb	-2.20	*
+
+-----------------------------------------------
+Cluster 4 (#133, n=1, top1_avg_score = -2.01 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_66.pdb	-2.01	*
+
+-----------------------------------------------
+Cluster 5 (#28, n=1, top1_avg_score = -1.89 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_172.pdb	-1.89	*
+
+-----------------------------------------------
+Cluster 6 (#21, n=1, top1_avg_score = -1.79 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_179.pdb	-1.79	*
+
+-----------------------------------------------
+Cluster 7 (#151, n=1, top1_avg_score = -1.78 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_47.pdb	-1.78	*
+
+-----------------------------------------------
+Cluster 8 (#158, n=1, top1_avg_score = -1.74 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_40.pdb	-1.74	*
+
+-----------------------------------------------
+Cluster 9 (#17, n=1, top1_avg_score = -1.58 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_184.pdb	-1.58	*
+
+-----------------------------------------------
+Cluster 10 (#185, n=1, top1_avg_score = -1.53 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_12.pdb	-1.53	*
+
+-----------------------------------------------
+Cluster 11 (#189, n=1, top1_avg_score = -1.42 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_8.pdb	-1.42	*
+
+-----------------------------------------------
+Cluster 12 (#74, n=1, top1_avg_score = -1.40 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_125.pdb	-1.40	*
+
+-----------------------------------------------
+Cluster 13 (#91, n=1, top1_avg_score = -1.39 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_108.pdb	-1.39	*
+
+-----------------------------------------------
+Cluster 14 (#157, n=1, top1_avg_score = -1.26 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_41.pdb	-1.26	*
+
+-----------------------------------------------
+Cluster 15 (#195, n=1, top1_avg_score = -1.26 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_2.pdb	-1.26	*
+
+-----------------------------------------------
+Cluster 16 (#154, n=1, top1_avg_score = -1.24 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_44.pdb	-1.24	*
+
+-----------------------------------------------
+Cluster 17 (#121, n=1, top1_avg_score = -1.19 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_78.pdb	-1.19	*
+
+-----------------------------------------------
+Cluster 18 (#142, n=1, top1_avg_score = -1.17 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_57.pdb	-1.17	*
+
+-----------------------------------------------
+Cluster 19 (#42, n=1, top1_avg_score = -1.14 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_158.pdb	-1.14	*
+
+-----------------------------------------------
+Cluster 20 (#146, n=1, top1_avg_score = -1.04 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_52.pdb	-1.04	*
+
+-----------------------------------------------
+Cluster 21 (#190, n=1, top1_avg_score = -1.03 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_7.pdb	-1.03	*
+
+-----------------------------------------------
+Cluster 22 (#3, n=1, top1_avg_score = -1.01 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_198.pdb	-1.01	*
+
+-----------------------------------------------
+Cluster 23 (#7, n=1, top1_avg_score = -0.90 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_194.pdb	-0.90	*
+
+-----------------------------------------------
+Cluster 24 (#196, n=1, top1_avg_score = -0.89 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_1.pdb	-0.89	*
+
+-----------------------------------------------
+Cluster 25 (#58, n=1, top1_avg_score = -0.84 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_141.pdb	-0.84	*
+
+-----------------------------------------------
+Cluster 26 (#143, n=1, top1_avg_score = -0.82 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_56.pdb	-0.82	*
+
+-----------------------------------------------
+Cluster 27 (#19, n=1, top1_avg_score = -0.80 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_181.pdb	-0.80	*
+
+-----------------------------------------------
+Cluster 28 (#72, n=1, top1_avg_score = -0.76 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_127.pdb	-0.76	*
+
+-----------------------------------------------
+Cluster 29 (#97, n=1, top1_avg_score = -0.74 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_102.pdb	-0.74	*
+
+-----------------------------------------------
+Cluster 30 (#88, n=1, top1_avg_score = -0.74 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_111.pdb	-0.74	*
+
+-----------------------------------------------
+Cluster 31 (#70, n=1, top1_avg_score = -0.72 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_129.pdb	-0.72	*
+
+-----------------------------------------------
+Cluster 32 (#192, n=1, top1_avg_score = -0.71 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_5.pdb	-0.71	*
+
+-----------------------------------------------
+Cluster 33 (#20, n=1, top1_avg_score = -0.67 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_180.pdb	-0.67	*
+
+-----------------------------------------------
+Cluster 34 (#82, n=1, top1_avg_score = -0.66 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_117.pdb	-0.66	*
+
+-----------------------------------------------
+Cluster 35 (#96, n=1, top1_avg_score = -0.66 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_103.pdb	-0.66	*
+
+-----------------------------------------------
+Cluster 36 (#160, n=1, top1_avg_score = -0.66 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_38.pdb	-0.66	*
+
+-----------------------------------------------
+Cluster 37 (#188, n=1, top1_avg_score = -0.64 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_9.pdb	-0.64	*
+
+-----------------------------------------------
+Cluster 38 (#117, n=1, top1_avg_score = -0.62 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_82.pdb	-0.62	*
+
+-----------------------------------------------
+Cluster 39 (#13, n=1, top1_avg_score = -0.61 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_188.pdb	-0.61	*
+
+-----------------------------------------------
+Cluster 40 (#170, n=1, top1_avg_score = -0.56 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_28.pdb	-0.56	*
+
+-----------------------------------------------
+Cluster 41 (#162, n=1, top1_avg_score = -0.56 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_36.pdb	-0.56	*
+
+-----------------------------------------------
+Cluster 42 (#130, n=1, top1_avg_score = -0.53 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_69.pdb	-0.53	*
+
+-----------------------------------------------
+Cluster 43 (#94, n=1, top1_avg_score = -0.51 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_105.pdb	-0.51	*
+
+-----------------------------------------------
+Cluster 44 (#134, n=1, top1_avg_score = -0.49 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_65.pdb	-0.49	*
+
+-----------------------------------------------
+Cluster 45 (#124, n=1, top1_avg_score = -0.46 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_75.pdb	-0.46	*
+
+-----------------------------------------------
+Cluster 46 (#104, n=1, top1_avg_score = -0.44 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_95.pdb	-0.44	*
+
+-----------------------------------------------
+Cluster 47 (#30, n=1, top1_avg_score = -0.42 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_170.pdb	-0.42	*
+
+-----------------------------------------------
+Cluster 48 (#155, n=1, top1_avg_score = -0.40 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_43.pdb	-0.40	*
+
+-----------------------------------------------
+Cluster 49 (#167, n=1, top1_avg_score = -0.38 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_31.pdb	-0.38	*
+
+-----------------------------------------------
+Cluster 50 (#175, n=1, top1_avg_score = -0.32 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_22.pdb	-0.32	*
+
+-----------------------------------------------
+Cluster 51 (#12, n=1, top1_avg_score = -0.27 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_189.pdb	-0.27	*
+
+-----------------------------------------------
+Cluster 52 (#156, n=1, top1_avg_score = -0.27 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_42.pdb	-0.27	*
+
+-----------------------------------------------
+Cluster 53 (#86, n=1, top1_avg_score = -0.26 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_113.pdb	-0.26	*
+
+-----------------------------------------------
+Cluster 54 (#67, n=1, top1_avg_score = -0.24 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_132.pdb	-0.24	*
+
+-----------------------------------------------
+Cluster 55 (#194, n=1, top1_avg_score = -0.23 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_3.pdb	-0.23	*
+
+-----------------------------------------------
+Cluster 56 (#177, n=1, top1_avg_score = -0.18 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_20.pdb	-0.18	*
+
+-----------------------------------------------
+Cluster 57 (#112, n=1, top1_avg_score = -0.17 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_87.pdb	-0.17	*
+
+-----------------------------------------------
+Cluster 58 (#114, n=1, top1_avg_score = -0.16 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_85.pdb	-0.16	*
+
+-----------------------------------------------
+Cluster 59 (#132, n=1, top1_avg_score = -0.14 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_67.pdb	-0.14	*
+
+-----------------------------------------------
+Cluster 60 (#140, n=1, top1_avg_score = -0.13 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_59.pdb	-0.13	*
+
+-----------------------------------------------
+Cluster 61 (#36, n=1, top1_avg_score = -0.08 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_164.pdb	-0.08	*
+
+-----------------------------------------------
+Cluster 62 (#80, n=1, top1_avg_score = -0.06 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_119.pdb	-0.06	*
+
+-----------------------------------------------
+Cluster 63 (#128, n=1, top1_avg_score = -0.06 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_71.pdb	-0.06	*
+
+-----------------------------------------------
+Cluster 64 (#1, n=1, top1_avg_score = 0.01 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_200.pdb	0.01	*
+
+-----------------------------------------------
+Cluster 65 (#63, n=1, top1_avg_score = 0.01 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_136.pdb	0.01	*
+
+-----------------------------------------------
+Cluster 66 (#44, n=1, top1_avg_score = 0.04 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_155.pdb	0.04	*
+
+-----------------------------------------------
+Cluster 67 (#52, n=1, top1_avg_score = 0.12 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_147.pdb	0.12	*
+
+-----------------------------------------------
+Cluster 68 (#81, n=1, top1_avg_score = 0.13 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_118.pdb	0.13	*
+
+-----------------------------------------------
+Cluster 69 (#125, n=1, top1_avg_score = 0.19 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_74.pdb	0.19	*
+
+-----------------------------------------------
+Cluster 70 (#32, n=1, top1_avg_score = 0.20 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_168.pdb	0.20	*
+
+-----------------------------------------------
+Cluster 71 (#174, n=1, top1_avg_score = 0.21 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_23.pdb	0.21	*
+
+-----------------------------------------------
+Cluster 72 (#85, n=1, top1_avg_score = 0.34 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_114.pdb	0.34	*
+
+-----------------------------------------------
+Cluster 73 (#4, n=1, top1_avg_score = 0.40 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_197.pdb	0.40	*
+
+-----------------------------------------------
+Cluster 74 (#84, n=1, top1_avg_score = 0.50 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_115.pdb	0.50	*
+
+-----------------------------------------------
+Cluster 75 (#164, n=1, top1_avg_score = 0.60 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_34.pdb	0.60	*
+
+-----------------------------------------------
+Cluster 76 (#54, n=1, top1_avg_score = 0.62 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_145.pdb	0.62	*
+
+-----------------------------------------------
+Cluster 77 (#168, n=1, top1_avg_score = 0.72 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_30.pdb	0.72	*
+
+-----------------------------------------------
+Cluster 78 (#8, n=1, top1_avg_score = 0.72 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_193.pdb	0.72	*
+
+-----------------------------------------------
+Cluster 79 (#60, n=1, top1_avg_score = 0.74 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_139.pdb	0.74	*
+
+-----------------------------------------------
+Cluster 80 (#172, n=1, top1_avg_score = 0.75 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_25.pdb	0.75	*
+
+-----------------------------------------------
+Cluster 81 (#43, n=1, top1_avg_score = 0.75 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_156.pdb	0.75	*
+
+-----------------------------------------------
+Cluster 82 (#14, n=1, top1_avg_score = 0.76 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_187.pdb	0.76	*
+
+-----------------------------------------------
+Cluster 83 (#181, n=1, top1_avg_score = 0.85 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_16.pdb	0.85	*
+
+-----------------------------------------------
+Cluster 84 (#45, n=1, top1_avg_score = 0.90 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_154.pdb	0.90	*
+
+-----------------------------------------------
+Cluster 85 (#6, n=1, top1_avg_score = 0.93 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_195.pdb	0.93	*
+
+-----------------------------------------------
+Cluster 86 (#147, n=1, top1_avg_score = 0.94 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_51.pdb	0.94	*
+
+-----------------------------------------------
+Cluster 87 (#25, n=1, top1_avg_score = 0.98 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_175.pdb	0.98	*
+
+-----------------------------------------------
+Cluster 88 (#118, n=1, top1_avg_score = 1.09 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_81.pdb	1.09	*
+
+-----------------------------------------------
+Cluster 89 (#144, n=1, top1_avg_score = 1.13 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_55.pdb	1.13	*
+
+-----------------------------------------------
+Cluster 90 (#40, n=1, top1_avg_score = 1.45 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_160.pdb	1.45	*
+
+-----------------------------------------------
+Cluster 91 (#180, n=1, top1_avg_score = 1.83 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_17.pdb	1.83	*
+
+-----------------------------------------------
+Cluster 92 (#24, n=1, top1_avg_score = 2.01 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_176.pdb	2.01	*
+
+-----------------------------------------------
+Cluster 93 (#89, n=1, top1_avg_score = 9997.71 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_110.pdb	9997.71	*
+
+-----------------------------------------------
+Cluster 94 (#145, n=1, top1_avg_score = 9997.89 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_54.pdb	9997.89	*
+
+-----------------------------------------------
+Cluster 95 (#173, n=1, top1_avg_score = 9998.04 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_24.pdb	9998.04	*
+
+-----------------------------------------------
+Cluster 96 (#47, n=1, top1_avg_score = 9998.17 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_152.pdb	9998.17	*
+
+-----------------------------------------------
+Cluster 97 (#79, n=1, top1_avg_score = 9998.25 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_120.pdb	9998.25	*
+
+-----------------------------------------------
+Cluster 98 (#107, n=1, top1_avg_score = 9998.58 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_92.pdb	9998.58	*
+
+-----------------------------------------------
+Cluster 99 (#71, n=1, top1_avg_score = 9998.72 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_128.pdb	9998.72	*
+
+-----------------------------------------------
+Cluster 100 (#106, n=1, top1_avg_score = 9998.85 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_93.pdb	9998.85	*
+
+-----------------------------------------------
+Cluster 101 (#11, n=1, top1_avg_score = 9998.91 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_190.pdb	9998.91	*
+
+-----------------------------------------------
+Cluster 102 (#153, n=1, top1_avg_score = 9998.92 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_45.pdb	9998.92	*
+
+-----------------------------------------------
+Cluster 103 (#78, n=1, top1_avg_score = 9999.01 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_121.pdb	9999.01	*
+
+-----------------------------------------------
+Cluster 104 (#123, n=1, top1_avg_score = 9999.10 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_76.pdb	9999.10	*
+
+-----------------------------------------------
+Cluster 105 (#105, n=1, top1_avg_score = 9999.12 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_94.pdb	9999.12	*
+
+-----------------------------------------------
+Cluster 106 (#5, n=1, top1_avg_score = 9999.13 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_196.pdb	9999.13	*
+
+-----------------------------------------------
+Cluster 107 (#37, n=1, top1_avg_score = 9999.18 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_163.pdb	9999.18	*
+
+-----------------------------------------------
+Cluster 108 (#93, n=1, top1_avg_score = 9999.22 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_106.pdb	9999.22	*
+
+-----------------------------------------------
+Cluster 109 (#41, n=1, top1_avg_score = 9999.23 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_159.pdb	9999.23	*
+
+-----------------------------------------------
+Cluster 110 (#120, n=1, top1_avg_score = 9999.25 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_79.pdb	9999.25	*
+
+-----------------------------------------------
+Cluster 111 (#10, n=1, top1_avg_score = 9999.31 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_191.pdb	9999.31	*
+
+-----------------------------------------------
+Cluster 112 (#38, n=1, top1_avg_score = 9999.33 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_162.pdb	9999.33	*
+
+-----------------------------------------------
+Cluster 113 (#57, n=1, top1_avg_score = 9999.34 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_142.pdb	9999.34	*
+
+-----------------------------------------------
+Cluster 114 (#27, n=1, top1_avg_score = 9999.35 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_173.pdb	9999.35	*
+
+-----------------------------------------------
+Cluster 115 (#184, n=1, top1_avg_score = 9999.40 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_13.pdb	9999.40	*
+
+-----------------------------------------------
+Cluster 116 (#100, n=1, top1_avg_score = 9999.43 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_99.pdb	9999.43	*
+
+-----------------------------------------------
+Cluster 117 (#99, n=1, top1_avg_score = 9999.44 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_100.pdb	9999.44	*
+
+-----------------------------------------------
+Cluster 118 (#186, n=1, top1_avg_score = 9999.45 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_11.pdb	9999.45	*
+
+-----------------------------------------------
+Cluster 119 (#131, n=1, top1_avg_score = 9999.51 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_68.pdb	9999.51	*
+
+-----------------------------------------------
+Cluster 120 (#62, n=1, top1_avg_score = 9999.52 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_137.pdb	9999.52	*
+
+-----------------------------------------------
+Cluster 121 (#138, n=1, top1_avg_score = 9999.54 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_61.pdb	9999.54	*
+
+-----------------------------------------------
+Cluster 122 (#65, n=1, top1_avg_score = 9999.54 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_134.pdb	9999.54	*
+
+-----------------------------------------------
+Cluster 123 (#103, n=1, top1_avg_score = 9999.54 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_96.pdb	9999.54	*
+
+-----------------------------------------------
+Cluster 124 (#150, n=1, top1_avg_score = 9999.55 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_48.pdb	9999.55	*
+
+-----------------------------------------------
+Cluster 125 (#48, n=1, top1_avg_score = 9999.56 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_151.pdb	9999.56	*
+
+-----------------------------------------------
+Cluster 126 (#108, n=1, top1_avg_score = 9999.56 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_91.pdb	9999.56	*
+
+-----------------------------------------------
+Cluster 127 (#73, n=1, top1_avg_score = 9999.59 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_126.pdb	9999.59	*
+
+-----------------------------------------------
+Cluster 128 (#34, n=1, top1_avg_score = 9999.59 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_166.pdb	9999.59	*
+
+-----------------------------------------------
+Cluster 129 (#22, n=1, top1_avg_score = 9999.61 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_178.pdb	9999.61	*
+
+-----------------------------------------------
+Cluster 130 (#122, n=1, top1_avg_score = 9999.62 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_77.pdb	9999.62	*
+
+-----------------------------------------------
+Cluster 131 (#49, n=1, top1_avg_score = 9999.64 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_150.pdb	9999.64	*
+
+-----------------------------------------------
+Cluster 132 (#129, n=1, top1_avg_score = 9999.65 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_70.pdb	9999.65	*
+
+-----------------------------------------------
+Cluster 133 (#90, n=1, top1_avg_score = 9999.69 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_109.pdb	9999.69	*
+
+-----------------------------------------------
+Cluster 134 (#126, n=1, top1_avg_score = 9999.75 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_73.pdb	9999.75	*
+
+-----------------------------------------------
+Cluster 135 (#191, n=1, top1_avg_score = 9999.76 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_6.pdb	9999.76	*
+
+-----------------------------------------------
+Cluster 136 (#113, n=1, top1_avg_score = 9999.77 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_86.pdb	9999.77	*
+
+-----------------------------------------------
+Cluster 137 (#56, n=1, top1_avg_score = 9999.78 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_143.pdb	9999.78	*
+
+-----------------------------------------------
+Cluster 138 (#115, n=1, top1_avg_score = 9999.79 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_84.pdb	9999.79	*
+
+-----------------------------------------------
+Cluster 139 (#23, n=1, top1_avg_score = 9999.84 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_177.pdb	9999.84	*
+
+-----------------------------------------------
+Cluster 140 (#26, n=1, top1_avg_score = 9999.85 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_174.pdb	9999.85	*
+
+-----------------------------------------------
+Cluster 141 (#33, n=1, top1_avg_score = 9999.87 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_167.pdb	9999.87	*
+
+-----------------------------------------------
+Cluster 142 (#178, n=1, top1_avg_score = 9999.87 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_19.pdb	9999.87	*
+
+-----------------------------------------------
+Cluster 143 (#18, n=1, top1_avg_score = 9999.89 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_182.pdb	9999.89	*
+
+-----------------------------------------------
+Cluster 144 (#87, n=1, top1_avg_score = 9999.91 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_112.pdb	9999.91	*
+
+-----------------------------------------------
+Cluster 145 (#64, n=1, top1_avg_score = 9999.92 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_135.pdb	9999.92	*
+
+-----------------------------------------------
+Cluster 146 (#110, n=1, top1_avg_score = 9999.93 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_89.pdb	9999.93	*
+
+-----------------------------------------------
+Cluster 147 (#111, n=1, top1_avg_score = 9999.94 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_88.pdb	9999.94	*
+
+-----------------------------------------------
+Cluster 148 (#92, n=1, top1_avg_score = 9999.94 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_107.pdb	9999.94	*
+
+-----------------------------------------------
+Cluster 149 (#39, n=1, top1_avg_score = 9999.94 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_161.pdb	9999.94	*
+
+-----------------------------------------------
+Cluster 150 (#69, n=1, top1_avg_score = 9999.95 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_130.pdb	9999.95	*
+
+-----------------------------------------------
+Cluster 151 (#136, n=1, top1_avg_score = 9999.96 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_63.pdb	9999.96	*
+
+-----------------------------------------------
+Cluster 152 (#137, n=1, top1_avg_score = 9999.96 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_62.pdb	9999.96	*
+
+-----------------------------------------------
+Cluster 153 (#176, n=1, top1_avg_score = 9999.96 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_21.pdb	9999.96	*
+
+-----------------------------------------------
+Cluster 154 (#61, n=1, top1_avg_score = 10000.01 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_138.pdb	10000.01	*
+
+-----------------------------------------------
+Cluster 155 (#165, n=1, top1_avg_score = 10000.03 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_33.pdb	10000.03	*
+
+-----------------------------------------------
+Cluster 156 (#16, n=1, top1_avg_score = 10000.06 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_185.pdb	10000.06	*
+
+-----------------------------------------------
+Cluster 157 (#193, n=1, top1_avg_score = 10000.06 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_4.pdb	10000.06	*
+
+-----------------------------------------------
+Cluster 158 (#9, n=1, top1_avg_score = 10000.07 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_192.pdb	10000.07	*
+
+-----------------------------------------------
+Cluster 159 (#116, n=1, top1_avg_score = 10000.11 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_83.pdb	10000.11	*
+
+-----------------------------------------------
+Cluster 160 (#31, n=1, top1_avg_score = 10000.11 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_169.pdb	10000.11	*
+
+-----------------------------------------------
+Cluster 161 (#171, n=1, top1_avg_score = 10000.18 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_26.pdb	10000.18	*
+
+-----------------------------------------------
+Cluster 162 (#95, n=1, top1_avg_score = 10000.20 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_104.pdb	10000.20	*
+
+-----------------------------------------------
+Cluster 163 (#35, n=1, top1_avg_score = 10000.22 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_165.pdb	10000.22	*
+
+-----------------------------------------------
+Cluster 164 (#139, n=1, top1_avg_score = 10000.23 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_60.pdb	10000.23	*
+
+-----------------------------------------------
+Cluster 165 (#66, n=1, top1_avg_score = 10000.24 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_133.pdb	10000.24	*
+
+-----------------------------------------------
+Cluster 166 (#77, n=1, top1_avg_score = 10000.32 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_122.pdb	10000.32	*
+
+-----------------------------------------------
+Cluster 167 (#152, n=1, top1_avg_score = 10000.36 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_46.pdb	10000.36	*
+
+-----------------------------------------------
+Cluster 168 (#159, n=1, top1_avg_score = 10000.43 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_39.pdb	10000.43	*
+
+-----------------------------------------------
+Cluster 169 (#55, n=1, top1_avg_score = 10000.58 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_144.pdb	10000.58	*
+
+-----------------------------------------------
+Cluster 170 (#15, n=1, top1_avg_score = 10000.61 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_186.pdb	10000.61	*
+
+-----------------------------------------------
+Cluster 171 (#179, n=1, top1_avg_score = 10000.65 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_18.pdb	10000.65	*
+
+-----------------------------------------------
+Cluster 172 (#76, n=1, top1_avg_score = 10000.69 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_123.pdb	10000.69	*
+
+-----------------------------------------------
+Cluster 173 (#163, n=1, top1_avg_score = 10000.70 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_35.pdb	10000.70	*
+
+-----------------------------------------------
+Cluster 174 (#29, n=1, top1_avg_score = 10000.71 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_171.pdb	10000.71	*
+
+-----------------------------------------------
+Cluster 175 (#183, n=1, top1_avg_score = 10000.72 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_14.pdb	10000.72	*
+
+-----------------------------------------------
+Cluster 176 (#50, n=1, top1_avg_score = 10000.77 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_149.pdb	10000.77	*
+
+-----------------------------------------------
+Cluster 177 (#53, n=1, top1_avg_score = 10000.78 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_146.pdb	10000.78	*
+
+-----------------------------------------------
+Cluster 178 (#187, n=1, top1_avg_score = 10000.79 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_10.pdb	10000.79	*
+
+-----------------------------------------------
+Cluster 179 (#51, n=1, top1_avg_score = 10000.84 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_148.pdb	10000.84	*
+
+-----------------------------------------------
+Cluster 180 (#75, n=1, top1_avg_score = 10000.89 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_124.pdb	10000.89	*
+
+-----------------------------------------------
+Cluster 181 (#161, n=1, top1_avg_score = 10000.93 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_37.pdb	10000.93	*
+
+-----------------------------------------------
+Cluster 182 (#46, n=1, top1_avg_score = 10000.95 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_153.pdb	10000.95	*
+
+-----------------------------------------------
+Cluster 183 (#102, n=1, top1_avg_score = 10001.02 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_97.pdb	10001.02	*
+
+-----------------------------------------------
+Cluster 184 (#59, n=1, top1_avg_score = 10001.04 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_140.pdb	10001.04	*
+
+-----------------------------------------------
+Cluster 185 (#135, n=1, top1_avg_score = 10001.08 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_64.pdb	10001.08	*
+
+-----------------------------------------------
+Cluster 186 (#127, n=1, top1_avg_score = 10001.12 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_72.pdb	10001.12	*
+
+-----------------------------------------------
+Cluster 187 (#83, n=1, top1_avg_score = 10001.22 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_116.pdb	10001.22	*
+
+-----------------------------------------------
+Cluster 188 (#101, n=1, top1_avg_score = 10001.25 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_98.pdb	10001.25	*
+
+-----------------------------------------------
+Cluster 189 (#68, n=1, top1_avg_score = 10001.28 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_131.pdb	10001.28	*
+
+-----------------------------------------------
+Cluster 190 (#119, n=1, top1_avg_score = 10001.34 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_80.pdb	10001.34	*
+
+-----------------------------------------------
+Cluster 191 (#182, n=1, top1_avg_score = 10001.38 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_15.pdb	10001.38	*
+
+-----------------------------------------------
+Cluster 192 (#98, n=1, top1_avg_score = 10001.54 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_101.pdb	10001.54	*
+
+-----------------------------------------------
+Cluster 193 (#148, n=1, top1_avg_score = 10001.75 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_50.pdb	10001.75	*
+
+-----------------------------------------------
+Cluster 194 (#2, n=1, top1_avg_score = 10002.02 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_199.pdb	10002.02	*
+
+-----------------------------------------------
+Cluster 195 (#149, n=1, top1_avg_score = 10002.54 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_49.pdb	10002.54	*
+
+-----------------------------------------------
+Cluster 196 (#169, n=1, top1_avg_score = 10002.97 +-0.00)
+
+clt_rank	model_name	score
+1	rigidbody_29.pdb	10002.97	*
+-----------------------------------------------

@@ -1,11 +1,33 @@
 import os
 configfile: "config.yaml"
+import randomname
+
+
+# Check if we have a stored experiment name for this run
+experiment_name_file = ".current_experiment_name"
+if os.path.exists(experiment_name_file):
+    with open(experiment_name_file, "r") as f:
+        EXPERIMENT_NAME = f.read().strip()
+else:
+    # Generate a new name and save it
+    EXPERIMENT_NAME = randomname.get_name()
+    with open(experiment_name_file, "w") as f:
+        f.write(EXPERIMENT_NAME)
+
+EXPERIMENT_DIR = os.path.join(config["main"]["experiment_dir"], EXPERIMENT_NAME)
+experiment_dir = EXPERIMENT_DIR
+
+# Print for debugging
+print(f"Using experiment directory: {EXPERIMENT_DIR}")
 
 rule all:
+    params:
+        experiment_dir = EXPERIMENT_DIR,
+
     input: 
         # "config_timestamp",
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_ss.tsv")),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "5_postprocess/frankies_report.html"))
+        os.path.abspath(os.path.join(experiment_dir, "4_docking/output/10_caprieval/capri_ss.tsv")),
+        os.path.abspath(os.path.join(experiment_dir, "5_postprocess/frankies_report.html"))
 
 # rule config_timestamp:
 #     input:
@@ -17,18 +39,19 @@ rule initialize:
     # input:
         # config_stamp = "config_timestamp"
     params:
-        experiment_dir = config["main"]["experiment_dir"],
-        experiment_name = config["main"]["experiment_name"],
+        experiment_dir = EXPERIMENT_DIR,
+        # experiment_name = config["main"]["experiment_name"],
         H_chain = config["main"]["H_chain"],
         L_chain = config["main"]["L_chain"],
         Antigen = config["main"]["Antigen"],
     output:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log")),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["H_chain"])),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["L_chain"])),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["Antigen"]))
+        os.path.abspath(os.path.join(experiment_dir, "frankies.log")),
+        os.path.abspath(os.path.join(experiment_dir, "1_inputs", config["main"]["H_chain"])),
+        os.path.abspath(os.path.join(experiment_dir, "1_inputs", config["main"]["L_chain"])),
+        os.path.abspath(os.path.join(experiment_dir, "1_inputs", config["main"]["Antigen"]))
     run: 
         # Create the experiment directory
+        shell("mkdir -p {params.experiment_dir}")
         shell("mkdir -p {params.experiment_dir}/1_inputs"),
         shell("cp -r ./data/inputs/* {params.experiment_dir}/1_inputs/"),
         # Create the output directories
@@ -45,15 +68,15 @@ rule initialize:
 rule prepare_evodiff:
     # This rule prepares the input files for Evodiff
     params:
-        path = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs")),
-        prepare_evodiff_script = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "scripts/2_diffusion/prepare.py")),
+        path = os.path.abspath(os.path.join(experiment_dir, "1_inputs")),
+        prepare_evodiff_script = os.path.abspath(os.path.join(experiment_dir, "scripts/2_diffusion/prepare.py")),
     input:
-        H_chain = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["H_chain"])),
-        L_chain = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "1_inputs", config["main"]["L_chain"]))
+        H_chain = os.path.abspath(os.path.join(experiment_dir, "1_inputs", config["main"]["H_chain"])),
+        L_chain = os.path.abspath(os.path.join(experiment_dir, "1_inputs", config["main"]["L_chain"]))
     output:
-        evo_config= os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion","evodiff", "evo_config.txt")),
+        evo_config= os.path.abspath(os.path.join(experiment_dir, "2_diffusion","evodiff", "evo_config.txt")),
     log:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
+        os.path.abspath(os.path.join(experiment_dir, "frankies.log"))
     shell:
         """
         ## Create output directories
@@ -69,17 +92,17 @@ rule prepare_evodiff:
 rule run_evodiff:
     # This rule runs Evodiff using Docker with config-specified GPU settings
     params:
-        experiment_dir = os.path.abspath(config["main"]["experiment_dir"]),
+        experiment_dir = os.path.abspath(experiment_dir),
         H_chain = os.path.join("/workspace/evodiff/frankie/experiment/1_inputs", config["main"]["H_chain"]),
         L_chain = os.path.join("/workspace/evodiff/frankie/experiment/1_inputs", config["main"]["L_chain"]),
 
     input:
-        evo_config= os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion","evodiff", "evo_config.txt")), 
+        evo_config= os.path.abspath(os.path.join(experiment_dir, "2_diffusion","evodiff", "evo_config.txt")), 
     output:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "h_chain.json")),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "l_chain.json"))
+        os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "h_chain.json")),
+        os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "l_chain.json"))
     log:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
+        os.path.abspath(os.path.join(experiment_dir, "frankies.log"))
     shell:
         """
         docker run  --ipc=host --userns=host  \
@@ -216,14 +239,14 @@ rule run_evodiff:
 
 rule run_esmfold:
     params:
-        experiment_dir = config["main"]["experiment_dir"],
+        experiment_dir = EXPERIMENT_DIR,
         token = config["folding"]["esmfold"]["forge_token"],
         model = config["folding"]["esmfold"]["model"]
     input:
-        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "h_chain.json")),
-        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion", "evodiff", "l_chain.json"))
+        input_h_json = os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "h_chain.json")),
+        input_l_json = os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "l_chain.json"))
     output:
-        output_pdb = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding", "antibody.pdb"))
+        output_pdb = os.path.abspath(os.path.join(experiment_dir, "3_folding", "antibody.pdb"))
     shell:
         """
         ## Create output directories
@@ -241,7 +264,7 @@ rule run_esmfold:
 ## Docking
 rule prepare_haddock3:
     params:
-        experiment_dir = config["main"]["experiment_dir"],
+        experiment_dir = EXPERIMENT_DIR,
         antibody_pdb = "antibody.pdb",
         antigen_pdb = config["main"]["Antigen"],
         prepared_antibody_pdb = config["docking"]["haddock3"]["prepared_antibody_pdb"],
@@ -250,11 +273,11 @@ rule prepare_haddock3:
         config_file = config["docking"]["haddock3"]["config_file"],
         n_cores=config["main"]["cores"]
     input:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "3_folding/antibody.pdb"))
+        os.path.abspath(os.path.join(experiment_dir, "3_folding/antibody.pdb"))
     output: 
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking", config["docking"]["haddock3"]["config_file"]))
+        os.path.abspath(os.path.join(experiment_dir, "4_docking", config["docking"]["haddock3"]["config_file"]))
     log:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "frankies.log"))
+        os.path.abspath(os.path.join(experiment_dir, "frankies.log"))
     shell:
         """
         ## Run antigen preparation
@@ -286,13 +309,13 @@ rule prepare_haddock3:
 ## Docking
 rule run_haddock3:
     params:
-        experiment_dir=config["main"]["experiment_dir"],
+        experiment_dir=EXPERIMENT_DIR,
         config_file=config['docking']['haddock3']['config_file'],
     input:
-        config_file=os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking", config['docking']['haddock3']['config_file'])),
+        config_file=os.path.abspath(os.path.join(experiment_dir, "4_docking", config['docking']['haddock3']['config_file'])),
     output:
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
-        os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_ss.tsv"))
+        os.path.abspath(os.path.join(experiment_dir, "4_docking/output/10_caprieval/capri_clt.tsv")),
+        os.path.abspath(os.path.join(experiment_dir, "4_docking/output/10_caprieval/capri_ss.tsv"))
     shell:
         """
         rm -rf $(pwd)/{params.experiment_dir}/4_docking/output
@@ -306,27 +329,27 @@ rule run_haddock3:
 ## Report Generation
 rule make_report:
     params:
-        experiment_dir = config["main"]["experiment_dir"],
-        experiment_name = config["main"]["experiment_name"]
+        experiment_dir = EXPERIMENT_DIR,  
     input:
-        haddock_clt_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_clt.tsv")),
-        haddock_ss_file = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "4_docking/output/10_caprieval/capri_ss.tsv")),
-        input_h_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/evodiff/h_chain.json")),
-        input_l_json = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "2_diffusion/evodiff/l_chain.json"))
+        # Use params.experiment_dir instead of experiment_dir
+        haddock_clt_file = os.path.abspath(os.path.join(EXPERIMENT_DIR, "4_docking/output/10_caprieval/capri_clt.tsv")),
+        haddock_ss_file = os.path.abspath(os.path.join(EXPERIMENT_DIR, "4_docking/output/10_caprieval/capri_ss.tsv")),
+        input_h_json = os.path.abspath(os.path.join(EXPERIMENT_DIR, "2_diffusion/evodiff/h_chain.json")),
+        input_l_json = os.path.abspath(os.path.join(EXPERIMENT_DIR, "2_diffusion/evodiff/l_chain.json"))
     output:
-        output_report = os.path.abspath(os.path.join(config["main"]["experiment_dir"], "5_postprocess/frankies_report.html"))
+        output_report = os.path.abspath(os.path.join(EXPERIMENT_DIR, "5_postprocess/frankies_report.html"))
     shell:
         """
         ## Create output directories
         mkdir -p $(dirname {output.output_report})
         cp scripts/5_postprocess/frankies_report.qmd {params.experiment_dir}/5_postprocess/frankies_report.qmd
         cp scripts/5_postprocess/frankies.scss {params.experiment_dir}/5_postprocess/frankies.scss
-
+        
         ## Render dashboard with Quarto
-        quarto render {params.experiment_dir}/5_postprocess/frankies_report.qmd \
-            -P experiment_dir:{params.experiment_dir} \
-            -P capri_clt_file:{input.haddock_clt_file} \
-            -P capri_ss_file:{input.haddock_ss_file} \
-            -P input_h_json:{input.input_h_json} \
-            -P input_l_json:{input.input_l_json} \
+        quarto render {params.experiment_dir}/5_postprocess/frankies_report.qmd \\
+        -P experiment_dir:{params.experiment_dir} \\
+        -P capri_clt_file:{input.haddock_clt_file} \\
+        -P capri_ss_file:{input.haddock_ss_file} \\
+        -P input_h_json:{input.input_h_json} \\
+        -P input_l_json:{input.input_l_json}
         """

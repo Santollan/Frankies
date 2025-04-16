@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frankies Experiments Home Page</title>
+    <!-- Import Source Sans Pro from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Using Frankies theme colors */
+        :root {
+            --primary: #005035;
+            --secondary: #899064;
+            --warning: #A49665;
+            --gray-100: #fafafa;
+            --gray-200: #f9f8fc;
+            --gray-300: #ededed;
+            --gray-400: #cbc8d0;
+            --gray-600: #868e96;
+            --gray-700: #444;
+            --gray-900: #17141f;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: var(--gray-700);
+            background-color: var(--gray-100);
+        }
+        
+        h1 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .experiment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .experiment-card {
+            background-color: var(--gray-200);
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 4px solid var(--secondary);
+        }
+        
+        .experiment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+            border-left-color: var(--primary);
+        }
+        
+        .experiment-name {
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: var(--gray-900);
+        }
+        
+        .report-link {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s;
+            border: none;
+        }
+        
+        .report-link:hover {
+            background-color: var(--secondary);
+        }
+        
+        .report-link:focus {
+            box-shadow: 0 0 5px rgba(0, 80, 53, 0.4);
+            outline: none;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid var(--gray-300);
+            margin-bottom: 20px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        .search-box:focus {
+            box-shadow: 0 0 5px rgba(137, 144, 100, 0.4);
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .no-results {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 20px;
+            color: var(--gray-600);
+        }
+    </style>
+</head>
+<body>
+    <h1>Frankies Experiments</h1>
+    
+    <input type="text" class="search-box" id="searchBox" placeholder="Search experiments...">
+    
+    <div class="experiment-grid" id="experimentGrid">
+        <div class="experiment-card">
+            <div class="experiment-name">aquamarine-python</div>
+            <a href="../experiments/aquamarine-python/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">backup</div>
+            <a href="../experiments/backup/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">beige-depth</div>
+            <a href="../experiments/beige-depth/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">flavorful-lily</div>
+            <a href="../experiments/flavorful-lily/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">funny-chateau</div>
+            <a href="../experiments/funny-chateau/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">grating-diameter</div>
+            <a href="../experiments/grating-diameter/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">mad-bobtail</div>
+            <a href="../experiments/mad-bobtail/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">parallel-tincan</div>
+            <a href="../experiments/parallel-tincan/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">quiet-image</div>
+            <a href="../experiments/quiet-image/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">recent-effusion</div>
+            <a href="../experiments/recent-effusion/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">tangy-keyframe</div>
+            <a href="../experiments/tangy-keyframe/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+        <div class="experiment-card">
+            <div class="experiment-name">tattered-array</div>
+            <a href="../experiments/tattered-array/5_postprocess/frankies_report.html" class="report-link">View Report</a>
+        </div>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchBox = document.getElementById('searchBox');
+        const experimentGrid = document.getElementById('experimentGrid');
+        const experimentCards = document.querySelectorAll('.experiment-card');
+        
+        searchBox.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            let visibleCount = 0;
+            
+            experimentCards.forEach(card => {
+                const experimentName = card.querySelector('.experiment-name').textContent.toLowerCase();
+                if (experimentName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show a message if no results
+            if (visibleCount === 0 && searchTerm !== '') {
+                if (!document.querySelector('.no-results')) {
+                    const noResults = document.createElement('div');
+                    noResults.className = 'no-results';
+                    noResults.textContent = 'No experiments found matching your search.';
+                    experimentGrid.appendChild(noResults);
+                }
+            } else {
+                const noResults = document.querySelector('.no-results');
+                if (noResults) {
+                    noResults.remove();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

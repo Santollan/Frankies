@@ -1,0 +1,32 @@
+Starting multiple Snakemake runs at Wed 16 Apr 2025 08:33:46 AM EDT
+[Wed 16 Apr 2025 08:33:46 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 08:33:46 AM EDT] Attempt 1: Starting Snakemake run
+[Wed 16 Apr 2025 09:17:09 AM EDT] Success! Run 1 of 10 completed
+[Wed 16 Apr 2025 09:17:11 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 09:17:11 AM EDT] Attempt 2: Starting Snakemake run
+[Wed 16 Apr 2025 09:47:25 AM EDT] Success! Run 2 of 10 completed
+[Wed 16 Apr 2025 09:47:27 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 09:47:27 AM EDT] Attempt 3: Starting Snakemake run
+[Wed 16 Apr 2025 10:14:16 AM EDT] Success! Run 3 of 10 completed
+[Wed 16 Apr 2025 10:14:18 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 10:14:18 AM EDT] Attempt 4: Starting Snakemake run
+[Wed 16 Apr 2025 10:36:23 AM EDT] Success! Run 4 of 10 completed
+[Wed 16 Apr 2025 10:36:25 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 10:36:25 AM EDT] Attempt 5: Starting Snakemake run
+[Wed 16 Apr 2025 10:57:09 AM EDT] Success! Run 5 of 10 completed
+[Wed 16 Apr 2025 10:57:11 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 10:57:11 AM EDT] Attempt 6: Starting Snakemake run
+[Wed 16 Apr 2025 11:17:05 AM EDT] Success! Run 6 of 10 completed
+[Wed 16 Apr 2025 11:17:07 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 11:17:07 AM EDT] Attempt 7: Starting Snakemake run
+[Wed 16 Apr 2025 11:49:08 AM EDT] Success! Run 7 of 10 completed
+[Wed 16 Apr 2025 11:49:10 AM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 11:49:10 AM EDT] Attempt 8: Starting Snakemake run
+[Wed 16 Apr 2025 12:09:19 PM EDT] Success! Run 8 of 10 completed
+[Wed 16 Apr 2025 12:09:21 PM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 12:09:21 PM EDT] Attempt 9: Starting Snakemake run
+[Wed 16 Apr 2025 12:37:56 PM EDT] Success! Run 9 of 10 completed
+[Wed 16 Apr 2025 12:37:58 PM EDT] Removed existing .current_experiment_name before starting
+[Wed 16 Apr 2025 12:37:58 PM EDT] Attempt 10: Starting Snakemake run
+[Wed 16 Apr 2025 01:04:46 PM EDT] Success! Run 10 of 10 completed
+[Wed 16 Apr 2025 01:04:48 PM EDT] All 10 successful runs completed in 10 attempts!

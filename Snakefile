@@ -329,9 +329,9 @@ rule run_haddock3:
 ## Report Generation
 rule make_report:
     params:
-        experiment_dir = EXPERIMENT_DIR,  
+        experiment_dir = EXPERIMENT_DIR,
+        # experiment_name = config["main"]["experiment_name"]
     input:
-        # Use params.experiment_dir instead of experiment_dir
         haddock_clt_file = os.path.abspath(os.path.join(EXPERIMENT_DIR, "4_docking/output/10_caprieval/capri_clt.tsv")),
         haddock_ss_file = os.path.abspath(os.path.join(EXPERIMENT_DIR, "4_docking/output/10_caprieval/capri_ss.tsv")),
         input_h_json = os.path.abspath(os.path.join(EXPERIMENT_DIR, "2_diffusion/evodiff/h_chain.json")),
@@ -344,12 +344,12 @@ rule make_report:
         mkdir -p $(dirname {output.output_report})
         cp scripts/5_postprocess/frankies_report.qmd {params.experiment_dir}/5_postprocess/frankies_report.qmd
         cp scripts/5_postprocess/frankies.scss {params.experiment_dir}/5_postprocess/frankies.scss
-        
+
         ## Render dashboard with Quarto
-        quarto render {params.experiment_dir}/5_postprocess/frankies_report.qmd \\
-        -P experiment_dir:{params.experiment_dir} \\
-        -P capri_clt_file:{input.haddock_clt_file} \\
-        -P capri_ss_file:{input.haddock_ss_file} \\
-        -P input_h_json:{input.input_h_json} \\
-        -P input_l_json:{input.input_l_json}
+        quarto render {params.experiment_dir}/5_postprocess/frankies_report.qmd \
+            -P experiment_dir:{params.experiment_dir} \
+            -P capri_clt_file:{input.haddock_clt_file} \
+            -P capri_ss_file:{input.haddock_ss_file} \
+            -P input_h_json:{input.input_h_json} \
+            -P input_l_json:{input.input_l_json} \
         """

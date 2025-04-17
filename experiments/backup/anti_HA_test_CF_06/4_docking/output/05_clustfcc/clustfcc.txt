@@ -1,0 +1,23 @@
+### clustfcc output ###
+
+Clustering parameters 
+> contact_distance_cutoff=5.0A
+> fraction_cutoff=0.6
+> threshold=5
+> strictness=0.75
+
+Note: Models marked with * represent the center of the cluster
+-----------------------------------------------
+
+Total # of clusters: 1
+
+-----------------------------------------------
+Cluster 1 (#1, n=5, top5_avg_score = 84.27 +-18.11)
+
+clt_rank	model_name	score
+1	flexref_11.pdb	54.16
+2	flexref_13.pdb	77.24
+3	flexref_14.pdb	85.69
+4	flexref_12.pdb	97.45
+5	flexref_15.pdb	106.80	*
+-----------------------------------------------

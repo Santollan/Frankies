@@ -14,3 +14,19 @@ Practice/snakemake-tutorial/data/samples/B.fastq
 Practice/snakemake-tutorial/data/samples/C.fastq
 .snakemake/*
 .DS_Store
+
+
+## Experiment files
+# experiments/*/01_inputs/*
+# experiments/*/1_inputs/*
+# experiments/*/2_diffusion/*
+# experiments/*/3_folding/*
+experiments/*/4_docking/output/00_topoaa
+experiments/*/4_docking/output/01_rigidbody
+experiments/*/4_docking/output/02_clustfcc
+experiments/*/4_docking/output/03_seletopclusts
+experiments/*/4_docking/output/04_flexref
+experiments/*/4_docking/output/05_clustfcc
+experiments/*/4_docking/output/06_seletopclusts
+experiments/*/4_docking/output/07_mdref
+experiments/*/4_docking/output/data

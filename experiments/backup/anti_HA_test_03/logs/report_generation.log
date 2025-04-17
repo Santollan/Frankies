@@ -1,0 +1,17 @@
+Starting report generation at Wed 09 Apr 2025 08:35:38 AM EDT
+Analyzing CAPRI scores to find the best structure...
+Best model based on VDW score: ../08_mdscoring/mdscoring_1.pdb
+Best model path: ./experiments/anti_HA_test_03/4_docking/output/08_mdscoring/../08_mdscoring/mdscoring_1.pdb
+Generating Quarto report...
+[91mERROR: No valid input files passed to render
+
+Stack trace:
+    at Command.actionHandler (file:///opt/quarto/bin/quarto.js:91799:15)
+    at eventLoopTick (ext:core/01_core.js:175:7)
+    at async Command.execute (file:///opt/quarto/bin/quarto.js:8253:13)
+    at async Command.parseCommand (file:///opt/quarto/bin/quarto.js:8143:20)
+    at async quarto (file:///opt/quarto/bin/quarto.js:128203:9)
+    at async file:///opt/quarto/bin/quarto.js:128230:9
+    at async file:///opt/quarto/bin/quarto.js:128085:20
+    at async mainRunner (file:///opt/quarto/bin/quarto.js:128087:9)
+    at async file:///opt/quarto/bin/quarto.js:128221:5[39m

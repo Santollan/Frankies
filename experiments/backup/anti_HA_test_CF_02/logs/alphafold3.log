@@ -1,0 +1,74 @@
+Starting AlphaFold3 run at Sun 13 Apr 2025 11:12:39 AM EDT
+Using docker with GPU setting: all
+Using the following paths:
+Input directory: /home/nicholas/Documents/GitHub/Frankies/experiments/anti_HA_test_CF_02/3_folding/af_input
+Output directory: /home/nicholas/Documents/GitHub/Frankies/experiments/anti_HA_test_CF_02/3_folding/af_output
+Weights directory: /home/nicholas/alphafold_weights
+Databases directory: /home/nicholas/public_databases
+Using GPU flag: --gpus all
+Running AlphaFold3...
+I0413 15:12:40.685742 130410707857600 xla_bridge.py:895] Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+I0413 15:12:40.686369 130410707857600 xla_bridge.py:895] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+I0413 15:12:43.862380 130410707857600 pipeline.py:82] Getting protein MSAs for sequence E
+I0413 15:12:43.863167 130406586254912 jackhmmer.py:78] Query sequence: E
+I0413 15:12:43.863367 130406575769152 jackhmmer.py:78] Query sequence: E
+I0413 15:12:43.863561 130406565283392 jackhmmer.py:78] Query sequence: E
+I0413 15:12:43.863723 130406412191296 jackhmmer.py:78] Query sequence: E
+I0413 15:12:43.863838 130406575769152 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmplhbwt81l/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmplhbwt81l/query.fasta /root/public_databases/mgy_clusters_2022_05.fa"
+I0413 15:12:43.863950 130406586254912 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpccg5hlp1/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpccg5hlp1/query.fasta /root/public_databases/uniref90_2022_05.fa"
+I0413 15:12:43.864048 130406565283392 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpcyc9vidr/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpcyc9vidr/query.fasta /root/public_databases/bfd-first_non_consensus_sequences.fasta"
+I0413 15:12:43.864233 130406412191296 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/jackhmmer -o /dev/null -A /tmp/tmpbdjsidqd/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --cpu 8 -N 1 -E 0.0001 --incE 0.0001 /tmp/tmpbdjsidqd/query.fasta /root/public_databases/uniprot_all_2021_04.fa"
+I0413 15:13:20.577896 130406565283392 subprocess_utils.py:97] Finished Jackhmmer (bfd-first_non_consensus_sequences.fasta) in 36.714 seconds
+I0413 15:15:26.969040 130406586254912 subprocess_utils.py:97] Finished Jackhmmer (uniref90_2022_05.fa) in 163.105 seconds
+I0413 15:16:52.199756 130406412191296 subprocess_utils.py:97] Finished Jackhmmer (uniprot_all_2021_04.fa) in 248.335 seconds
+I0413 15:17:30.350382 130406575769152 subprocess_utils.py:97] Finished Jackhmmer (mgy_clusters_2022_05.fa) in 286.486 seconds
+I0413 15:17:30.350799 130410707857600 pipeline.py:115] Getting protein MSAs took 286.49 seconds for sequence E
+I0413 15:17:30.350836 130410707857600 pipeline.py:121] Deduplicating MSAs for sequence E
+I0413 15:17:30.351076 130410707857600 pipeline.py:134] Deduplicating MSAs took 0.00 seconds for sequence E, found 1 unpaired sequences, 1 paired sequences
+I0413 15:17:30.351117 130410707857600 pipeline.py:40] Getting protein templates for sequence E
+I0413 15:17:30.351362 130410707857600 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmbuild --informat stockholm --hand --amino /tmp/tmpi4el2tba/output.hmm /tmp/tmpi4el2tba/query.msa"
+I0413 15:17:30.356550 130410707857600 subprocess_utils.py:97] Finished Hmmbuild in 0.005 seconds
+I0413 15:17:30.356867 130410707857600 subprocess_utils.py:68] Launching subprocess "/hmmer/bin/hmmsearch --noali --cpu 8 --F1 0.1 --F2 0.1 --F3 0.1 -E 100 --incE 100 --domE 100 --incdomE 100 -A /tmp/tmpi9kotheb/output.sto /tmp/tmpi9kotheb/query.hmm /root/public_databases/pdb_seqres_2022_09_28.fasta"
+I0413 15:17:30.837274 130410707857600 subprocess_utils.py:97] Finished Hmmsearch (pdb_seqres_2022_09_28.fasta) in 0.480 seconds
+I0413 15:17:30.837557 130410707857600 pipeline.py:52] Getting 0 protein templates took 0.49 seconds for sequence E
+I0413 15:17:33.869378 130410707857600 pipeline.py:166] processing Antibody, random_seed=1234
+I0413 15:17:33.872069 130410707857600 pipeline.py:259] Calculating bucket size for input with 2 tokens.
+I0413 15:17:33.872134 130410707857600 pipeline.py:265] Got bucket size 256 for input with 2 tokens, resulting in 254 padded tokens.
+
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+
+Found local devices: [CudaDevice(id=0)], using device 0: cuda:0
+Building model from scratch...
+Checking that model parameters can be loaded...
+
+Running fold job Antibody...
+Output will be written in /root/af_output/antibody
+Running data pipeline...
+Running data pipeline for chain H...
+Running data pipeline for chain H took 286.98 seconds
+Running data pipeline for chain L...
+Running data pipeline for chain L took 0.00 seconds
+Writing model input JSON to /root/af_output/antibody/antibody_data.json
+Predicting 3D structure for Antibody with 1 seed(s)...
+Featurising data with 1 seed(s)...
+Featurising data with seed 1234.
+Featurising data with seed 1234 took 0.05 seconds.
+Featurising data with 1 seed(s) took 3.08 seconds.
+Running model inference and extracting output structure samples with 1 seed(s)...
+Running model inference with seed 1234...
+Running model inference with seed 1234 took 31.36 seconds.
+Extracting inference results with seed 1234...
+Extracting 5 inference samples with seed 1234 took 0.01 seconds.
+Running model inference and extracting output structures with 1 seed(s) took 31.37 seconds.
+Writing outputs with 1 seed(s)...
+Fold job Antibody done, output written to /root/af_output/antibody
+
+Done running 1 fold jobs.
+Converting output to PDB format...
+Conversion successful: /home/nicholas/Documents/GitHub/Frankies/experiments/anti_HA_test_CF_02/3_folding/af_output/antibody/antibody_model.cif -> experiments/anti_HA_test_CF_02/3_folding/antibody.pdb
+AlphaFold3 run completed at Sun 13 Apr 2025 11:18:06 AM EDT

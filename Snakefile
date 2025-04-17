@@ -99,16 +99,16 @@ rule run_evodiff:
     input:
         evo_config= os.path.abspath(os.path.join(experiment_dir, "2_diffusion","evodiff", "evo_config.txt")), 
     output:
-        os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "h_chain.json")),
-        os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "l_chain.json"))
+        h_out=os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "h_chain.json")),
+        l_out=os.path.abspath(os.path.join(experiment_dir, "2_diffusion", "evodiff", "l_chain.json"))
     log:
         os.path.abspath(os.path.join(experiment_dir, "frankies.log"))
     shell:
         """
-        docker run  --ipc=host --userns=host  \
+        docker run --rm --ipc=host --userns=host  \
         -v {params.experiment_dir}:/workspace/evodiff/frankie/experiment:rw \
         -v $(pwd)/scripts/2_diffusion:/workspace/evodiff/frankie:rw \
-        -it --rm cford38/evodiff:v1.1.0 /bin/bash -c \
+        cford38/evodiff:v1.1.0 /bin/bash -c \
         "conda install -c bioconda abnumber -y && \
         python3 /workspace/evodiff/frankie/run_evodiff.py --path {params.H_chain} \
             --config /workspace/evodiff/frankie/experiment/2_diffusion/evodiff/evo_config.txt \
@@ -116,9 +116,10 @@ rule run_evodiff:
             && \
         python3 /workspace/evodiff/frankie/run_evodiff.py --path {params.L_chain} \
             --config /workspace/evodiff/frankie/experiment/2_diffusion/evodiff/evo_config.txt \
-            --chain l_chain
-            "
+            --chain l_chain" 
+
         """
+
 
 # rule run_evodiff:
 #     params:

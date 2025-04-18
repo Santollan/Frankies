@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Configuration
-TOTAL_RUNS_NEEDED=10
+TOTAL_RUNS_NEEDED=30
 SUCCESSFUL_RUNS=0
-MAX_ATTEMPTS=20  # Safety limit to prevent infinite loops
+MAX_ATTEMPTS=40  # Safety limit to prevent infinite loops
 ATTEMPT=0
 
 # Log file for tracking
-LOG_FILE="snakemake_runs.log"
+LOG_FILE="experiments/snakemake_runs.log"
 echo "Starting multiple Snakemake runs at $(date)" > $LOG_FILE
 
 # Function to run Snakemake and handle result
@@ -25,12 +25,12 @@ run_snakemake() {
     else
         echo "[$(date)] Failed run. Cleaning up and will retry." | tee -a $LOG_FILE
         
-        # Clean up the .current_experiment_name file
-        if [ -f .current_experiment_name ]; then
-            rm .current_experiment_name
-            echo "[$(date)] Removed .current_experiment_name file" | tee -a $LOG_FILE
+        # Clean up the experiments/.current_experiment_name file
+        if [ -f experiments/.current_experiment_name ]; then
+            rm experiments/.current_experiment_name
+            echo "[$(date)] Removed experiments/.current_experiment_name file" | tee -a $LOG_FILE
         else
-            echo "[$(date)] Warning: .current_experiment_name file not found" | tee -a $LOG_FILE
+            echo "[$(date)] Warning: experiments/.current_experiment_name file not found" | tee -a $LOG_FILE
         fi
         
         return 1
@@ -41,10 +41,10 @@ run_snakemake() {
 while [ $SUCCESSFUL_RUNS -lt $TOTAL_RUNS_NEEDED ] && [ $ATTEMPT -lt $MAX_ATTEMPTS ]; do
     ATTEMPT=$((ATTEMPT+1))
     
-    # Make sure .current_experiment_name is removed before starting
-    if [ -f .current_experiment_name ]; then
-        rm .current_experiment_name
-        echo "[$(date)] Removed existing .current_experiment_name before starting" | tee -a $LOG_FILE
+    # Make sure experiments/.current_experiment_name is removed before starting
+    if [ -f experiments/.current_experiment_name ]; then
+        rm experiments/.current_experiment_name
+        echo "[$(date)] Removed existing experiments/.current_experiment_name before starting" | tee -a $LOG_FILE
     fi
     
     # Run Snakemake

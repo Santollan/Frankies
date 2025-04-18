@@ -1,6 +1,44 @@
 # Frankies
-Scalable, AI-Based Antibody Design Pipeline
+## Scalable, AI-Based Antibody Design Pipeline
 
+
+## Antibody Generation and Testing
+
+This repository contains a Snakemake pipeline for generating and testing antibodies using the Frankies framework. The pipeline is designed to be scalable and efficient, allowing for the generation of large numbers of antibodies and their subsequent testing.
+
+### The pipeline includes the following steps:
+
+0. **Preprocessing**: 
+    - Preprocess the input Heavy and Light Chain FASTA or A3m files preparing it for use in the pipeline. This includes generating assessing legnth and number of sequences, preparing the input files for the Frankies framework.
+
+1. **Generate sequences using Evodiff**: 
+    - Use the Frankies framework to generate a set of antibodies based on the proprocessed Antibody sequences.
+    - The generated sequences are assessed for known antibody motifs and only structurally valid sequences are kept.
+
+2. **Generate structures using AlphaFold or ESM3**: 
+    - Use the AlphaFold3 or ESM models to predict the 3D structures of the generated antibodies.
+
+3. **Generate HADDOCK3 experiment files**:
+    - Use the generated structures to create HADDOCK3 experiment files. This includes generating the input files for HADDOCK3 and setting up the docking parameters.
+
+4. **Run HADDOCK3**:
+    - Run HADDOCK3 on the generated experiment files. This includes running the docking simulations and generating the output files.
+
+5. **Analyze HADDOCK3 results**:
+    - Analyze the results of the HADDOCK3 simulations. This includes generating the output files and analyzing the docking results.
+    
+6. **Generate report**:
+    - Generate a report using Quarto. This includes generating the report files and analyzing the results.
+
+
+## Prerequisites
+- Python 3.8 or higher
+- Snakemake
+- Conda
+- CUDA (if using GPU)
+- Quarto (for report generation)
+- PyMOL (for visualization)
+- Docker
 
 ## Setup Conda Environment
 ```bash

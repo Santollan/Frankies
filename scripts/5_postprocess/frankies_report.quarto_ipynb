@@ -5,7 +5,7 @@
       "metadata": {},
       "source": [
         "---\n",
-        "title: \"Antibody Performance Dashboard\"\n",
+        "title: \"Antibody Performance Dashboard\" \n",
         "subtitle: \"Frankies Diffusion Pipeline\"\n",
         "format:\n",
         "  dashboard:\n",
@@ -15,9 +15,9 @@
         "    nav-buttons:\n",
         "      - icon: github\n",
         "        href: https://github.com/Santollan/Frankies/\n",
-        "---"
+        "---\n"
       ],
-      "id": "71a32601"
+      "id": "2d8787ae"
     },
     {
       "cell_type": "code",
@@ -33,13 +33,29 @@
         "capri_clt_file = \"../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_clt.tsv\"\n",
         "capri_ss_file = \"../../experiments/anti_HA_test_CF_02/4_docking/output/10_caprieval/capri_ss.tsv\"\n",
         "input_h_json = \"../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Hchains_aligned.a3m.json\"\n",
-        "input_l_json = \"../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json\"\n",
+        "input_l_json = \"../../experiments/anti_HA_test_CF_02/2_diffusion/anti-HA_antibodies_Lchains_aligned.a3m.json\"\n"
+      ],
+      "id": "parameters",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: debug-params\n",
+        "#| output: false\n",
         "\n",
         "# Extract experiment name from path for use elsewhere\n",
         "import os\n",
-        "experiment_name = os.path.basename(os.path.normpath(experiment_dir))"
+        "experiment_name = os.path.basename(os.path.normpath(experiment_dir))\n",
+        "print(f\"Experiment directory: {experiment_dir}\")\n",
+        "print(f\"CAPRI CLT file: {capri_clt_file}\")\n",
+        "print(f\"CAPRI SS file: {capri_ss_file}\")\n",
+        "print(f\"Input H JSON: {input_h_json}\")\n",
+        "print(f\"Input L JSON: {input_l_json}\")"
       ],
-      "id": "parameters",
+      "id": "debug-params",
       "execution_count": null,
       "outputs": []
     },
@@ -88,7 +104,7 @@
         "\n",
         "# Navigate up to the experiments directory (2 levels up from postprocess)\n",
         "experiments_dir = os.path.dirname(os.path.dirname(current_dir))\n",
-        "best_pdb_path = os.path.join(experiments_dir, \"anti_HA_test_CF_03/4_docking/output/08_mdscoring\", best_model)"
+        "best_pdb_path = os.path.join(experiments_dir,experiment_name, \"4_docking/output/08_mdscoring\", best_model)"
       ],
       "id": "load_data",
       "execution_count": null,
@@ -102,20 +118,22 @@
         "\n",
         "## Column {width=50%}\n",
         "\n",
-        "### Row {height=20%}"
+        "### Row {height=20%}\n"
       ],
-      "id": "2966c370"
+      "id": "03a18ee7"
     },
     {
       "cell_type": "code",
       "metadata": {
-        "component": "text"
+        "component": "card",
+        "title": "Experiment : "
       },
       "source": [
         "#| label: experiment_display\n",
+        "#| output: asis\n",
         "import os\n",
         "experiment_name = os.path.basename(os.path.normpath(experiment_dir))\n",
-        "f\"**Experiment**: {experiment_name}\""
+        "print(f\"<div style='font-size: 20px; font-weight: bold; color:rgb(0, 0, 0);'> {experiment_name}</div>\")"
       ],
       "id": "experiment_display",
       "execution_count": null,
@@ -199,7 +217,7 @@
       "source": [
         "### Row {height=80%}"
       ],
-      "id": "602cf44c"
+      "id": "f58f77c4"
     },
     {
       "cell_type": "code",
@@ -207,7 +225,7 @@
       "source": [
         "#| label: create-graphs\n",
         "#| output: false\n",
-        "score_fig  = px.box(ss_df, y=\"score\", notched=True, points=\"all\", labels={\"score\": \"Combined Score\"})\n",
+        "score_fig  = px.box(ss_df, y=\"score\", points=\"all\", labels={\"score\": \"Combined Score\"})\n",
         "score_fig.update_traces(marker_color='#005035', line_color='#005035')\n",
         "score_fig.update_layout(\n",
         "    showlegend=False,\n",
@@ -218,7 +236,7 @@
         "    yaxis=dict(color=\"#444\")\n",
         ")\n",
         "\n",
-        "total_fig  = px.box(ss_df, y=\"total\", notched=True, points=\"all\", labels={\"total\": \"Total Score\"})\n",
+        "total_fig  = px.box(ss_df, y=\"total\", points=\"all\", labels={\"total\": \"Total Score\"})\n",
         "total_fig.update_traces(marker_color='#899064', line_color='#899064')\n",
         "total_fig.update_layout(\n",
         "    showlegend=False,\n",
@@ -229,7 +247,7 @@
         "    yaxis=dict(color=\"#444\")\n",
         ")\n",
         "\n",
-        "vdw_fig  = px.box(ss_df, y=\"vdw\", notched=True, points=\"all\", labels={\"vdw\": \"Van der Waals Energy\"})\n",
+        "vdw_fig  = px.box(ss_df, y=\"vdw\", points=\"all\", labels={\"vdw\": \"Van der Waals Energy\"})\n",
         "vdw_fig.update_traces(marker_color='#A49665', line_color='#A49665')\n",
         "vdw_fig.update_layout(\n",
         "    showlegend=False,\n",
@@ -240,7 +258,7 @@
         "    yaxis=dict(color=\"#444\")\n",
         ")\n",
         "\n",
-        "elec_fig  = px.box(ss_df, y=\"elec\", notched=True, points=\"all\", labels={\"elec\": \"Electrostatic Energy\"})\n",
+        "elec_fig  = px.box(ss_df, y=\"elec\", points=\"all\", labels={\"elec\": \"Electrostatic Energy\"})\n",
         "elec_fig.update_traces(marker_color='#101820', line_color='#101820')\n",
         "elec_fig.update_layout(\n",
         "    showlegend=False,\n",
@@ -251,7 +269,7 @@
         "    yaxis=dict(color=\"#444\")\n",
         ")\n",
         "\n",
-        "desolv_fig  = px.box(ss_df, y=\"desolv\", notched=True, points=\"all\", labels={\"desolv\": \"Desolvation Energy\"})\n",
+        "desolv_fig  = px.box(ss_df, y=\"desolv\", points=\"all\", labels={\"desolv\": \"Desolvation Energy\"})\n",
         "desolv_fig.update_traces(marker_color='#802F2D', line_color='#802F2D')\n",
         "desolv_fig.update_layout(\n",
         "    showlegend=False,\n",
@@ -262,7 +280,7 @@
         "    yaxis=dict(color=\"#444\")\n",
         ")\n",
         "\n",
-        "bsa_fig  = px.box(ss_df, y=\"bsa\", notched=True, points=\"all\", labels={\"bsa\": \"Buried Surface Area\"})\n",
+        "bsa_fig  = px.box(ss_df, y=\"bsa\", points=\"all\", labels={\"bsa\": \"Buried Surface Area\"})\n",
         "bsa_fig.update_traces(marker_color='#007377', line_color='#007377')\n",
         "bsa_fig.update_layout(\n",
         "    showlegend=False,\n",
@@ -305,7 +323,7 @@
         "\n",
         "### Row {height=20%}"
       ],
-      "id": "2cf0c9cd"
+      "id": "a855b746"
     },
     {
       "cell_type": "code",
@@ -355,7 +373,7 @@
       "source": [
         "### Row {height=80%}"
       ],
-      "id": "7b996e8a"
+      "id": "d7a43ade"
     },
     {
       "cell_type": "code",
@@ -426,7 +444,7 @@
         "\n",
         "### Row {height=50%}"
       ],
-      "id": "d02cb6ce"
+      "id": "8fb062d1"
     },
     {
       "cell_type": "code",
@@ -445,28 +463,153 @@
       "cell_type": "markdown",
       "metadata": {},
       "source": [
-        "<!-- ### Row {height=50%}\n",
-        "\n",
+        "<!-- ### Row {height=50%}"
+      ],
+      "id": "a0a61a0e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "title": "Cluster-Level Performance"
+      },
+      "source": [
         "#| label: cluster_data\n",
-        "#| title: Cluster-Level Performance\n",
-        "show(clt_df, showIndex = False)\n",
-        "``` -->\n",
+        "show(clt_df, showIndex = False)"
+      ],
+      "id": "cluster_data",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "-->\n",
         "\n",
-        "<!-- # About -->\n",
         "\n",
-        "## About FrankIES\n",
+        "# About\n",
+        "## Row\n",
+        "### About FrankIES {orientation=\"rows\" width=100%}\n",
+        "**About**\n",
         "\n",
+        "::: {.card title=\"FrankIES : Scalable, AI-Based Antibody Design Against 2025 H5N1 Avian Influenza Isolates\"}\n",
         "FrankIES (Frankie Immune Engineering Suite) is a computational pipeline for antibody engineering that integrates multiple advanced tools:\n",
         "\n",
         "- **Diffusion**: EvoDiff v1.1.0 (Docker container: cford38/evodiff:v1.1.0)\n",
         "- **Folding**: ESM\n",
         "- **Docking**: HADDOCK3 (Docker container: cford38/haddock:3)\n",
         "\n",
-        "**Host System**: Ubuntu 22.04 with NVIDIA 560 drivers and CUDA 12.6\n",
-        "\n",
-        "The pipeline automates the complex process of antibody design, folding, docking, and evaluation, providing comprehensive results visualization through this interactive report.\n"
+        "The pipeline automates the complex process of antibody design, folding, docking, and evaluation, providing comprehensive results visualization through this interactive report.\n",
+        ":::\n"
       ],
-      "id": "60366db2"
+      "id": "d458fa2a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: system_info\n",
+        "#| output: asis\n",
+        "\n",
+        "\n",
+        "import platform\n",
+        "import os\n",
+        "import subprocess\n",
+        "import re\n",
+        "import psutil\n",
+        "\n",
+        "# Function to safely run commands\n",
+        "def run_command(command):\n",
+        "    try:\n",
+        "        result = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT, text=True)\n",
+        "        return result.strip()\n",
+        "    except subprocess.CalledProcessError as e:\n",
+        "        return f\"Command failed: {e.output.strip()}\"\n",
+        "\n",
+        "# Get OS info\n",
+        "os_info = platform.platform()\n",
+        "\n",
+        "# Get CPU info\n",
+        "cpu_info = {}\n",
+        "try:\n",
+        "    with open('/proc/cpuinfo', 'r') as f:\n",
+        "        for line in f:\n",
+        "            if 'model name' in line:\n",
+        "                cpu_info['model'] = re.sub(r'.*model name.*:', '', line).strip()\n",
+        "                break\n",
+        "except:\n",
+        "    cpu_info['model'] = platform.processor()\n",
+        "\n",
+        "# Get CPU cores\n",
+        "cpu_info['cores'] = psutil.cpu_count(logical=False)\n",
+        "cpu_info['logical_cores'] = psutil.cpu_count(logical=True)\n",
+        "\n",
+        "# Get memory info\n",
+        "memory_gb = round(psutil.virtual_memory().total / (1024**3), 2)\n",
+        "\n",
+        "# Get GPU info\n",
+        "gpu_info = {}\n",
+        "nvidia_smi = run_command('nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader')\n",
+        "if 'failed' not in nvidia_smi and 'not found' not in nvidia_smi.lower():\n",
+        "    gpu_lines = nvidia_smi.strip().split('\\n')\n",
+        "    gpu_info['gpus'] = []\n",
+        "    for i, line in enumerate(gpu_lines):\n",
+        "        parts = line.split(', ')\n",
+        "        if len(parts) >= 3:\n",
+        "            gpu_info['gpus'].append({\n",
+        "                'name': parts[0],\n",
+        "                'driver': parts[1],\n",
+        "                'memory': parts[2]\n",
+        "            })\n",
+        "\n",
+        "# Get CUDA version - with better error handling\n",
+        "cuda_version = None\n",
+        "try:\n",
+        "    nvcc_output = run_command('nvcc --version')\n",
+        "    if 'not found' not in nvcc_output.lower() and 'failed' not in nvcc_output:\n",
+        "        cuda_match = re.search(r'release (\\d+\\.\\d+)', nvcc_output)\n",
+        "        if cuda_match:\n",
+        "            cuda_version = cuda_match.group(1)\n",
+        "except:\n",
+        "    pass  # Silently handle errors\n",
+        "\n",
+        "# Create clean HTML output\n",
+        "output = \"\"\"\n",
+        "<div class=\"card mt-3\">\n",
+        "  <div class=\"card-header\"><strong>Host System Information</strong></div>\n",
+        "  <div class=\"card-body\">\n",
+        "    <p><strong>Operating System:</strong> {os_info}</p>\n",
+        "    <p><strong>CPU:</strong> {cpu_model}</p>\n",
+        "    <p><strong>Cores:</strong> {cores} physical / {logical_cores} logical</p>\n",
+        "    <p><strong>Memory:</strong> {memory_gb} GB</p>\n",
+        "\"\"\".format(\n",
+        "    os_info=os_info,\n",
+        "    cpu_model=cpu_info.get('model', 'Unknown'),\n",
+        "    cores=cpu_info.get('cores', 'Unknown'),\n",
+        "    logical_cores=cpu_info.get('logical_cores', 'Unknown'),\n",
+        "    memory_gb=memory_gb\n",
+        ")\n",
+        "\n",
+        "# Add GPU information if available\n",
+        "if gpu_info.get('gpus'):\n",
+        "    output += \"<p><strong>GPUs:</strong></p><ul>\"\n",
+        "    for gpu in gpu_info['gpus']:\n",
+        "        output += f\"<li>{gpu['name']} ({gpu['memory']})</li>\"\n",
+        "    output += \"</ul>\"\n",
+        "    \n",
+        "    if cuda_version:\n",
+        "        output += f\"<p><strong>CUDA Version:</strong> {cuda_version}</p>\"\n",
+        "\n",
+        "output += \"\"\"\n",
+        "  </div>\n",
+        "</div>\n",
+        "\"\"\"\n",
+        "\n",
+        "print(output)"
+      ],
+      "id": "system_info",
+      "execution_count": null,
+      "outputs": []
     }
   ],
   "metadata": {

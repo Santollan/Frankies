@@ -4,7 +4,7 @@ main:
   experiment_dir: "experiments/" # Directory for the experiment
   H_chain: "anti-HA_antibodies_Hchains_aligned.a3m" # Path to the heavy chain alignment file
   L_chain: "anti-HA_antibodies_Lchains_aligned.a3m" # Path to the light chain alignment file
-  Antigen: "2vir_chainC_antigen.pdb" # Path to the antigen PDB file
+  Antigen: "EPI3009175_HA.pdb" # Path to the antigen PDB file
   cores: 24 # Number of CPU cores to use
   gpus: "all" # GPU setting (optional for dynamic configuration)
   container_engine: "docker" # Container engine to use (docker or singularity)

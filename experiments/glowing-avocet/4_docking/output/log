@@ -488,3 +488,155 @@ Python 3.9.18 (main, Nov 29 2023, 06:01:45)
 [2025-04-18 18:11:10,544 __init__ INFO] [flexref] Running CNS Jobs n=20
 [2025-04-18 18:11:10,544 libutil INFO] Selected 16 cores to process 20 jobs, with 16 maximum available cores.
 [2025-04-18 18:11:10,544 libparallel INFO] Using 16 cores
+[2025-04-18 18:16:49,272 libparallel INFO] >> /flexref_1.inp completed 5% 
+[2025-04-18 18:16:49,272 libparallel INFO] >> /flexref_2.inp completed 10% 
+[2025-04-18 18:16:49,272 libparallel INFO] >> /flexref_3.inp completed 15% 
+[2025-04-18 18:16:49,272 libparallel INFO] >> /flexref_4.inp completed 20% 
+[2025-04-18 18:17:12,728 libparallel INFO] >> /flexref_5.inp completed 25% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_6.inp completed 30% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_7.inp completed 35% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_8.inp completed 40% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_9.inp completed 45% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_10.inp completed 50% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_11.inp completed 55% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_12.inp completed 60% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_13.inp completed 65% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_14.inp completed 70% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_15.inp completed 75% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_16.inp completed 80% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_17.inp completed 85% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_18.inp completed 90% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_19.inp completed 95% 
+[2025-04-18 18:17:12,729 libparallel INFO] >> /flexref_20.inp completed 100% 
+[2025-04-18 18:17:12,729 libparallel INFO] 20 tasks finished
+[2025-04-18 18:17:12,729 __init__ INFO] [flexref] CNS jobs have finished
+[2025-04-18 18:17:12,743 base_cns_module INFO] Module [flexref] finished.
+[2025-04-18 18:17:12,743 __init__ INFO] [flexref] took 6 minutes and 2 seconds
+[2025-04-18 18:17:12,749 __init__ INFO] Running [clustfcc] module
+[2025-04-18 18:17:12,749 __init__ INFO] Calculating contacts
+[2025-04-18 18:17:12,749 libutil INFO] Selected 15 cores to process 20 jobs, with 15 maximum available cores.
+[2025-04-18 18:17:12,750 libparallel INFO] Using 15 cores
+[2025-04-18 18:17:12,811 libparallel INFO] >> /flexref_1.con completed 5% 
+[2025-04-18 18:17:12,811 libparallel INFO] >> /flexref_2.con completed 10% 
+[2025-04-18 18:17:12,811 libparallel INFO] >> /flexref_3.con completed 15% 
+[2025-04-18 18:17:12,811 libparallel INFO] >> /flexref_4.con completed 20% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_5.con completed 25% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_6.con completed 30% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_7.con completed 35% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_8.con completed 40% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_9.con completed 45% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_10.con completed 50% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_11.con completed 55% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_12.con completed 60% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_13.con completed 65% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_14.con completed 70% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_15.con completed 75% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_16.con completed 80% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_17.con completed 85% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_18.con completed 90% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_19.con completed 95% 
+[2025-04-18 18:17:12,817 libparallel INFO] >> /flexref_20.con completed 100% 
+[2025-04-18 18:17:12,817 libparallel INFO] 20 tasks finished
+[2025-04-18 18:17:12,817 __init__ INFO] Calculating the FCC matrix
+[2025-04-18 18:17:12,820 __init__ INFO] Clustering...
+[2025-04-18 18:17:12,820 __init__ INFO] Clustering with threshold=10
+[2025-04-18 18:17:12,820 __init__ INFO] Saving output to cluster.out
+[2025-04-18 18:17:12,821 libclust INFO] Saving structure list to clustfcc.tsv
+[2025-04-18 18:17:12,821 __init__ INFO] Saving detailed output to clustfcc.txt
+[2025-04-18 18:17:12,823 __init__ INFO] Module [clustfcc] finished.
+[2025-04-18 18:17:12,823 __init__ INFO] [clustfcc] took 0 seconds
+[2025-04-18 18:17:12,827 __init__ INFO] Running [seletopclusts] module
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts] Selecting all clusters: 1
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_17.pdb > cluster_1_model_1.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_11.pdb > cluster_1_model_2.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_12.pdb > cluster_1_model_3.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_14.pdb > cluster_1_model_4.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_16.pdb > cluster_1_model_5.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_15.pdb > cluster_1_model_6.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_18.pdb > cluster_1_model_7.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_13.pdb > cluster_1_model_8.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_19.pdb > cluster_1_model_9.pdb
+[2025-04-18 18:17:12,827 __init__ INFO] [seletopclusts]  flexref_20.pdb > cluster_1_model_10.pdb
+[2025-04-18 18:17:12,832 __init__ INFO] Module [seletopclusts] finished.
+[2025-04-18 18:17:12,832 __init__ INFO] [seletopclusts] took 0 seconds
+[2025-04-18 18:17:13,409 base_cns_module INFO] Running [mdref] module
+[2025-04-18 18:17:13,445 __init__ INFO] [mdref] Running CNS Jobs n=10
+[2025-04-18 18:17:13,445 libutil INFO] Selected 10 cores to process 10 jobs, with 16 maximum available cores.
+[2025-04-18 18:17:13,445 libparallel INFO] Using 10 cores
+[2025-04-18 18:19:33,049 libparallel INFO] >> /mdref_1.inp completed 10% 
+[2025-04-18 18:19:59,929 libparallel INFO] >> /mdref_2.inp completed 20% 
+[2025-04-18 18:19:59,929 libparallel INFO] >> /mdref_3.inp completed 30% 
+[2025-04-18 18:19:59,929 libparallel INFO] >> /mdref_4.inp completed 40% 
+[2025-04-18 18:19:59,929 libparallel INFO] >> /mdref_5.inp completed 50% 
+[2025-04-18 18:19:59,929 libparallel INFO] >> /mdref_6.inp completed 60% 
+[2025-04-18 18:20:19,914 libparallel INFO] >> /mdref_7.inp completed 70% 
+[2025-04-18 18:20:19,914 libparallel INFO] >> /mdref_8.inp completed 80% 
+[2025-04-18 18:20:19,914 libparallel INFO] >> /mdref_9.inp completed 90% 
+[2025-04-18 18:20:19,914 libparallel INFO] >> /mdref_10.inp completed 100% 
+[2025-04-18 18:20:19,914 libparallel INFO] 10 tasks finished
+[2025-04-18 18:20:19,914 __init__ INFO] [mdref] CNS jobs have finished
+[2025-04-18 18:20:19,921 base_cns_module INFO] Module [mdref] finished.
+[2025-04-18 18:20:19,922 __init__ INFO] [mdref] took 3 minutes and 7 seconds
+[2025-04-18 18:20:19,978 base_cns_module INFO] Running [mdscoring] module
+[2025-04-18 18:20:20,008 __init__ INFO] [mdscoring] Running CNS Jobs n=10
+[2025-04-18 18:20:20,008 libutil INFO] Selected 10 cores to process 10 jobs, with 16 maximum available cores.
+[2025-04-18 18:20:20,008 libparallel INFO] Using 10 cores
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_1.inp completed 10% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_2.inp completed 20% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_3.inp completed 30% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_4.inp completed 40% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_5.inp completed 50% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_6.inp completed 60% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_7.inp completed 70% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_8.inp completed 80% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_9.inp completed 90% 
+[2025-04-18 18:22:19,349 libparallel INFO] >> /mdscoring_10.inp completed 100% 
+[2025-04-18 18:22:19,349 libparallel INFO] 10 tasks finished
+[2025-04-18 18:22:19,349 __init__ INFO] [mdscoring] CNS jobs have finished
+[2025-04-18 18:22:19,355 __init__ INFO] [mdscoring] Saving output to mdscoring.tsv
+[2025-04-18 18:22:19,357 base_cns_module INFO] Module [mdscoring] finished.
+[2025-04-18 18:22:19,357 __init__ INFO] [mdscoring] took 1 minute and 59 seconds
+[2025-04-18 18:22:19,363 __init__ INFO] Running [clustfcc] module
+[2025-04-18 18:22:19,363 __init__ INFO] Calculating contacts
+[2025-04-18 18:22:19,363 libutil INFO] Selected 10 cores to process 10 jobs, with 15 maximum available cores.
+[2025-04-18 18:22:19,363 libparallel INFO] Using 10 cores
+[2025-04-18 18:22:19,397 libparallel INFO] >> /mdscoring_1.con completed 10% 
+[2025-04-18 18:22:19,397 libparallel INFO] >> /mdscoring_2.con completed 20% 
+[2025-04-18 18:22:19,401 libparallel INFO] >> /mdscoring_3.con completed 30% 
+[2025-04-18 18:22:19,401 libparallel INFO] >> /mdscoring_4.con completed 40% 
+[2025-04-18 18:22:19,401 libparallel INFO] >> /mdscoring_5.con completed 50% 
+[2025-04-18 18:22:19,401 libparallel INFO] >> /mdscoring_6.con completed 60% 
+[2025-04-18 18:22:19,401 libparallel INFO] >> /mdscoring_7.con completed 70% 
+[2025-04-18 18:22:19,405 libparallel INFO] >> /mdscoring_8.con completed 80% 
+[2025-04-18 18:22:19,405 libparallel INFO] >> /mdscoring_9.con completed 90% 
+[2025-04-18 18:22:19,405 libparallel INFO] >> /mdscoring_10.con completed 100% 
+[2025-04-18 18:22:19,405 libparallel INFO] 10 tasks finished
+[2025-04-18 18:22:19,405 __init__ INFO] Calculating the FCC matrix
+[2025-04-18 18:22:19,407 __init__ INFO] Clustering...
+[2025-04-18 18:22:19,407 __init__ INFO] Clustering with threshold=4
+[2025-04-18 18:22:19,407 __init__ INFO] Saving output to cluster.out
+[2025-04-18 18:22:19,407 libclust INFO] Saving structure list to clustfcc.tsv
+[2025-04-18 18:22:19,407 __init__ INFO] Saving detailed output to clustfcc.txt
+[2025-04-18 18:22:19,409 __init__ INFO] Module [clustfcc] finished.
+[2025-04-18 18:22:19,409 __init__ INFO] [clustfcc] took 0 seconds
+[2025-04-18 18:22:19,428 __init__ INFO] Running [caprieval] module
+[2025-04-18 18:22:19,428 __init__ INFO] [caprieval] No reference was given. Using the structure with the lowest score from previous step
+[2025-04-18 18:22:19,467 libutil INFO] Selected 10 cores to process 10 jobs, with 15 maximum available cores.
+[2025-04-18 18:22:19,467 libparallel INFO] Using 10 cores
+[2025-04-18 18:22:19,751 libparallel INFO] >> /capri_ss_1.tsv completed 10% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_2.tsv completed 20% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_3.tsv completed 30% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_4.tsv completed 40% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_5.tsv completed 50% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_6.tsv completed 60% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_7.tsv completed 70% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_8.tsv completed 80% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_9.tsv completed 90% 
+[2025-04-18 18:22:19,752 libparallel INFO] >> /capri_ss_10.tsv completed 100% 
+[2025-04-18 18:22:19,752 libparallel INFO] 10 tasks finished
+[2025-04-18 18:22:19,752 capri INFO] Rearranging output files into capri_ss.tsv
+[2025-04-18 18:22:19,753 capri INFO] Rearranging cluster information into capri_clt.tsv
+[2025-04-18 18:22:19,756 __init__ INFO] Module [caprieval] finished.
+[2025-04-18 18:22:19,756 __init__ INFO] [caprieval] took 0 seconds
+[2025-04-18 18:22:19,756 cli INFO] This HADDOCK3 run took: 21 minutes and 21 seconds
+[2025-04-18 18:22:19,756 cli INFO] Finished at 18/04/2025 18:22:19. Agur! Até logo! Ciao!

@@ -1,0 +1,30 @@
+{
+  "raw_sequence": "EIVLTQSPASIALSTBERATISCRANHPFIHSDGSNYLDWVRQQKPGQSPTRHIYGASYHETDIPDWFSGSGTBTDFTLTIRRSTSVVEAEDTGVYYCQQFSVSPPDWEASNYGDGTRVEIPGVH",
+  "cleaned_sequence": "EIVLTQSPASIALSTGERATISCRANHPFIHSDGSNYLDWVRQQKPGQSPTRHIYGASYHETDIPDWFSGSGTGTDFTLTIRRSTSVVEAEDTGVYYCQQFSVSPPDWEASNYGDGTRVEIPGVH",
+  "validation": {
+    "sequence": "EIVLTQSPASIALSTGERATISCRANHPFIHSDGSNYLDWVRQQKPGQSPTRHIYGASYHETDIPDWFSGSGTGTDFTLTIRRSTSVVEAEDTGVYYCQQFSVSPPDWEASNYGDGTRVEIPGVH",
+    "length": 125,
+    "likely_chain_type": "light (VL)",
+    "non_standard_aas": [],
+    "validation_schemes": {
+      "chothia": {
+        "valid": true,
+        "message": "K"
+      },
+      "imgt": {
+        "valid": true,
+        "message": "K"
+      },
+      "kabat": {
+        "valid": true,
+        "message": "K"
+      }
+    },
+    "valid": true,
+    "valid_schemes": [
+      "chothia",
+      "imgt",
+      "kabat"
+    ]
+  }
+}

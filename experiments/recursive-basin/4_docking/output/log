@@ -1,0 +1,628 @@
+[2025-04-18 18:56:41,145 cli INFO] 
+##############################################
+#                                            #
+#                 HADDOCK 3                  #
+#                                            #
+##############################################
+
+Starting HADDOCK 3.0.0 on 2025-04-18 18:56:00
+
+Python 3.9.18 (main, Nov 29 2023, 06:01:45) 
+[GCC 10.2.1 20210110]
+
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 0_topoaa
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 1_rigidbody
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 2_clustfcc
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 3_seletopclusts
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 4_flexref
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 5_clustfcc
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 6_seletopclusts
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 7_mdref
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 8_mdscoring
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 9_clustfcc
+[2025-04-18 18:56:43,048 libworkflow INFO] Reading instructions step 10_caprieval
+[2025-04-18 18:56:43,067 base_cns_module INFO] Running [topoaa] module
+[2025-04-18 18:56:43,067 __init__ INFO] [topoaa] Molecule 1: antibody.pdb
+[2025-04-18 18:56:43,068 __init__ INFO] [topoaa] Sanitizing molecule antibody.pdb
+[2025-04-18 18:56:43,073 __init__ INFO] [topoaa] Topology CNS input created in antibody.inp
+[2025-04-18 18:56:43,073 __init__ INFO] [topoaa] Molecule 2: antigen.pdb
+[2025-04-18 18:56:43,074 __init__ INFO] [topoaa] Sanitizing molecule antigen.pdb
+[2025-04-18 18:56:43,079 __init__ INFO] [topoaa] Topology CNS input created in antigen.inp
+[2025-04-18 18:56:43,079 __init__ INFO] [topoaa] Running CNS Jobs n=2
+[2025-04-18 18:56:43,079 libutil INFO] Selected 2 cores to process 2 jobs, with 16 maximum available cores.
+[2025-04-18 18:56:43,079 libparallel INFO] Using 2 cores
+[2025-04-18 18:56:45,082 libparallel INFO] >> /antibody.inp completed 50% 
+[2025-04-18 18:56:45,191 libparallel INFO] >> /antigen.inp completed 100% 
+[2025-04-18 18:56:45,191 libparallel INFO] 2 tasks finished
+[2025-04-18 18:56:45,191 __init__ INFO] [topoaa] CNS jobs have finished
+[2025-04-18 18:56:45,193 base_cns_module INFO] Module [topoaa] finished.
+[2025-04-18 18:56:45,193 __init__ INFO] [topoaa] took 2 seconds
+[2025-04-18 18:56:45,666 base_cns_module INFO] Running [rigidbody] module
+[2025-04-18 18:56:45,666 __init__ INFO] [rigidbody] crossdock=true
+[2025-04-18 18:56:45,666 __init__ INFO] [rigidbody] Preparing jobs...
+[2025-04-18 18:56:46,319 __init__ INFO] [rigidbody] Running CNS Jobs n=200
+[2025-04-18 18:56:46,319 libutil INFO] Selected 16 cores to process 200 jobs, with 16 maximum available cores.
+[2025-04-18 18:56:46,319 libparallel INFO] Using 16 cores
+[2025-04-18 19:04:47,944 libparallel INFO] >> /rigidbody_1.inp completed 0% 
+[2025-04-18 19:04:47,944 libparallel INFO] >> /rigidbody_2.inp completed 1% 
+[2025-04-18 19:04:47,944 libparallel INFO] >> /rigidbody_3.inp completed 2% 
+[2025-04-18 19:04:47,944 libparallel INFO] >> /rigidbody_4.inp completed 2% 
+[2025-04-18 19:04:47,944 libparallel INFO] >> /rigidbody_5.inp completed 2% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_6.inp completed 3% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_7.inp completed 4% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_8.inp completed 4% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_9.inp completed 4% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_10.inp completed 5% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_11.inp completed 6% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_12.inp completed 6% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_13.inp completed 6% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_14.inp completed 7% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_15.inp completed 8% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_16.inp completed 8% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_17.inp completed 8% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_18.inp completed 9% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_19.inp completed 10% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_20.inp completed 10% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_21.inp completed 10% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_22.inp completed 11% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_23.inp completed 12% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_24.inp completed 12% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_25.inp completed 12% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_26.inp completed 13% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_27.inp completed 14% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_28.inp completed 14% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_29.inp completed 14% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_30.inp completed 15% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_31.inp completed 16% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_32.inp completed 16% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_33.inp completed 16% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_34.inp completed 17% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_35.inp completed 18% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_36.inp completed 18% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_37.inp completed 18% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_38.inp completed 19% 
+[2025-04-18 19:04:47,945 libparallel INFO] >> /rigidbody_39.inp completed 20% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_40.inp completed 20% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_41.inp completed 20% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_42.inp completed 21% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_43.inp completed 22% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_44.inp completed 22% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_45.inp completed 22% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_46.inp completed 23% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_47.inp completed 24% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_48.inp completed 24% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_49.inp completed 24% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_50.inp completed 25% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_51.inp completed 26% 
+[2025-04-18 19:04:47,946 libparallel INFO] >> /rigidbody_52.inp completed 26% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_53.inp completed 26% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_54.inp completed 27% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_55.inp completed 28% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_56.inp completed 28% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_57.inp completed 28% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_58.inp completed 29% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_59.inp completed 30% 
+[2025-04-18 19:04:59,243 libparallel INFO] >> /rigidbody_60.inp completed 30% 
+[2025-04-18 19:04:59,244 libparallel INFO] >> /rigidbody_61.inp completed 30% 
+[2025-04-18 19:04:59,244 libparallel INFO] >> /rigidbody_62.inp completed 31% 
+[2025-04-18 19:04:59,244 libparallel INFO] >> /rigidbody_63.inp completed 32% 
+[2025-04-18 19:04:59,244 libparallel INFO] >> /rigidbody_64.inp completed 32% 
+[2025-04-18 19:04:59,244 libparallel INFO] >> /rigidbody_65.inp completed 32% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_66.inp completed 33% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_67.inp completed 34% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_68.inp completed 34% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_69.inp completed 34% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_70.inp completed 35% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_71.inp completed 36% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_72.inp completed 36% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_73.inp completed 36% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_74.inp completed 37% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_75.inp completed 38% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_76.inp completed 38% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_77.inp completed 38% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_78.inp completed 39% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_79.inp completed 40% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_80.inp completed 40% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_81.inp completed 40% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_82.inp completed 41% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_83.inp completed 42% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_84.inp completed 42% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_85.inp completed 42% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_86.inp completed 43% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_87.inp completed 44% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_88.inp completed 44% 
+[2025-04-18 19:05:21,641 libparallel INFO] >> /rigidbody_89.inp completed 44% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_90.inp completed 45% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_91.inp completed 46% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_92.inp completed 46% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_93.inp completed 46% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_94.inp completed 47% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_95.inp completed 48% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_96.inp completed 48% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_97.inp completed 48% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_98.inp completed 49% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_99.inp completed 50% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_100.inp completed 50% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_101.inp completed 50% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_102.inp completed 51% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_103.inp completed 52% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_104.inp completed 52% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_105.inp completed 52% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_106.inp completed 53% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_107.inp completed 54% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_108.inp completed 54% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_109.inp completed 55% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_110.inp completed 55% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_111.inp completed 56% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_112.inp completed 56% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_113.inp completed 56% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_114.inp completed 57% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_115.inp completed 57% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_116.inp completed 58% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_117.inp completed 58% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_118.inp completed 59% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_119.inp completed 60% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_120.inp completed 60% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_121.inp completed 60% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_122.inp completed 61% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_123.inp completed 62% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_124.inp completed 62% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_125.inp completed 62% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_126.inp completed 63% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_127.inp completed 64% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_128.inp completed 64% 
+[2025-04-18 19:05:21,642 libparallel INFO] >> /rigidbody_129.inp completed 64% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_130.inp completed 65% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_131.inp completed 66% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_132.inp completed 66% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_133.inp completed 66% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_134.inp completed 67% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_135.inp completed 68% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_136.inp completed 68% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_137.inp completed 68% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_138.inp completed 69% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_139.inp completed 70% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_140.inp completed 70% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_141.inp completed 70% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_142.inp completed 71% 
+[2025-04-18 19:05:21,643 libparallel INFO] >> /rigidbody_143.inp completed 72% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_144.inp completed 72% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_145.inp completed 72% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_146.inp completed 73% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_147.inp completed 74% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_148.inp completed 74% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_149.inp completed 74% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_150.inp completed 75% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_151.inp completed 76% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_152.inp completed 76% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_153.inp completed 76% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_154.inp completed 77% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_155.inp completed 78% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_156.inp completed 78% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_157.inp completed 78% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_158.inp completed 79% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_159.inp completed 80% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_160.inp completed 80% 
+[2025-04-18 19:05:30,974 libparallel INFO] >> /rigidbody_161.inp completed 80% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_162.inp completed 81% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_163.inp completed 82% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_164.inp completed 82% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_165.inp completed 82% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_166.inp completed 83% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_167.inp completed 84% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_168.inp completed 84% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_169.inp completed 84% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_170.inp completed 85% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_171.inp completed 86% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_172.inp completed 86% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_173.inp completed 86% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_174.inp completed 87% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_175.inp completed 88% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_176.inp completed 88% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_177.inp completed 88% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_178.inp completed 89% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_179.inp completed 90% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_180.inp completed 90% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_181.inp completed 90% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_182.inp completed 91% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_183.inp completed 92% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_184.inp completed 92% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_185.inp completed 92% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_186.inp completed 93% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_187.inp completed 94% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_188.inp completed 94% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_189.inp completed 94% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_190.inp completed 95% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_191.inp completed 96% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_192.inp completed 96% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_193.inp completed 96% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_194.inp completed 97% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_195.inp completed 98% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_196.inp completed 98% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_197.inp completed 98% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_198.inp completed 99% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_199.inp completed 100% 
+[2025-04-18 19:05:30,975 libparallel INFO] >> /rigidbody_200.inp completed 100% 
+[2025-04-18 19:05:30,975 libparallel INFO] 200 tasks finished
+[2025-04-18 19:05:30,975 __init__ INFO] [rigidbody] CNS jobs have finished
+[2025-04-18 19:05:31,096 base_cns_module INFO] Module [rigidbody] finished.
+[2025-04-18 19:05:31,096 __init__ INFO] [rigidbody] took 8 minutes and 45 seconds
+[2025-04-18 19:05:31,111 __init__ INFO] Running [clustfcc] module
+[2025-04-18 19:05:31,111 __init__ INFO] Calculating contacts
+[2025-04-18 19:05:31,112 libutil INFO] Selected 15 cores to process 200 jobs, with 15 maximum available cores.
+[2025-04-18 19:05:31,113 libparallel INFO] Using 15 cores
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_1.con completed 0% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_2.con completed 1% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_3.con completed 2% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_4.con completed 2% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_5.con completed 2% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_6.con completed 3% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_7.con completed 4% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_8.con completed 4% 
+[2025-04-18 19:05:31,574 libparallel INFO] >> /rigidbody_9.con completed 4% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_10.con completed 5% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_11.con completed 6% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_12.con completed 6% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_13.con completed 6% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_14.con completed 7% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_15.con completed 8% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_16.con completed 8% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_17.con completed 8% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_18.con completed 9% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_19.con completed 10% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_20.con completed 10% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_21.con completed 10% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_22.con completed 11% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_23.con completed 12% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_24.con completed 12% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_25.con completed 12% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_26.con completed 13% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_27.con completed 14% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_28.con completed 14% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_29.con completed 14% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_30.con completed 15% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_31.con completed 16% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_32.con completed 16% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_33.con completed 16% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_34.con completed 17% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_35.con completed 18% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_36.con completed 18% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_37.con completed 18% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_38.con completed 19% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_39.con completed 20% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_40.con completed 20% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_41.con completed 20% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_42.con completed 21% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_43.con completed 22% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_44.con completed 22% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_45.con completed 22% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_46.con completed 23% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_47.con completed 24% 
+[2025-04-18 19:05:31,575 libparallel INFO] >> /rigidbody_48.con completed 24% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_49.con completed 24% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_50.con completed 25% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_51.con completed 26% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_52.con completed 26% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_53.con completed 26% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_54.con completed 27% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_55.con completed 28% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_56.con completed 28% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_57.con completed 28% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_58.con completed 29% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_59.con completed 30% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_60.con completed 30% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_61.con completed 30% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_62.con completed 31% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_63.con completed 32% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_64.con completed 32% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_65.con completed 32% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_66.con completed 33% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_67.con completed 34% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_68.con completed 34% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_69.con completed 34% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_70.con completed 35% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_71.con completed 36% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_72.con completed 36% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_73.con completed 36% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_74.con completed 37% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_75.con completed 38% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_76.con completed 38% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_77.con completed 38% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_78.con completed 39% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_79.con completed 40% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_80.con completed 40% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_81.con completed 40% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_82.con completed 41% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_83.con completed 42% 
+[2025-04-18 19:05:31,576 libparallel INFO] >> /rigidbody_84.con completed 42% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_85.con completed 42% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_86.con completed 43% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_87.con completed 44% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_88.con completed 44% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_89.con completed 44% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_90.con completed 45% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_91.con completed 46% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_92.con completed 46% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_93.con completed 46% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_94.con completed 47% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_95.con completed 48% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_96.con completed 48% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_97.con completed 48% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_98.con completed 49% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_99.con completed 50% 
+[2025-04-18 19:05:31,584 libparallel INFO] >> /rigidbody_100.con completed 50% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_101.con completed 50% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_102.con completed 51% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_103.con completed 52% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_104.con completed 52% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_105.con completed 52% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_106.con completed 53% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_107.con completed 54% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_108.con completed 54% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_109.con completed 55% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_110.con completed 55% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_111.con completed 56% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_112.con completed 56% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_113.con completed 56% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_114.con completed 57% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_115.con completed 57% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_116.con completed 58% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_117.con completed 58% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_118.con completed 59% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_119.con completed 60% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_120.con completed 60% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_121.con completed 60% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_122.con completed 61% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_123.con completed 62% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_124.con completed 62% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_125.con completed 62% 
+[2025-04-18 19:05:31,585 libparallel INFO] >> /rigidbody_126.con completed 63% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_127.con completed 64% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_128.con completed 64% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_129.con completed 64% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_130.con completed 65% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_131.con completed 66% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_132.con completed 66% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_133.con completed 66% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_134.con completed 67% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_135.con completed 68% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_136.con completed 68% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_137.con completed 68% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_138.con completed 69% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_139.con completed 70% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_140.con completed 70% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_141.con completed 70% 
+[2025-04-18 19:05:31,591 libparallel INFO] >> /rigidbody_142.con completed 71% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_143.con completed 72% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_144.con completed 72% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_145.con completed 72% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_146.con completed 73% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_147.con completed 74% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_148.con completed 74% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_149.con completed 74% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_150.con completed 75% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_151.con completed 76% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_152.con completed 76% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_153.con completed 76% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_154.con completed 77% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_155.con completed 78% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_156.con completed 78% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_157.con completed 78% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_158.con completed 79% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_159.con completed 80% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_160.con completed 80% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_161.con completed 80% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_162.con completed 81% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_163.con completed 82% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_164.con completed 82% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_165.con completed 82% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_166.con completed 83% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_167.con completed 84% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_168.con completed 84% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_169.con completed 84% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_170.con completed 85% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_171.con completed 86% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_172.con completed 86% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_173.con completed 86% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_174.con completed 87% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_175.con completed 88% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_176.con completed 88% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_177.con completed 88% 
+[2025-04-18 19:05:31,592 libparallel INFO] >> /rigidbody_178.con completed 89% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_179.con completed 90% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_180.con completed 90% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_181.con completed 90% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_182.con completed 91% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_183.con completed 92% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_184.con completed 92% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_185.con completed 92% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_186.con completed 93% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_187.con completed 94% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_188.con completed 94% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_189.con completed 94% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_190.con completed 95% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_191.con completed 96% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_192.con completed 96% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_193.con completed 96% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_194.con completed 97% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_195.con completed 98% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_196.con completed 98% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_197.con completed 98% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_198.con completed 99% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_199.con completed 100% 
+[2025-04-18 19:05:31,593 libparallel INFO] >> /rigidbody_200.con completed 100% 
+[2025-04-18 19:05:31,593 libparallel INFO] 200 tasks finished
+[2025-04-18 19:05:31,593 __init__ INFO] Calculating the FCC matrix
+[2025-04-18 19:05:31,650 __init__ INFO] Clustering...
+[2025-04-18 19:05:31,658 __init__ INFO] Clustering with threshold=10
+[2025-04-18 19:05:31,658 __init__ INFO] [WARNING] No cluster was found, decreasing threshold!
+[2025-04-18 19:05:31,658 __init__ INFO] Clustering with threshold=9
+[2025-04-18 19:05:31,658 __init__ INFO] [WARNING] No cluster was found, decreasing threshold!
+[2025-04-18 19:05:31,658 __init__ INFO] Clustering with threshold=8
+[2025-04-18 19:05:31,659 __init__ INFO] Saving output to cluster.out
+[2025-04-18 19:05:31,659 libclust INFO] Saving structure list to clustfcc.tsv
+[2025-04-18 19:05:31,659 __init__ INFO] Saving detailed output to clustfcc.txt
+[2025-04-18 19:05:31,662 __init__ INFO] Module [clustfcc] finished.
+[2025-04-18 19:05:31,663 __init__ INFO] [clustfcc] took 1 seconds
+[2025-04-18 19:05:31,666 __init__ INFO] Running [seletopclusts] module
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts] Selecting all clusters: 1,2
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_161.pdb > cluster_1_model_1.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_126.pdb > cluster_1_model_2.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_77.pdb > cluster_1_model_3.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_89.pdb > cluster_1_model_4.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_41.pdb > cluster_1_model_5.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_113.pdb > cluster_1_model_6.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_168.pdb > cluster_1_model_7.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_39.pdb > cluster_1_model_8.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_160.pdb > cluster_2_model_1.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_56.pdb > cluster_2_model_2.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_171.pdb > cluster_2_model_3.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_44.pdb > cluster_2_model_4.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_82.pdb > cluster_2_model_5.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_162.pdb > cluster_2_model_6.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_116.pdb > cluster_2_model_7.pdb
+[2025-04-18 19:05:31,667 __init__ INFO] [seletopclusts]  rigidbody_114.pdb > cluster_2_model_8.pdb
+[2025-04-18 19:05:31,674 __init__ INFO] Module [seletopclusts] finished.
+[2025-04-18 19:05:31,674 __init__ INFO] [seletopclusts] took 0 seconds
+[2025-04-18 19:05:32,258 base_cns_module INFO] Running [flexref] module
+[2025-04-18 19:05:32,313 __init__ INFO] [flexref] Running CNS Jobs n=16
+[2025-04-18 19:05:32,313 libutil INFO] Selected 16 cores to process 16 jobs, with 16 maximum available cores.
+[2025-04-18 19:05:32,314 libparallel INFO] Using 16 cores
+[2025-04-18 19:08:51,737 libparallel INFO] >> /flexref_1.inp completed 6% 
+[2025-04-18 19:08:53,561 libparallel INFO] >> /flexref_2.inp completed 12% 
+[2025-04-18 19:08:56,005 libparallel INFO] >> /flexref_3.inp completed 19% 
+[2025-04-18 19:08:56,018 libparallel INFO] >> /flexref_4.inp completed 25% 
+[2025-04-18 19:09:02,493 libparallel INFO] >> /flexref_5.inp completed 31% 
+[2025-04-18 19:09:04,112 libparallel INFO] >> /flexref_6.inp completed 38% 
+[2025-04-18 19:09:05,591 libparallel INFO] >> /flexref_7.inp completed 44% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_8.inp completed 50% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_9.inp completed 56% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_10.inp completed 62% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_11.inp completed 69% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_12.inp completed 75% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_13.inp completed 81% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_14.inp completed 88% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_15.inp completed 94% 
+[2025-04-18 19:09:17,569 libparallel INFO] >> /flexref_16.inp completed 100% 
+[2025-04-18 19:09:17,569 libparallel INFO] 16 tasks finished
+[2025-04-18 19:09:17,569 __init__ INFO] [flexref] CNS jobs have finished
+[2025-04-18 19:09:17,581 base_cns_module INFO] Module [flexref] finished.
+[2025-04-18 19:09:17,581 __init__ INFO] [flexref] took 3 minutes and 45 seconds
+[2025-04-18 19:09:17,587 __init__ INFO] Running [clustfcc] module
+[2025-04-18 19:09:17,587 __init__ INFO] Calculating contacts
+[2025-04-18 19:09:17,587 libutil INFO] Selected 15 cores to process 16 jobs, with 15 maximum available cores.
+[2025-04-18 19:09:17,587 libparallel INFO] Using 15 cores
+[2025-04-18 19:09:17,633 libparallel INFO] >> /flexref_1.con completed 6% 
+[2025-04-18 19:09:17,633 libparallel INFO] >> /flexref_2.con completed 12% 
+[2025-04-18 19:09:17,634 libparallel INFO] >> /flexref_3.con completed 19% 
+[2025-04-18 19:09:17,634 libparallel INFO] >> /flexref_4.con completed 25% 
+[2025-04-18 19:09:17,635 libparallel INFO] >> /flexref_5.con completed 31% 
+[2025-04-18 19:09:17,635 libparallel INFO] >> /flexref_6.con completed 38% 
+[2025-04-18 19:09:17,635 libparallel INFO] >> /flexref_7.con completed 44% 
+[2025-04-18 19:09:17,635 libparallel INFO] >> /flexref_8.con completed 50% 
+[2025-04-18 19:09:17,635 libparallel INFO] >> /flexref_9.con completed 56% 
+[2025-04-18 19:09:17,635 libparallel INFO] >> /flexref_10.con completed 62% 
+[2025-04-18 19:09:17,637 libparallel INFO] >> /flexref_11.con completed 69% 
+[2025-04-18 19:09:17,637 libparallel INFO] >> /flexref_12.con completed 75% 
+[2025-04-18 19:09:17,637 libparallel INFO] >> /flexref_13.con completed 81% 
+[2025-04-18 19:09:17,637 libparallel INFO] >> /flexref_14.con completed 88% 
+[2025-04-18 19:09:17,638 libparallel INFO] >> /flexref_15.con completed 94% 
+[2025-04-18 19:09:17,638 libparallel INFO] >> /flexref_16.con completed 100% 
+[2025-04-18 19:09:17,638 libparallel INFO] 16 tasks finished
+[2025-04-18 19:09:17,639 __init__ INFO] Calculating the FCC matrix
+[2025-04-18 19:09:17,641 __init__ INFO] Clustering...
+[2025-04-18 19:09:17,641 __init__ INFO] Clustering with threshold=10
+[2025-04-18 19:09:17,642 __init__ INFO] [WARNING] No cluster was found, decreasing threshold!
+[2025-04-18 19:09:17,642 __init__ INFO] Clustering with threshold=9
+[2025-04-18 19:09:17,642 __init__ INFO] [WARNING] No cluster was found, decreasing threshold!
+[2025-04-18 19:09:17,642 __init__ INFO] Clustering with threshold=8
+[2025-04-18 19:09:17,642 __init__ INFO] Saving output to cluster.out
+[2025-04-18 19:09:17,642 libclust INFO] Saving structure list to clustfcc.tsv
+[2025-04-18 19:09:17,642 __init__ INFO] Saving detailed output to clustfcc.txt
+[2025-04-18 19:09:17,644 __init__ INFO] Module [clustfcc] finished.
+[2025-04-18 19:09:17,644 __init__ INFO] [clustfcc] took 0 seconds
+[2025-04-18 19:09:17,648 __init__ INFO] Running [seletopclusts] module
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts] Selecting all clusters: 1
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_2.pdb > cluster_1_model_1.pdb
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_1.pdb > cluster_1_model_2.pdb
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_7.pdb > cluster_1_model_3.pdb
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_4.pdb > cluster_1_model_4.pdb
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_6.pdb > cluster_1_model_5.pdb
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_8.pdb > cluster_1_model_6.pdb
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_5.pdb > cluster_1_model_7.pdb
+[2025-04-18 19:09:17,648 __init__ INFO] [seletopclusts]  flexref_3.pdb > cluster_1_model_8.pdb
+[2025-04-18 19:09:17,652 __init__ INFO] Module [seletopclusts] finished.
+[2025-04-18 19:09:17,652 __init__ INFO] [seletopclusts] took 0 seconds
+[2025-04-18 19:09:18,186 base_cns_module INFO] Running [mdref] module
+[2025-04-18 19:09:18,214 __init__ INFO] [mdref] Running CNS Jobs n=8
+[2025-04-18 19:09:18,214 libutil INFO] Selected 8 cores to process 8 jobs, with 16 maximum available cores.
+[2025-04-18 19:09:18,214 libparallel INFO] Using 8 cores
+[2025-04-18 19:11:18,534 libparallel INFO] >> /mdref_1.inp completed 12% 
+[2025-04-18 19:11:18,534 libparallel INFO] >> /mdref_2.inp completed 25% 
+[2025-04-18 19:11:23,763 libparallel INFO] >> /mdref_3.inp completed 38% 
+[2025-04-18 19:11:23,763 libparallel INFO] >> /mdref_4.inp completed 50% 
+[2025-04-18 19:11:23,763 libparallel INFO] >> /mdref_5.inp completed 62% 
+[2025-04-18 19:11:27,707 libparallel INFO] >> /mdref_6.inp completed 75% 
+[2025-04-18 19:11:27,707 libparallel INFO] >> /mdref_7.inp completed 88% 
+[2025-04-18 19:11:27,708 libparallel INFO] >> /mdref_8.inp completed 100% 
+[2025-04-18 19:11:27,708 libparallel INFO] 8 tasks finished
+[2025-04-18 19:11:27,708 __init__ INFO] [mdref] CNS jobs have finished
+[2025-04-18 19:11:27,714 base_cns_module INFO] Module [mdref] finished.
+[2025-04-18 19:11:27,714 __init__ INFO] [mdref] took 2 minutes and 10 seconds
+[2025-04-18 19:11:27,757 base_cns_module INFO] Running [mdscoring] module
+[2025-04-18 19:11:27,780 __init__ INFO] [mdscoring] Running CNS Jobs n=8
+[2025-04-18 19:11:27,780 libutil INFO] Selected 8 cores to process 8 jobs, with 16 maximum available cores.
+[2025-04-18 19:11:27,780 libparallel INFO] Using 8 cores
+[2025-04-18 19:12:54,648 libparallel INFO] >> /mdscoring_1.inp completed 12% 
+[2025-04-18 19:12:56,666 libparallel INFO] >> /mdscoring_2.inp completed 25% 
+[2025-04-18 19:12:56,666 libparallel INFO] >> /mdscoring_3.inp completed 38% 
+[2025-04-18 19:12:56,666 libparallel INFO] >> /mdscoring_4.inp completed 50% 
+[2025-04-18 19:12:56,666 libparallel INFO] >> /mdscoring_5.inp completed 62% 
+[2025-04-18 19:12:56,666 libparallel INFO] >> /mdscoring_6.inp completed 75% 
+[2025-04-18 19:12:56,667 libparallel INFO] >> /mdscoring_7.inp completed 88% 
+[2025-04-18 19:12:56,667 libparallel INFO] >> /mdscoring_8.inp completed 100% 
+[2025-04-18 19:12:56,667 libparallel INFO] 8 tasks finished
+[2025-04-18 19:12:56,667 __init__ INFO] [mdscoring] CNS jobs have finished
+[2025-04-18 19:12:56,671 __init__ INFO] [mdscoring] Saving output to mdscoring.tsv
+[2025-04-18 19:12:56,673 base_cns_module INFO] Module [mdscoring] finished.
+[2025-04-18 19:12:56,673 __init__ INFO] [mdscoring] took 1 minute and 29 seconds
+[2025-04-18 19:12:56,679 __init__ INFO] Running [clustfcc] module
+[2025-04-18 19:12:56,679 __init__ INFO] Calculating contacts
+[2025-04-18 19:12:56,679 libutil INFO] Selected 8 cores to process 8 jobs, with 15 maximum available cores.
+[2025-04-18 19:12:56,679 libparallel INFO] Using 8 cores
+[2025-04-18 19:12:56,704 libparallel INFO] >> /mdscoring_1.con completed 12% 
+[2025-04-18 19:12:56,704 libparallel INFO] >> /mdscoring_2.con completed 25% 
+[2025-04-18 19:12:56,705 libparallel INFO] >> /mdscoring_3.con completed 38% 
+[2025-04-18 19:12:56,706 libparallel INFO] >> /mdscoring_4.con completed 50% 
+[2025-04-18 19:12:56,707 libparallel INFO] >> /mdscoring_5.con completed 62% 
+[2025-04-18 19:12:56,711 libparallel INFO] >> /mdscoring_6.con completed 75% 
+[2025-04-18 19:12:56,711 libparallel INFO] >> /mdscoring_7.con completed 88% 
+[2025-04-18 19:12:56,712 libparallel INFO] >> /mdscoring_8.con completed 100% 
+[2025-04-18 19:12:56,712 libparallel INFO] 8 tasks finished
+[2025-04-18 19:12:56,712 __init__ INFO] Calculating the FCC matrix
+[2025-04-18 19:12:56,713 __init__ INFO] Clustering...
+[2025-04-18 19:12:56,713 __init__ INFO] Clustering with threshold=4
+[2025-04-18 19:12:56,713 __init__ INFO] Saving output to cluster.out
+[2025-04-18 19:12:56,713 libclust INFO] Saving structure list to clustfcc.tsv
+[2025-04-18 19:12:56,713 __init__ INFO] Saving detailed output to clustfcc.txt
+[2025-04-18 19:12:56,715 __init__ INFO] Module [clustfcc] finished.
+[2025-04-18 19:12:56,715 __init__ INFO] [clustfcc] took 0 seconds
+[2025-04-18 19:12:56,733 __init__ INFO] Running [caprieval] module
+[2025-04-18 19:12:56,733 __init__ INFO] [caprieval] No reference was given. Using the structure with the lowest score from previous step
+[2025-04-18 19:12:56,763 libutil INFO] Selected 8 cores to process 8 jobs, with 15 maximum available cores.
+[2025-04-18 19:12:56,763 libparallel INFO] Using 8 cores
+[2025-04-18 19:12:56,971 libparallel INFO] >> /capri_ss_1.tsv completed 12% 
+[2025-04-18 19:12:56,971 libparallel INFO] >> /capri_ss_2.tsv completed 25% 
+[2025-04-18 19:12:56,973 libparallel INFO] >> /capri_ss_3.tsv completed 38% 
+[2025-04-18 19:12:56,973 libparallel INFO] >> /capri_ss_4.tsv completed 50% 
+[2025-04-18 19:12:56,973 libparallel INFO] >> /capri_ss_5.tsv completed 62% 
+[2025-04-18 19:12:56,973 libparallel INFO] >> /capri_ss_6.tsv completed 75% 
+[2025-04-18 19:12:56,973 libparallel INFO] >> /capri_ss_7.tsv completed 88% 
+[2025-04-18 19:12:56,973 libparallel INFO] >> /capri_ss_8.tsv completed 100% 
+[2025-04-18 19:12:56,973 libparallel INFO] 8 tasks finished
+[2025-04-18 19:12:56,974 capri INFO] Rearranging output files into capri_ss.tsv
+[2025-04-18 19:12:56,974 capri INFO] Rearranging cluster information into capri_clt.tsv
+[2025-04-18 19:12:56,976 __init__ INFO] Module [caprieval] finished.
+[2025-04-18 19:12:56,976 __init__ INFO] [caprieval] took 0 seconds
+[2025-04-18 19:12:56,976 cli INFO] This HADDOCK3 run took: 16 minutes and 16 seconds
+[2025-04-18 19:12:56,976 cli INFO] Finished at 18/04/2025 19:12:56. Au revoir! Até logo! Ciao!

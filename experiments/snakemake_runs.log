@@ -3,3 +3,150 @@ Starting multiple Snakemake runs at Fri 18 Apr 2025 01:12:29 PM EDT
 [Fri 18 Apr 2025 01:12:29 PM EDT] Attempt 1: Starting Snakemake run
 Using experiment directory: experiments/kinetic-template
 Using experiment directory: experiments/kinetic-template
+[Fri 18 Apr 2025 01:32:45 PM EDT] Success! Run 1 of 30 completed
+[Fri 18 Apr 2025 01:32:47 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 01:32:47 PM EDT] Attempt 2: Starting Snakemake run
+Using experiment directory: experiments/partial-lagoon
+Using experiment directory: experiments/partial-lagoon
+[Fri 18 Apr 2025 01:55:34 PM EDT] Success! Run 2 of 30 completed
+[Fri 18 Apr 2025 01:55:36 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 01:55:36 PM EDT] Attempt 3: Starting Snakemake run
+Using experiment directory: experiments/glowing-avocet
+Using experiment directory: experiments/glowing-avocet
+[Fri 18 Apr 2025 02:22:35 PM EDT] Success! Run 3 of 30 completed
+[Fri 18 Apr 2025 02:22:37 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 02:22:37 PM EDT] Attempt 4: Starting Snakemake run
+Using experiment directory: experiments/approximate-entrepreneur
+Using experiment directory: experiments/approximate-entrepreneur
+[Fri 18 Apr 2025 02:45:55 PM EDT] Success! Run 4 of 30 completed
+[Fri 18 Apr 2025 02:45:57 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 02:45:57 PM EDT] Attempt 5: Starting Snakemake run
+Using experiment directory: experiments/recursive-basin
+Using experiment directory: experiments/recursive-basin
+[Fri 18 Apr 2025 03:13:12 PM EDT] Success! Run 5 of 30 completed
+[Fri 18 Apr 2025 03:13:14 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 03:13:14 PM EDT] Attempt 6: Starting Snakemake run
+Using experiment directory: experiments/free-hearth
+Using experiment directory: experiments/free-hearth
+[Fri 18 Apr 2025 03:35:58 PM EDT] Success! Run 6 of 30 completed
+[Fri 18 Apr 2025 03:36:00 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 03:36:00 PM EDT] Attempt 7: Starting Snakemake run
+Using experiment directory: experiments/smoky-latitude
+Using experiment directory: experiments/smoky-latitude
+[Fri 18 Apr 2025 03:57:56 PM EDT] Success! Run 7 of 30 completed
+[Fri 18 Apr 2025 03:57:58 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 03:57:58 PM EDT] Attempt 8: Starting Snakemake run
+Using experiment directory: experiments/internal-rundown
+Using experiment directory: experiments/internal-rundown
+[Fri 18 Apr 2025 04:19:41 PM EDT] Success! Run 8 of 30 completed
+[Fri 18 Apr 2025 04:19:43 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 04:19:43 PM EDT] Attempt 9: Starting Snakemake run
+Using experiment directory: experiments/critical-tin
+Using experiment directory: experiments/critical-tin
+[Fri 18 Apr 2025 04:43:43 PM EDT] Success! Run 9 of 30 completed
+[Fri 18 Apr 2025 04:43:45 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 04:43:45 PM EDT] Attempt 10: Starting Snakemake run
+Using experiment directory: experiments/gilded-stud
+Using experiment directory: experiments/gilded-stud
+[Fri 18 Apr 2025 05:06:01 PM EDT] Success! Run 10 of 30 completed
+[Fri 18 Apr 2025 05:06:03 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 05:06:03 PM EDT] Attempt 11: Starting Snakemake run
+Using experiment directory: experiments/concave-glove
+Using experiment directory: experiments/concave-glove
+[Fri 18 Apr 2025 05:25:32 PM EDT] Success! Run 11 of 30 completed
+[Fri 18 Apr 2025 05:25:34 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 05:25:34 PM EDT] Attempt 12: Starting Snakemake run
+Using experiment directory: experiments/boolean-burbot
+Using experiment directory: experiments/boolean-burbot
+[Fri 18 Apr 2025 05:45:43 PM EDT] Success! Run 12 of 30 completed
+[Fri 18 Apr 2025 05:45:45 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 05:45:45 PM EDT] Attempt 13: Starting Snakemake run
+Using experiment directory: experiments/magenta-food
+Using experiment directory: experiments/magenta-food
+[Fri 18 Apr 2025 06:05:33 PM EDT] Success! Run 13 of 30 completed
+[Fri 18 Apr 2025 06:05:35 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 06:05:35 PM EDT] Attempt 14: Starting Snakemake run
+Using experiment directory: experiments/exponential-cymbal
+Using experiment directory: experiments/exponential-cymbal
+[Fri 18 Apr 2025 06:27:02 PM EDT] Success! Run 14 of 30 completed
+[Fri 18 Apr 2025 06:27:04 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 06:27:04 PM EDT] Attempt 15: Starting Snakemake run
+Using experiment directory: experiments/soft-spook
+Using experiment directory: experiments/soft-spook
+[Fri 18 Apr 2025 06:48:40 PM EDT] Success! Run 15 of 30 completed
+[Fri 18 Apr 2025 06:48:42 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 06:48:42 PM EDT] Attempt 16: Starting Snakemake run
+Using experiment directory: experiments/creative-halftone
+Using experiment directory: experiments/creative-halftone
+[Fri 18 Apr 2025 07:11:10 PM EDT] Success! Run 16 of 30 completed
+[Fri 18 Apr 2025 07:11:12 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 07:11:12 PM EDT] Attempt 17: Starting Snakemake run
+Using experiment directory: experiments/brilliant-charge
+Using experiment directory: experiments/brilliant-charge
+[Fri 18 Apr 2025 07:33:41 PM EDT] Success! Run 17 of 30 completed
+[Fri 18 Apr 2025 07:33:43 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 07:33:43 PM EDT] Attempt 18: Starting Snakemake run
+Using experiment directory: experiments/strong-bear
+Using experiment directory: experiments/strong-bear
+[Fri 18 Apr 2025 07:59:21 PM EDT] Success! Run 18 of 30 completed
+[Fri 18 Apr 2025 07:59:23 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 07:59:23 PM EDT] Attempt 19: Starting Snakemake run
+Using experiment directory: experiments/minty-cylinder
+Using experiment directory: experiments/minty-cylinder
+[Fri 18 Apr 2025 08:21:12 PM EDT] Success! Run 19 of 30 completed
+[Fri 18 Apr 2025 08:21:14 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 08:21:14 PM EDT] Attempt 20: Starting Snakemake run
+Using experiment directory: experiments/bitter-folder
+Using experiment directory: experiments/bitter-folder
+[Fri 18 Apr 2025 08:47:18 PM EDT] Success! Run 20 of 30 completed
+[Fri 18 Apr 2025 08:47:20 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 08:47:20 PM EDT] Attempt 21: Starting Snakemake run
+Using experiment directory: experiments/contemporary-wine
+Using experiment directory: experiments/contemporary-wine
+[Fri 18 Apr 2025 09:12:48 PM EDT] Success! Run 21 of 30 completed
+[Fri 18 Apr 2025 09:12:50 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 09:12:50 PM EDT] Attempt 22: Starting Snakemake run
+Using experiment directory: experiments/quadratic-format
+Using experiment directory: experiments/quadratic-format
+[Fri 18 Apr 2025 09:37:13 PM EDT] Success! Run 22 of 30 completed
+[Fri 18 Apr 2025 09:37:15 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 09:37:15 PM EDT] Attempt 23: Starting Snakemake run
+Using experiment directory: experiments/avocado-bumper
+Using experiment directory: experiments/avocado-bumper
+[Fri 18 Apr 2025 10:02:49 PM EDT] Success! Run 23 of 30 completed
+[Fri 18 Apr 2025 10:02:51 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 10:02:51 PM EDT] Attempt 24: Starting Snakemake run
+Using experiment directory: experiments/cold-electricity
+Using experiment directory: experiments/cold-electricity
+[Fri 18 Apr 2025 10:25:48 PM EDT] Success! Run 24 of 30 completed
+[Fri 18 Apr 2025 10:25:50 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 10:25:50 PM EDT] Attempt 25: Starting Snakemake run
+Using experiment directory: experiments/flat-gutter
+Using experiment directory: experiments/flat-gutter
+[Fri 18 Apr 2025 10:46:12 PM EDT] Success! Run 25 of 30 completed
+[Fri 18 Apr 2025 10:46:14 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 10:46:14 PM EDT] Attempt 26: Starting Snakemake run
+Using experiment directory: experiments/symmetric-pad
+Using experiment directory: experiments/symmetric-pad
+[Fri 18 Apr 2025 11:07:23 PM EDT] Success! Run 26 of 30 completed
+[Fri 18 Apr 2025 11:07:25 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 11:07:25 PM EDT] Attempt 27: Starting Snakemake run
+Using experiment directory: experiments/antique-structure
+Using experiment directory: experiments/antique-structure
+[Fri 18 Apr 2025 11:34:39 PM EDT] Success! Run 27 of 30 completed
+[Fri 18 Apr 2025 11:34:41 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 11:34:41 PM EDT] Attempt 28: Starting Snakemake run
+Using experiment directory: experiments/cream-callback
+Using experiment directory: experiments/cream-callback
+[Fri 18 Apr 2025 11:57:47 PM EDT] Success! Run 28 of 30 completed
+[Fri 18 Apr 2025 11:57:49 PM EDT] Removed existing experiments/.current_experiment_name before starting
+[Fri 18 Apr 2025 11:57:49 PM EDT] Attempt 29: Starting Snakemake run
+Using experiment directory: experiments/inventive-amarone
+Using experiment directory: experiments/inventive-amarone
+[Sat 19 Apr 2025 12:25:23 AM EDT] Success! Run 29 of 30 completed
+[Sat 19 Apr 2025 12:25:25 AM EDT] Removed existing experiments/.current_experiment_name before starting
+[Sat 19 Apr 2025 12:25:25 AM EDT] Attempt 30: Starting Snakemake run
+Using experiment directory: experiments/messy-discriminator
+Using experiment directory: experiments/messy-discriminator
+[Sat 19 Apr 2025 12:47:14 AM EDT] Success! Run 30 of 30 completed
+[Sat 19 Apr 2025 12:47:16 AM EDT] All 30 successful runs completed in 30 attempts!

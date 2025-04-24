@@ -1,4 +1,4 @@
-# Frankies - Scalable, AI-Based Antibody Design Pipeline 
+# AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains
 ## Antibody Generation and Analysis
 
 ![](figures/inclusive-laser_mdscoring_2.png)

@@ -1,4 +1,4 @@
-# AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains
+# Frankies Scalable, AI-Based  Antibody Design Pipeline
 ## Antibody Generation and Analysis
 
 ![](figures/inclusive-laser_mdscoring_2.png)
@@ -50,22 +50,22 @@ This repository contains a Snakemake pipeline for generating and testing antibod
 
 Entire pipeline:
 ```bash
-# snakemake --snakefile Snakefile
+snakemake --snakefile Snakefile
 ```
 
 Specific rule:
 ```bash
-# snakemake --force make_report
+snakemake --force make_report
 ```
 
 Clear current experiment name:
 ```bash
-# rm experiments/.current_experiment_name
+rm experiments/.current_experiment_name
 ```
 
 ## Run Batch of Snakemake Pipeline
 ```bash
-# ./run_snakemake_multiple.sh
+./run_snakemake_multiple.sh
 ```
 By default, this will run the pipeline 10 times and create a new experiment name each time. You can change the number of runs by modifying the `NUM_RUNS` variable in the script.
 

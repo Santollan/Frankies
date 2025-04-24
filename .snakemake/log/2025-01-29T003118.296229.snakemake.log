@@ -1,7 +1,0 @@
-host: bigboy
-Building DAG of jobs...
-MissingInputException in rule frank_folding in file /home/bigboy/Documents/GitHub/Frankies/Frankies/pipeline.txt, line 10:
-Missing input files for rule frank_folding:
-    output: outputs/3_diffusion/structure.pdb
-    affected files:
-        /home/bigboy/Documents/GitHub/Frankies/Frankies/data/processed/3_diffusion/af_output

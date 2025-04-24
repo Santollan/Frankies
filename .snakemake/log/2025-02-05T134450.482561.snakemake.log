@@ -1,4 +1,0 @@
-host: bigboy
-Building DAG of jobs...
-MissingRuleException:
-No rule to produce outputs/3_diffusion/structure.pdb (if you use input functions make sure that they don't raise unexpected exceptions).

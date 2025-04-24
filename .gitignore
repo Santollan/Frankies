@@ -30,3 +30,9 @@ experiments/*/4_docking/output/05_clustfcc
 experiments/*/4_docking/output/06_seletopclusts
 experiments/*/4_docking/output/07_mdref
 experiments/*/4_docking/output/data
+
+
+## Temp files
+__pycache__/
+.snakemake/
+.venv/

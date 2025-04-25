@@ -1,4 +1,10 @@
-# Frankies Scalable, AI-Based  Antibody Design Pipeline
+# Frankies: Scalable, AI-Based  Antibody Design Pipeline
+
+<h3 align="right">Nicholas F. Santolla and Colby T. Ford</h3>
+
+[![Preprint](https://img.shields.io/badge/bioRxiv-10.1101/2025.04.24.650061-bb2635?style=for-the-badge&logo=read.cv)](https://www.biorxiv.org/content/10.1101/2025.04.24.650061)
+
+
 ## Antibody Generation and Analysis
 
 ![](figures/dashboard_gilded-stud.png)
@@ -35,8 +41,8 @@ This repository contains a Snakemake pipeline for generating and testing antibod
 
 ## Setup Conda Environment
 ```bash
-# conda env create -f environment.yml
-# conda activate frankies
+conda env create -f environment.yml
+conda activate frankies
 
 # conda deactivate
 # conda env update -n frankies -f environment.yml

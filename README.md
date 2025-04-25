@@ -1,7 +1,7 @@
 # Frankies Scalable, AI-Based  Antibody Design Pipeline
 ## Antibody Generation and Analysis
 
-![](figures/inclusive-laser_mdscoring_2.png)
+![](figures/dashboard_gilded-stud.png)
 
 This repository contains a Snakemake pipeline for generating and testing antibodies using the Frankies framework. The pipeline is designed to be scalable and efficient, allowing for the generation of large numbers of antibodies and their subsequent analysis.
 

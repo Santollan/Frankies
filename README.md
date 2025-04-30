@@ -15,7 +15,7 @@ This repository contains a Snakemake pipeline for generating and testing antibod
 
 0. **Preprocessing**: 
     - Preprocess the input Heavy and Light sequences preparing them for use in the pipeline. This includes assessing legnth and number of sequences, ensuring the input files are passed to the Frankies framework.
-1. **Generate sequences using Evodiff**: 
+1. **Generate sequences using EvoDiff**: 
     - Use the Frankies framework to generate a set of antibodies based on the proprocessed Antibody sequences.
     - The generated sequences are assessed for known antibody motifs and only structurally valid sequences are kept.
 2. **Generate structures using AlphaFold or ESM3**: 
@@ -29,6 +29,8 @@ This repository contains a Snakemake pipeline for generating and testing antibod
 6. **Generate report**:
     - Generate a report using Quarto. This includes generating the report files and analyzing the results.
 
+
+![](paper/workflow.svg)
 
 ## Prerequisites
 - Python 3.8 or higher
@@ -52,6 +54,10 @@ conda activate frankies
 > You'll also need to install Quarto separately. See https://quarto.org/docs/get-started/ for instructions.
 
 
+## Modify Configurations
+
+To set up your own run of the pipeline, simply modify the [**config.yaml**](config.yaml) file. This file contains the paths to the input files (`H_chain`/`L_chain` .a3m files, `Antigen` .pdb file, etc. ) and other parameters (`cores`, `gpus`, `tokens`, etc.)
+
 ## Run Snakemake Pipeline
 
 Entire pipeline:
@@ -70,6 +76,7 @@ rm experiments/.current_experiment_name
 ```
 
 ## Run Batch of Snakemake Pipeline
+
 ```bash
 ./run_snakemake_multiple.sh
 ```
@@ -80,3 +87,24 @@ This was tested on:
  - Ubuntu 22.04 with NVIDIA 560 drivers and CUDA 12.6.
  - Ubuntu 22.04 with NVIDIA 575 drivers and CUDA 12.9.
  - Windows Subsystem for Linux with Ubuntu 18.04 on an NVIDIA Titan X.
+
+
+## Citation
+If you use our H5N1 experimental results or the _Frankies_ pipeline code in your research, please cite the following paper:
+
+> Nicholas F. Santolla and Colby T. Ford. AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains. 
+_bioRxiv_, 2025. doi: [10.1101/2025.04.24.650061](https://doi.org/10.1101/2025.04.24.650061)
+
+```bibtex
+@article {Santolla2025.04.24.650061,
+	author = {Santolla, Nicholas F. and Ford, Colby T.},
+	title = {AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains},
+	elocation-id = {2025.04.24.650061},
+	year = {2025},
+	doi = {10.1101/2025.04.24.650061},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2025/04/24/2025.04.24.650061},
+	eprint = {https://www.biorxiv.org/content/early/2025/04/24/2025.04.24.650061.full.pdf},
+	journal = {bioRxiv}
+}
+```

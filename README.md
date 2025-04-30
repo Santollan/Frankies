@@ -82,12 +82,15 @@ rm experiments/.current_experiment_name
 ```
 By default, this will run the pipeline 10 times and create a new experiment name each time. You can change the number of runs by modifying the `NUM_RUNS` variable in the script.
 
-## Host and Drivers
+### Host and Drivers
 This was tested on:
  - Ubuntu 22.04 with NVIDIA 560 drivers and CUDA 12.6.
  - Ubuntu 22.04 with NVIDIA 575 drivers and CUDA 12.9.
  - Windows Subsystem for Linux with Ubuntu 18.04 on an NVIDIA Titan X.
 
+
+## H5N1 Antibody Generation
+The pipeline was used to generate antibodies against a recent H5N1 avian influenza viral isolate (as reported in [Santolla and Ford, 2025](https://www.biorxiv.org/content/10.1101/2025.04.24.650061v1)). The input files for the pipeline are included in the `data/` directory. The generated Fv sequences, structures, and other results are included in the `experiments/` directory. 
 
 ## Citation
 If you use our H5N1 experimental results or the _Frankies_ pipeline code in your research, please cite the following paper:
@@ -95,10 +98,11 @@ If you use our H5N1 experimental results or the _Frankies_ pipeline code in your
 > Nicholas F. Santolla and Colby T. Ford. AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains. 
 _bioRxiv_, 2025. doi: [10.1101/2025.04.24.650061](https://doi.org/10.1101/2025.04.24.650061)
 
+
 ```bibtex
 @article {Santolla2025.04.24.650061,
 	author = {Santolla, Nicholas F. and Ford, Colby T.},
-	title = {AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains},
+	title = {{AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains}},
 	elocation-id = {2025.04.24.650061},
 	year = {2025},
 	doi = {10.1101/2025.04.24.650061},

@@ -100,7 +100,7 @@ _bioRxiv_, 2025. doi: [10.1101/2025.04.24.650061](https://doi.org/10.1101/2025.0
 
 
 ```bibtex
-@article {Santolla2025.04.24.650061,
+@article{Santolla2025.04.24.650061,
 	author = {Santolla, Nicholas F. and Ford, Colby T.},
 	title = {{AI-Based Antibody Design Targeting Recent H5N1 Avian Influenza Strains}},
 	elocation-id = {2025.04.24.650061},

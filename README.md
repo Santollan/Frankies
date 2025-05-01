@@ -30,7 +30,7 @@ This repository contains a Snakemake pipeline for generating and testing antibod
     - Generate a report using Quarto. This includes generating the report files and analyzing the results.
 
 
-![](paper/workflow.svg)
+![](paper/workflow.png)
 
 ## Prerequisites
 - Python 3.8 or higher

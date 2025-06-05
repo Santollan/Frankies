@@ -107,15 +107,58 @@ l_seq_identity_df_pvt <- l_seq_identity_df %>%
 #   theme_minimal() +
 #   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
-
-ggplot(rbind(h_seq_identity_df_pvt, l_seq_identity_df_pvt),
+## Heatmap
+plot_heatmap <- ggplot(rbind(h_seq_identity_df_pvt, l_seq_identity_df_pvt),
        aes(x = reference, y = diffused, fill = identity)) +
   geom_tile() +
-  scale_fill_gradient(low = "blue", high = "red", limits = c(0,1)) +
+  scale_fill_gradient(
+    low = "blue", high = "red",
+    limits = c(0,1),
+    name = "Identity",
+    labels = scales::label_percent()) +
   labs(
     # title = "Fv Sequence Identity",
     x = "Reference Antibodies",
     y = "Diffused Antibodies") +
-  theme_minimal() +
+  # theme_minimal() +
+  theme_classic() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
   facet_grid(~chain)
+
+## Boxplot
+plot_boxplot <- ggplot(rbind(h_seq_identity_df_pvt, l_seq_identity_df_pvt),
+       aes(x = identity, y = "")) +
+  geom_violin(fill = "grey") +
+  # geom_polygon(aes(group = 1)) +
+  # geom_dotplot(binaxis='y', stackdir='center', dotsize=1)
+  geom_boxplot(width=0.5) +
+  scale_fill_gradient(
+    low = "blue", high = "red",
+    limits = c(0,1),
+    name = "Identity",
+    labels = scales::label_percent()) +
+  labs(
+    # title = "Fv Sequence Identity",
+    x = "Identity",
+    y = "Density"
+    ) +
+  scale_x_continuous(labels = scales::label_percent(), limits=c(0,1)) +
+  # theme_minimal() +
+  theme_classic() +
+  # theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+  facet_grid(~chain)
+
+
+ggpubr::ggarrange(
+  ggpubr::ggarrange(
+    NULL,
+    plot_boxplot,
+    ncol = 3,
+    widths = c(0.5, 2, 0.5)
+    ),
+  plot_heatmap,
+  nrow = 2, ncol = 1,
+  heights = c(1, 2),
+  align = "h",
+  labels = c("A", "B")
+)

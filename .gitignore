@@ -36,3 +36,4 @@ experiments/*/4_docking/output/data
 __pycache__/
 .snakemake/
 .venv/
+.Rhistory

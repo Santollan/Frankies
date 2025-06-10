@@ -1,0 +1,1533 @@
+./mdscoring_1.pdb	GLU	A	1	-9999	-9999	116.847	*	0.195602	0	0	-0.12949	-0.0396997	0.362278	-0.0983474	0	0	0.0970987	0	0	0	0	0	0	0	0	0.00376192	0	0	0	0	0	0	0.00134159	656.189	767.983	0
+./mdscoring_1.pdb	VAL	A	2	179.929	-78.945	123.323	E	0.0445665	0	0	-0.614117	0	0.512868	-1.09944	0	0.181155	1.01452	0	0	0	0.049587	0	0	0	0	0	0	0	0	0	0	0.42411	0.413936	771.979	1092.1	1
+./mdscoring_1.pdb	GLN	A	3	179.649	-120.721	118.841	E	0.556717	-1.35481	0	-0.739299	0	1.28328	-0.732214	0	0.233336	1.86643	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.13522	0.79251	885.691	1350.61	2
+./mdscoring_1.pdb	LEU	A	4	179.95	-109.513	112.547	E	-0.670351	-0.208544	0	-1.66022	0	1.21959	-2.93103	0.120372	0.96105	1.82843	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.830982	0.903401	1352.45	1435.67	3
+./mdscoring_1.pdb	LEU	A	5	-179.445	-102.65	104.043	E	0.312082	-1.00812	0	-0.94803	0	1.43116	-1.12105	0	0.243704	1.71443	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.253581	0.950902	848.376	1467.3	4
+./mdscoring_1.pdb	GLN	A	6	-179.838	-82.6825	111.164	E	1.67576	-1.03481	-0.307696	-1.87391	0	2.76545	-2.02457	0.293245	1.72561	2.13243	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0.856865	1903.72	1396.94	5
+./mdscoring_1.pdb	SER	A	7	179.39	-100.324	122.803	B	1.3241	-1.23295	0	-0.51696	0	1.30712	-0.275846	0	0.111187	1.88163	0	0	0	0.0499258	0	0	0	0	0	0	0	0	0	0	0.209925	0.57157	371.554	1131.12	6
+./mdscoring_1.pdb	GLY	A	8	-179.741	134.611	77.8281	*	3.99122	0	0	-0.393888	0	0.951814	-0.303424	0.48709	0	3.24963	0	0	0	0	0.0627682	0	0	0	0	0	0	0	0	0	0	0.492105	0	1040.36	7
+./mdscoring_1.pdb	ALA	A	9	179.518	-136.544	145.517	*	0.514092	0	0	-0.187473	0	0.0384666	-0.400456	0.00208786	0	1.06147	0	0	0	0	0.0627682	0	0	0	0	0	0	0	0	0	0.337567	0.0859859	206.08	761.477	8
+./mdscoring_1.pdb	GLY	A	10	-179.847	156.374	-157.682	*	1.32249	-0.594852	0	-0.285112	0	0.831541	-0.158849	0	0	1.52976	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.372258	0	931.894	9
+./mdscoring_1.pdb	ALA	A	11	-179.726	-109.933	135.243	B	0.92935	0	0	-0.216004	0	0.256988	-0.385156	0	0	1.27352	0	0	0	0	0.0148589	0	0	0	0	0	0	0	0	0	0.242653	0.239731	181.877	885.703	10
+./mdscoring_1.pdb	LYS	A	12	179.651	-126.764	149.484	B	0.174932	-1.02347	0	-1.01345	0.00969544	1.35658	-1.37695	0	0.660101	1.56243	0	0	0	0	0.0964868	0	0	0	0	0	0	0	0	0	0.349641	0.743347	1139.44	1319.57	11
+./mdscoring_1.pdb	LYS	A	13	179.424	-83.7815	149.723	B	0.621966	-0.528623	-0.852259	-0.680461	-0.0198339	1.17458	-0.69871	0.0193785	0.987389	1.22051	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0473649	0.788949	797.57	1351.63	12
+./mdscoring_1.pdb	PRO	A	14	179.336	-57.6774	123.972	*	-0.408523	0	0	-0.40419	0	0.108481	-0.707914	0	0.104275	0.490825	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.406878	0.403885	738.878	1076.16	13
+./mdscoring_1.pdb	GLY	A	15	-179.74	98.3094	-7.99036	*	1.20293	-0.304362	0	-0.360373	0	0.746741	-0.3351	0	0	1.45603	0	0	0	0	0.417595	0	0	0	0	0	0	0	0	0	0	0.446619	0	999.19	14
+./mdscoring_1.pdb	ALA	A	16	179.895	-77.6468	171.532	*	0.313145	-0.886966	0	-0.70486	0	1.09355	-0.815022	0.0108221	0	1.61563	0	0	0	0	0.367273	0	0	0	0	0	0	0	0	0	0.542453	0.661621	258.325	1226.59	15
+./mdscoring_1.pdb	THR	A	17	-179.657	-109.91	132.103	E	0.711847	0	0	-0.537543	0	0.754223	-0.780951	0	0.138179	1.08374	0	0	0	0.0541944	0	0	0	0	0	0	0	0	0	0	0.26517	0.519956	664.262	1147.65	16
+./mdscoring_1.pdb	VAL	A	18	179.809	-114.348	139.389	E	-1.26757	-1.08847	0	-1.17662	0	1.19092	-1.81275	0.00179986	0.427142	1.1845	0	0	0	0.00592316	0	0	0	0	0	0	0	0	0	0	0.68715	0.762539	933.223	1334.73	17
+./mdscoring_1.pdb	THR	A	19	179.692	-128.822	109.068	E	1.58402	0	0	-0.4545	0	0.858284	-0.503025	0	0.0935551	1.39977	0	0	0	0.189942	0	0	0	0	0	0	0	0	0	0	0.179536	0.498552	610.569	1131.94	18
+./mdscoring_1.pdb	ILE	A	20	-179.616	-101.243	128.228	E	-1.76372	-1.0763	0	-1.51383	0	1.12824	-2.6298	0	0.96105	1.36483	0	0	0	0.00207937	0	0	0	0	0	0	0	0	0	0	0.772109	0.762797	1302.42	1343.92	19
+./mdscoring_1.pdb	SER	A	21	179.596	-105.747	115.61	E	0.858838	-1.23295	0	-0.78225	0	1.42587	-0.609637	0	0.209099	1.84363	0	0	0	0.00507731	0	0	0	0	0	0	0	0	0	0	0.394784	0.800183	460.102	1327.96	20
+./mdscoring_1.pdb	CYS	A	22	-180	-95.2151	103.112	E	1.77747	-1.17823	0	-1.42645	0	1.44814	-1.65927	1.88215	0.8295	1.88163	0	0	0	0	0.000821026	0	0	0	0	0	0	0	0	0	0.863119	1	683.75	1531.69	21
+./mdscoring_1.pdb	VAL	A	23	-179.395	-80.4793	111.395	E	-0.183794	-1.06588	0	-1.07054	0	1.52	-1.33328	0	0.180684	1.58523	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.423007	1	771.303	1542.26	22
+./mdscoring_1.pdb	VAL	A	24	179.519	-92.6957	120.098	E	0.374634	0	0	-1.04276	0	1.38359	-1.5936	0.00689463	0.427142	1.19336	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.577746	0.669719	866.158	1270.12	23
+./mdscoring_1.pdb	SER	A	25	-179.655	-119.957	118.449	B	1.51355	-0.933591	-0.184397	-0.618454	0	1.43886	-0.288589	0	0.394453	1.44577	0	0	0	0.259508	0	0	0	0	0	0	0	0	0	0	0.400348	0.54468	462.767	1107.97	24
+./mdscoring_1.pdb	GLY	A	26	179.698	96.4847	102.19	*	2.11807	0	0	-0.286013	0	0.734585	-0.24811	0.00579935	0	1.9118	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.373301	0	932.837	25
+./mdscoring_1.pdb	TYR	A	27	-179.792	-150.785	150.601	*	0.255765	0	0	-0.403119	0.0455074	0.101555	-0.753135	0.00932312	0.185245	1.04903	0	0	0	0.021359	0	0	0	0	0	0	0	0	0	0	0.219037	0.105062	1643.47	905.761	26
+./mdscoring_1.pdb	SER	A	28	178.613	-109.473	174.953	*	1.4809	-0.39558	0	-0.487049	0	1.14033	-0.326686	1.6415e-05	0.0988017	1.35705	0	0	0	0.094006	0	0	0	0	0	0	0	0	0	0	0.18654	0.55108	360.353	1113.48	27
+./mdscoring_1.pdb	TYR	A	29	-179.69	-66.1207	-42.241	*	1.6166	0	0	-0.411761	0.0383685	0.952031	-0.402468	0	0	1.44043	0	0	0	0	0.337775	0	0	0	0	0	0	0	0	0	0	0.544431	1245.5	1197.5	28
+./mdscoring_1.pdb	SER	A	30	-179.925	-69.3618	-27.5512	*	2.47787	-0.453384	0	-0.880738	0	1.82066	-0.638338	0.182343	0.293465	1.33362	0	0	0	0.820244	0.960637	0	0	0	0	0	0	0	0	0	0.554069	0.799872	536.399	1327.69	29
+./mdscoring_1.pdb	SER	A	31	-179.121	-71.0884	-23.1192	*	1.07523	0	-1.12177	-0.961768	0	1.98539	-0.763885	2.32461e-05	0.529654	1.35864	0	0	0	0.0489428	1.17136	0	0	0	0	0	0	0	0	0	0.670013	0.83627	591.936	1359.03	30
+./mdscoring_1.pdb	TYR	A	32	-179.651	-84.9838	5.09713	*	1.71692	0	-0.471952	-0.903469	0.0388624	1.59755	-0.971791	0	0.845724	1.58199	0	0	0	0	0.921467	0	0	0	0	0	0	0	0	0	0.304416	0.589952	1791.77	1227.73	31
+./mdscoring_1.pdb	TYR	A	33	179.014	-96.9624	11.968	*	0.574889	-0.453384	0	-0.840556	0.0521093	1.02181	-1.13948	0.125192	0.206754	1.60245	0	0	0	0	0.716888	0	0	0	0	0	0	0	0	0	0.24447	0.611842	1687.64	1242.26	32
+./mdscoring_1.pdb	SER	A	34	-179.871	-117.169	-174.954	*	3.09187	0	0	-0.952861	0	2.30917	-0.630287	0.000308272	0.411166	1.94956	0	0	0	0.00482102	0.468692	0	0	0	0	0	0	0	0	0	0.776291	0.723896	642.844	1262.27	33
+./mdscoring_1.pdb	GLY	A	35	179.581	-124.074	161.842	B	2.20786	0	0	-0.73731	0	1.57051	-0.750804	0.056332	0	2.06914	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.888507	0	1399.1	34
+./mdscoring_1.pdb	ILE	A	36	-179.824	-117.699	127.411	E	-0.286188	-0.636363	0	-1.25451	0	1.51844	-1.86781	0	0.486946	1.43323	0	0	0	0.0338796	0.0706658	0	0	0	0	0	0	0	0	0	0.506681	0.857633	1072.29	1406.32	35
+./mdscoring_1.pdb	ASP	A	37	-179.768	-103.462	153.589	E	1.09639	-1.11304	-0.699966	-0.92458	-0.0579216	2.34578	-0.822636	0.00403926	0.521094	1.84363	0	0	0	0	0.251993	0	0	0	0	0	0	0	0	0	0.381179	0.803849	930.685	1351.91	36
+./mdscoring_1.pdb	LYS	A	38	-179.01	-127.822	123.759	E	2.41936	-0.292801	-1.56403	-1.78338	0.164123	4.29644	-2.15677	0.0579698	1.88794	1.80563	0	0	0	0.00422953	0.00432128	0	0	0	0	0	0	0	0	0	0.769945	0.909667	1614.81	1436.5	37
+./mdscoring_1.pdb	VAL	A	39	178.439	-128.152	177.123	E	-0.384463	-0.928326	0	-1.22029	0	1.19271	-1.91213	0	0.427142	2.05643	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.680119	0.895354	928.913	1427.17	38
+./mdscoring_1.pdb	ARG	A	40	179.783	-144.583	124.685	E	1.20397	-1.25331	-0.898417	-2.43708	-0.450971	4.17502	-1.94754	0.0237231	1.81959	1.88163	0	0	0	0.291331	0.592065	0	0	0	0	0	0	0	0	0	0.942657	1	2531.99	1610.29	39
+./mdscoring_1.pdb	GLN	A	41	179.502	-84.1023	117.871	B	0.272229	-1.28526	0	-1.12716	0	1.73668	-1.32151	0	0.585462	1.68403	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.339278	1	1119.13	1532.09	40
+./mdscoring_1.pdb	ARG	A	42	-179.368	-83.3929	146.597	B	-0.0439673	-1.18576	0	-1.41713	-0.056141	2.1206	-1.5139	0	0.815838	1.13539	0	0	0	0.0571378	0	0	0	0	0	0	0	0	0	0	0.448364	0.835559	1730.25	1373.54	41
+./mdscoring_1.pdb	PRO	A	43	179.491	-59.9862	113.101	*	0.590212	0	0	-0.140417	0	0.0796024	-0.199401	0	0.0467606	0.803666	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.182459	0.13586	592.781	885.596	42
+./mdscoring_1.pdb	GLY	A	44	-179.889	75.6693	24.8864	*	0.781954	0	0	-0.0384566	0	0.091154	-0.0217127	0	0	0.750969	0	0	0	0	0.338061	0	0	0	0	0	0	0	0	0	0	0.0843441	0	671.331	43
+./mdscoring_1.pdb	H1S	A	45	179.955	-147.941	-172.686	*	1.96651	-0.488259	0	-0.242934	0	0.504026	-0.319236	0.00152638	0.0413762	2.42123	0	0	0	0	0.338061	0	0	0	0	0	0.0487825	0	0	0	0.048924	0.23775	1033.57	993.866	44
+./mdscoring_1.pdb	GLY	A	46	179.724	-89.6973	-158.629	*	1.13348	-0.6315	0	-0.387849	0	0.895328	-0.314051	0.00152638	0	1.57003	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.497108	0	1044.88	45
+./mdscoring_1.pdb	LYS	A	47	-179.751	-95.4958	122.442	B	0.996846	0	0	-0.78055	-0.00552097	1.33825	-1.26257	0	0.700846	1.00639	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.371223	0.445704	1163.85	1110.33	46
+./mdscoring_1.pdb	ASP	A	48	178.974	-86.5132	115.408	B	-0.337163	-1.18923	-0.515946	-1.11963	-0.925057	2.68163	-1.07943	0	0.521094	1.28941	0	0	0	0	0.48801	0	0	0	0	0	0	0	0	0	0.53791	0.858854	1074.88	1393.44	47
+./mdscoring_1.pdb	CYS	A	49	-179.383	-68.0214	128.118	B	1.48488	0	0	-0.626205	0	1.12691	-0.59972	0	0.203962	1.37333	0	0	0	0.00660004	0	0	0	0	0	0	0	0	0	0	0.212228	0.681108	368.719	1259.56	48
+./mdscoring_1.pdb	VAL	A	50	179.941	-103.305	-65.3929	B	-0.516689	-0.995209	0	-1.44966	0	1.50499	-2.35717	0	0.427142	2.35283	0	0	0	0.000390646	0.552609	0	0	0	0	0	0	0	0	0	0.864959	0.855061	1042.22	1399.12	49
+./mdscoring_1.pdb	GLY	A	51	179.888	143.764	117.434	*	3.18398	-0.292801	0	-0.705323	0	1.39685	-0.686464	0.624893	0	2.84683	0	0	0	0	0.472749	0	0	0	0	0	0	0	0	0	0	0.831738	0	1347.72	50
+./mdscoring_1.pdb	GLY	A	52	179.066	-99.2248	-172.317	*	0.162231	-1.22878	0	-0.718978	0	1.17521	-0.787247	0	0	1.72203	0	0	0	0	0.171071	0	0	0	0	0	0	0	0	0	0	0.861703	0	1374.84	51
+./mdscoring_1.pdb	ILE	A	53	-179.105	-130.966	149.148	B	-0.595388	-0.589892	0	-1.53148	0	1.50309	-2.48958	0.00057348	0.675877	1.83603	0	0	0	0	0.0743094	0	0	0	0	0	0	0	0	0	0.703269	0.963331	1242.73	1475.87	52
+./mdscoring_1.pdb	TYR	A	54	179.41	-109.164	99.0577	B	-0.00682732	-0.724495	0	-1.24797	0	1.4613	-1.595	0.000178115	0.250175	1.76771	0	0	0	0.0812807	0.441376	0	0	0	0	0	0	0	0	0	0.295811	1	1776.82	1509.22	53
+./mdscoring_1.pdb	PRO	A	55	-179.447	-61.013	-21.8894	B	-0.58793	0	0	-0.60572	0	0.35883	-0.994614	0.00333982	0.25628	0.393954	0	0	0	0	0.0301459	0	0	0	0	0	0	0	0	0	0.518026	0.538887	811.235	1172.15	54
+./mdscoring_1.pdb	ARG	A	56	-179.909	-61.7447	-41.762	*	1.51089	0	0	-0.908118	0.056689	1.48045	-0.907934	0	0.674364	1.0995	0	0	0	0.0284014	0.42274	0	0	0	-0.0124656	0	0	0	0	0	0.370613	0.412546	1604.13	1048.25	55
+./mdscoring_1.pdb	SER	A	57	-179.382	-95.0936	-21.0028	*	2.57255	0	-0.192273	-0.541094	0	1.238	-0.345812	0.0118916	0.475237	1.15448	0	0	0	0.772115	0.755485	0	0	0	0	0	0	0	0	0	0.524839	0.386135	522.398	971.462	56
+./mdscoring_1.pdb	GLY	A	58	179.648	125.501	-128.311	*	2.56642	-0.486878	0	-0.500175	0	1.21084	-0.397798	0	0	2.74043	0	0	0	0	0.731873	0	0	0	0	0	0	0	0	0	0	0.611947	0	1148.81	57
+./mdscoring_1.pdb	TYR	A	59	-179.956	-86.7166	48.3224	*	2.67635	-0.409701	0	-0.289811	0	0.446533	-0.343439	0.337618	0.0616928	2.80123	0	0	0	0.0722303	0.337664	0	0	0	0	0	0	0	0	0	0.0729467	0.300994	1389.71	1035.86	58
+./mdscoring_1.pdb	TYR	A	60	-179.693	-89.9954	74.9188	*	0.633794	-0.990123	0	-0.829372	0	1.12678	-0.984704	0.0118916	0.104683	2.15523	0	0	0	0.0394158	0.649164	0	0	0	0	0	0	0	0	0	0.12378	0.751748	1478.01	1335.16	59
+./mdscoring_1.pdb	THR	A	61	179.3	-90.448	116.315	*	0.395291	-0.820468	0	-1.12384	0	1.52524	-1.57102	0.00984732	0.521094	1.41043	0	0	0	0.444005	0.142766	0	0	0	0	0	0	0	0	0	0.8328	0.615796	1020.17	1217.99	60
+./mdscoring_1.pdb	H2S	A	62	-179.413	-85.5962	78.147	*	2.07515	-0.52881	0	-0.388785	0	1.0324	-0.2305	0	0	2.11723	0	0	0	0.0248356	0.0851853	0	0	0	0	0	0.0487825	0	0	0	0	0.540027	908.784	1194.58	61
+./mdscoring_1.pdb	TYR	A	63	179.591	-70.9598	137.388	B	0.117718	-0.410767	0	-1.16708	0.0478817	1.2962	-1.50484	0.0308086	0.422689	1.40283	0	0	0	0	0.0691893	0	0	0	0	0	0	0	0	0	0.499795	0.513719	2131.14	1177.11	62
+./mdscoring_1.pdb	THR	A	64	179.028	-76.3147	167.701	B	2.65616	-0.449478	-0.765078	-0.928584	0	2.05211	-0.790687	0.023136	0.521094	2.01083	0	0	0	0.982813	0	0	0	0	0	0	0	0	0	0	0.597858	0.670842	872.857	1258.4	63
+./mdscoring_1.pdb	GLU	A	65	-179.921	-75.5018	-19.3471	B	1.19228	0	0	-0.218737	0.0065833	0.516903	-0.184484	0	0	1.04447	0	0	0	0.0275462	0.338631	0	0	0	0	0	0	0	0	0	0	0.335089	572.344	1012.62	64
+./mdscoring_1.pdb	LYS	A	66	-179.555	-82.2461	-39.2641	*	1.57794	0	-0.388412	-0.409735	-0.126866	1.01088	-0.499499	0	0.719451	1.27212	0	0	0	0	0.676336	0	0	0	0	0	0	0	0	0	0.17469	0.328621	941.574	1028.02	65
+./mdscoring_1.pdb	PHE	A	67	-178.442	-98.4234	1.00355	*	-2.60013	-1.22107	0	-2.03646	0.127709	1.06931	-3.22884	0.183181	0.751746	1.75429	0	0	0	0	0.877817	0	0	0	0	0	0	0	0	0	0.934053	0.774305	2522.58	1350.14	66
+./mdscoring_1.pdb	GLN	A	68	-180	-62.0216	108.584	*	1.82549	0	0	-0.386465	0	0.873887	-0.439007	0.0100215	0.184206	1.58285	0	0	0	0	0.481887	0	0	0	0	0	0	0	0	0	0.106748	0.35882	853.12	1038.35	67
+./mdscoring_1.pdb	GLY	A	69	179.659	121.952	-30.0413	*	1.54817	0	0	-0.105565	0	0.281967	-0.0670378	0	0	1.4388	0	0	0	0	0.33783	0	0	0	0	0	0	0	0	0	0	0.162579	0	742.134	68
+./mdscoring_1.pdb	ARG	A	70	-179.343	-101.701	-33.2594	*	0.283631	-1.22037	-1.96976	-1.62427	-0.644861	2.87748	-1.21319	0.00146456	1.81959	2.15523	0	0	0	0.102331	0.675629	0	0	0	0	0	0	0	0	0	0.615812	0.760719	2001.85	1315.99	69
+./mdscoring_1.pdb	VAL	A	71	-179.344	-83.1656	127.448	B	-0.895811	-0.499622	0	-1.33766	0	1.21341	-2.25478	0.160468	0.427142	1.39523	0	0	0	0	0.611895	0	0	0	0	0	0	0	0	0	0.797136	0.789558	1000.64	1353.53	70
+./mdscoring_1.pdb	THR	A	72	179.65	-129.358	145.065	B	0.76483	-1.23586	-0.0960058	-0.858784	0	1.84646	-0.624102	0	0.318705	1.31163	0	0	0	0.102793	0	0	0	0	0	0	0	0	0	0	0.369317	0.865929	729.562	1401.59	71
+./mdscoring_1.pdb	TYR	A	73	179.859	-113.969	98.3045	B	-0.76476	-0.505691	-0.845672	-1.66986	0.265213	1.13012	-2.34015	0.666891	0.845724	1.68867	0	0	0	0	0.0226367	0	0	0	0	0	0	0	0	0	0.840763	0.420292	2723.4	1115.07	72
+./mdscoring_1.pdb	PRO	A	74	-179.54	-79.6751	45.8242	B	0.400378	0	0	-0.333888	0	0.00749449	-0.637999	0	0.120439	1.24234	0	0	0	0.00199286	0	0	0	0	0	0	0	0	0	0	0.469951	0.187889	779.938	922.589	73
+./mdscoring_1.pdb	SER	A	75	-179.838	-110.476	137.034	*	1.33977	-0.505691	0	-0.395156	0	1.07842	-0.215831	0	0.23387	1.13148	0	0	0	0.0126847	0.0226367	0	0	0	0	0	0	0	0	0	0.441553	0.244532	482.504	849.542	74
+./mdscoring_1.pdb	GLY	A	76	-179.786	-107.841	-93.0849	*	2.59466	0	0	-0.184752	0	0.488857	-0.177079	0.709771	0	1.75786	0	0	0	0	0.0620381	0	0	0	0	0	0	0	0	0	0	0.256873	0	827.47	75
+./mdscoring_1.pdb	LYS	A	77	179.882	-68.8462	-177.691	*	3.01758	-0.233868	0	-0.101517	0	0.211308	-0.0780619	0.372153	0	1.49563	0	0	0	1.35194	0.0620381	0	0	0	0	0	0	0	0	0	0	0.165755	655.78	913.526	76
+./mdscoring_1.pdb	GLN	A	78	179.964	-80.7291	90.4073	B	1.40889	0	0	-0.100009	0	0.18315	-0.144628	0	0.108209	1.36217	0	0	0	0	0.00308323	0	0	0	0	0	0	0	0	0	0.0627077	0.137391	802.738	878.922	77
+./mdscoring_1.pdb	THR	A	79	-179.341	-98.0205	155.709	B	1.20177	-0.471952	-0.233868	-0.258489	0	0.510797	-0.220017	0	0.303758	1.22713	0	0	0	0.34441	0.00308323	0	0	0	0	0	0	0	0	0	0.139932	0.305823	585.737	990.474	78
+./mdscoring_1.pdb	ASN	A	80	179.954	-82.3281	-11.3883	B	1.57864	0	0	-0.5339	0	1.21206	-0.563207	0.0107846	0.167666	1.28523	0	0	0	0	0.338668	0	0	0	0	0	0	0	0	0	0.242308	0.490608	812.773	1122.54	79
+./mdscoring_1.pdb	ASN	A	81	179.673	-101.579	134.792	E	1.83229	0	0	-0.929156	0	1.9326	-0.98618	0	0.355991	1.45904	0	0	0	0	0.362722	0	0	0	0	0	0	0	0	0	0.514471	0.638236	1059.63	1231.93	80
+./mdscoring_1.pdb	ALA	A	82	179.638	-94.397	150.086	E	-0.0461461	-1.12239	0	-0.775982	0	1.18085	-0.913851	0	0	1.58523	0	0	0	0	0.000702174	0	0	0	0	0	0	0	0	0	0.571967	0.740413	265.852	1290.25	81
+./mdscoring_1.pdb	TYR	A	83	-179.567	-128.284	155.132	E	-0.57751	-0.755855	0	-1.17947	0	1.13256	-1.68726	0.00206031	0.325235	1.58523	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.384564	0.774857	1930.99	1350.51	82
+./mdscoring_1.pdb	LEU	A	84	179.43	-150.299	113.033	E	-1.11784	-1.14448	0	-1.6254	0	1.4601	-2.64277	0.00166131	0.708228	2.12483	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.736931	0.942663	1270.34	1461.81	83
+./mdscoring_1.pdb	GLN	A	85	179.946	-114.849	125.451	E	0.224239	-1.24517	-0.6315	-1.41157	0	1.99102	-1.66412	0	1.33436	1.85123	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.552911	1	1363.53	1526.94	84
+./mdscoring_1.pdb	LEU	A	86	179.452	-117.319	117.675	B	-1.67931	-1.20108	0	-1.77246	0	1.52	-2.93357	0.00193817	0.96105	1.74483	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.843498	1	1363.37	1617.91	85
+./mdscoring_1.pdb	ASN	A	87	180	-88.7484	143.812	B	1.25133	-0.6975	-0.727506	-1.074	0	2.14391	-0.99024	0.152288	0.691956	1.75243	0	0	0	9.35594e-07	0.402536	0	0	0	0	0	0	0	0	0	0.425484	0.960822	978.914	1470.97	86
+./mdscoring_1.pdb	SER	A	88	179.165	52.1912	72.7857	*	2.14868	-0.835734	0	-0.656156	0	1.34592	-0.480176	0.083568	0.0870971	2.51243	0	0	0	0.0917317	0.546911	0	0	0	0	0	0	0	0	0	0.164442	0.792004	349.767	1320.92	87
+./mdscoring_1.pdb	VAL	A	89	179.845	-73.2461	135.753	*	-2.06399	-0.706339	0	-1.68516	0	1.41729	-2.807	0	0.427142	1.28123	0	0	0	0.00884594	0.153558	0	0	0	0	0	0	0	0	0	1	1	1127.43	1517.69	88
+./mdscoring_1.pdb	THR	A	90	179.842	-106.2	170.603	*	3.16179	-0.882353	0	-0.940792	0	2.43343	-0.70208	1.00925	0.210709	2.03363	0	0	0	0	0.273532	0	0	0	0	0	0	0	0	0	0.40436	0.935389	751.534	1452.58	89
+./mdscoring_1.pdb	THR	A	91	-180	-66.8445	-19.9477	*	2.27391	-0.368785	0	-0.452914	0	0.931344	-0.353686	0	0	1.89683	0	0	0	0.621125	0.453143	0	0	0	0	0	0	0	0	0	0	0.617015	491.961	1218.89	90
+./mdscoring_1.pdb	GLU	A	92	179.778	-82.169	-6.7505	*	1.45475	0	0	-0.654189	-0.157618	1.35876	-0.715666	0	0.127329	1.48316	0	0	0	0.0129732	0.869391	0	0	0	0	0	0	0	0	0	0.090334	0.698252	787.039	1278.82	91
+./mdscoring_1.pdb	ASP	A	93	-179.26	-88.0439	-2.46593	*	0.123571	0	-2.51348	-1.52659	-1.99074	4.29411	-1.50096	1.36037	0.521094	1.47976	0	0	0	0	1.31306	0	0	0	0	0	0	0	0	0	0.965133	0.907022	1467.92	1429.8	92
+./mdscoring_1.pdb	THR	A	94	179.05	-69.6158	103.102	*	1.71416	0	-0.899112	-0.97104	0	2.08318	-0.954028	0.253447	0.521094	1.66807	0	0	0	0.0125491	0.570366	0	0	0	0	0	0	0	0	0	0.60948	0.702824	880.144	1281.87	93
+./mdscoring_1.pdb	ALA	A	95	-179.534	-161.72	173.287	*	0.505933	-0.58965	0	-1.10538	0	1.53084	-1.51044	0.352141	0	1.82843	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.990854	0.999268	372.668	1499.41	94
+./mdscoring_1.pdb	VAL	A	96	179.416	-95.12	104.952	E	-0.844867	-1.35126	0	-1.25011	0	1.52	-1.74159	0	0.427142	1.46363	0	0	0	0.0873292	0	0	0	0	0	0	0	0	0	0	0.589737	1	873.508	1570.57	95
+./mdscoring_1.pdb	TYR	A	97	-179.732	-74.7033	138.85	E	-1.88795	-1.0893	-0.544498	-2.10693	0.0793324	2.06571	-2.71625	0.17543	0.845724	1.40283	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.796344	1	2646.25	1583.55	96
+./mdscoring_1.pdb	TYR	A	98	-179.147	-127.399	157.907	E	-1.20543	-0.965106	-0.33548	-1.73556	0	1.66629	-2.26652	0	0.845724	1.58523	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.642606	0.874086	2379.21	1416.39	97
+./mdscoring_1.pdb	CYS	A	99	177.838	-114.994	114.304	E	2.8051	-0.280677	0	-1.30853	0	1.58966	-1.54296	1.63928	0.758294	1.95003	0	0	0	0	0.0215099	0	0	0	0	0	0	0	0	0	0.789026	0.930976	647.889	1447.96	98
+./mdscoring_1.pdb	ALA	A	100	-179.633	-126.047	122.394	B	0.232274	-1.11304	0	-0.92157	0	1.20479	-1.22993	0	0	2.29203	0	0	0	0	0.116929	0	0	0	0	0	0	0	0	0	0.728646	0.876313	305.805	1400.06	99
+./mdscoring_1.pdb	ARG	A	101	179.281	-105.149	110.569	B	1.46873	-0.688207	0	-1.69136	-0.134389	2.80988	-1.59103	0	0.963934	1.76771	0	0	0	0.0518018	0.0932573	0	0	0	-0.0196032	0	0	0	0	0	0.529754	1	1862.26	1510.39	100
+./mdscoring_1.pdb	PRO	A	102	179.184	-59.7268	147.056	*	-1.13417	-0.495516	0	-0.758294	0	0.527871	-1.13512	0.032978	0.25628	0.437625	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.542329	0.721488	827.056	1301.98	101
+./mdscoring_1.pdb	GLY	A	103	-179.429	-79.0743	70.5315	*	1.86333	-0.408378	0	-0.630086	0	1.13152	-0.651437	0.0536848	0	2.36803	0	0	0	0	0.161159	0	0	0	0	0	0	0	0	0	0	0.752473	0	1275.99	102
+./mdscoring_1.pdb	LEU	A	104	179.113	-83.661	-13.8338	*	-0.346554	-0.495516	0	-1.19642	0	1.12512	-2.03746	0.000445152	0.588453	1.66883	0	0	0	0	0.501595	0	0	0	0	0	0	0	0	0	0.612302	0.638458	1161.54	1259.21	103
+./mdscoring_1.pdb	GLU	A	105	179.288	-67.7226	115.643	*	2.18389	0	-0.763692	-0.864855	-0.0786944	1.98913	-0.974161	0	1.2921	1.5103	0	0	0	0	0.415085	0	0	0	0.0737535	0	0	0	0	0	0.429282	0.539288	1192.42	1162.3	104
+./mdscoring_1.pdb	SER	A	106	-179.689	112.081	67.1602	*	5.24979	0	-0.966041	-0.976809	0	1.97602	-0.729896	0.108593	0.529654	3.24963	0	0	0	2.05864	0.448694	0	0	0	0	0	0	0	0	0	0.756053	0.78192	633.15	1312.23	105
+./mdscoring_1.pdb	PHE	A	107	179.024	-76.3618	84.0734	*	0.383613	0	0	-1.67036	0.201889	1.44474	-2.49429	0.098464	0.751746	2.05142	0	0	0	0	0.502423	0	0	0	0	0	0	0	0	0	0.680983	0.849961	2129.57	1400.37	106
+./mdscoring_1.pdb	TYR	A	108	-178.802	-58.0404	108.383	*	1.03334	-0.60314	0	-1.69056	0.136074	1.73915	-2.25558	0.420223	0.845724	2.44146	0	0	0	0	0.108991	0	0	0	0	0	0	0	0	0	0.573113	0.978599	2258.5	1485.79	107
+./mdscoring_1.pdb	GLY	A	109	178.703	137.326	-171.396	*	2.60376	0	0	-0.710475	0	1.65643	-0.649712	0.24994	0	2.05758	0	0	0	0	0.185359	0	0	0	0	0	0	0	0	0	0	0.817934	0	1335.23	108
+./mdscoring_1.pdb	VAL	A	110	179.676	-93.6976	105.592	*	-0.185374	-0.6315	0	-0.648748	0	0.790787	-0.950619	0	0.171491	1.06166	0	0	0	0.0215559	0	0	0	0	0	0	0	0	0	0	0.401486	0.41216	758.111	1090.86	109
+./mdscoring_1.pdb	GLY	A	111	179.937	107.424	-138.613	*	2.08787	0	0	-0.277706	0	0.75134	-0.172503	0	0	1.78674	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.356692	0	917.806	110
+./mdscoring_1.pdb	VAL	A	112	-179.808	-107.726	91.8681	B	0.879906	0	0	-0.564138	0	0.702727	-0.920728	0	0.125156	1.52813	0	0	0	0.00875731	1.71533e-05	0	0	0	0	0	0	0	0	0	0.293009	0.474233	691.614	1134.07	111
+./mdscoring_1.pdb	ASN	A	113	179.043	-100.734	110.405	B	2.10384	0	-1.09434	-1.51671	0	2.83103	-1.3364	1.04344	0.691956	1.47288	0	0	0	0.0119798	0.0288055	0	0	0	0	0	0	0	0	0	0.889004	0.830442	1399.33	1374.36	112
+./mdscoring_1.pdb	TRP	A	114	-179.219	-73.6346	82.9354	B	1.0488	0	0	-0.608723	0.238516	0.650508	-0.906977	0	0.166566	1.50311	0	0	0	0.00579764	0.0207537	0	0	0	0	0	0	0	0	0	0.201014	0.352032	2157.62	1088.54	113
+./mdscoring_1.pdb	SER	A	115	179.293	-98.1158	113.144	B	1.79877	0	-0.751259	-0.845851	0	1.85749	-0.5613	0	0.529654	1.57003	0	0	0	0	0.0467425	0	0	0	0	0	0	0	0	0	0.681774	0.650995	597.57	1199.51	114
+./mdscoring_1.pdb	H2S	A	116	-179.595	-71.5492	101.051	B	2.67355	0	0	-0.319217	0	0.852272	-0.263111	0.337503	0	2.01732	0	0	0	0	0	0	0	0	0	0	0.0487825	0	0	0	0	0.400707	948.358	1102.07	115
+./mdscoring_1.pdb	ASN	A	117	178.874	-92.3898	155.378	B	1.57639	-0.191658	-0.857535	-0.948142	0	1.84925	-0.755986	0.0360834	0.691956	1.75243	0	0	0	0	0.00646419	0	0	0	0	0	0	0	0	0	0.551388	0.556647	1093.11	1171.48	116
+./mdscoring_1.pdb	ASN	A	118	-178.733	-91.0439	28.7922	B	2.46215	-0.385768	0	-0.639129	0	1.27337	-0.567288	0.337748	0.342896	2.04123	0	0	0	0.0590993	0.408701	0	0	0	0	0	0	0	0	0	0.495546	0.270463	1042.46	959.413	117
+./mdscoring_1.pdb	SER	A	119	178.964	-84.5025	41.4449	*	3.26663	0	0	-0.41384	0	1.31527	-0.2266	0	0.139556	1.93961	0	0	0	0.512643	0.68222	0	0	0	0	0	0	0	0	0	0.263484	0.402389	397.209	985.457	118
+./mdscoring_1.pdb	MET	A	120	-179.065	-68.8486	110.345	B	1.11877	-0.385768	0	-0.828307	0	0.591446	-1.39113	0	0.734097	2.39843	0	0	0	0	0.40862	0	0	0	0	0	0	0	0	0	0.388836	0.504674	954.23	1152.78	119
+./mdscoring_1.pdb	SER	A	121	179.1	-92.5147	118.446	B	1.86334	-0.659593	0	-0.848147	0	1.8921	-0.576398	0	0.280904	1.76763	0	0	0	0.00685259	0.0668102	0	0	0	0	0	0	0	0	0	0.530354	0.762296	525.04	1295.34	120
+./mdscoring_1.pdb	ILE	A	122	-178.877	-113.596	151.22	B	-0.448885	0	0	-1.17456	0	0.782075	-2.16297	0	0.613754	1.42458	0	0	0	0.0682347	0.0118455	0	0	0	0	0	0	0	0	0	0.638628	0.582363	1186.69	1225.19	121
+./mdscoring_1.pdb	GLY	A	123	179.906	-86.6795	-154.472	B	1.52185	0	0	-0.60599	0	1.32612	-0.635048	0.0806248	0	1.35614	0	0	0	0	0.00387129	0	0	0	0	0	0	0	0	0	0	0.70979	0	1237.36	122
+./mdscoring_1.pdb	GLN	A	124	-179.612	-90.3886	-27.8157	*	2.12394	-0.756752	-1.62731	-0.806846	0	1.74316	-0.493625	0.0889295	1.72561	2.21603	0	0	0	0.0347447	0.33795	0	0	0	0	0	0	0	0	0	0.476943	0.401242	1276.62	1068.89	123
+./mdscoring_1.pdb	GLY	A	125	-180	97.6908	152.139	B	1.26238	-0.236543	0	-0.686912	0	1.14194	-0.80733	0	0	1.85123	0	0	0	0	0.540299	0	0	0	0	0	0	0	0	0	0	0.81189	0	1329.76	124
+./mdscoring_1.pdb	THR	A	126	179.561	-132.552	126.648	B	1.19745	-1.03982	0	-1.46207	0	2.39906	-1.74795	0.567983	0.521094	1.31163	0	0	0	0.64751	0	0	0	0	0	0	0	0	0	0	0.966016	0.902202	1103.69	1428.22	125
+./mdscoring_1.pdb	LEU	A	127	-179.315	-88.0502	109.983	B	1.09742	0	0	-0.789761	0	1.19886	-1.04165	0	0.204621	1.52535	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.212914	0.766348	812.874	1344.39	126
+./mdscoring_1.pdb	VAL	A	128	179.01	-104.767	112.882	B	-0.267926	-0.534435	0	-1.26318	0	1.52995	-1.89203	0	0.427142	1.46363	0	0	0	0.00100445	0	0	0	0	0	0	0	0	0	0	0.671404	0.882405	923.57	1418.15	127
+./mdscoring_1.pdb	THR	A	129	-178.858	-106.155	123.619	B	0.794324	-1.02095	0	-0.844377	0	1.78258	-0.72571	0.00158603	0.19083	1.38763	0	0	0	0.0227412	0.0272181	0	0	0	0	0	0	0	0	0	0.36621	0.863342	727.613	1399.69	128
+./mdscoring_1.pdb	VAL	A	130	178.701	-99.8327	120.216	B	-1.69111	-0.567827	0	-1.4631	0	1.08622	-2.62613	0.0625131	0.427142	1.38763	0	0	0	0.00244186	0	0	0	0	0	0	0	0	0	0	0.997684	0.76189	1123.58	1334.28	129
+./mdscoring_1.pdb	SER	A	131	-179.227	-144.283	150.42	B	1.59714	-0.604104	0	-0.547904	0	1.36341	-0.310564	0.0625131	0.109371	1.52443	0	0	0	0	0.198845	0	0	0	0	0	0	0	0	0	0.206495	0.604606	369.911	1159.57	130
+./mdscoring_1.pdb	GLU	A	132	-179.623	-72.9257	-9999	B	0.0520722	-0.852259	0	-0.0812308	-0.00793023	0.161252	-0.0637852	0	0	0.896025	0	0	0	0	0.0990221	0	0	0	0	0	0	0	0	0	0	0.105695	574	844.474	131
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GAP	
+./mdscoring_1.pdb	GLY	A	1134	-9999	-9999	30.2721	*	0.269882	0	0	-0.0438062	0	0.225432	-0.00776945	0	0	0.0960254	0	0	0	0	0.337943	0	0	0	0	0	0	0	0	0	0	0	0	562.118	1133
+./mdscoring_1.pdb	ILE	A	1135	-179.938	-108.307	112.485	B	0.576644	0	0	-0.146083	0	0.131284	-0.305664	0	0.113441	0.783182	0	0	0	0.0004845	0.337943	0	0	0	0	0	0	0	0	0	0.118038	0.0219462	735.339	856.441	1134
+./mdscoring_1.pdb	ARG	A	1136	179.927	-139.2	116.427	B	1.70375	-0.590917	0	-0.383354	-0.000563542	0.857885	-0.354662	0.495585	0	1.59618	0	0	0	0.083592	0	0	0	0	0	0	0	0	0	0	0	0.536414	902.489	1143.5	1135
+./mdscoring_1.pdb	ILE	A	1137	-179.687	-99.694	130.353	B	-0.905609	0	0	-1.15636	0	0.760499	-2.16698	0	0.613152	0.992888	0	0	0	0.0511905	0	0	0	0	0	0	0	0	0	0	0.638002	0.505578	1186.15	1174.67	1136
+./mdscoring_1.pdb	THR	A	1138	179.599	-115.407	129.655	B	1.15568	-1.20281	0	-0.490904	0	1.28205	-0.286158	0.338773	0.0486868	1.31163	0	0	0	0.154405	0.0296563	0	0	0	0	0	0	0	0	0	0.0934319	0.562826	556.582	1179.11	1137
+./mdscoring_1.pdb	GLN	A	1139	-179.576	-119.348	136.113	B	1.53473	-0.19081	-0.639264	-1.46058	0	2.11721	-1.63407	0	1.72561	1.61563	0	0	0	0.00101547	0	0	0	0	0	0	0	0	0	0	0.875103	0.513198	1732.12	1149.5	1138
+./mdscoring_1.pdb	SER	A	1140	179.632	-73.9069	112.28	B	2.42105	-0.6315	0	-0.608743	0	1.32298	-0.389416	0.511839	0.174658	2.04123	0	0	0	0	0.488612	0	0	0	0	0	0	0	0	0	0.329759	0.592525	428.954	1149.16	1139
+./mdscoring_1.pdb	ARG	A	1141	-179.52	73.126	123.349	*	3.57056	0	0	-0.693729	-0.0324488	1.41616	-0.579404	0.794421	0.438057	2.1189	0	0	0	0.108608	0.491063	0	0	0	0	0	0	0	0	0	0.240745	0.487186	1393.49	1105.65	1140
+./mdscoring_1.pdb	ALA	A	1142	178.939	-87.3952	-18.1737	*	1.05627	-0.608255	0	-0.431171	0	0.764369	-0.428171	0.288916	0	1.47059	0	0	0	0	0.33891	0	0	0	0	0	0	0	0	0	0.185888	0.52661	167.401	1117.5	1141
+./mdscoring_1.pdb	SER	A	1143	179.297	-148.751	130.171	E	2.08697	0	0	-0.488287	0	1.16109	-0.399345	0.228002	0.146807	1.4387	0	0	0	0	0.373928	0	0	0	0	0	0	0	0	0	0.277175	0.516806	403.767	1083.97	1142
+./mdscoring_1.pdb	LEU	A	1144	179.497	-122.654	130.71	E	-1.17451	-1.19774	0	-1.19525	0	1.10635	-1.92014	0	0.547413	1.48486	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.569599	0.684661	1124.26	1289.98	1143
+./mdscoring_1.pdb	SER	A	1145	-179.79	-127.409	101.608	E	2.51666	0	0	-0.649108	0	1.31337	-0.562777	0.0225275	0.209822	2.18282	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.39615	0.63953	460.756	1189.64	1144
+./mdscoring_1.pdb	VAL	A	1146	178.934	-123.155	170.398	E	-0.545151	-0.84684	0	-1.20158	0	1.37344	-1.73865	0.000515482	0.427142	1.44083	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.599497	0.903346	879.492	1432.73	1145
+./mdscoring_1.pdb	SER	A	1147	179.202	-73.4209	164.221	*	1.0305	-0.86987	-0.405326	-0.787695	0	1.58104	-0.538305	0.102974	0.529654	1.16723	0	0	0	0.250797	0.625243	0	0	0	0	0	0	0	0	0	0.333795	0.827325	430.888	1351.33	1146
+./mdscoring_1.pdb	ALA	A	1148	-179.55	-71.3228	75.2794	*	1.28236	0	0	-0.614688	0	0.879779	-0.837	0	0	1.82107	0	0	0	0.0332004	0.0882704	0	0	0	0	0	0	0	0	0	0.493231	0.610084	245.774	1184.95	1147
+./mdscoring_1.pdb	GLY	A	1149	-179.867	154.475	-16.3811	*	2.23173	0	0	-0.506428	0	1.04438	-0.508473	0	0	2.20225	0	0	0	0	1.39963	0	0	0	0	0	0	0	0	0	0	0.592971	0	1131.64	1148
+./mdscoring_1.pdb	GLU	A	1150	-179.56	-70.9782	144.082	B	0.371367	-0.412115	-1.20324	-0.861644	-0.121808	1.66327	-1.00024	0.0597367	1.40954	0.837865	0	0	0	0	0.353031	0	0	0	0	0	0	0	0	0	0.367792	0.595491	1118.88	1203.49	1149
+./mdscoring_1.pdb	PRO	A	1151	-179.652	-68.251	118.548	E	0.90187	0	0	-0.208168	0	0.271977	-0.240272	0	0.0223763	1.05596	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0873119	0.39606	530.84	1070.6	1150
+./mdscoring_1.pdb	ALA	A	1152	179.107	-100.038	147.668	E	0.889718	-0.6315	0	-0.863531	0	1.35556	-1.14057	0.532774	0	1.63698	0	0	0	0	0.0634872	0	0	0	0	0	0	0	0	0	0.735684	0.771209	307.6	1315.14	1151
+./mdscoring_1.pdb	SER	A	1153	179.866	-147.009	108.966	E	3.14027	0	0	-0.741562	0	1.54339	-0.587874	0.781091	0.221804	1.92342	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.418772	0.723954	471.592	1262.32	1152
+./mdscoring_1.pdb	ILE	A	1154	-179.742	-98.8079	125.271	E	-1.36471	-1.06479	0	-1.32945	0	1.23406	-2.13431	0	0.564549	1.36483	0	0	0	0.000414519	0.130242	0	0	0	0	0	0	0	0	0	0.587429	0.814535	1142.3	1377.96	1153
+./mdscoring_1.pdb	GLN	A	1155	-179.897	-111.324	133.457	E	0.949175	-0.6315	-0.604707	-0.977887	0	1.46974	-1.17609	0.00401976	0.999016	1.86643	0	0	0	0.000165886	0	0	0	0	0	0	0	0	0	0	0.313396	0.799597	1089.52	1355.71	1154
+./mdscoring_1.pdb	ALA	A	1156	179.88	-126.922	124.552	E	1.2957	-0.388123	0	-0.671443	0	1.0612	-0.876356	0	0	2.17043	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.566057	0.620948	264.344	1193.73	1155
+./mdscoring_1.pdb	ARG	A	1157	179.623	-122.595	121.853	E	0.911902	-1.20281	-0.507954	-0.722266	-0.368434	1.04212	-0.820586	0.491486	1.1301	1.81323	0	0	0	0.0570231	0.0319154	0	0	0	0	0	0	0	0	0	0.132903	0.673812	1218.57	1249.16	1156
+./mdscoring_1.pdb	VAL	A	1158	-179.863	-96.4571	-175.918	E	2.47788	0	0	-1.00283	0	0.962153	-1.74425	0.0261849	0.427142	3.24963	0	0	0	0.559856	0	0	0	0	0	0	0	0	0	0	0.640528	0.576986	904.644	1205.58	1157
+./mdscoring_1.pdb	SER	A	1159	-179.507	-79.3681	-40.2431	*	2.30811	0	-0.590917	-0.472688	0	1.0819	-0.271507	0.426071	0.529654	1.28783	0	0	0	0.317758	0.424762	0	0	0	0	0	0	0	0	0	0.47088	0.329251	496.552	922.485	1158
+./mdscoring_1.pdb	GLN	A	1160	-179.827	-116.614	153.224	B	1.29786	-0.74582	0	-0.480529	0	1.12736	-0.412253	0	0.148825	1.61563	0	0	0	0.0446466	0.337749	0	0	0	0	0	0	0	0	0	0.0862447	0.567294	829.664	1188.45	1159
+./mdscoring_1.pdb	SER	A	1161	-179.133	-76.2275	167.586	B	0.381633	-0.857919	-0.583264	-0.781259	0	1.49027	-0.583201	0.000125644	0.529654	1.16723	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.488184	0.73281	504.84	1269.95	1160
+./mdscoring_1.pdb	LEU	A	1162	179.589	-87.1417	70.6832	B	0.336363	0	0	-1.20064	0	1.22814	-2.06107	0	0.57345	1.73097	0	0	0	0.0655109	0.359204	0	0	0	0	0	0	0	0	0	0.596691	0.623905	1147.91	1249.52	1161
+./mdscoring_1.pdb	ILE	A	1163	-179.909	-137.69	-157.613	*	1.26565	-1.11889	0	-0.751105	0	1.06851	-0.936599	0.273455	0.256508	2.3964	0	0	0	0.0773689	0.205957	0	0	0	0	0	0	0	0	0	0.266904	0.686495	864.406	1293.71	1162
+./mdscoring_1.pdb	LYS	A	1164	179.359	121.576	2.08254	*	4.85921	0	0	-0.468654	-0.0077129	0.782954	-0.583808	0.328298	0.185262	3.24963	0	0	0	1.36889	0.407957	0	0	0	0.00436336	0	0	0	0	0	0.0981295	0.46353	854.984	1122.86	1163
+./mdscoring_1.pdb	GLY	A	1165	179.839	71.5161	-89.5934	*	2.13252	-0.210797	0	-0.298446	0	0.732623	-0.208962	0	0	2.1181	0	0	0	0	0.338721	0	0	0	0	0	0	0	0	0	0	0.39319	0	950.837	1164
+./mdscoring_1.pdb	ASP	A	1166	-179.455	-83.5861	-19.594	*	2.64949	0	0	-0.676302	0.020871	1.94188	-0.612186	0	0.147689	1.40843	0	0	0	0.414238	0.353583	0	0	0	0.00487163	0	0	0	0	0	0.283422	0.645029	840.748	1232	1165
+./mdscoring_1.pdb	ILE	A	1167	179.629	-65.6042	125.022	E	-0.689582	-0.30907	0	-1.4916	0	1.52737	-2.425	0	0.64389	1.36483	0	0	0	0	0.579526	0	0	0	0	0	0	0	0	0	0.669986	0.980822	1213.88	1487.38	1166
+./mdscoring_1.pdb	SER	A	1168	-179.207	-89.7477	121.191	E	1.66727	-1.14803	0	-1.145	0	2.36051	-0.788951	0.00496659	0.447546	1.76763	0	0	0	0.16861	0	0	0	0	0	0	0	0	0	0	0.844979	0.916261	675.745	1427.9	1167
+./mdscoring_1.pdb	ASN	A	1169	-179.297	-100.677	100.973	E	2.1887	0	-0.634111	-1.18901	0	2.44741	-0.972927	0	0.691956	1.42217	0	0	0	0.423203	0	0	0	0	0	0	0	0	0	0	0.748081	0.622861	1271.51	1220.54	1168
+./mdscoring_1.pdb	TYR	A	1170	179.885	-97.0281	106.17	E	-0.199422	-1.19544	-0.596119	-1.29629	-0.132219	1.46133	-1.57126	0.243628	0.845724	2.04123	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.451713	0.762708	2047.63	1342.44	1169
+./mdscoring_1.pdb	LEU	A	1171	179.079	-103.773	101.151	E	0.190012	-0.374718	0	-1.41643	0	1.55026	-2.21717	0	0.591647	2.05643	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.615626	0.943962	1164.44	1462.68	1170
+./mdscoring_1.pdb	GLU	A	1172	-178.116	-95.7264	130.062	E	0.010892	-1.34151	-1.5591	-1.55131	-0.0968413	2.87771	-1.84436	0.480986	1.40954	1.62323	0	0	0	0.00890126	0	0	0	0	0.00364639	0	0	0	0	0	0.669967	1	1480.28	1562.46	1171
+./mdscoring_1.pdb	TYR	A	1173	178.378	-99.9392	116.275	E	-0.869766	-1.27665	0	-1.91723	0	2.07329	-2.45246	0.0215329	0.845724	1.83603	0	0	0	0	0.192655	0	0	0	0	0	0	0	0	0	0.683426	1	2450.11	1543.44	1172
+./mdscoring_1.pdb	TYR	A	1174	-179.158	-110.213	149.176	E	-2.18301	-1.10854	-0.765418	-2.05521	-0.037774	1.79974	-2.79035	0.135427	0.845724	1.69923	0	0	0	0.0941702	0.226552	0	0	0	0	0	0	0	0	0	0.803552	0.956059	2658.77	1470.82	1173
+./mdscoring_1.pdb	TYR	A	1175	179.176	-132.865	124.817	E	-1.85027	-1.02613	-0.854705	-1.92357	0.313848	1.6463	-2.62036	0.0313916	0.845724	1.73723	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.76062	0.883927	2584.2	1422.93	1174
+./mdscoring_1.pdb	GLN	A	1176	179.371	-112.471	101.658	B	1.57489	-1.263	0	-1.26124	0	2.00983	-1.35163	0.364175	0.989933	2.08683	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.573671	0.741901	1387.28	1314.17	1175
+./mdscoring_1.pdb	ARG	A	1177	-179.127	-67.2444	-59.9302	B	2.157	0	-0.631201	-0.791209	-0.0488818	1.31538	-0.785428	0.0171645	1.12136	1.92114	0	0	0	0.0518186	0.38033	0	0	0	-0.0131391	0	0	0	0	0	0.269658	0.529851	1440.38	1138.46	1176
+./mdscoring_1.pdb	LYS	A	1178	-179.593	-109.011	140.208	B	0.571958	-0.535433	0	-0.683543	0.00333214	1.21219	-0.745414	0.00195545	0.164981	1.15389	0	0	0	0	0.419171	0	0	0	0	0	0	0	0	0	0.0873871	0.706229	842.835	1293.48	1177
+./mdscoring_1.pdb	PRO	A	1179	179.392	-60.1436	131.239	B	0.432275	0	0	-0.103124	0	0.132141	-0.0875676	0	0	0.490825	0	0	0	0	0.000132537	0	0	0	0	0	0	0	0	0	0	0.222276	442.905	947.038	1178
+./mdscoring_1.pdb	GLY	A	1180	-179.559	98.4147	-20.7442	*	1.44512	-0.33548	0	-0.235429	0	0.577167	-0.18818	0.0266197	0	1.60043	0	0	0	0	0.338314	0	0	0	0	0	0	0	0	0	0	0.311252	0	876.683	1179
+./mdscoring_1.pdb	GLN	A	1181	179.462	-83.7857	153.311	B	1.54148	-0.535433	0	-0.796596	0	1.46927	-0.868452	0.461844	0.551667	1.25699	0	0	0	0.00219689	0.342974	0	0	0	0	0	0	0	0	0	0.319694	0.609297	1096.73	1218.69	1180
+./mdscoring_1.pdb	PRO	A	1182	179.848	-70.219	130.365	B	-0.699806	0	0	-0.5436	0	0.464499	-0.830527	0	0.113798	0.0960254	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.444036	0.526838	763.068	1163.58	1181
+./mdscoring_1.pdb	PRO	A	1183	178.705	-74.9505	107.889	B	0.747351	0	0	-0.626202	0	0.519449	-1.02477	0	0.25628	1.6226	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.498719	0.581938	798.666	1202.76	1182
+./mdscoring_1.pdb	LYS	A	1184	-179.285	-80.7398	160.72	B	1.36602	-1.02613	-0.854705	-0.859155	0.0828651	2.24263	-0.728072	0.00230254	1.11348	1.4102	0	0	0	0	0	0	0	0	-0.0173973	0	0	0	0	0	0.222967	0.84006	996.176	1387.56	1183
+./mdscoring_1.pdb	LEU	A	1185	179.661	-83.4877	144.62	B	-1.28107	0	0	-1.76085	0	1.35324	-3.1318	0.00952795	0.96105	1.26603	0	0	0	0.0217432	0	0	0	0	0	0	0	0	0	0	0.926856	0.936424	1436.15	1457.66	1184
+./mdscoring_1.pdb	PHE	A	1186	178.805	-115.841	-56.6554	B	-1.34715	-1.395	0	-2.02902	0.0871203	1.52	-2.98073	0.0103038	0.751746	2.68723	0	0	0	0.00119773	0.67519	0	0	0	0	0	0	0	0	0	0.810951	1	2331.41	1617.38	1185
+./mdscoring_1.pdb	ILE	A	1187	179.828	-128.427	138.793	B	-1.04097	-0.579152	0	-1.81233	0	1.85688	-3.02522	0	0.96105	1.49403	0	0	0	0.0637769	0.867845	0	0	0	0	0	0	0	0	0	0.860304	1	1378.88	1675.05	1186
+./mdscoring_1.pdb	TYR	A	1188	178.786	-123.836	155.344	B	-0.861253	-1.21673	-0.438897	-2.07301	0	2.07874	-2.64856	1.00625	0.845724	1.58523	0	0	0	0	0.52244	0	0	0	0	0	0	0	0	0	0.782803	1	2622.73	1623.33	1187
+./mdscoring_1.pdb	SER	A	1189	-179.075	59.7889	20.9131	*	2.95473	-0.460012	-0.345114	-1.01723	0	1.95736	-0.733325	0.655379	0.529654	2.36803	0	0	0	0	0.64072	0	0	0	0	0	0	0	0	0	0.81579	0.788105	661.763	1317.56	1188
+./mdscoring_1.pdb	ALA	A	1190	179.585	56.0808	22.8231	*	1.98991	-0.340996	0	-0.71098	0	0.955802	-0.985515	0.329379	0	2.74043	0	0	0	0.00179206	1.10752	0	0	0	0	0	0	0	0	0	0.651605	0.615792	286.159	1189.56	1189
+./mdscoring_1.pdb	SER	A	1191	-179.5	-158.883	-51.0961	*	3.35934	-0.535979	-0.460012	-0.714481	0	1.62274	-0.43095	0.0640433	0.529654	3.24963	0	0	0	0.0346987	0.882283	0	0	0	0	0	0	0	0	0	0.476227	0.634712	499.113	1185.49	1190
+./mdscoring_1.pdb	THR	A	1192	-179.155	-69.5796	120.051	B	2.79561	-0.631444	0	-1.56671	0	2.95621	-1.79899	0.569122	0.521094	1.39523	0	0	0	1.3511	1.18741	0	0	0	0	0	0	0	0	0	1	1	1166.14	1671.03	1191
+./mdscoring_1.pdb	ARG	A	1193	-179.694	-87.2387	150.158	B	3.58944	0	0	-2.01993	-0.266037	4.07838	-1.80295	0.692145	1.28208	1.69163	0	0	0	0.0892135	0	0	0	0	-0.155073	0	0	0	0	0	0.7046	1	2145.86	1725.7	1192
+./mdscoring_1.pdb	ALA	A	1194	-179.804	-91.5163	-172.696	B	1.45467	-0.6975	0	-1.00686	0	1.63582	-1.22311	0.0132691	0	2.73305	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.732602	0.994419	306.814	1495.49	1193
+./mdscoring_1.pdb	THR	A	1195	179.606	-83.5169	139.566	*	1.68616	0	0	-0.440326	0	1.23025	-0.324259	0.00528246	0.15939	1.01405	0	0	0	0.0417727	0	0	0	0	0	0	0	0	0	0	0.305875	0.373052	689.783	1039.82	1194
+./mdscoring_1.pdb	GLY	A	1196	-179.596	85.2486	21.6436	*	1.11487	0	0	-0.25172	0	0.6767	-0.216148	0	0	0.906035	0	0	0	0	0.338346	0	0	0	0	0	0	0	0	0	0	0.341075	0	903.673	1195
+./mdscoring_1.pdb	VAL	A	1197	-179.957	-109.415	115.514	B	-1.36188	0	0	-1.35932	0	1.06283	-2.45621	0	0.427142	0.963158	0	0	0	0.000522663	0.357393	0	0	0	0	0	0	0	0	0	0.96658	0.601462	1104.51	1222.62	1196
+./mdscoring_1.pdb	PRO	A	1198	179.916	-62.632	147.635	B	-0.716041	-0.541313	0	-0.607727	0	0.664086	-0.77915	0	0.110438	0.437625	0	0	0	0	0.000951936	0	0	0	0	0	0	0	0	0	0.430926	0.605933	754.533	1219.82	1197
+./mdscoring_1.pdb	ALA	A	1199	180	-79.045	60.9765	B	2.04515	0	0	-0.528447	0	0.806432	-0.717018	0	0	2.41192	0	0	0	0.0722635	0.337519	0	0	0	0	0	0	0	0	0	0.451101	0.50746	235.031	1102.03	1198
+./mdscoring_1.pdb	ARG	A	1200	179.808	-137.08	20.4609	*	1.02651	-1.11414	-0.665647	-1.52333	-0.782306	2.44063	-1.35418	0.0412706	1.81959	2.1105	0	0	0	0.0602469	0.914345	0	0	0	-0.00613549	0	0	0	0	0	0.533858	0.791283	1868.92	1339.5	1199
+./mdscoring_1.pdb	LEU	A	1201	179.57	-134.292	85.7631	B	-0.571397	0	0	-1.47463	0	1.08894	-2.67853	0	0.96105	1.48401	0	0	0	0.0477675	0.494171	0	0	0	0	0	0	0	0	0	0.807595	0.642667	1332.03	1262.02	1200
+./mdscoring_1.pdb	PRO	A	1202	179.714	-66.171	119.432	B	0.416627	-0.39693	0	-0.307236	0	0.39188	-0.281803	6.74402e-05	0.0660268	0.944622	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.257635	0.362113	641.721	1046.46	1201
+./mdscoring_1.pdb	GLY	A	1203	-179.814	-67.2043	112.829	B	1.36456	0	0	-0.0952958	0	0.22705	-0.115658	0	0	1.34846	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.132809	0	715.192	1202
+./mdscoring_1.pdb	SER	A	1204	-179.629	-129.966	142.35	B	1.38512	-0.253859	-0.39693	-0.338581	0	0.82347	-0.162715	0	0.507963	1.19366	0	0	0	0.0121164	0	0	0	0	0	0	0	0	0	0	0.231452	0.325323	381.866	919.103	1203
+./mdscoring_1.pdb	GLY	A	1205	179.542	139.238	143.131	*	1.67703	0	0	-0.313923	0	0.494866	-0.42046	0.349798	0	1.56675	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.392466	0	950.182	1204
+./mdscoring_1.pdb	SER	A	1206	179.724	-155.034	135.85	*	0.982539	-0.761954	0	-0.271166	0	0.685182	-0.119551	0.349437	0	1.10059	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.377248	247.179	963.811	1205
+./mdscoring_1.pdb	GLY	A	1207	179.153	77.0522	-109.593	*	2.17252	0	0	-0.408081	0	0.912764	-0.37587	0.000160736	0	2.04354	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.521022	0	1066.53	1206
+./mdscoring_1.pdb	THR	A	1208	-179.441	-115.133	8.72432	*	1.53547	0	-0.583264	-0.543455	0	0.900786	-0.701376	0	0.521094	1.58089	0	0	0	0.360798	0.338474	0	0	0	0	0	0	0	0	0	0.263769	0.514859	663.383	1143.91	1207
+./mdscoring_1.pdb	ASP	A	1209	179.835	-121.697	118.07	E	0.680768	-0.761954	-0.507954	-0.676586	-0.440724	1.47713	-0.630632	0.00116583	0.521094	1.69923	0	0	0	0	0.39928	0	0	0	0	0	0	0	0	0	0.229568	0.699265	791.203	1272.95	1208
+./mdscoring_1.pdb	PHE	A	1210	-179.326	-134.09	115.913	E	-0.506709	-0.388123	0	-1.50857	0	1.03739	-2.30399	0.000414479	0.751746	1.90443	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.685647	0.646292	2136.81	1265.14	1209
+./mdscoring_1.pdb	THR	A	1211	-179.96	-114.763	107.55	E	0.765245	-0.253859	-0.604707	-0.81118	0	1.34601	-0.976533	0.00463891	0.521094	1.53963	0	0	0	0.000151763	0	0	0	0	0	0	0	0	0	0	0.44586	0.683914	777.554	1267.99	1210
+./mdscoring_1.pdb	LEU	A	1212	179.384	-81.0228	108.526	E	-0.866557	-1.11217	0	-1.3872	0	1.39733	-2.14658	0	0.584049	1.79803	0	0	0	0	0.121894	0	0	0	0	0	0	0	0	0	0.60772	0.864363	1157.54	1409.67	1211
+./mdscoring_1.pdb	THR	A	1213	-179.499	-93.9073	131.884	E	1.76932	0	0	-0.96792	0	2.07362	-0.943854	0.00013488	0.215702	1.38763	0	0	0	0.00400906	0	0	0	0	0	0	0	0	0	0	0.41394	1	757.54	1504.41	1212
+./mdscoring_1.pdb	ILE	A	1214	179.212	-116.213	109.598	B	-1.85544	-1.16336	0	-1.55144	0	1.27529	-2.60815	0.0453153	0.703556	1.44083	0	0	0	0.0025189	0.0650918	0	0	0	0	0	0	0	0	0	0.73207	0.865708	1267.7	1411.64	1213
+./mdscoring_1.pdb	SER	A	1215	-179.878	-159.825	121.021	B	2.21068	-0.572823	-0.465863	-0.61198	0	1.42713	-0.370398	0.0285372	0.529654	2.24643	0	0	0	0	0.0155444	0	0	0	0	0	0	0	0	0	0.38696	0.565187	456.354	1125.63	1214
+./mdscoring_1.pdb	SER	A	1216	-180	-83.074	166.646	B	1.81409	0	-0.981417	-0.800602	0	1.61756	-0.580893	1.02881	0.529654	0.941616	0	0	0	0.0593591	0.0132259	0	0	0	0	0	0	0	0	0	0.718566	0.578772	615.193	1137.32	1215
+./mdscoring_1.pdb	ARG	A	1217	-179.733	-69.914	-13.9768	B	1.99125	0	-0.218407	-0.839282	-0.243733	1.51952	-0.526312	0.00357737	1.10541	1.18479	0	0	0	0.0569588	0.338437	0	0	0	-0.0512724	0	0	0	0	0	0.374277	0.358237	1610.08	1006.48	1216
+./mdscoring_1.pdb	ASP	A	1218	178.736	-106.942	-5.86127	*	2.31107	0	0	-0.44921	-0.275077	1.58722	-0.437069	0.338231	0.521094	1.12391	0	0	0	0	0.677475	0	0	0	-0.0980181	0	0	0	0	0	0.34851	0.262874	900.629	943.47	1217
+./mdscoring_1.pdb	GLY	A	1219	179.544	66.9828	51.8742	*	1.37901	-0.421296	0	-0.329235	0	0.539474	-0.359959	0	0	1.95003	0	0	0	0	0.689554	0	0	0	0	0	0	0	0	0	0	0.425433	0	980.017	1218
+./mdscoring_1.pdb	PHE	A	1220	180	-145.475	122.982	B	1.11828	-0.597621	0	-0.817432	-0.0880359	1.06057	-1.05008	0.426595	0.181059	2.00323	0	0	0	0	0.400897	0	0	0	0	0	0	0	0	0	0.240851	0.692345	1446.04	1295.72	1219
+./mdscoring_1.pdb	VAL	A	1221	179.727	-96.5695	128.947	B	0.70097	0	0	-0.970783	0	1.49711	-1.45549	0	0.427142	1.20299	0	0	0	0	0.253493	0	0	0	0	0	0	0	0	0	0.519541	0.714095	830.478	1301.01	1220
+./mdscoring_1.pdb	GLY	A	1222	179.935	-84.8436	165.808	B	1.00637	-0.446251	0	-0.61923	0	1.3105	-0.55919	0	0	1.32054	0	0	0	0	0.00466151	0	0	0	0	0	0	0	0	0	0	0.732971	0	1258.34	1221
+./mdscoring_1.pdb	SER	A	1223	-179.77	-73.0624	-6.56857	B	2.26575	0	0	-0.488013	0	1.17117	-0.363867	0.349548	0.125688	1.47123	0	0	0	0	0.383744	0	0	0	0	0	0	0	0	0	0.237302	0.529143	384.668	1094.59	1222
+./mdscoring_1.pdb	GLU	A	1224	179.604	-73.6127	-10.673	*	-0.205796	-1.72271	-1.25906	-0.765791	-0.248016	1.52223	-0.855302	0.00262294	1.40954	1.67643	0	0	0	0.0362022	0.680252	0	0	0	-0.00193668	0	0	0	0	0	0.358319	0.57136	1107.55	1185.81	1223
+./mdscoring_1.pdb	ASP	A	1225	179.385	-90.674	-4.22819	*	2.17765	-0.446251	-0.377797	-1.03326	-0.571195	3.07712	-0.91879	0.371936	0.521094	1.54723	0	0	0	0	0.991471	0	0	0	0.00756404	0	0	0	0	0	0.598956	0.688861	1131.04	1265.09	1224
+./mdscoring_1.pdb	PHE	A	1226	179.679	-65.3882	107.154	*	1.12275	0	0	-1.10369	0.052574	1.1303	-1.63035	0.0861419	0.751746	1.83582	0	0	0	0.00020182	0.3885	0	0	0	0	0	0	0	0	0	0.523012	0.467684	1884.24	1146.54	1225
+./mdscoring_1.pdb	GLY	A	1227	179.96	168.845	-161.348	*	1.7671	-0.647991	0	-0.625685	0	1.39242	-0.56007	0	0	2.20843	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.7468	0	1270.85	1226
+./mdscoring_1.pdb	ILE	A	1228	179.953	-121.18	128.894	E	-1.42878	-1.329	0	-1.37517	0	1.37529	-2.13365	0	0.562009	1.43323	0	0	0	0.0385214	0	0	0	0	0	0	0	0	0	0	0.584786	0.976842	1140.01	1484.76	1227
+./mdscoring_1.pdb	TYR	A	1229	-179.963	-98.3102	122.099	E	-0.0757948	-1.39225	0	-1.73403	0.00254419	2.07279	-2.08932	0.382716	0.845724	1.83603	0	0	0	0	0.000321805	0	0	0	0	0	0	0	0	0	0.609482	0.981745	2321.67	1487.88	1228
+./mdscoring_1.pdb	TYR	A	1230	-179.862	-114.3	155.482	E	-0.936819	-1.04948	0	-1.59278	-0.026328	1.50114	-2.20031	0	0.845724	1.58523	0	0	0	0	0.226684	0	0	0	0	0	0	0	0	0	0.552312	0.881552	2222.37	1421.35	1229
+./mdscoring_1.pdb	CYS	A	1231	178.754	-124.605	133.907	E	0.315872	-1.12277	0	-1.15803	0	1.30438	-1.33541	0.150946	0.617922	1.85883	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.642965	0.902405	577.195	1426.41	1230
+./mdscoring_1.pdb	GLN	A	1232	-179.578	-114.373	126.774	E	0.23645	-1.29604	-0.831185	-1.76334	0	2.52812	-2.00449	0	1.72561	1.85123	0	0	0	0.0265564	0	0	0	0	0	0	0	0	0	0	0.812603	1	1660.62	1520.83	1231
+./mdscoring_1.pdb	ARG	A	1233	179.573	-103.537	120.633	E	1.06768	-0.915239	-1.40978	-1.75132	-0.66307	3.1651	-1.23573	0.00213414	1.81959	1.95003	0	0	0	0.106136	0	0	0	0	-0.000174412	0	0	0	0	0	0.630693	0.838104	2025.98	1375.5	1232
+./mdscoring_1.pdb	VAL	A	1234	179.263	-115.264	102.819	E	-0.0569072	-1.18718	0	-1.14597	0	1.32344	-1.64742	0.216776	0.427142	1.94243	0	0	0	0.0138809	0	0	0	0	0	0	0	0	0	0	0.597071	0.847097	878.005	1393.58	1233
+./mdscoring_1.pdb	GLU	A	1235	-179.602	-90.2829	90.0253	E	2.35955	0	-0.382098	-0.878078	-0.319297	1.87618	-0.974987	0	1.06993	1.96265	0	0	0	0.00156515	0.00187217	0	0	0	0.0036886	0	0	0	0	0	0.330782	0.717857	1074.62	1293.19	1234
+./mdscoring_1.pdb	ASN	A	1236	-179.345	-80.3608	116.273	E	1.04248	-1.11513	0	-1.20841	0	2.32288	-1.09888	0.111096	0.400095	1.63083	0	0	0	0	0.0024644	0	0	0	0	0	0	0	0	0	0.578208	0.895725	1117.44	1422.73	1235
+./mdscoring_1.pdb	THR	A	1237	-180	-120.674	147.581	E	1.18223	-1.13566	0	-0.989676	0	2.02253	-0.895057	0.163574	0.27855	1.26915	0	0	0	0.468819	0.553315	0	0	0	0	0	0	0	0	0	0.534548	0.806254	833.161	1357.79	1236
+./mdscoring_1.pdb	PRO	A	1238	178.502	-54.6322	116.282	*	0.10314	0	0	-0.227847	0	0.257693	-0.281844	0.16357	0.0456595	0.145908	0	0	0	0	0.00889359	0	0	0	0	0	0	0	0	0	0.178163	0.309336	589.984	1008.94	1237
+./mdscoring_1.pdb	PRO	A	1239	-179.094	75.2775	15.0307	*	3.19622	0	0	-0.032351	0	4.04255e-10	-0.037272	0	0.0162158	3.24963	0	0	0	0	0.0444445	0	0	0	0	0	0	0	0	0	0.0632739	0.0975549	515.191	858.362	1238
+./mdscoring_1.pdb	GLN	A	1240	179.749	-145.976	100.004	B	0.982544	-1.12202	0	-0.625006	0	1.10522	-0.616301	2.81042e-06	0.127223	2.11292	0	0	0	0.000500828	0.627557	0	0	0	0	0	0	0	0	0	0.0737264	0.701448	815.343	1285.04	1239
+./mdscoring_1.pdb	LEU	A	1241	-179.912	-64.1641	143.938	B	1.03517	0	0	-0.239906	0	0.585214	-0.191449	0	0	0.881306	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.342361	590.483	1062.01	1240
+./mdscoring_1.pdb	GLY	A	1242	-180	-71.3446	123.601	B	1.49071	0	0	-0.440405	0	0.885956	-0.469052	0	0	1.51422	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.529871	0	1074.53	1241
+./mdscoring_1.pdb	GLN	A	1243	179.934	-79.1497	126.875	B	0.837084	-0.265874	0	-0.348873	0	0.756903	-0.269716	0	0	0.964644	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.473234	713.813	1120.73	1242
+./mdscoring_1.pdb	PRO	A	1244	179.557	-57.4993	107.656	B	1.31828	0	0	-0.283977	0	0.325725	-0.341926	0	0.0455865	1.57287	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.177878	0.472428	589.798	1124.9	1243
+./mdscoring_1.pdb	THR	A	1245	179.909	-115.857	114.872	B	0.859433	-0.627397	-0.591878	-0.798681	0	1.67017	-0.619871	0	0.521094	1.19425	0	0	0	0.111739	0	0	0	0	0	0	0	0	0	0	0.422269	0.700569	762.762	1280.22	1244
+./mdscoring_1.pdb	PHE	A	1246	179.736	-104.578	157.885	B	-0.269891	0	0	-1.14255	0.168043	0.557507	-1.86335	0	0.751746	1.25871	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.585874	0.403871	1981.86	1104.17	1245
+./mdscoring_1.pdb	ASP	A	1247	-179.974	-103.679	-160.135	B	2.47353	-0.13214	-0.757168	-1.12269	-0.221326	3.21625	-1.112	0.47557	0.521094	1.60593	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.88518	0.499711	1394.37	1122.28	1246
+./mdscoring_1.pdb	GLN	A	1248	-179.256	-75.9655	-36.2055	*	1.4086	0	-0.19081	-0.646417	0	1.01965	-0.611977	0.210583	0.619402	1.00817	0	0	0	0	0.337806	0	0	0	0	0	0	0	0	0	0.350299	0.34139	1131.74	1025.8	1247
+./mdscoring_1.pdb	GLY	A	1249	-179.539	93.8205	142.638	B	1.0738	-0.591671	0	-0.767351	0	1.37556	-0.830317	0.00595642	0	1.88163	0	0	0	0	0.593241	0	0	0	0	0	0	0	0	0	0	0.921931	0	1429.35	1248
+./mdscoring_1.pdb	THR	A	1250	179.656	-109.187	115.472	E	0.198887	-1.28096	0	-1.31456	0	2.33591	-1.45023	0	0.521094	1.38763	0	0	0	0	0.000298255	0	0	0	0	0	0	0	0	0	0.78775	0.909861	991.919	1433.84	1249
+./mdscoring_1.pdb	LYS	A	1251	-179.884	-78.3171	126.379	E	-0.777647	-1.1745	0	-1.16308	-0.30611	1.33848	-1.62896	0.00311061	0.651777	1.50163	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.345232	0.969013	1134.46	1478.22	1250
+./mdscoring_1.pdb	LEU	A	1252	-179.68	-111.908	113.8	E	-0.347014	-0.681818	0	-1.32157	0	1.46292	-2.06288	0	0.54951	1.70683	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.571781	0.830645	1126.16	1387.21	1251
+./mdscoring_1.pdb	GLU	A	1253	-179.742	-129.725	152.616	E	0.690191	-0.950881	0	-1.01265	-0.326242	1.8857	-1.16384	0.00311061	0.517776	1.73723	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.367337	0.795561	1118.34	1350.15	1252
+./mdscoring_1.pdb	ILE	A	1254	179.873	-92.9797	122.955	E	-0.593811	0	0	-1.37118	0	1.31838	-2.48569	0.0802235	0.691648	1.16912	0	0	0	0.00367878	0	0	0	0	0	0	0	0	0	0	0.719679	0.691511	1256.96	1297.01	1253
+./mdscoring_1.pdb	LYS	A	1255	-179.815	-76.6243	113.677	B	0.736488	-0.484727	0	-0.555909	-0.0855481	0.943574	-0.65269	0.0225275	0.327194	1.22207	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.173308	0.460115	940.011	1120.46	1254
+./mdscoring_1.pdb	GLY	A	1256	179.788	102.634	13.3665	*	0.967262	0	0	-0.129835	0	0.26118	-0.106812	0	0	0.942729	0	0	0	0	0.338319	0	0	0	0	0	0	0	0	0	0	0.198279	0	774.442	1255
+./mdscoring_1.pdb	TYR	A	1257	-179.887	-68.3878	115.865	*	0.519306	0	0	-0.52062	0.0238217	0.366569	-0.941585	0.337733	0.232324	1.02106	0	0	0	0	0.338319	0	0	0	0	0	0	0	0	0	0.274704	0.170638	1740.16	949.303	1256
+./mdscoring_1.pdb	LYS	A	1258	-179.833	-120.75	-9999	*	0.31594	0	0	-0.0206719	-0.0149851	0.218474	-1.42844e-09	0	0	0.133122	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.046371	642.276	829.599	1257
+./mdscoring_1.pdb	LEU	B	1049	-9999	-9999	111.279	*	-0.374749	-0.672348	0	-1.12686	0.0259037	1.95152	-1.79613	2.49089e-05	0.489047	0.7541	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.508868	0.638611	1071.24	1259.31	1258
+./mdscoring_1.pdb	GLU	B	1050	-179.466	-96.6942	142.05	*	-0.209466	-0.476339	-2.64082	-1.5767	-0.16041	3.40839	-1.79927	0.00856838	1.40954	1.60895	0	0	0	0	0.675028	0	0	0	0.00860866	0	0	0	0	0	0.702792	1	1519.54	1616.7	1259
+./mdscoring_1.pdb	LYS	B	1051	179.782	-140.305	-3.45538	*	2.13045	-0.431012	-0.672348	-0.922066	-0.00290981	1.6031	-1.23583	0.000946072	1.17825	2.61215	0	0	0	0.000160813	0.461579	0	0	0	0	0	0	0	0	0	0.372184	0.59382	1164.94	1214.46	1260
+./mdscoring_1.pdb	THR	B	1052	-178.429	-97.8698	142.154	*	1.8535	-0.416345	-0.821793	-0.44593	0	1.13239	-0.275818	0	0.521094	1.47215	0	0	0	0.687747	0.351816	0	0	0	0	0	0	0	0	0	0	0.575014	497.319	1188.06	1261
+./mdscoring_1.pdb	H2S	B	1053	179.447	-142.613	176.781	*	1.01532	0	0	-1.03167	0	1.39034	-1.46915	0.000537237	0.845724	1.22186	0	0	0	0	0	0	0	0	0	0	0.0576679	0	0	0	0.597216	0.327874	1734.84	1053.71	1262
+./mdscoring_1.pdb	ASN	B	1054	-178.937	-86.1365	-22.7726	*	2.00714	-0.269561	-0.611173	-0.953243	0	1.84835	-0.695575	0.703386	0.691956	1.293	0	0	0	0	0.337937	0	0	0	0	0	0	0	0	0	0.732947	0.380185	1257.78	1040.72	1263
+./mdscoring_1.pdb	GLY	B	1055	179.47	81.1163	19.4942	*	1.08007	0	0	-0.386508	0	0.889276	-0.392398	0.000521112	0	0.969175	0	0	0	0	0.880611	0	0	0	0	0	0	0	0	0	0	0.469244	0	1019.67	1264
+./mdscoring_1.pdb	LYS	B	1056	179.859	-138.453	160.407	B	1.18603	-0.416087	0	-0.92342	-0.0247678	1.48142	-1.19386	0.400156	0.263974	1.61655	0	0	0	0	0.422502	0	0	0	-0.0179369	0	0	0	0	0	0.139821	0.967577	902.138	1477.21	1265
+./mdscoring_1.pdb	LEU	B	1057	178.719	-91.6372	123.743	B	-1.82505	-1.22841	0	-1.6253	0	1.52	-2.59906	0.00133783	0.68743	1.41895	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.71529	1	1251.45	1570.16	1266
+./mdscoring_1.pdb	CYS	B	1058	-179.332	-117.755	170.966	B	-2.78351	-1.25601	0	-1.49201	0	1.37023	-1.82031	0.174812	0.96105	1.98895	0	0	0	0	0	0	0	-2.71022	0	0	0	0	0	0	1	0.994727	760.274	1496.02	1267
+./mdscoring_1.pdb	ASP	B	1059	179.411	-81.0519	116.571	B	1.10574	-0.541813	-1.22279	-1.35819	-0.284133	3.86115	-1.28183	0.00225236	0.521094	1.36575	0	0	0	0	0.0148507	0	0	0	0.0442423	0	0	0	0	0	0.740089	0.961374	1260.88	1470.84	1268
+./mdscoring_1.pdb	LEU	B	1060	-179.348	-63.106	103.587	B	-0.371277	-0.524671	0	-1.63729	0	1.59459	-2.75465	0.202253	0.736743	2.01175	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.766602	0.986025	1296.24	1490.69	1269
+./mdscoring_1.pdb	ASN	B	1061	-179.608	58.7921	25.5337	*	0.98122	-0.686768	-0.879	-0.821878	0	1.58998	-0.670872	0.102054	0.691956	1.62415	0	0	0	0.0315982	0.674969	0	0	0	0	0	0	0	0	0	0.409548	0.566205	964.46	1178.56	1270
+./mdscoring_1.pdb	GLY	B	1062	-179.869	92.0307	-13.5886	*	0.693043	-0.61557	0	-0.584824	0	1.06088	-0.563597	0	0	1.39615	0	0	0	0	0.88943	0	0	0	0	0	0	0	0	0	0	0.703387	0	1231.57	1271
+./mdscoring_1.pdb	VAL	B	1063	-179.875	-80.2878	107.916	B	-0.459691	-1.05827	0	-1.14184	0	1.35093	-1.61831	0	0.427142	1.57095	0	0	0	0.00969496	0.526738	0	0	0	0	0	0	0	0	0	0.535991	1	840.563	1507.85	1272
+./mdscoring_1.pdb	LYS	B	1064	-179.402	-60.2667	130.832	B	2.03104	-0.265017	-1.4407	-1.40978	-0.158663	3.43679	-1.53707	0.362393	1.88794	1.12719	0	0	0	0.0510855	0	0	0	0	-0.0231314	0	0	0	0	0	0.511675	0.950699	1322.7	1465.34	1273
+./mdscoring_1.pdb	PRO	B	1065	178.753	-86.4853	-169.531	B	-0.113285	0	0	-1.02056	0	0.543242	-1.75852	0	0.25628	1.86627	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.789765	0.799632	988.137	1357.54	1274
+./mdscoring_1.pdb	LEU	B	1066	179.547	-132.001	111.914	B	-1.22404	-1.329	0	-1.64967	0	1.44123	-2.7126	0	0.96105	2.06495	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.777078	1	1305.39	1516.3	1275
+./mdscoring_1.pdb	ILE	B	1067	178.774	-102.715	128.41	B	0.272	0	0	-1.73859	0	2.04973	-2.85686	0.472222	0.96105	1.35055	0	0	0	0.0338998	0.0541423	0	0	0	0	0	0	0	0	0	0.794414	1	1321.76	1640.63	1276
+./mdscoring_1.pdb	LEU	B	1068	-177.548	-78.1381	17.7882	B	-0.585033	-1.26202	0	-1.70994	0	1.51486	-2.796	0.39126	0.96105	2.31575	0	0	0	0	0.685575	0	0	0	0	0	0	0	0	0	0.785051	1	1312.35	1536.79	1277
+./mdscoring_1.pdb	LYS	B	1069	178.963	56.0208	-124.249	*	3.83813	0	-0.506887	-1.51316	-0.31869	2.75505	-2.00652	1.1967	1.62088	2.60229	0	0	0	0.00252506	0.918531	0	0	0	0.00594208	0	0	0	0	0	0.558454	0.992202	1375.61	1494.52	1278
+./mdscoring_1.pdb	ASP	B	1070	179.36	-105.688	22.615	*	2.79056	-0.628648	-1.0632	-1.22591	-0.367526	2.9251	-1.18218	0.889106	0.521094	1.77615	0	0	0	1.151	0.590886	0	0	0	-0.00442171	0	0	0	0	0	0.586287	1	1119.38	1542.35	1279
+./mdscoring_1.pdb	CYS	B	1071	180	-111.96	160.5	*	-0.198522	-0.623173	0	-1.49055	0	1.71418	-1.75993	0.593549	0.894535	1.82175	0	0	0	0.0439876	0.67746	0	0	-1.39288	0	0	0	0	0	0	0.930789	1	716.502	1542.8	1280
+./mdscoring_1.pdb	SER	B	1072	179.953	-96.5707	177.586	n	1.70568	0	-0.879	-1.18882	0	2.4931	-0.844276	0.00536719	0.529654	1.57095	0	0	0	0.0783037	0	-0.0595996	0	0	0	0	0	0	0	0	0.834508	1	670.729	1518.54	1281
+./mdscoring_1.pdb	VAL	B	1073	179.195	-59.6885	-48.9643	a	-1.58542	-1.25029	0	-1.4505	0	1.45426	-2.24578	0	0.427142	1.47975	0	0	0	0	0.842919	0	0	0	0	0	0	0	0	0	0.774308	1	986.651	1505.65	1282
+./mdscoring_1.pdb	ALA	B	1074	179.393	-59.4451	-30.1637	a	-0.999901	-1.2392	0	-1.09458	0	1.49095	-1.41641	0	0	1.25935	0	0	0	0	1.29974	0	0	0	0	0	0	0	0	0	0.876182	1	343.427	1527.89	1283
+./mdscoring_1.pdb	GLY	B	1075	179.563	-64.0955	-27.1588	a	1.06062	-0.618796	0	-0.733165	0	1.4248	-0.757973	0	0	1.74575	0	0	0	0	1.30938	0	0	0	0	0	0	0	0	0	0	0.861489	0	1374.65	1284
+./mdscoring_1.pdb	TRP	B	1076	179.958	-91.1243	-36.1192	a	1.60591	0	0	-1.76533	0.338164	2.14262	-2.55506	0.575817	0.82863	2.04107	0	0	0	0	1.20579	0	0	0	0	0	0	0	0	0	0.544893	0.809489	2842.97	1379.03	1285
+./mdscoring_1.pdb	LEU	B	1077	-179.731	-66.4786	-38.5585	a	-2.23053	-0.95796	0	-1.80544	0	1.33527	-3.1444	0	0.96105	1.38095	0	0	0	0	1.34942	0	0	0	0	0	0	0	0	0	0.913485	0.963167	1424.47	1475.47	1286
+./mdscoring_1.pdb	LEU	B	1078	-179.795	-92.1123	-26.0987	a	-1.11872	-0.965143	0	-1.74135	0	1.52	-2.86369	0.141059	0.96105	1.82935	0	0	0	0	1.35174	0	0	0	0	0	0	0	0	0	0.818552	1	1341.6	1562.38	1287
+./mdscoring_1.pdb	GLY	B	1079	-179.696	86.2301	70.6246	c	2.80763	0	0	-0.74609	0	1.69937	-0.702832	0	0	2.55718	0	0	0	0	1.59127	0	0	0	0	0	0	0	0	0	0	0.872204	0	1384.34	1288
+./mdscoring_1.pdb	ASN	B	1080	-179.951	-67.4919	124.661	*	-0.120007	-1.09297	-0.616672	-1.51764	0	2.60055	-1.37051	0	0.691956	1.1843	0	0	0	0.000980538	0.30636	0	0	0	0	0	0	0	0	0	0.903847	0.841508	1412.79	1382.56	1289
+./mdscoring_1.pdb	PRO	B	1081	179.599	-57.7286	-25.3993	*	-1.60481	0	0	-1.06269	0	0.644218	-1.83557	0	0.25628	0.392952	0	0	0	0	0.0250958	0	0	0	0	0	0	0	0	0	0.841899	0.795265	1022.08	1354.43	1290
+./mdscoring_1.pdb	LEU	B	1082	179.181	-72.0211	-16.3531	*	0.155078	-0.612629	0	-0.879023	0	1.0101	-1.34257	0	0.347453	1.63175	0	0	0	0	0.558354	0	0	0	0	0	0	0	0	0	0.361535	0.681564	942.62	1287.92	1291
+./mdscoring_1.pdb	CYS	B	1083	179.617	-118.925	43.2125	*	-0.187119	-0.474175	0	-1.24541	0	1.35859	-1.45054	0	0.774641	2.04975	0	0	0	0.192908	2.1022	0	0	-1.39288	0	0	0	0	0	0	0.806036	0.792669	656.122	1343.67	1292
+./mdscoring_1.pdb	ASP	B	1084	-179.661	-73.0728	25.8392	*	1.05269	0	-0.807205	-0.783959	-0.496699	1.94283	-0.861064	0.0152404	0.521094	1.49166	0	0	0	0.00128888	0.715032	0	0	0	0.0295067	0	0	0	0	0	0.459871	0.546287	1003.08	1157.45	1293
+./mdscoring_1.pdb	GLU	B	1085	179.495	-112.947	4.31404	*	2.25797	0	-0.725909	-1.04447	-0.389905	2.43751	-1.18659	0.0267261	1.40954	1.69657	0	0	0	0	1.66193	0	0	0	0.0344858	0	0	0	0	0	0.508257	0.634766	1286.88	1232.28	1294
+./mdscoring_1.pdb	PHE	B	1086	179.834	-112.092	34.2948	*	0.416901	0	0	-1.32797	0.113754	0.809053	-2.13314	0.343476	0.751746	1.85998	0	0	0	0	0.677717	0	0	0	0	0	0	0	0	0	0.701465	0.415015	2161.38	1111.57	1295
+./mdscoring_1.pdb	ILE	B	1087	-178.909	-65.7562	-54.1983	*	0.922787	0	0	-0.362018	0	0.656481	-0.530326	0	0.171056	0.987594	0	0	0	0	0.675657	0	0	0	0	0	0	0	0	0	0.177989	0.308477	787.316	1044.98	1296
+./mdscoring_1.pdb	ASN	B	1088	-178.705	-109.829	113.038	B	1.37412	0	0	-0.267681	0	0.5687	-0.284555	0	0.0520399	1.30562	0	0	0	0	0.337538	0	0	0	0	0	0	0	0	0	0.075207	0.335112	661.213	1007.32	1297
+./mdscoring_1.pdb	VAL	B	1089	179.354	-118.369	127.063	B	-0.133221	0	0	-0.859042	0	0.865021	-1.41379	1.03777e-05	0.427142	0.841901	0	0	0	0.00553723	0	0	0	0	0	0	0	0	0	0	0.541911	0.504154	844.191	1154.89	1298
+./mdscoring_1.pdb	PRO	B	1090	-179.494	-82.9267	-86.5286	B	2.60371	0	0	-0.822694	0	1.01235	-1.1472	0.069622	0.25628	3.23535	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.484029	0.925261	789.103	1446.86	1299
+./mdscoring_1.pdb	GLU	B	1091	-179.629	-146.656	165.171	B	2.16055	-0.483497	-1.25524	-1.86051	-1.23021	4.19804	-2.07568	1.86948	1.40954	1.72295	0	0	0	0	0	0	0	0	-0.13431	0	0	0	0	0	1	1	1963.4	1514.42	1300
+./mdscoring_1.pdb	TRP	B	1092	-179.382	-152.11	158.507	B	-3.75253	-1.21817	-0.488915	-2.78704	0.144718	2.14163	-4.256	0.114066	0.82863	1.76855	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.96081	0.975862	3671.89	1484.67	1301
+./mdscoring_1.pdb	SER	B	1093	178.166	-90.3847	-52.5916	E	2.53513	-0.711524	-0.533595	-1.18769	0	2.30324	-0.802949	0	0.529654	2.55895	0	0	0	0.379042	0.652626	0	0	0	0	0	0	0	0	0	0.976762	0.900579	738.869	1414.4	1302
+./mdscoring_1.pdb	TYR	B	1094	179.071	-139.131	159.276	E	-1.79338	-0.6975	-0.585268	-2.32035	0	2.34769	-3.09452	0.0258979	0.845724	1.68495	0	0	0	0	0.666801	0	0	0	0	0	0	0	0	0	0.926909	1	2873.04	1614.47	1303
+./mdscoring_1.pdb	ILE	B	1095	-179.017	-109.279	132.658	E	-2.16695	-1.28675	0	-1.78136	0	1.52	-2.95445	0	0.96105	1.35055	0	0	0	0.0240096	0.120527	0	0	0	0	0	0	0	0	0	0.834583	1	1356.58	1568.61	1304
+./mdscoring_1.pdb	VAL	B	1096	179.453	-117.44	118.028	E	-2.02085	-1.34031	0	-1.56385	0	1.52	-2.45602	0.0188383	0.427142	1.37335	0	0	0	0	0.00279184	0	0	0	0	0	0	0	0	0	0.853862	1	1035.42	1540.98	1305
+./mdscoring_1.pdb	GLU	B	1097	179.422	-108.26	151.582	E	1.75953	-0.65208	-0.943569	-1.77511	-0.933055	3.94432	-1.99116	0.731998	1.40954	1.83695	0	0	0	0.131706	0.0220888	0	0	0	0	0	0	0	0	0	0.89952	0.978062	1754.83	1483.92	1306
+./mdscoring_1.pdb	LYS	B	1098	179.859	-77.7362	142.291	B	0.859833	0	-1.06594	-1.96662	-0.8677	3.83301	-2.61455	0.166345	1.88794	1.48735	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.882646	1	1742.27	1609.32	1307
+./mdscoring_1.pdb	ALA	B	1099	-179.813	-62.6253	-45.4536	B	0.939758	0	0	-0.829869	0	1.61314	-1.06387	0.0534052	0	1.16695	0	0	0	0	0.675344	0	0	0	0	0	0	0	0	0	0.59073	0.843068	270.636	1373.2	1308
+./mdscoring_1.pdb	ASN	B	1100	179.023	-125.224	76.8112	*	2.49278	-0.791054	-0.757141	-0.680641	0	1.55884	-0.595636	0.569513	0.691956	1.35799	0	0	0	1.13895	0.569671	0	0	0	0	0	0	0	0	0	0.141612	0.73515	721.442	1303.75	1309
+./mdscoring_1.pdb	PRO	B	1101	-178.922	-73.9673	134.737	*	-1.78232	0	0	-1.07144	0	0.363417	-2.05183	0.0243071	0.25628	0.696952	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.970284	0.740505	1105.65	1315.5	1310
+./mdscoring_1.pdb	ALA	B	1102	179.066	-82.0593	-33.2978	*	0.527965	-1.36268	0	-0.386723	0	0.642375	-0.415707	0.137751	0	1.91295	0	0	0	0	0.435078	0	0	0	0	0	0	0	0	0	0.231185	0.428848	178.952	1038.51	1311
+./mdscoring_1.pdb	ASN	B	1103	179.691	-90.8937	62.3575	*	2.7512	-0.569533	0	-1.37047	0	2.37293	-1.39599	0.408515	0.691956	2.06495	0	0	0	0.548835	0.953303	0	0	0	0	0	0	0	0	0	0.723747	0.921758	1249.44	1442.02	1312
+./mdscoring_1.pdb	ASP	B	1104	-179.525	-87.0572	-91.0293	*	3.12495	-0.487255	-0.879	-0.79182	-0.00531547	2.1612	-0.745274	0.115963	0.521094	3.23535	0	0	0	0	0.454267	0	0	0	0	0	0	0	0	0	0.367804	0.64974	918.38	1235.55	1313
+./mdscoring_1.pdb	LEU	B	1105	-179.512	-123.71	128.251	*	0.549575	0	0	-0.54644	0	0.488104	-0.969427	0.111497	0.280233	1.18561	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.29159	0.338981	881.558	1059.76	1314
+./mdscoring_1.pdb	CYS	B	1106	179.379	-91.7547	-13.5815	*	-0.790552	0	0	-0.973943	0	1.23956	-1.10448	0	0.597226	1.43465	0	0	0	0	0.353257	0	0	-1.98356	0	0	0	0	0	0	0.62143	0.664081	566.772	1246.72	1315
+./mdscoring_1.pdb	TYR	B	1107	179.44	-126.438	124.909	B	0.213306	0	0	-1.67531	0.0210264	1.68778	-2.27032	0.479391	0.845724	1.12501	0	0	0	0	0.419393	0	0	0	0	0	0	0	0	0	0.748336	0.589175	2562.86	1227.21	1316
+./mdscoring_1.pdb	PRO	B	1108	179.425	-65.543	121.936	B	-0.912902	0	0	-1.12818	0	0.726201	-1.93028	0.000288687	0.25628	1.16278	0	0	0	0	7.08875e-05	0	0	0	0	0	0	0	0	0	0.974441	0.735205	1108.36	1311.73	1317
+./mdscoring_1.pdb	GLY	B	1109	-179.79	-164.329	-167.59	B	1.25641	0	0	-0.318106	0	0.563071	-0.40706	0	0	1.41851	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.390716	0	948.598	1318
+./mdscoring_1.pdb	ASN	B	1110	-179.542	-131.36	122.593	B	0.502192	-1.02276	0	-0.451932	0	0.875572	-0.392159	0	0.0713044	1.42217	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.103048	0.514249	686.464	1140.06	1319
+./mdscoring_1.pdb	PHE	B	1111	179.395	-92.7638	107.139	B	-1.05105	0	0	-1.59376	0.218955	0.721741	-2.61735	0.00020798	0.751746	1.46741	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.807806	0.532467	2326.52	1189.56	1320
+./mdscoring_1.pdb	ASN	B	1112	-179.285	-78.5479	138.048	B	2.26245	0	0	-0.848638	0	2.04955	-0.697065	0.211229	0.245031	1.30234	0	0	0	0	0.105422	0	0	0	0	0	0	0	0	0	0.354114	0.664742	914.181	1251.57	1321
+./mdscoring_1.pdb	ASP	B	1113	-180	60.4613	38.022	n	1.07619	-0.635331	0	-0.698689	0.183093	1.15209	-0.794778	0.207473	0.114067	1.78375	0	0	0	0.0473867	0.337853	-0.282869	0	0	0	0	0	0	0	0	0.218899	0.766777	781.387	1323.92	1322
+./mdscoring_1.pdb	TYR	B	1114	-179.619	-64.9689	-48.5716	a	-0.482532	-0.546758	-0.618633	-1.76345	0.146216	1.93175	-2.18231	0.0047754	0.845724	1.70015	0	0	0	0	1.05493	0	0	0	0	0	0	0	0	0	0.639964	0.984864	2374.62	1489.95	1323
+./mdscoring_1.pdb	GLU	B	1115	179.857	-68.285	-32.5402	a	1.54454	-0.402285	-0.372458	-0.841904	-0.20441	1.94273	-0.795264	0	0.844779	1.37335	0	0	0	0	1.14677	0	0	0	0	0	0	0	0	0	0.259636	0.786797	989.525	1343.72	1324
+./mdscoring_1.pdb	GLU	B	1116	178.989	-66.5672	-42.1943	a	1.81461	-0.258857	0	-0.86922	0.254835	1.85989	-0.911008	0	0.365624	1.37335	0	0	0	0	1.01888	0	0	0	0	0	0	0	0	0	0.259392	0.798035	989.233	1351.96	1325
+./mdscoring_1.pdb	LEU	B	1117	179.269	-64.9646	-36.7988	a	-2.81068	-1.31931	0	-1.97581	0	1.52	-3.39787	0.0186277	0.96105	1.38095	0	0	0	0.00167958	1.35145	0	0	0	0	0	0	0	0	0	1	1	1534.38	1653.29	1326
+./mdscoring_1.pdb	LYS	B	1118	179.17	-60.7686	-38.1441	a	-0.00316623	-1.32792	-0.372458	-1.7561	-0.456114	2.9158	-2.34748	0.00458639	1.87196	1.46455	0	0	0	0	1.35157	0	0	0	0	0	0	0	0	0	0.719987	1	1558.3	1524.83	1327
+./mdscoring_1.pdb	H2S	B	1119	179.044	-65.3252	-37.5916	a	1.74955	-0.402285	0	-0.698954	0	1.54216	-0.592083	0	0.0833798	1.76855	0	0	0	0	1.19363	0	0	0	0	0	0.0487825	0	0	0	0.0985898	0.810953	1097.1	1374.47	1328
+./mdscoring_1.pdb	LEU	B	1120	178.981	-69.6904	-42.3943	a	-0.837326	-0.818026	0	-1.37171	0	1.49202	-2.04187	0	0.521305	1.38095	0	0	0	0	1.33098	0	0	0	0	0	0	0	0	0	0.542433	1	1100.54	1523.41	1329
+./mdscoring_1.pdb	LEU	B	1121	179.714	-63.9799	-21.7334	a	-1.16852	-0.683978	0	-1.81537	0	1.7484	-3.03214	0.0217643	0.96105	1.63175	0	0	0	0	1.40711	0	0	0	0	0	0	0	0	0	0.881932	1	1396.93	1634.89	1330
+./mdscoring_1.pdb	SER	B	1122	179.715	-78.29	6.13386	c	1.86953	-0.726164	-0.3345	-0.976948	0	2.47028	-0.685087	0	0.529654	1.60895	0	0	0	0	1.74737	-0.0166595	0	0	0	0	0	0	0	0	0.69069	0.83994	601.84	1362.19	1331
+./mdscoring_1.pdb	ARG	B	1123	178.974	-125.608	3.63387	*	0.507339	-1.11655	0	-0.837976	-0.0803768	1.24042	-0.945948	0	0.23404	1.95095	0	0	0	0.0627788	1.11559	0	0	0	0	0	0	0	0	0	0.128623	0.864613	1211.63	1395.89	1332
+./mdscoring_1.pdb	ILE	B	1124	-179.837	-110.298	126.171	*	-1.73106	-0.471388	0	-1.96132	0	1.78384	-3.39383	0	0.96105	1.35055	0	0	0	3.36768e-05	0.680416	0	0	0	0	0	0	0	0	0	1	1	1517.91	1514.56	1333
+./mdscoring_1.pdb	ASN	B	1125	-179.694	-108.51	-31.8488	*	-0.42142	-1.30381	-1.66206	-1.52517	0	2.51313	-1.47402	0	0.691956	2.33855	0	0	0	0	0.675824	0	0	0	0	0	0	0	0	0	0.782108	1	1302.37	1580.17	1334
+./mdscoring_1.pdb	H1S	B	1126	-179.565	-124.107	116.869	E	1.10681	-0.27393	-0.841042	-2.172	0	3.63284	-2.32753	0.25838	0.845724	1.82175	0	0	0	0	0.773268	0	0	0	0	0	0.162608	0	0	0	1	1	2363.71	1672.59	1335
+./mdscoring_1.pdb	PHE	B	1127	179.854	-115.711	134.631	E	-1.03656	0	0	-2.01438	0.226115	1.428	-3.09739	0.145003	0.751746	1.50683	0	0	0	0.0175182	0	0	0	0	0	0	0	0	0	0	0.920957	0.829839	2502.25	1387.01	1336
+./mdscoring_1.pdb	GLU	B	1128	178.679	-124.169	114.311	E	1.45597	-0.984118	0	-1.36095	-0.480862	3.13835	-1.41363	0.00187901	0.870244	1.8458	0	0	0	0	0	0	0	0	-0.160737	0	0	0	0	0	0.617396	0.87227	1417.41	1406.37	1337
+./mdscoring_1.pdb	LYS	B	1129	-179.28	-85.9368	128.236	E	1.59374	0	-0.878169	-1.17301	0.0226469	2.33672	-1.72264	0.0294353	1.75386	1.22917	0	0	0	0	0	0	0	0	-0.0042638	0	0	0	0	0	0.620293	0.459582	1445.55	1120.09	1338
+./mdscoring_1.pdb	ILE	B	1130	179.929	-125.958	157.048	B	-0.960049	-1.31071	0	-1.20889	0	1.28099	-1.82659	0	0.510687	1.59245	0	0	0	0.00200888	0	0	0	0	0	0	0	0	0	0	0.531384	0.815747	1093.71	1378.76	1339
+./mdscoring_1.pdb	GLN	B	1131	179.613	-90.117	112.747	B	1.07327	0	-0.39659	-1.04104	0	1.22165	-1.3425	0	1.03715	1.59454	0	0	0	6.25966e-05	0	0	0	0	0	0	0	0	0	0	0.503509	0.59914	1307.01	1211.38	1340
+./mdscoring_1.pdb	ILE	B	1132	-179.317	-92.5168	-42.8761	B	-0.957217	-0.521694	0	-1.53895	0	1.06916	-2.82106	0	0.96105	1.89428	0	0	0	0	0.60943	0	0	0	0	0	0	0	0	0	0.848658	0.650757	1368.79	1270.2	1341
+./mdscoring_1.pdb	ILE	B	1133	-179.586	-131.398	96.9629	B	0.305029	0	0	-1.58925	0	1.82356	-2.60673	0.373378	0.702192	1.60188	0	0	0	0	0.570034	0	0	0	0	0	0	0	0	0	0.730651	0.969078	1266.47	1479.65	1342
+./mdscoring_1.pdb	PRO	B	1134	-179.593	-69.1192	140.103	B	-1.79738	-1.2651	0	-0.92255	0	0.756775	-1.31973	0	0.25628	0.696952	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.545765	0.95584	829.293	1468.6	1343
+./mdscoring_1.pdb	LYS	B	1135	179.411	-56.8017	-33.5203	*	0.328063	-0.829795	0	-0.973772	-0.105873	1.38235	-1.24641	0.0310714	0.605944	1.46455	0	0	0	0	0.58558	0	0	0	0	0	0	0	0	0	0.320955	0.739256	1107	1316.7	1344
+./mdscoring_1.pdb	ASN	B	1136	-179.44	-64.7814	-10.1259	*	1.52364	0	0	-0.261202	0	0.657685	-0.163476	0	0.070027	1.22061	0	0	0	0	0.67596	0	0	0	0	0	0	0	0	0	0.101202	0.297696	684.79	979.593	1345
+./mdscoring_1.pdb	SER	B	1137	179.51	-83.0512	-19.4665	*	-0.104166	-0.93167	-1.3795	-0.747986	0	1.46568	-0.497289	0	0.529654	1.45695	0	0	0	0	0.932481	0	0	0	0	0	0	0	0	0	0.681071	0.539832	597.233	1103.8	1346
+./mdscoring_1.pdb	TRP	B	1138	-179.728	-82.3419	86.3065	*	-1.60689	-0.475113	0	-2.24163	0.263237	1.4669	-3.6395	0.0334029	0.82863	2.15615	0	0	0	0.0010258	0.352108	0	0	0	0	0	0	0	0	0	0.833815	0.572871	3418.79	1228.77	1347
+./mdscoring_1.pdb	SER	B	1139	179.959	-88.7614	-44.2795	*	2.33019	-0.879	-0.309245	-0.31613	0	0.721356	-0.186016	0	0.34005	2.23215	0	0	0	0.727023	0.405071	0	0	0	0	0	0	0	0	0	0.0943372	0.412975	316.188	994.572	1348
+./mdscoring_1.pdb	ASP	B	1140	-179.375	-91.362	1.96596	*	1.55008	0	-0.331175	-0.643176	-0.444058	1.77041	-0.571923	0	0.521094	1.24839	0	0	0	0.000516416	0.676388	0	0	0	0	0	0	0	0	0	0.286354	0.607832	843.445	1203.91	1349
+./mdscoring_1.pdb	HIS	B	1141	179.85	-123.21	136.492	B	1.919	0	-1.1769	-1.9217	-0.344006	4.18799	-2.09587	0	0.845724	1.73947	0	0	0	0	0.532738	0	0	0	0	0	0.684298	0	0	0	0.902181	0.905421	2124.89	1437.2	1350
+./mdscoring_1.pdb	GLU	B	1142	179.915	-79.5348	113.155	B	1.74771	-0.49065	-0.518374	-1.51331	-0.219347	3.09808	-1.72438	0	1.40954	1.70615	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.657792	0.998028	1465.72	1498.55	1351
+./mdscoring_1.pdb	ALA	B	1143	179.53	-120.014	-13.1017	B	1.3616	0	0	-0.798125	0	1.13029	-1.10189	0	0	2.13132	0	0	0	0	0.515455	0	0	0	0	0	0	0	0	0	0.730431	0.685779	306.26	1246.11	1352
+./mdscoring_1.pdb	SER	B	1144	-179.574	-64.8204	-38.3065	*	1.9016	0	-0.518374	-0.338886	0	0.751347	-0.227428	0	0.529654	1.02932	0	0	0	0.675973	0.684777	0	0	0	0	0	0	0	0	0	0.192337	0.37808	363.13	964.527	1353
+./mdscoring_1.pdb	LEU	B	1145	-179.231	-90.0809	18.7279	*	0.988875	-0.540404	0	-0.658835	0	1.17641	-0.811466	0	0.191951	1.63122	0	0	0	0	0.842103	0	0	0	0	0	0	0	0	0	0.19973	0.664658	801.365	1276.66	1354
+./mdscoring_1.pdb	GLY	B	1146	-179.796	-81.1044	60.4058	*	2.30952	0	0	-0.699672	0	1.54957	-0.708269	0.0173418	0	2.15055	0	0	0	0	1.06805	0	0	0	0	0	0	0	0	0	0	0.821129	0	1338.12	1355
+./mdscoring_1.pdb	VAL	B	1147	-179.64	-135.707	155.794	B	-0.123399	-0.540404	0	-0.895935	0	1.04401	-1.36748	0	0.204968	1.42655	0	0	0	0.00489432	0.473723	0	0	0	0	0	0	0	0	0	0.47986	0.712524	806.154	1299.92	1356
+./mdscoring_1.pdb	SER	B	1148	-179.735	-123.509	144.985	B	1.57803	-0.871146	0	-1.09591	0	2.3218	-0.739785	0	0.384528	1.57855	0	0	0	0	0.0186639	0	0	0	0	0	0	0	0	0	0.725999	0.934122	618.754	1443.28	1357
+./mdscoring_1.pdb	ALA	B	1149	179.205	-71.276	-27.418	B	0.730717	-0.505316	0	-0.337826	0	0.64166	-0.327154	0	0	1.25935	0	0	0	0	0.338258	0	0	0	0	0	0	0	0	0	0.129471	0.43467	153.015	1043.21	1358
+./mdscoring_1.pdb	GLY	B	1150	179.781	-69.9786	-23.8836	*	1.3791	0	0	-0.517392	0	1.04683	-0.580089	0	0	1.42975	0	0	0	0	0.778706	0	0	0	0	0	0	0	0	0	0	0.620187	0	1156.27	1359
+./mdscoring_1.pdb	CYS	B	1151	179.53	-113.814	54.9105	*	0.465287	0	0	-1.29729	0	1.70503	-1.55949	0	0.807146	2.56173	0	0	0	0.231726	0.925426	0	0	-1.98356	0	0	0	0	0	0	0.839858	0.864927	672.491	1398.16	1360
+./mdscoring_1.pdb	SER	B	1152	-179.349	-77.6723	145.168	B	1.91462	0	-0.505316	-0.691338	0	1.33428	-0.583027	0	0.529654	1.00019	0	0	0	0.830181	0.492533	0	0	0	0	0	0	0	0	0	0.439377	0.656036	481.462	1203.85	1361
+./mdscoring_1.pdb	TYR	B	1153	179.627	-125.56	106.427	B	0.628504	-0.602941	0	-0.991255	-0.0648015	1.25485	-1.25668	0.293426	0.292168	1.70374	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.345465	0.590981	1863.07	1228.41	1362
+./mdscoring_1.pdb	GLN	B	1154	179.968	67.2715	24.4155	*	1.95161	0	0	-0.236503	0	0.37318	-0.235465	0.292948	0.286742	1.46803	0	0	0	0.00267906	0.33811	0	0	0	0	0	0	0	0	0	0.166169	0.0958492	921.097	849.011	1363
+./mdscoring_1.pdb	GLY	B	1155	179.645	113.105	-52.6446	*	1.96932	0	0	-0.155375	0	0.486799	-0.127547	0	0	1.76544	0	0	0	0	0.675651	0	0	0	0	0	0	0	0	0	0	0.224146	0	797.852	1364
+./mdscoring_1.pdb	ASN	B	1156	-179.569	-72.1806	146.943	B	0.779533	-0.602941	0	-0.311608	0	0.774922	-0.214615	0	0	1.13377	0	0	0	0	0.337541	0	0	0	0	0	0	0	0	0	0	0.434837	515.048	1081.21	1365
+./mdscoring_1.pdb	SER	B	1157	179.19	-67.8068	138.093	B	1.0024	0	0	-0.628568	0	1.16156	-0.578601	0	0.227376	0.820631	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.429292	0.594874	476.631	1151.19	1366
+./mdscoring_1.pdb	SER	B	1158	179.934	-136.956	-177.649	B	1.69433	-0.874817	0	-0.967065	0	1.92642	-0.697801	0.0139056	0.276872	2.01681	0	0	0	0	0.0202915	0	0	0	0	0	0	0	0	0	0.522742	0.936612	521.393	1445.42	1367
+./mdscoring_1.pdb	PHE	B	1159	179.766	-144.706	178.112	*	-0.587198	0	0	-1.67559	0.141841	1.08226	-2.65111	0.0360399	0.751746	1.72761	0	0	0	0	0.0115432	0	0	0	0	0	0	0	0	0	0.773375	0.692226	2273.05	1295.64	1368
+./mdscoring_1.pdb	PHE	B	1160	179.105	-55.8036	147.269	*	-0.966058	0	0	-1.84193	0.111969	1.43825	-2.90484	0.156009	0.751746	1.32274	0	0	0	0	0.0140371	0	0	0	0	0	0	0	0	0	0.806468	0.804814	2324.44	1370.4	1369
+./mdscoring_1.pdb	ARG	B	1161	-179.169	-82.0842	-0.885862	*	2.03144	0	-0.903705	-0.764441	-0.371193	1.63834	-0.783412	0.0152404	1.58768	1.59276	0	0	0	0.0331412	0.959113	0	0	0	-0.0129712	0	0	0	0	0	0.183193	0.643476	1300.14	1225.83	1370
+./mdscoring_1.pdb	ASN	B	1162	-179.083	-114.733	-34.2713	*	-0.324496	-0.997455	-1.96851	-1.46559	0	2.50832	-1.30071	0.000712943	0.691956	2.20643	0	0	0	0.000337811	1.5835	0	0	0	0	0	0	0	0	0	0.817168	0.882913	1334.17	1413.24	1371
+./mdscoring_1.pdb	VAL	B	1163	-179.307	-113.158	159.733	B	-0.160248	0	0	-1.47603	0	1.72735	-2.33442	0.00151711	0.427142	1.49419	0	0	0	0	0.603464	0	0	0	0	0	0	0	0	0	0.807656	0.967186	1007.09	1477.16	1372
+./mdscoring_1.pdb	VAL	B	1164	-179.608	-122.228	136.925	B	-0.736999	-0.536186	0	-1.41575	0	1.61673	-2.19855	0	0.427142	1.29717	0	0	0	0.0724442	0.0345059	0	0	0	0	0	0	0	0	0	0.764241	0.999693	980.48	1499.79	1373
+./mdscoring_1.pdb	TRP	B	1165	179.334	-89.2389	104.719	B	0.212095	0	-0.433695	-2.0442	0.121568	2.18939	-2.91278	0.239777	0.82863	2.22341	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.629134	0.930461	3010.86	1455.84	1374
+./mdscoring_1.pdb	LEU	B	1166	-179.283	-91.0174	128.188	B	-0.583218	0	0	-1.63646	0	1.53733	-2.82965	0.0798133	0.96105	1.30471	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.830925	0.829131	1352.4	1386.2	1375
+./mdscoring_1.pdb	ILE	B	1167	179.032	-126.362	-179.677	B	0.110753	-0.445335	0	-1.68887	0	1.61859	-2.81764	0	0.96105	2.48295	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.795854	0.998259	1323.01	1498.85	1376
+./mdscoring_1.pdb	LYS	B	1168	-179.533	-70.2069	146.782	B	0.507573	-0.654951	-1.68491	-1.78681	-0.03098	3.63791	-2.3459	0.0967294	1.88794	1.38855	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.782156	0.898232	1628.62	1428.46	1377
+./mdscoring_1.pdb	LYS	B	1169	179.345	-120.611	121.563	B	1.62238	-0.561438	-0.879	-1.03271	-0.112591	1.84174	-1.32965	0.341387	1.51768	1.83695	0	0	0	0	0.0653555	0	0	0	0	0	0	0	0	0	0.381674	0.684927	1175.67	1278.5	1378
+./mdscoring_1.pdb	ASN	B	1170	-179.637	62.6649	37.2383	*	1.5881	0	0	-0.202813	0	0.392277	-0.202303	0.535785	0	0.924011	0	0	0	0.141141	0.337892	0	0	0	0	0	0	0	0	0	0	0.28904	521.257	973.179	1379
+./mdscoring_1.pdb	ASN	B	1171	-179.953	64.5672	25.5197	*	1.62838	0	-0.438711	-0.511281	0	0.978875	-0.539461	0.252062	0.615842	1.24034	0	0	0	0.0307164	0.675924	0	0	0	0	0	0	0	0	0	0.212463	0.502317	785.704	1131.22	1380
+./mdscoring_1.pdb	ALA	B	1172	179.546	-138.257	142.493	B	1.35885	-0.561438	0	-0.565508	0	1.34027	-0.485123	0	0	1.63065	0	0	0	0	0.532528	0	0	0	0	0	0	0	0	0	0.220133	0.657287	176.134	1223.09	1381
+./mdscoring_1.pdb	TYR	B	1173	179.569	-128.937	92.5278	B	-0.378133	0	0	-1.82488	0.146822	1.40032	-2.63155	0.385402	0.845724	1.28872	0	0	0	0.0113144	0	0	0	0	0	0	0	0	0	0	0.886433	0.444016	2802.73	1130.83	1382
+./mdscoring_1.pdb	PRO	B	1174	179.355	-65.404	151.921	B	-0.854914	-0.771914	0	-0.608107	0	0.651779	-0.806329	2.42682e-05	0.25628	0.423352	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.478515	0.537292	785.513	1171.01	1383
+./mdscoring_1.pdb	THR	B	1175	-179.754	-62.0071	131.735	B	0.613546	0	0	-0.447328	0	0.630056	-0.640204	0	0.0792177	0.961242	0	0	0	0.0305629	0	0	0	0	0	0	0	0	0	0	0.152022	0.484121	593.318	1121.34	1384
+./mdscoring_1.pdb	ILE	B	1176	-179.758	-79.4761	110.858	B	-1.1889	-0.6315	0	-1.64404	0	1.51127	-2.80688	0	0.96105	1.4212	0	0	0	0	0.0659025	0	0	0	0	0	0	0	0	0	0.825375	0.836367	1348.6	1392.33	1385
+./mdscoring_1.pdb	LYS	B	1177	179.188	-122.177	99.0353	E	1.24177	0	-0.248366	-0.379017	-0.262567	0.60855	-0.450107	0	0.650558	1.32272	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.138964	0.361011	901.168	1050.79	1386
+./mdscoring_1.pdb	LYS	B	1178	-179.126	-133.573	119.089	E	1.38827	-0.941344	-0.85488	-1.06882	0.0264287	2.26071	-1.3039	0.25925	1.51148	1.49934	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.473618	0.574402	1279.66	1200.8	1387
+./mdscoring_1.pdb	ASP	B	1179	179.19	-115.172	152.608	E	0.979896	0	-0.874787	-0.388067	-0.000984875	0.800445	-0.516603	0.0151594	0.521094	1.42364	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.221711	0.348087	783.974	1007.81	1388
+./mdscoring_1.pdb	TYR	B	1180	-179.928	-152.931	137.109	E	0.0264046	-1.2101	0	-1.33499	0	1.6168	-1.55844	0.0152834	0.845724	1.65212	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.530132	0.646784	2183.84	1265.46	1389
+./mdscoring_1.pdb	ASN	B	1181	178.982	-111.989	135.095	E	1.66017	0	0	-0.59022	0	1.21958	-0.624806	0	0.0826322	1.57298	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.119418	0.656189	701.312	1245.24	1390
+./mdscoring_1.pdb	ASN	B	1182	179.968	-83.4359	90.2904	B	0.831617	-1.15064	-0.891219	-1.69676	0	3.00831	-1.50322	0.679486	0.691956	1.65388	0	0	0	0.0398345	0.0026255	0	0	0	0	0	0	0	0	0	1	0.924737	1611.6	1444.23	1391
+./mdscoring_1.pdb	THR	B	1183	-179.295	-75.8493	-11.0374	B	2.05991	0	0	-0.260064	0	0.707967	-0.187495	0	0	1.42254	0	0	0	0.376967	0.353401	0	0	0	0	0	0	0	0	0	0	0.34698	485.519	1020.68	1392
+./mdscoring_1.pdb	ASN	B	1184	-179.784	-79.2833	159.992	*	1.803	0	0	-1.01482	0	2.05931	-0.983253	0	0.358587	1.38318	0	0	0	0	0.34089	0	0	0	0	0	0	0	0	0	0.518223	0.67926	1063.03	1262.33	1393
+./mdscoring_1.pdb	ARG	B	1185	179.538	-95.7254	16.0932	*	1.73699	-0.163308	0	-0.743684	-0.0536844	1.11086	-0.79002	0	0.439628	1.80655	0	0	0	0.109079	0.382244	0	0	0	0.0215718	0	0	0	0	0	0.241609	0.551825	1394.89	1155.35	1394
+./mdscoring_1.pdb	GLU	B	1186	179.909	-120.459	157.034	E	0.658759	-0.657919	-0.855638	-1.6022	-1.23883	3.61871	-1.77823	0.0183213	1.40954	1.94335	0	0	0	4.15465e-06	0.49739	0	0	0	-0.198347	0	0	0	0	0	0.81236	0.906457	1650.58	1431.43	1395
+./mdscoring_1.pdb	ASP	B	1187	179.764	-73.0817	135.418	E	0.871921	-0.647224	-0.319961	-1.21633	-0.431029	2.965	-1.24569	0	0.521094	1.28975	0	0	0	0	0.000231969	0	0	0	-0.0436889	0	0	0	0	0	0.57131	1	1105.61	1525.12	1396
+./mdscoring_1.pdb	LEU	B	1188	-179.711	-106.6	128.556	E	-2.46006	-1.37282	0	-1.91364	0	1.52	-3.25617	0.000174532	0.96105	1.60135	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.962497	1	1467.26	1621.13	1397
+./mdscoring_1.pdb	LEU	B	1189	179.107	-104.55	104.067	E	-2.07422	-1.2345	0	-1.8564	0	1.49744	-3.14195	0	0.96105	1.70015	0	0	0	0	0.0354853	0	0	0	0	0	0	0	0	0	0.918717	1	1429.04	1535.27	1398
+./mdscoring_1.pdb	ILE	B	1190	179.811	-103.203	134.643	E	-0.831512	-0.234232	0	-1.65465	0	1.65691	-2.68383	0	0.733738	1.35055	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.763476	0.962951	1294.93	1475.62	1399
+./mdscoring_1.pdb	LEU	B	1191	179.935	-120.74	130.812	E	-0.224216	0	0	-1.37326	0	1.29908	-2.33558	0.000181352	0.664635	1.50746	0	0	0	0.0132665	0	0	0	0	0	0	0	0	0	0	0.691572	0.729391	1230.74	1319.77	1400
+./mdscoring_1.pdb	TRP	B	1192	-179.836	-134.197	-178.829	E	-1.31777	-1.18736	0	-2.48664	0.156949	1.9739	-3.84953	0.0109363	0.82863	3.23535	0	0	0	0	0.00189357	0	0	0	0	0	0	0	0	0	0.855057	0.787327	3461.13	1364.95	1401
+./mdscoring_1.pdb	GLY	B	1193	-179.964	-160.913	171.664	*	1.1255	-0.664816	0	-0.815232	0	1.49658	-0.857184	0	0	1.96615	0	0	0	0	0.164447	0	0	0	0	0	0	0	0	0	0	0.980684	0	1482.52	1402
+./mdscoring_1.pdb	ILE	B	1194	179.599	-125.347	130.136	E	-1.24891	-0.387468	0	-1.92173	0	1.84832	-3.27467	0.00334993	0.96105	1.41895	0	0	0	0.103294	0.418	0	0	0	0	0	0	0	0	0	0.996907	1	1497.32	1624.3	1403
+./mdscoring_1.pdb	H2S	B	1195	-179.102	-97.0986	111.181	E	-0.382612	-1.34028	-0.59026	-1.95595	0	2.73235	-2.14749	0.0176427	0.845724	1.93575	0	0	0	0	0	0	0	0	0	0	0.119901	0	0	0	0.848105	1	2055.73	1654.23	1404
+./mdscoring_1.pdb	H2S	B	1196	178.912	-87.7108	133.573	E	-1.23133	-0.926865	-1.50261	-2.05771	0	2.8821	-2.22295	0	0.845724	1.61359	0	0	0	0	0	0	0	0	0	0	0.137399	0	0	0	0.944408	1	2178.9	1546.66	1405
+./mdscoring_1.pdb	PRO	B	1197	-180	-77.42	149.789	B	-1.34558	0	0	-1.28768	0	0.900533	-2.15487	0	0.25628	0.940152	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.966187	0.965004	1102.99	1475.12	1406
+./mdscoring_1.pdb	ASN	B	1198	179.275	-74.5442	-37.3216	B	0.904215	-0.851434	-0.582414	-1.1983	0	2.17132	-1.16222	0.15796	0.691956	1.67735	0	0	0	0	0.805468	0	0	0	0	0	0	0	0	0	0.629746	0.823881	1164.18	1369.5	1407
+./mdscoring_1.pdb	ASP	B	1199	179.973	-150.546	174.138	n	1.85243	-0.457597	-0.724804	-0.983449	0.114569	2.67833	-0.869649	0.366598	0.521094	1.96615	0	0	0	0	0.515563	-0.75882	0	0	0	0	0	0	0	0	0.404233	0.911081	951.894	1432.87	1408
+./mdscoring_1.pdb	GLU	B	1200	-178.393	-68.4398	-28.2907	a	1.23305	-0.45072	0	-0.535244	0.0474729	0.895451	-0.554308	0.435407	0.0216407	1.37335	0	0	0	0	0.360352	0	0	0	0	0	0	0	0	0	0.015353	0.647537	697.362	1241.64	1409
+./mdscoring_1.pdb	ALA	B	1201	179.356	-70.5575	-41.34	a	0.75265	-0.946537	0	-0.490398	0	1.0435	-0.471665	0.358396	0	1.25935	0	0	0	0	0.675555	0	0	0	0	0	0	0	0	0	0.166106	0.627743	162.357	1199.22	1410
+./mdscoring_1.pdb	GLU	B	1202	178.863	-64.0875	-39.8232	a	0.462735	-1.3735	-0.851434	-1.35366	-0.00678955	2.68657	-1.53816	0.11682	1.40954	1.37335	0	0	0	0	1.09527	0	0	0	0	0	0	0	0	0	0.551828	1	1338.99	1532.47	1411
+./mdscoring_1.pdb	GLN	B	1203	179.764	-58.0152	-46.2593	a	-0.937958	-0.953729	-2.27152	-1.91875	0	2.94169	-1.90301	0	1.72561	1.44175	0	0	0	0	2.02617	0	0	0	0	0	0	0	0	0	0.911389	1	1773.63	1619.78	1412
+./mdscoring_1.pdb	THR	B	1204	-180	-74.3047	-33.9275	a	1.02766	-1.4421	-0.408438	-1.06636	0	1.92269	-1.04142	0.622818	0.521094	1.47975	0	0	0	0.439627	1.39644	0	0	0	0	0	0	0	0	0	0.460036	1	786.443	1515.13	1413
+./mdscoring_1.pdb	LYS	B	1205	-179.668	-66.0766	-39.488	a	0.596421	-0.575599	0	-0.804596	-0.0722502	1.17935	-1.05876	0.0801798	0.361791	1.46455	0	0	0	0.0217594	1.1499	0	0	0	0	0	0	0	0	0	0.191633	0.713677	960.737	1298.71	1414
+./mdscoring_1.pdb	LEU	B	1206	-178.217	-98.5745	-31.485	a	-1.20121	-1.30364	0	-1.56677	0	1.52	-2.46659	0	0.65724	1.95855	0	0	0	0	1.35064	0	0	0	0	0	0	0	0	0	0.683877	1	1224.02	1632.9	1415
+./mdscoring_1.pdb	TYR	B	1207	-178.232	-121.634	-33.0273	c	0.598967	-0.949138	-1.00508	-2.43568	0.134615	2.81743	-3.21192	1.91155	0.845724	2.67295	0	0	0	0	1.51506	-0.181474	0	0	0	0	0	0	0	0	1	1	3021.71	1613.08	1416
+./mdscoring_1.pdb	GLN	B	1208	180	77.6468	-37.5	*	4.47249	0	-0.274592	-1.17585	0	2.24591	-1.38433	0.999514	0.826487	3.23535	0	0	0	0	2.0992	0	0	0	0	0	0	0	0	0	0.454051	0.908935	1250.43	1434.43	1417
+./mdscoring_1.pdb	ASN	B	1209	179.206	-72.5444	113.689	*	-0.0284979	-1.02409	-0.556496	-1.00974	0	1.69367	-1.00348	0	0.691956	1.17968	0	0	0	0	0.627434	0	0	0	0	0	0	0	0	0	0.444737	0.788383	996.376	1343.19	1418
+./mdscoring_1.pdb	PRO	B	1210	180	-67.7208	-45.3926	*	0.92536	0	0	-0.204888	0	0.386425	-0.153662	0.0111981	0.0174296	0.868857	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0680099	0.360786	518.274	1045.52	1419
+./mdscoring_1.pdb	THR	B	1211	179.76	-97.6358	100.603	B	1.07259	-0.55012	0	-0.270629	0	0.69412	-0.176953	0	0	1.36662	0	0	0	0.00955709	0	0	0	0	0	0	0	0	0	0	0	0.403304	413.508	1062.02	1420
+./mdscoring_1.pdb	THR	B	1212	-179.592	-112.55	148.252	B	1.00296	0	-0.397423	-1.27051	0	1.82012	-1.71331	0	0.521094	1.48925	0	0	0	0.553737	0	0	0	0	0	0	0	0	0	0	0.916543	0.72318	1072.67	1296.81	1421
+./mdscoring_1.pdb	TYR	B	1213	-179.6	-143.562	151.824	B	-1.05939	-1.34185	0	-1.43876	0.0402006	1.52714	-1.90147	0	0.370406	1.68495	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.437975	1	2023.76	1523.12	1422
+./mdscoring_1.pdb	ILE	B	1214	178.788	-133.469	130.333	B	-1.02969	-0.569877	0	-1.95233	0	1.80585	-3.34439	0.590251	0.96105	1.47975	0	0	0	0	0.112828	0	0	0	0	0	0	0	0	0	1	1	1520.31	1561.81	1423
+./mdscoring_1.pdb	SER	B	1215	-180	-120.89	116.388	B	1.39274	-0.648538	-0.744239	-0.763932	0	1.65863	-0.492897	0.0247072	0.529654	1.82935	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.479121	0.69457	500.499	1237.02	1424
+./mdscoring_1.pdb	ILE	B	1216	179.104	-83.0144	92.8448	B	-1.4453	-0.780594	0	-1.59192	0	0.957266	-2.9309	0.0237384	0.96105	1.91295	0	0	0	0.00311747	0.440758	0	0	0	0	0	0	0	0	0	0.890586	0.636096	1405.14	1260.55	1425
+./mdscoring_1.pdb	GLY	B	1217	-179.6	-91.2294	72.6695	B	1.98326	-0.485526	0	-0.491915	0	1.04409	-0.43714	0	0	2.35375	0	0	0	0	0.143783	0	0	0	0	0	0	0	0	0	0	0.595432	0	1133.87	1426
+./mdscoring_1.pdb	THR	B	1218	-179.879	-120.907	147.18	*	0.832581	-0.563418	0	-1.22896	0	2.0539	-1.57196	0	0.521094	1.54815	0	0	0	0.0737789	0.392795	0	0	0	0	0	0	0	0	0	0.928065	0.628345	1079.9	1227.2	1427
+./mdscoring_1.pdb	SER	B	1219	-179.968	-69.3468	-3.95041	*	1.53505	0	-0.802618	-0.335877	0	0.914312	-0.179249	0.0203825	0.529654	0.966931	0	0	0	0.421511	0.364434	0	0	0	0	0	0	0	0	0	0.298596	0.287346	414.027	886.405	1428
+./mdscoring_1.pdb	THR	B	1220	-179.826	-122.999	-0.598494	*	2.10883	0	-0.563639	-0.542611	0	1.39551	-0.447634	0.166558	0.521094	1.43441	0	0	0	0.145138	0.692677	0	0	0	0	0	0	0	0	0	0.443078	0.379982	775.81	1044.91	1429
+./mdscoring_1.pdb	LEU	B	1221	-179.11	-168.553	133.209	E	1.12829	-0.20763	0	-1.15153	0	1.43985	-1.78269	0.24339	0.490597	2.09631	0	0	0	0	1.33907	0	0	0	0	0	0	0	0	0	0.51048	0.773379	1072.65	1349.07	1430
+./mdscoring_1.pdb	ASN	B	1222	178.583	-138.422	107.488	E	1.3633	0	0	-0.380389	0	0.758491	-0.417751	0	0.0583563	1.34459	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0843353	0.426613	669.492	1075.12	1431
+./mdscoring_1.pdb	GLN	B	1223	-179.26	-140.41	139.855	E	1.45606	-0.616759	0	-0.946282	0	1.87955	-1.00374	0.0150526	0.53248	1.59576	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.308575	0.787072	1084.01	1346.69	1432
+./mdscoring_1.pdb	ARG	B	1224	179.054	-91.3805	102.861	E	2.11781	0	-0.744239	-0.698728	-0.0862893	1.26978	-0.565884	0.0247072	1.21551	1.66261	0	0	0	0.0403329	0	0	0	0	0	0	0	0	0	0	0.256655	0.513076	1419.29	1125.56	1433
+./mdscoring_1.pdb	LEU	B	1225	-179.706	-88.8761	113.017	B	-0.538529	-0.562311	0	-1.80801	0	1.76833	-3.02326	0.524321	0.96105	1.60135	0	0	0	0	0.112828	0	0	0	0	0	0	0	0	0	0.880443	1	1395.63	1530.16	1434
+./mdscoring_1.pdb	VAL	B	1226	179.502	-114.322	119.188	B	1.0251	0	0	-0.546233	0	1.1015	-0.535141	0	0.0668256	0.92047	0	0	0	0.0176808	0	0	0	0	0	0	0	0	0	0	0.156448	0.62341	607.903	1237.89	1435
+./mdscoring_1.pdb	PRO	B	1227	-179.967	-55.0394	135.671	B	-1.85977	0	0	-1.00579	0	0.409252	-1.887	0	0.25628	0.367484	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.873016	0.672902	1042.33	1267.43	1436
+./mdscoring_1.pdb	LYS	B	1228	-179.54	-108.186	109.124	B	0.261894	-1.4228	0	-0.743681	-0.0367176	1.31355	-0.731158	0.00234696	0.161318	1.71903	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0854464	0.795658	840.64	1356.35	1437
+./mdscoring_1.pdb	ILE	B	1229	179.862	-82.3148	119.083	B	0.0720269	0	0	-0.808531	0	0.442429	-1.58228	0.194842	0.450147	1.35055	0	0	0	0.0248731	0	0	0	0	0	0	0	0	0	0	0.46839	0.356597	1039.09	1076.64	1438
+./mdscoring_1.pdb	ALA	B	1230	-179.887	-165.362	146.069	B	1.15397	-0.712156	0	-0.64442	0	1.3138	-0.621223	0.26687	0	1.55111	0	0	0	0	0.330151	0	0	0	0	0	0	0	0	0	0.341752	0.696322	207.147	1254.63	1439
+./mdscoring_1.pdb	THR	B	1231	-180	-77.4232	123.884	B	1.12557	0	0	-0.26137	0	0.52311	-0.287176	0.00162466	0.00553286	0.98442	0	0	0	0.159427	0	0	0	0	0	0	0	0	0	0	0.0106178	0.389576	504.657	1051.95	1440
+./mdscoring_1.pdb	ARG	B	1232	-179.722	-123.907	152.729	B	1.19134	-0.582414	-1.56344	-1.92223	-0.0535926	3.31458	-1.39924	0.140178	1.81959	1.32175	0	0	0	0.116168	0	0	0	0	0	0	0	0	0	0	0.762929	0.721354	2240.47	1285.72	1441
+./mdscoring_1.pdb	PRO	B	1233	179.233	-61.2019	148.189	B	-0.768234	-1.31733	0	-0.391063	0	0.743213	-0.256045	0.000115764	0.0295237	0.423352	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.115201	0.601425	548.996	1216.61	1442
+./mdscoring_1.pdb	LYS	B	1234	-179.252	-78.596	115.447	B	0.537091	0	0	-0.462601	-0.00398601	0.526166	-0.72955	0.00191366	0.151129	1.05402	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0800498	0.469288	834.536	1126.91	1443
+./mdscoring_1.pdb	ILE	B	1235	179.147	-119.351	120.17	B	0.545583	-0.627203	0	-1.01259	0	1.4655	-1.38974	0.458048	0.380012	1.27156	0	0	0	0	0.0559756	0	0	0	0	0	0	0	0	0	0.395414	0.77955	975.824	1354.94	1444
+./mdscoring_1.pdb	ASN	B	1236	179.963	67.0232	15.6019	*	1.4526	0	0	-0.407339	0	0.697914	-0.45258	0.316011	0.168363	1.12848	0	0	0	0.00175176	0.338355	0	0	0	0	0	0	0	0	0	0.243315	0.269686	813.686	958.837	1445
+./mdscoring_1.pdb	GLY	B	1237	179.503	101.155	2.00494	*	0.876861	-0.611011	0	-0.278325	0	0.598807	-0.274362	0	0	1.44175	0	0	0	0	0.676773	0	0	0	0	0	0	0	0	0	0	0.366571	0	926.747	1446
+./mdscoring_1.pdb	GLN	B	1238	179.893	-122.02	135.161	*	1.20326	-0.692725	-0.611011	-1.27666	0	2.08108	-1.5157	0.337616	1.27932	1.60135	0	0	0	0	0.444747	0	0	0	0	0	0	0	0	0	0.517043	0.917089	1322.5	1440.3	1447
+./mdscoring_1.pdb	SER	B	1239	-179.636	-95.9127	-21.5224	*	2.89128	0	0	-0.954035	0	2.10826	-0.699141	0.0887368	0.284048	1.53477	0	0	0	0.528646	0.577235	0	0	0	0	0	0	0	0	0	0.536289	0.902848	527.883	1416.35	1448
+./mdscoring_1.pdb	GLY	B	1240	-179.953	-78.447	179.093	*	0.539658	-0.795797	0	-0.801287	0	1.45498	-0.828386	0	0	1.51015	0	0	0	0	0.56883	0	0	0	0	0	0	0	0	0	0	0.960733	0	1464.46	1449
+./mdscoring_1.pdb	ARG	B	1241	179.917	-137.128	144.027	B	1.00826	-0.924721	-1.70653	-2.16625	0.0707234	3.75875	-1.5676	0	1.81959	1.66975	0	0	0	0.0545493	0	0	0	0	0	0	0	0	0	0	0.817689	1	2329.29	1526.89	1450
+./mdscoring_1.pdb	ILE	B	1242	179.141	-128.766	119.025	B	-1.0054	-0.391258	0	-1.78412	0	1.64432	-3.04642	0.00935511	0.96105	1.59375	0	0	0	0.00791318	9.12693e-05	0	0	0	0	0	0	0	0	0	0.871015	1	1388.17	1517.27	1451
+./mdscoring_1.pdb	ASP	B	1243	179.063	-89.0887	144.002	B	1.54155	-0.387468	-0.812251	-1.22163	-0.260359	3.13774	-1.19181	0.00287707	0.521094	1.75335	0	0	0	0	0.564865	0	0	0	0	0	0	0	0	0	0.540638	1	1077.39	1536.88	1452
+./mdscoring_1.pdb	PHE	B	1244	-179.465	-117.524	138.11	B	-1.31271	-0.6975	0	-1.92441	0.111181	1.64358	-2.83666	0	0.751746	1.63935	0	0	0	0	0.13238	0	0	0	0	0	0	0	0	0	0.766086	1	2261.73	1518.7	1453
+./mdscoring_1.pdb	PHE	B	1245	179.808	-135.197	163.547	B	-1.55544	-1.18736	0	-1.65171	-0.0125276	1.32798	-2.37689	0.0223694	0.751746	1.57095	0	0	0	0	0.0023275	0	0	0	0	0	0	0	0	0	0.652023	0.851166	2084.59	1401.17	1454
+./mdscoring_1.pdb	TRP	B	1246	-179.37	-154.12	171.036	B	-1.46286	0	0	-2.14315	-0.0613724	1.73124	-3.42158	0.123293	0.82863	1.48008	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.756693	0.657968	3265.09	1282.81	1455
+./mdscoring_1.pdb	THR	B	1247	179.14	-165.377	168.035	B	2.88851	-0.214559	0	-1.27461	0	2.35737	-1.47352	0.130605	0.521094	2.63495	0	0	0	0.207171	0	0	0	0	0	0	0	0	0	0	0.800097	0.830645	999.661	1375.69	1456
+./mdscoring_1.pdb	ILE	B	1248	-179.654	-106.169	124.971	B	-0.710607	-0.563639	0	-1.18176	0	1.06008	-2.0313	0	0.563113	1.35055	0	0	0	0.0923441	0	0	0	0	0	0	0	0	0	0	0.585935	0.66687	1141.01	1280.8	1457
+./mdscoring_1.pdb	LEU	B	1249	179.085	-101.075	103.882	B	-2.57999	-1.54234	0	-1.86929	0	1.4076	-3.23716	0	0.96105	1.70015	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.965297	0.975799	1469.7	1483.88	1458
+./mdscoring_1.pdb	LYS	B	1250	-178.905	-65.5447	156.87	B	1.91705	0	0	-0.878378	-0.086568	1.74398	-0.941379	0.688647	0.221924	1.16883	0	0	0	0	0.0195851	0	0	0	0	0	0	0	0	0	0.117548	0.965348	876.947	1475.64	1459
+./mdscoring_1.pdb	PRO	B	1251	179.411	-59.0129	132.826	*	-0.27361	0	0	-0.664178	0	0.388048	-1.09536	0.435234	0.25628	0.406362	0	0	0	0	5.03295e-06	0	0	0	0	0	0	0	0	0	0.510481	0.644429	806.323	1247.19	1460
+./mdscoring_1.pdb	ASN	B	1252	179.601	74.644	6.12194	*	2.09596	-0.502563	0	-0.293556	0	0.736429	-0.178686	0.373337	0.00244503	1.95855	0	0	0	0	0.461088	0	0	0	0	0	0	0	0	0	0.00353351	0.375416	596.205	1037.18	1461
+./mdscoring_1.pdb	ASP	B	1253	179.096	-90.5418	178.818	*	0.54882	-0.587022	-1.42312	-0.909676	-0.026909	2.22532	-0.942015	0.0898	0.521094	1.60135	0	0	0	0	0.456929	0	0	0	0	0	0	0	0	0	0.430262	0.72336	975.841	1291.14	1462
+./mdscoring_1.pdb	ALA	B	1254	-178.737	-135.173	153.01	E	0.729666	-0.658006	0	-0.737882	0	1.09997	-0.961774	0.12761	0	1.85975	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.53339	0.754604	256.014	1301.72	1463
+./mdscoring_1.pdb	ILE	B	1255	179.107	-131.246	139.072	E	-2.30988	-1.2919	0	-1.82759	0	1.46637	-3.09874	0	0.96105	1.47975	0	0	0	0.00118213	0	0	0	0	0	0	0	0	0	0	0.892403	1	1406.71	1507.08	1464
+./mdscoring_1.pdb	H1S	B	1256	-179.357	-125.28	125.301	E	1.36735	-0.534368	-0.874787	-0.915287	0	1.83436	-0.858865	3.36855e-05	0.845724	1.82175	0	0	0	0	0	0	0	0	0	0	0.0487825	0	0	0	0.244405	0.833428	1283.59	1389.4	1465
+./mdscoring_1.pdb	PHE	B	1257	179.289	-102.381	136.92	E	-0.858805	-0.941344	0	-1.3788	0.0849881	0.953025	-2.01347	9.4986e-05	0.751746	1.68495	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.629202	0.575222	2049.15	1217.95	1466
+./mdscoring_1.pdb	GLU	B	1258	179.447	-147.35	127.886	E	1.51717	-0.6315	-0.248366	-0.77374	-0.283666	1.22915	-0.928811	0.301692	0.825464	2.02695	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.264133	0.689176	994.903	1272.17	1467
+./mdscoring_1.pdb	SER	B	1259	179.751	-169.711	162.248	B	1.07826	-0.648153	-1.2188	-1.27326	0	2.5233	-0.902072	0.36743	0.529654	1.70015	0	0	0	0	0.0741493	0	0	0	0	0	0	0	0	0	1	1	785.799	1505.58	1468
+./mdscoring_1.pdb	ASN	B	1260	178.687	-120.296	11.3114	B	-0.094608	-1.205	-1.18162	-1.42452	0	2.49823	-1.27274	0.00013005	0.691956	1.79895	0	0	0	0	0.677568	0	0	0	0	0	0	0	0	0	0.751571	0.92979	1274.68	1447.97	1469
+./mdscoring_1.pdb	GLY	B	1261	179.406	147.543	162.115	*	2.84519	-0.157356	0	-0.861	0	1.74503	-0.859583	0.738346	0	2.23975	0	0	0	0	0.678943	0	0	0	0	0	0	0	0	0	0	1	0	1581.81	1470
+./mdscoring_1.pdb	ASN	B	1262	179.209	72.0735	7.55469	*	-0.0144206	-0.642775	-2.64894	-1.70105	0	3.05085	-1.53662	0.813611	0.691956	1.95855	0	0	0	0	0.56149	0	0	0	0	0	0	0	0	0	1	0.968612	1502.59	1476.74	1471
+./mdscoring_1.pdb	PHE	B	1263	-179.445	-100.783	137.463	B	-0.457448	0	0	-1.89369	0.123105	1.70215	-2.79346	0	0.751746	1.6527	0	0	0	0	0.652142	0	0	0	0	0	0	0	0	0	0.757705	0.959761	2248.72	1473.28	1472
+./mdscoring_1.pdb	ILE	B	1264	178.495	-97.7362	103.046	B	-1.36671	-0.602116	0	-1.75139	0	1.56354	-2.99721	0.0286688	0.96105	1.42655	0	0	0	0.0041975	0	0	0	0	0	0	0	0	0	0	0.856657	1	1375.72	1507.78	1473
+./mdscoring_1.pdb	ALA	B	1265	-178.982	-78.7152	129.6	B	0.0713643	-0.551309	0	-1.00138	0	1.56838	-1.2296	0	0	1.28527	0	0	0	0	0.037395	0	0	0	0	0	0	0	0	0	0.745841	0.936627	310.19	1448.79	1474
+./mdscoring_1.pdb	PRO	B	1266	179.582	-79.7436	145.469	E	-0.940514	0	0	-1.12139	0	0.820757	-1.83631	0	0.25628	0.940152	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.796975	0.92818	992.83	1448.94	1475
+./mdscoring_1.pdb	GLU	B	1267	179.075	-108.122	-42.4991	E	0.943902	-1.27156	-1.05191	-1.70893	-0.507077	3.61077	-1.93638	8.58808e-05	1.40954	2.39935	0	0	0	0	0.843306	0	0	0	0	0	0	0	0	0	0.802538	1	1638.84	1634.98	1476
+./mdscoring_1.pdb	TYR	B	1268	-179.656	-113.605	142.453	E	0.041304	0	0	-1.72563	-0.0208307	1.79736	-2.49474	6.85406e-05	0.845724	1.63935	0	0	0	0	1.12475	0	0	0	0	0	0	0	0	0	0.598272	1	2302.2	1501.31	1477
+./mdscoring_1.pdb	ALA	B	1269	179.605	-129.321	157.798	E	-0.336845	-1.31407	0	-1.1052	0	1.45021	-1.47074	0	0	2.10295	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.93695	1	358.922	1502.25	1478
+./mdscoring_1.pdb	TYR	B	1270	-179.028	-101.571	118.226	E	-1.2987	-1.2531	-0.584588	-2.1651	0.254901	2.08297	-2.83077	0.529504	0.845724	1.82175	0	0	0	0	0.0354853	0	0	0	0	0	0	0	0	0	0.819725	1	2686.86	1592.69	1479
+./mdscoring_1.pdb	LYS	B	1271	179.742	-93.5962	123.378	B	0.394868	-1.03579	-0.358066	-1.9603	-0.667756	3.32744	-2.61152	0.0838239	1.88794	1.64695	0	0	0	0	0	0	0	0	0.082142	0	0	0	0	0	0.909836	1	1773.02	1692.06	1480
+./mdscoring_1.pdb	ILE	B	1272	179.594	-80.1385	96.4969	B	-1.20756	-0.647224	0	-1.89248	0	1.63264	-3.21056	0.00532992	0.96105	1.87495	0	0	0	0.0687369	0.000231969	0	0	0	0	0	0	0	0	0	0.917891	1	1428.81	1604.55	1481
+./mdscoring_1.pdb	VAL	B	1273	-178.245	-86.3994	-40.8388	B	-0.361975	-0.27393	0	-1.46266	0	1.13429	-2.56546	0.0439619	0.427142	1.92055	0	0	0	0.414133	0.675326	0	0	0	0	0	0	0	0	0	0.978382	0.799964	1111.75	1360.77	1482
+./mdscoring_1.pdb	LYS	B	1274	-178.795	-133.283	120.621	B	1.73661	-0.696751	-0.404713	-1.23765	-0.217229	2.49584	-1.52077	0.158498	1.19896	1.88255	0	0	0	0	0.61875	0	0	0	0.0778696	0	0	0	0	0	0.435999	0.863579	1237.11	1404.1	1483
+./mdscoring_1.pdb	LYS	B	1275	179.018	-105.782	158.772	B	1.09168	0	-0.319961	-0.562486	-0.220787	0.90945	-0.784948	0.00130539	0.817585	1.21408	0	0	0	0.00928797	0	0	0	0	0.0281581	0	0	0	0	0	0.224627	0.405919	998.053	1082.36	1484
+./mdscoring_1.pdb	GLY	B	1276	179.886	175.819	-107.639	*	2.71913	-0.61836	0	-0.304712	0	0.681766	-0.274914	0	0	3.23535	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.384113	0	942.623	1485
+./mdscoring_1.pdb	ASP	B	1277	-178.673	-135.385	120.731	B	0.55589	-1.07445	0	-0.309382	-0.0509722	0.588433	-0.278911	0	0	1.68495	0	0	0	0	0	0	0	0	-0.00377494	0	0	0	0	0	0	0.433548	514.464	1072.33	1486
+./mdscoring_1.pdb	SER	B	1278	178.967	-141.939	169.7	E	1.6707	-0.467803	-0.479394	-1.04883	0	1.98474	-0.785632	0.359413	0.529654	1.57855	0	0	0	0	0.313757	0	0	0	0	0	0	0	0	0	1	0.702186	760.667	1243.58	1487
+./mdscoring_1.pdb	THR	B	1279	-179.431	-155.703	135.767	E	1.62539	-0.589249	0	-1.08775	0	2.09726	-1.20361	0.361991	0.308595	1.73815	0	0	0	0	0.120527	0	0	0	0	0	0	0	0	0	0.592205	0.924687	869.313	1444.72	1488
+./mdscoring_1.pdb	ILE	B	1280	179.743	-99.9988	112.822	E	-1.04454	0	0	-1.24952	0	0.864073	-2.29701	0	0.650484	0.987437	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.676847	0.557805	1219.83	1209.04	1489
+./mdscoring_1.pdb	MET	B	1281	-179.932	-109.69	127.365	E	-1.53	-1.22212	0	-1.97886	0	1.27454	-3.0594	0	1.69415	1.76169	0	0	0	0	0.00225562	0	0	0	0	0	0	0	0	0	0.897356	0.842438	1408.34	1389.55	1490
+./mdscoring_1.pdb	ARG	B	1282	179.002	-97.6163	88.1839	E	2.67837	0	-0.33318	-1.03438	-0.708631	1.72815	-1.02736	0.465718	1.78231	1.72552	0	0	0	0.0802235	0.00862623	0	0	0	0	0	0	0	0	0	0.42504	0.491895	1692.42	1109.27	1491
+./mdscoring_1.pdb	SER	B	1283	-178.65	-135.507	151.077	B	2.20366	0	-0.377185	-0.801544	0	1.96389	-0.488396	0	0.529654	1.31969	0	0	0	0.0575529	0.0299037	0	0	0	0	0	0	0	0	0	0.486332	0.733317	503.953	1270.39	1492
+./mdscoring_1.pdb	GLU	B	1284	179.166	-110.395	62.7808	B	2.89141	0	-0.757141	-0.896279	-0.163912	1.90479	-1.12761	0.502331	1.40954	1.92431	0	0	0	0.0953934	0.337523	0	0	0	0	0	0	0	0	0	0.610547	0.301865	1409.21	988.267	1493
+./mdscoring_1.pdb	ALA	B	1285	-179.419	-113.713	171.269	*	1.63841	0	0	-0.527416	0	1.06238	-0.568718	0	0	1.67216	0	0	0	0	0.337523	0	0	0	0	0	0	0	0	0	0.397826	0.5167	221.446	1109.49	1494
+./mdscoring_1.pdb	GLN	B	1286	-179.919	-105.655	149.555	B	1.21076	-0.481569	-0.6315	-0.717969	0	1.18391	-0.706848	0.000319698	0.917084	1.64695	0	0	0	0.000380537	0	0	0	0	0	0	0	0	0	0	0.24538	0.63861	1011.71	1239.8	1495
+./mdscoring_1.pdb	TYR	B	1287	-179.782	-88.6116	137.569	B	-1.00676	-0.446355	-0.88197	-1.63592	-0.171886	1.39636	-2.2455	0.523825	0.845724	1.60895	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.709891	0.610548	2496.08	1241.4	1496
+./mdscoring_1.pdb	GLY	B	1288	179.769	-127.098	162.399	B	1.68304	-0.6315	0	-0.659152	0	1.40673	-0.604385	0	0	2.17135	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.772914	0	1294.49	1497
+./mdscoring_1.pdb	ASN	B	1289	179.935	-82.4845	93.3233	E	1.69958	0	0	-0.380807	0	0.783495	-0.378947	0.0298216	0.125486	1.45807	0	0	0	0.0624623	0.000179433	0	0	0	0	0	0	0	0	0	0.181349	0.354396	757.484	1021.61	1498
+./mdscoring_1.pdb	CYS	B	1290	-179.595	-156.296	158.57	E	-1.75924	-0.570229	0	-1.1347	0	1.26259	-1.26594	0.0348295	0.668813	1.67226	0	0	0	0.283355	0.000215815	0	0	-2.71022	0	0	0	0	0	0	0.695919	0.781478	602.825	1335.23	1499
+./mdscoring_1.pdb	ASN	B	1291	179.302	-117.488	144.501	E	1.82356	0	-0.835513	-1.41804	0	2.78042	-1.30757	0.0625794	0.691956	1.84972	0	0	0	0	0.0154168	0	0	0	0	0	0	0	0	0	0.740642	0.922963	1264.76	1442.92	1500
+./mdscoring_1.pdb	THR	B	1292	-179.796	-157.445	152.425	E	0.241813	-0.634045	-0.798552	-1.41026	0	2.22664	-1.74625	0.0625194	0.521094	2.01935	0	0	0	0.00132027	0	0	0	0	0	0	0	0	0	0	0.912755	0.858743	1070.3	1396.32	1501
+./mdscoring_1.pdb	ARG	B	1293	179.516	-97.0951	-7.26685	E	0.914794	-0.868248	-0.586132	-0.936995	-0.41016	1.42431	-1.03684	0.00934998	1.32687	1.95095	0	0	0	0.0487159	0.425858	0	0	0	-0.00703192	0	0	0	0	0	0.184132	0.889828	1301.66	1415.28	1502
+./mdscoring_1.pdb	CYS	B	1294	-179.906	-140.969	113.854	B	-1.74316	-1.14342	0	-1.4622	0	1.3842	-1.74698	0.00889361	0.893014	2.01935	0	0	0	0	0.556962	0	0	-1.69602	0	0	0	0	0	0	0.929207	1	715.736	1540.33	1503
+./mdscoring_1.pdb	GLN	B	1295	-179.742	-120.168	135.25	B	1.38002	0	-1.47832	-2.03375	0	3.62685	-2.06945	0.00772291	1.72561	1.60135	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	1911.48	1626.48	1504
+./mdscoring_1.pdb	THR	B	1296	179.183	-122.645	168.41	B	-0.488167	-0.97426	-0.972989	-1.54782	0	2.4185	-1.79344	0.630198	0.521094	1.23055	0	0	0	0	0.000323812	0	0	0	0	0	0	0	0	0	1	1	1171.99	1519.29	1505
+./mdscoring_1.pdb	PRO	B	1297	179.387	-63.271	-16.8395	B	-1.50617	-0.377185	0	-0.998866	0	0.301595	-1.78714	0.630198	0.25628	0.468952	0	0	0	0	0.0914034	0	0	0	0	0	0	0	0	0	0.852449	0.734483	1028.94	1311.22	1506
+./mdscoring_1.pdb	ILE	B	1298	-179.839	-93.2221	-34.3815	*	1.34674	0	0	-0.875083	0	1.17462	-1.34554	0	0.407881	1.82745	0	0	0	0.157407	0.499864	0	0	0	0	0	0	0	0	0	0.424412	0.589886	1000.97	1230.15	1507
+./mdscoring_1.pdb	GLY	B	1299	179.817	168.467	-172.793	*	0.409494	-1.46226	0	-0.832324	0	1.43031	-0.859583	0	0	2.13335	0	0	0	0	0.631986	0	0	0	0	0	0	0	0	0	0	1	0	1532.56	1508
+./mdscoring_1.pdb	ALA	B	1300	179.767	-88.9209	137.37	B	-0.502914	-0.884458	0	-1.12937	0	1.45498	-1.52261	0	0	1.57855	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.98207	1	370.428	1570.38	1509
+./mdscoring_1.pdb	ILE	B	1301	-179.72	-99.5995	111.746	B	-1.16196	-0.652462	0	-1.57793	0	1.37423	-2.69339	0	0.96105	1.42655	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.807888	0.774915	1333.44	1351.89	1510
+./mdscoring_1.pdb	ASN	B	1302	178.922	-111.635	88.8522	B	2.29542	0	0	-0.362426	0	1.13203	-0.0996514	0.0376618	0.191014	1.31488	0	0	0	0.0819156	0.0125178	0	0	0	0	0	0	0	0	0	0.276049	0.149938	843.376	870.104	1511
+./mdscoring_1.pdb	SER	B	1303	-179.093	-155.322	168.104	B	0.308566	0	-1.41494	-0.461942	0	0.926191	-0.30637	0.0445459	0.529654	0.99143	0	0	0	0	0.0125178	0	0	0	0	0	0	0	0	0	0.546197	0.266961	532.628	868.854	1512
+./mdscoring_1.pdb	SER	B	1304	179.399	-109.648	5.82269	B	1.82882	-0.250735	0	-0.112884	0	0.301196	-0.0386723	0	0	1.92815	0	0	0	0.00176522	0.338996	0	0	0	0	0	0	0	0	0	0	0.184473	231.485	797.831	1513
+./mdscoring_1.pdb	MET	B	1305	-180	-65.6339	137.518	*	0.248186	-0.23965	0	-0.888925	0	0.825148	-1.38604	8.24451e-07	0.755741	1.18191	0	0	0	0	0.338996	0	0	0	0	0	0	0	0	0	0.400299	0.547989	964.467	1183.14	1514
+./mdscoring_1.pdb	PRO	B	1306	-179.884	-80.9022	-16.8813	*	0.78307	-0.539642	0	-0.324852	0	0.464093	-0.321842	1.37782e-06	0.0559605	1.44935	0	0	0	0	0.0350066	0	0	0	0	0	0	0	0	0	0.218357	0.471402	616.15	1124.17	1515
+./mdscoring_1.pdb	PHE	B	1307	-179.772	-130.687	151.835	B	0.599934	0	0	-1.21933	0.0270652	1.60236	-1.63981	0.0013195	0.257378	1.57095	0	0	0	0	0.727599	0	0	0	0	0	0	0	0	0	0.342374	1	1603.71	1526.71	1516
+./mdscoring_1.pdb	H2S	B	1308	179.349	-149.895	162.072	B	-0.264332	-1.34038	-0.409122	-2.16718	0	3.11861	-2.32009	0.0465469	0.845724	1.79895	0	0	0	0	0	0	0	0	0	0	0.162608	0	0	0	1	1	2362.45	1674.8	1517
+./mdscoring_1.pdb	ASN	B	1309	179.704	-138.967	28.3842	B	1.87624	-0.476339	0	-0.977545	0	1.83419	-1.00349	5.75796e-06	0.334221	2.13335	0	0	0	0.0318452	0.676511	0	0	0	0	0	0	0	0	0	0.483009	0.805063	1031.09	1355.55	1518
+./mdscoring_1.pdb	ILE	B	1310	-179.391	-75.2115	-65.663	*	-0.203733	-0.37196	0	-1.37839	0	0.885151	-2.56691	0.0010593	0.96105	2.21695	0	0	0	0.0493164	0.900173	0	0	0	0	0	0	0	0	0	0.78473	0.572157	1313.36	1218.48	1519
+./mdscoring_1.pdb	H2S	B	1311	-179.473	-145.124	135.424	*	1.32879	0	-0.580226	-1.61162	0	2.82644	-1.7691	0.0452239	0.845724	1.51631	0	0	0	0	0.444879	0	0	0	0	0	0.0560386	0	0	0	0.611923	1	1753.65	1538.9	1520
+./mdscoring_1.pdb	PRO	B	1312	179.641	-61.1369	-40.1102	*	-0.787319	-0.455178	0	-0.443928	0	0.248441	-0.611304	0	0.0816988	0.392952	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.318787	0.569999	681.531	1194.27	1521
+./mdscoring_1.pdb	LEU	B	1313	-179.857	-74.6558	103.984	B	0.458151	-0.580226	0	-1.01549	0	1.33609	-1.47459	0	0.408613	1.78375	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.425173	0.736974	998.176	1324.82	1522
+./mdscoring_1.pdb	THR	B	1314	-178.637	-132.012	122.966	B	0.224599	0	-0.455178	-0.918192	0	1.02185	-1.40488	0.0194474	0.521094	1.08197	0	0	0	0.358481	0	0	0	0	0	0	0	0	0	0	0.641633	0.548811	900.304	1168.83	1523
+./mdscoring_1.pdb	ILE	B	1315	-179.317	-113.861	141.617	B	-0.339661	0	0	-1.40264	0	1.51518	-2.34134	0	0.661628	1.22751	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.688443	0.703987	1229.88	1305.22	1524
+./mdscoring_1.pdb	GLY	B	1316	179.491	102.461	-130.878	*	1.74776	0	0	-0.35509	0	0.57515	-0.458156	0	0	1.98585	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.440102	0	993.292	1525
+./mdscoring_1.pdb	GLU	B	1317	179.652	-109.7	69.1758	*	1.53893	-0.580504	-1.2473	-0.667464	-0.436256	1.56346	-0.667174	0.00842194	1.40954	2.10203	0	0	0	0.049663	0.337508	0	0	0	0.00452148	0	0	0	0	0	0.314031	0.477028	1054.58	1116.66	1526
+./mdscoring_1.pdb	CYS	B	1318	-178.469	-97.3479	153.295	*	-1.56208	0	0	-1.13187	0	0.727758	-1.53842	0.0350086	0.921093	1.12037	0	0	0	0	0.363356	0	0	-1.69602	0	0	0	0	0	0	0.958423	0.492265	729.877	1117.17	1527
+./mdscoring_1.pdb	PRO	B	1319	179.297	-69.7461	-178.892	*	0.382939	0	0	-0.800813	0	0.627163	-1.3673	8.89198e-08	0.25628	1.66761	0	0	0	0	0.0340218	0	0	0	0	0	0	0	0	0	0.674845	0.59929	913.324	1215.1	1528
+./mdscoring_1.pdb	LYS	B	1320	-179.787	-85.2338	123.345	B	0.148692	-1.20783	0	-0.70039	-0.0156709	1.26937	-0.676067	2.60975e-06	0.0802112	1.37998	0	0	0	0.0190743	0	0	0	0	0	0	0	0	0	0	0.0424861	0.847227	792.052	1392.6	1529
+./mdscoring_1.pdb	TYR	B	1321	180	-80.9345	125.545	B	-0.897058	0	0	-1.30108	-0.176789	0.794878	-2.04982	7.63129e-06	0.845724	0.990029	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.581178	0.492808	2272.51	1163.22	1530
+./mdscoring_1.pdb	VAL	B	1322	179.594	-129.942	-9999	B	1.26665	-0.608729	0	-0.521391	-0.110151	2.27175	-0.558186	0	0.102884	0.690481	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0.240866	0.55264	659.651	1188.64	1531
+

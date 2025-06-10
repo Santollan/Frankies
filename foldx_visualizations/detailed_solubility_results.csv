@@ -1,0 +1,31 @@
+experiment_name,total_energy,pdb_file,stability_rank,stability_quartile
+cream-callback,323.009,./mdscoring_1.pdb,1,Q1 (Best)
+avocado-bumper,323.396,./mdscoring_4.pdb,2,Q1 (Best)
+partial-lagoon,327.966,./mdscoring_2.pdb,3,Q1 (Best)
+critical-tin,334.474,./mdscoring_2.pdb,4,Q1 (Best)
+gilded-stud,338.174,./mdscoring_3.pdb,5,Q1 (Best)
+messy-discriminator,347.696,./mdscoring_3.pdb,6,Q1 (Best)
+brilliant-charge,354.008,./mdscoring_1.pdb,7,Q1 (Best)
+creative-halftone,354.098,./mdscoring_7.pdb,8,Q1 (Best)
+soft-spook,354.732,./mdscoring_1.pdb,9,Q2
+boolean-burbot,354.941,./mdscoring_5.pdb,10,Q2
+strong-bear,355.306,./mdscoring_2.pdb,11,Q2
+symmetric-pad,360.4,./mdscoring_5.pdb,12,Q2
+free-hearth,363.952,./mdscoring_1.pdb,13,Q2
+smoky-latitude,365.573,./mdscoring_3.pdb,14,Q2
+bitter-folder,366.894,./mdscoring_4.pdb,15,Q2
+concave-glove,367.936,./mdscoring_5.pdb,16,Q3
+approximate-entrepreneur,368.221,./mdscoring_1.pdb,17,Q3
+minty-cylinder,374.746,./mdscoring_5.pdb,18,Q3
+cold-electricity,375.132,./mdscoring_9.pdb,19,Q3
+recursive-basin,380.53,./mdscoring_1.pdb,20,Q3
+kinetic-template,380.928,./mdscoring_2.pdb,21,Q3
+magenta-food,386.77,./mdscoring_7.pdb,22,Q3
+quadratic-format,387.126,./mdscoring_5.pdb,23,Q4 (Worst)
+glowing-avocet,387.708,./mdscoring_5.pdb,24,Q4 (Worst)
+contemporary-wine,394.704,./mdscoring_3.pdb,25,Q4 (Worst)
+exponential-cymbal,396.767,./mdscoring_7.pdb,26,Q4 (Worst)
+antique-structure,404.359,./mdscoring_1.pdb,27,Q4 (Worst)
+internal-rundown,407.932,./mdscoring_2.pdb,28,Q4 (Worst)
+flat-gutter,408.983,./mdscoring_4.pdb,29,Q4 (Worst)
+inventive-amarone,490.335,./mdscoring_3.pdb,30,Q4 (Worst)

@@ -1,8 +1,12 @@
-# Frankies: Scalable, AI-Based  Antibody Design Pipeline
+# Frankies: A Scalable, AI-Based Antibody Design Pipeline
 
 <h3 align="right">Nicholas F. Santolla and Colby T. Ford</h3>
 
-[![Preprint](https://img.shields.io/badge/bioRxiv-10.1101/2025.04.24.650061-bb2635?style=for-the-badge&logo=read.cv)](https://www.biorxiv.org/content/10.1101/2025.04.24.650061)
+<!--[![Preprint](https://img.shields.io/badge/bioRxiv-10.1101/2025.04.24.650061-bb2635?style=for-the-badge&logo=read.cv)](https://www.biorxiv.org/content/10.1101/2025.04.24.650061)-->
+
+[![Preprint](https://img.shields.io/badge/Computational_and_Structural_Biotechnology_Journal-10.1016/j.csbj.2025.06.026-00558b?style=for-the-badge&logo=read.cv)](https://doi.org/10.1016/j.csbj.2025.06.026)
+
+
 
 
 ## Antibody Generation and Analysis
